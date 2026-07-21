@@ -146,8 +146,9 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .chip.enum{font-family:var(--font-mono);font-size:.72rem;color:var(--muted-foreground)}
 .chip.role{font-size:.7rem;color:hsl(45 80% 62%);border-color:hsl(45 45% 32%)}
 .chip.ctx{font-size:.72rem;color:hsl(189 70% 62%);border-color:hsl(189 40% 28%)}
+.chip.key{font-family:var(--font-mono);font-size:.7rem;color:var(--muted-foreground);
+  background:transparent;border-style:dashed}
 .enumrow{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
-.enumrow .kf{color:var(--muted-foreground);font-size:.78rem;font-family:var(--font-mono);margin-right:.15rem}
 [data-jump]:hover{border-color:var(--primary);color:var(--primary)}
 .ref tr.hit{animation:refhit 2s ease-out}
 @keyframes refhit{0%,35%{background:hsl(21 100% 55% / .2)}100%{background:transparent}}
@@ -500,6 +501,8 @@ const REG = {                       // enum family -> canonical section of the s
 // every structured enum renders as a badge that leads to where it is defined
 const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+href+
   '" target="_blank" rel="noopener noreferrer"'+(title?' title="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
+const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuum behaviour"],
+  scl:["K-SCL","Scale"],per:["K-PER","Persistence"],mod:["K-MOD","Documented modulators"]};
 const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
   "EP-3":"Lab-contested — measured and disputed","EP-4":"Historical-anecdotal",
   "EP-5":"Orthodox-covered — explained by established physics","EP-0":"Unquantized — not yet assessed"};
@@ -679,13 +682,18 @@ function expand(tr){
             pill(m.ref,REG.M,"enum","Mechanism — defined in Registry M")+
             pill(m.role,REG.ROLE,"role","Edge role assigned by the source")).join("")+"</span>" : "");
   add("Context", d.context
-        ? Object.keys(d.context).map(k=>'<span class="enumrow"><span class="kf">'+esc(k)+"</span>"+
-            [].concat(d.context[k]).map(v=>pill(v,REG.K,"ctx","Context facet — defined in Registry K")).join("")+
-            "</span>").join("") : "");
+        ? Object.keys(d.context).map(k=>{
+            const f=KFACET[k]||[k.toUpperCase(),k];
+            return '<span class="enumrow">'+pill(f[0],REG.K,"key",f[1]+" — Registry K")+
+              [].concat(d.context[k]).map(v=>pill(v,REG.K,"ctx",f[1]+" value — Registry K")).join("")+
+              "</span>";
+          }).join("") : "");
   add("Entry type", d.record_kind ? pill(KIND[d.record_kind]||d.record_kind, REG.KIND,"enum",
         "Record kind — defined in Addendum B") : "");
   add("Patent on file", d.patent_flag===true ? "yes" : (d.patent_flag===false ? "no" : ""));
-  add("Compiler confidence", (d.confidence?'<span class="chip enum">'+esc(d.confidence)+"</span>":"")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades");
+  add("Compiler confidence", (d.confidence?pill(d.confidence,
+        "https://github.com/shredEngineer/eqo/blob/main/ADDENDUM-A.md#a1-compilation-metadata-normative-for-corpus-releases",
+        "enum","Compiler recall reliability — Addendum A"):"")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades");
   add("References", refs);
   add("Patterns", (d.signatures||[]).length
         ? '<span class="enumrow">'+d.signatures.map(sg=>pill(sg,REG.S,"enum",
