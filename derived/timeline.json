@@ -47,11 +47,10 @@
     "scl": "lab",
     "per": "permanent"
    },
-   "e_signature": "E1:D3R2C0P1T0Q0",
+   "e_signature": "E1:D3R2C0P1T3Q0",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-HUT",
-    "S-OFN"
+    "S-HUT"
    ],
    "note": "Video/sample corpus; military delegation visits documented 1983; never independently reproduced under controls.",
    "refs": [],
@@ -194,12 +193,11 @@
     "scl": "lab",
     "per": "x"
    },
-   "e_signature": "E1:D1R2C0P1T0Q0",
+   "e_signature": "E1:D1R2C0P1T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SRL",
     "S-SLF",
-    "S-OFN"
+    "S-SRL"
    ],
    "note": "Spin-up, weight loss, halo, cooling per narrative corpus; no controlled documentation.",
    "refs": [],
@@ -245,11 +243,10 @@
     "scl": "lab",
     "per": "transient"
    },
-   "e_signature": "E1:D5R1C1P2T0Q2",
+   "e_signature": "E1:D5R1C1P2T1Q2",
    "epistemotype": "EP-3",
    "signatures": [
-    "S-SRL",
-    "S-OFN"
+    "S-SRL"
    ],
    "note": "Reported weight change, pink glow, cooling around rotating magnet assembly.",
    "refs": [],
@@ -296,7 +293,7 @@
     "scl": "lab",
     "per": "decaying"
    },
-   "e_signature": "E1:D7R3C2P1T2Q3",
+   "e_signature": "E1:D7R3C2P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-LNR"
@@ -339,9 +336,10 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R3C3P4T3Q3",
+   "e_signature": "E1:D7R3C3P4T4Q3",
    "epistemotype": "EP-3",
    "signatures": [
+    "S-DEK",
     "S-LNR"
    ],
    "relations": [
@@ -434,7 +432,7 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D6R4C3P1T2Q3",
+   "e_signature": "E1:D6R4C3P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-LNR"
@@ -480,7 +478,7 @@
     "med": "solid",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R3C3P1T2Q3",
+   "e_signature": "E1:D7R3C3P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-LNR"
@@ -531,9 +529,11 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R3C3P1T2Q3",
+   "e_signature": "E1:D7R3C3P1T4Q3",
    "epistemotype": "EP-3",
-   "signatures": [],
+   "signatures": [
+    "S-DEK"
+   ],
    "note": "Sonofusion claim; later Purdue research-conduct inquiries (2008).",
    "refs": [
     "Science 295, 1868 (2002)"
@@ -577,7 +577,7 @@
     "med": "solid",
     "scl": "lab"
    },
-   "e_signature": "E1:D4R2C1P2T2Q1",
+   "e_signature": "E1:D4R2C1P2T3Q1",
    "epistemotype": "EP-1",
    "signatures": [
     "S-LNR"
@@ -712,7 +712,7 @@
     "med": "cryo",
     "scl": "lab"
    },
-   "e_signature": "E1:D5R3C3P3T3Q2",
+   "e_signature": "E1:D5R3C3P3T2Q2",
    "epistemotype": "EP-3",
    "signatures": [],
    "relations": [
@@ -758,7 +758,7 @@
     "med": "cryo",
     "scl": "lab"
    },
-   "e_signature": "E1:D5R1C1P1T1Q2",
+   "e_signature": "E1:D5R1C1P1T2Q2",
    "epistemotype": "EP-1",
    "signatures": [],
    "note": "Claimed force beam from superconducting discharge; preprint only.",
@@ -831,7 +831,7 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R3C3P1T2Q3",
+   "e_signature": "E1:D7R3C3P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-GYR"
@@ -871,6 +871,7 @@
    "e_signature": "E1:D7R3C4P4T4Q3",
    "epistemotype": "EP-5",
    "signatures": [
+    "S-DEK",
     "S-GYR"
    ],
    "relations": [
@@ -917,11 +918,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R2C1P3T4Q1",
+   "e_signature": "E1:D3R2C1P3T3Q1",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-GYR",
-    "S-DEK"
+    "S-GYR"
    ],
    "note": "Perceived gyro 'weight loss'; later resolved within classical mechanics.",
    "refs": [],
@@ -959,7 +959,7 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D4R1C1P1T0Q2",
+   "e_signature": "E1:D4R1C1P1T3Q2",
    "epistemotype": "EP-1",
    "signatures": [
     "S-GYR"
@@ -1052,7 +1052,7 @@
      "astronomical"
     ]
    },
-   "e_signature": "E1:D5R4C2P1T2Q3",
+   "e_signature": "E1:D5R4C2P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-AST"
@@ -1192,8 +1192,7 @@
    "e_signature": "E1:D4R2C1P1T1Q2",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-AST",
-    "S-OFN"
+    "S-AST"
    ],
    "note": "'Causal mechanics'; detectors reportedly responding to true star positions.",
    "refs": [],
@@ -1376,7 +1375,7 @@
     "med": "cryo",
     "scl": "lab"
    },
-   "e_signature": "E1:D6R3C3P1T2Q3",
+   "e_signature": "E1:D6R3C3P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [],
    "note": "Reported acceleration fields near spun cryogenic rings; later attributed to artifacts by the group itself.",
@@ -1421,7 +1420,7 @@
     "vac": "persists",
     "scl": "lab"
    },
-   "e_signature": "E1:D6R3C3P1T2Q3",
+   "e_signature": "E1:D6R3C3P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-ANT"
@@ -1503,11 +1502,10 @@
     "scl": "lab",
     "per": "persistent"
    },
-   "e_signature": "E1:D1R2C2P3T0Q0",
+   "e_signature": "E1:D1R2C2P3T3Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "54-day sealed-room run, Kassel 1717, attested by officials; hidden-drive allegation by a maid.",
    "refs": [],
@@ -1638,8 +1636,7 @@
    "e_signature": "E1:D1R2C1P2T1Q1",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-RDE",
-    "S-OFN"
+    "S-RDE"
    ],
    "note": "Multi-kW demonstrations reported by witnesses; device later destroyed.",
    "refs": [],
@@ -1673,11 +1670,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R1C0P2T0Q0",
+   "e_signature": "E1:D1R1C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-RDE",
-    "S-OFN"
+    "S-RDE"
    ],
    "note": "Aviation-era publicity; never independently validated.",
    "refs": [],
@@ -1793,11 +1789,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R1C0P1T0Q0",
+   "e_signature": "E1:D3R1C0P1T1Q0",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "Economist ad 2006; failed Kinetica demo 2007; own jury 2009: no evidence of energy production.",
    "refs": [],
@@ -1882,11 +1877,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D2R1C0P2T0Q1",
+   "e_signature": "E1:D2R1C0P2T1Q1",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "Conditioned-magnet device; witness accounts report self-powering, device weight loss under load, and cooling.",
    "refs": [],
@@ -2159,6 +2153,7 @@
    "e_signature": "E1:D5R3C3P4T4Q3",
    "epistemotype": "EP-3",
    "signatures": [
+    "S-DEK",
     "S-SLF"
    ],
    "note": "1986 NBS measurement: efficiency below 100% on all tests; patent litigation followed.",
@@ -2196,11 +2191,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R2C1P3T0Q1",
+   "e_signature": "E1:D1R2C1P3T1Q1",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "Investigated by German navy and postwar British intelligence (BIOS 2394); never reproduced.",
    "refs": [],
@@ -2237,11 +2231,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D2R3C0P1T0Q0",
+   "e_signature": "E1:D2R3C0P1T1Q0",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "patent_flag": true,
    "note": "Patent granted for magnet-gate geometry; working self-runner never validated.",
@@ -2326,11 +2319,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R1C0P1T0Q0",
+   "e_signature": "E1:D3R1C0P1T1Q0",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "Videotaped toroid demos; device and inventor withdrew from scrutiny.",
    "refs": [],
@@ -2369,11 +2361,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D2R1C0P2T0Q0",
+   "e_signature": "E1:D2R1C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "Pulsed-discharge motor; 'cold' conductor reports.",
    "refs": [],
@@ -2629,7 +2620,7 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D4R1C1P1T1Q2",
+   "e_signature": "E1:D4R1C1P1T3Q2",
    "epistemotype": "EP-1",
    "signatures": [],
    "patent_flag": true,
@@ -2676,11 +2667,9 @@
     "med": "plasma",
     "scl": "lab"
    },
-   "e_signature": "E1:D6R3C2P1T1Q3",
+   "e_signature": "E1:D6R3C2P1T3Q3",
    "epistemotype": "EP-3",
-   "signatures": [
-    "S-OFN"
-   ],
+   "signatures": [],
    "note": "Below-ground-state hydrogen claims with extensive self-published data; demonstrates the X- private-extension mechanism of \u00a75.",
    "refs": [],
    "lane": "CHM",
@@ -2723,7 +2712,7 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D5R3C2P1T1Q2",
+   "e_signature": "E1:D5R3C2P1T3Q2",
    "epistemotype": "EP-3",
    "signatures": [
     "S-MEM"
@@ -2765,7 +2754,7 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R3C2P1T0Q3",
+   "e_signature": "E1:D7R3C2P1T1Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-MEM"
@@ -2808,6 +2797,7 @@
    "e_signature": "E1:D7R3C4P4T4Q3",
    "epistemotype": "EP-5",
    "signatures": [
+    "S-DEK",
     "S-MEM"
    ],
    "relations": [
@@ -2892,11 +2882,10 @@
    "context": {
     "med": "water_electrolyte"
    },
-   "e_signature": "E1:D1R2C0P2T0Q0",
+   "e_signature": "E1:D1R2C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-MEM",
-    "S-OFN"
+    "S-MEM"
    ],
    "note": "Commercialized 'informed water' devices.",
    "refs": [],
@@ -2934,11 +2923,9 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D2R2C0P1T0Q0",
+   "e_signature": "E1:D2R2C0P1T1Q0",
    "epistemotype": "EP-1",
-   "signatures": [
-    "S-OFN"
-   ],
+   "signatures": [],
    "note": "'Gas in nano state' production claims.",
    "refs": [],
    "lane": "CHM",
@@ -3067,10 +3054,10 @@
     "med": "air",
     "scl": "micro"
    },
-   "e_signature": "E1:D2R2C0P2T0Q0",
+   "e_signature": "E1:D2R2C0P2T4Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-OFN"
+    "S-DEK"
    ],
    "note": "Claimed frequency-specific devitalization of microorganisms.",
    "refs": [],
@@ -3146,11 +3133,9 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R1C0P1T0Q0",
+   "e_signature": "E1:D1R1C0P1T1Q0",
    "epistemotype": "EP-4",
-   "signatures": [
-    "S-OFN"
-   ],
+   "signatures": [],
    "note": "Book-documented levitation platform based on insect-shell geometry.",
    "refs": [],
    "lane": "BIO",
@@ -3227,11 +3212,10 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R1C0P2T0Q0",
+   "e_signature": "E1:D1R1C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-IMP",
-    "S-OFN"
+    "S-IMP"
    ],
    "note": "Vortex 'implosion' engineering; Repulsine lore.",
    "refs": [],
@@ -3270,11 +3254,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D2R1C0P2T0Q0",
+   "e_signature": "E1:D2R1C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "note": "Cone-and-magnet constructions; anecdotal flight claims.",
    "refs": [],
@@ -3349,11 +3332,9 @@
    "context": {
     "med": "air"
    },
-   "e_signature": "E1:D0R0C0P2T0Q0",
+   "e_signature": "E1:D0R0C0P2T1Q0",
    "epistemotype": "EP-0",
-   "signatures": [
-    "S-OFN"
-   ],
+   "signatures": [],
    "note": "Free-energy saucer venture (OTC-X1, 'Utron' accumulator); a 1959 public demonstration did not take place. Convicted in Oklahoma in 1961 of selling securities without registering them \u2014 a registration offense, not a finding of fraud \u2014 and fined USD 5,000; conviction affirmed on appeal.",
    "refs": [
     "Carr v. State, 1961 OK CR 15, 359 P.2d 606 (Okla. Crim. App., 11 Jan 1961), case no. A-12907 \u2014 conviction under 71 O.S.A. \u00a7 53 affirmed."
@@ -3478,11 +3459,11 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D2R1C0P2T0Q0",
+   "e_signature": "E1:D2R1C0P2T4Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-WFC",
-    "S-OFN"
+    "S-DEK",
+    "S-WFC"
    ],
    "note": "Philippine water-car claims; secondary sources report a 2008 estafa conviction. Not verified against a primary source.",
    "refs": [],
@@ -3564,9 +3545,11 @@
     "med": "water_electrolyte",
     "scl": "plant"
    },
-   "e_signature": "E1:D4R2C1P1T3Q2",
+   "e_signature": "E1:D4R2C1P1T4Q2",
    "epistemotype": "EP-1",
-   "signatures": [],
+   "signatures": [
+    "S-DEK"
+   ],
    "note": "Cavitation heater; heating is orthodox, COP>1 claim is not confirmed.",
    "refs": [],
    "lane": "THM",
@@ -3690,7 +3673,7 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R2C1P2T2Q1",
+   "e_signature": "E1:D3R2C1P2T3Q1",
    "epistemotype": "EP-1",
    "signatures": [],
    "note": "Large Tesla-coil facility aimed at reproducing ball lightning.",
@@ -3854,9 +3837,7 @@
    },
    "e_signature": "E1:D2R2C0P1T1Q1",
    "epistemotype": "EP-1",
-   "signatures": [
-    "S-OFN"
-   ],
+   "signatures": [],
    "compilation_confidence": "high",
    "note": "State-adjacent 'torsion generator' program; funding exposed ~1991; repeatedly targeted by the RAS pseudoscience commission (est. 1998, Kruglyakov).",
    "refs": [],
@@ -4103,8 +4084,7 @@
    "e_signature": "E1:D4R2C1P1T1Q2",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-AET",
-    "S-OFN"
+    "S-AET"
    ],
    "compilation_confidence": "medium",
    "note": "'Coupled shutters/mirrors' apparatus claiming measurable aether drift; self-published corpus; died 1997.",
@@ -4147,7 +4127,7 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D6R3C2P1T2Q3",
+   "e_signature": "E1:D6R3C2P1T3Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-LNR"
@@ -4317,8 +4297,7 @@
    "e_signature": "E1:D1R0C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "compilation_confidence": "medium",
    "note": "'Raumkraft' sphere device; never publicly demonstrated; survives via period accounts and later esoteric literature \u2014 the record indexes the period claim only.",
@@ -4365,9 +4344,7 @@
    },
    "e_signature": "E1:D5R3C1P1T3Q1",
    "epistemotype": "EP-3",
-   "signatures": [
-    "S-OFN"
-   ],
+   "signatures": [],
    "compilation_confidence": "high",
    "note": "Sensitives reporting glows and sensations from magnets/crystals in darkness; extensive self-published protocols; ancestor lineage of orgone-type claims.",
    "refs": [],
@@ -4405,7 +4382,7 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R2C0P2T3Q0",
+   "e_signature": "E1:D1R2C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [],
    "compilation_confidence": "high",
@@ -4618,9 +4595,11 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D0R0C0P0T3Q0",
+   "e_signature": "E1:D0R0C0P0T4Q0",
    "epistemotype": "EP-0",
-   "signatures": [],
+   "signatures": [
+    "S-DEK"
+   ],
    "compilation_confidence": "low",
    "note": "Widely reprinted period story of an RF-expanded, load-lifting quartz crystal; commonly assessed as a magazine hoax; indexed as a print claim.",
    "refs": [],
@@ -4851,11 +4830,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R5C3P3T4Q3",
+   "e_signature": "E1:D7R5C3P3T1Q3",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-AET",
-    "S-DEK"
+    "S-AET"
    ],
    "compilation_confidence": "high",
    "note": "Real, foundational effect originally interpreted by its discoverer as aether evidence \u2014 interpretation migrated, phenomenon stayed; today the basis of ring-laser gyros.",
@@ -5004,8 +4982,7 @@
    "e_signature": "E1:D4R1C1P1T3Q2",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-BRN",
-    "S-OFN"
+    "S-BRN"
    ],
    "compilation_confidence": "medium",
    "note": "Cavendish-type setup with electrified masses; claimed modification of gravitational attraction; electrostatic force on the apparatus is the standard account.",
@@ -5119,7 +5096,9 @@
    },
    "e_signature": "E1:D7R3C2P3T0Q3",
    "epistemotype": "EP-3",
-   "signatures": [],
+   "signatures": [
+    "S-OFN"
+   ],
    "compilation_confidence": "high",
    "note": "Reanalysis suggesting composition-dependent coupling; triggered a worldwide measurement campaign incl. an early claimed positive (Thieberger float experiment).",
    "refs": [
@@ -5206,7 +5185,7 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D4R3C1P2T2Q2",
+   "e_signature": "E1:D4R3C1P2T3Q2",
    "epistemotype": "EP-1",
    "signatures": [
     "S-LNR"
@@ -5659,10 +5638,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D4R2C1P2T1Q1",
+   "e_signature": "E1:D4R2C1P2T4Q1",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-OFN"
+    "S-DEK"
    ],
    "compilation_confidence": "medium",
    "note": "Plant-tumor and clinical claims around broadband spark-gap coils; hospital-adjacent trials reported in period sources.",
@@ -5703,10 +5682,10 @@
     "med": "plasma",
     "scl": "plant"
    },
-   "e_signature": "E1:D5R2C2P2T1Q2",
+   "e_signature": "E1:D5R2C2P2T4Q2",
    "epistemotype": "EP-3",
    "signatures": [
-    "S-OFN"
+    "S-DEK"
    ],
    "compilation_confidence": "high",
    "note": "Large undisclosed-principle machine; animal-trial cures reported with Academy-level advocacy and state funding; device principle never disclosed, program collapsed.",
@@ -5745,11 +5724,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R3C0P1T0Q0",
+   "e_signature": "E1:D3R3C0P1T1Q0",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "compilation_confidence": "medium",
    "note": "Video-marketed all-magnet motor with investment scheme; the venture was the subject of subsequent legal proceedings. No court outcome is asserted here \u2014 none could be verified against a primary source.",
@@ -6035,7 +6013,7 @@
     "med": "water_electrolyte",
     "scl": "micro"
    },
-   "e_signature": "E1:D7R4C2P1T0Q3",
+   "e_signature": "E1:D7R4C2P1T1Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-MEM"
@@ -6318,7 +6296,7 @@
     "med": "solid",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R2C3P3T3Q3",
+   "e_signature": "E1:D7R2C3P3T2Q3",
    "epistemotype": "EP-3",
    "signatures": [
     "S-LNR"
@@ -6407,7 +6385,7 @@
     "med": "water_electrolyte",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R4C2P1T2Q2",
+   "e_signature": "E1:D7R4C2P1T3Q2",
    "epistemotype": "EP-3",
    "signatures": [
     "S-LNR"
@@ -6447,11 +6425,10 @@
     ],
     "med": "air"
    },
-   "e_signature": "E1:D0R0C0P1T0Q0",
+   "e_signature": "E1:D0R0C0P1T1Q0",
    "epistemotype": "EP-0",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "compilation_confidence": "high",
    "record_kind": "design_description",
@@ -6818,11 +6795,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R1C3P4T4Q1",
+   "e_signature": "E1:D1R1C3P4T3Q1",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-SLF",
-    "S-DEK"
+    "S-SLF"
    ],
    "compilation_confidence": "medium",
    "record_kind": "demonstration_claim",
@@ -6862,11 +6838,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D0RxC0P1T0Q0",
+   "e_signature": "E1:D0RxC0P1T1Q0",
    "epistemotype": "EP-0",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "patent_flag": true,
    "compilation_confidence": "medium",
@@ -6908,11 +6883,10 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R2C0P2T0Q0",
+   "e_signature": "E1:D1R2C0P2T1Q0",
    "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-OFN"
+    "S-SLF"
    ],
    "compilation_confidence": "medium",
    "record_kind": "demonstration_claim",
@@ -7571,8 +7545,7 @@
    "e_signature": "E1:D5R2C1P1T3Q2",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-PLM",
-    "S-OFN"
+    "S-PLM"
    ],
    "patent_flag": true,
    "compilation_confidence": "high",

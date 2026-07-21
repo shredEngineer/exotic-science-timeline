@@ -290,6 +290,9 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 @media(max-width:640px){.fsocial a span{display:none}}
 .fdisclaim{max-width:42rem;margin:0 auto 1.5rem;text-align:center;font-size:.75rem;
   line-height:1.6;color:hsl(210 15% 60% / .55)}
+.dataver{text-align:center;font-size:.78rem;color:var(--dim);margin:0 0 1rem}
+.dataver a{font-family:var(--font-mono);color:var(--dim)}
+.dataver a:hover{color:#00D9FF}
 .flegal{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;
   font-size:.75rem;color:var(--dim)}
 .flegal a{color:var(--dim);transition:color .2s}
@@ -443,6 +446,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 
   <p class="fdisclaim">This page catalogues claims made by other people and grades how well each one is documented. It endorses none of them. Where a record carries a citation, the citation is given; where it does not, its documentation grade says so — that absence is a finding, not an omission. Nothing here should be taken as engineering specification for experimental replication.</p>
 
+  <p class="dataver" id="dataver"></p>
+
   <div class="flegal">
     <a href="https://advanced-rediscovery.com/legal-notice">Legal Notice</a>
     <span>·</span>
@@ -532,6 +537,14 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   document.getElementById("stats").innerHTML = items.map(it=>
     '<div class="stat"><b'+(it.nowrap?' class="range"':"")+">"+it.v+
     "</b><span>"+esc(it.l)+"</span></div>").join("");
+  const dv=document.getElementById("dataver");
+  if(dv && DATA.data_commit){
+    const sha=DATA.data_commit, short=sha.slice(0,7), date=DATA.data_commit_date||"";
+    dv.innerHTML="This page was built from data version "+
+      '<a href="https://github.com/shredEngineer/exotic-science-timeline/commit/'+sha+
+      '" target="_blank" rel="noopener noreferrer">'+short+"</a>"+
+      (date?" of "+date:"")+". The record is append-only and changes over time.";
+  }
   const pinEl=document.getElementById("pin");
   if(pinEl) pinEl.textContent = DATA.enrichment_attached
     ? DATA.enrichment_attached+" entries enriched" : "";

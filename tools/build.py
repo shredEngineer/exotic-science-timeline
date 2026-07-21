@@ -13,7 +13,7 @@ The merge is additive and non-destructive: overlay entries attach to their event
 under an `enrichment` key. Base fields are never overwritten — an overlay that
 tries is a bug, and the build says so rather than silently winning.
 """
-import json, pathlib, shutil, sys
+import json, pathlib, shutil, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = ROOT / "derived" / "timeline.json"
@@ -64,6 +64,17 @@ def main() -> int:
         return 3
 
     data["enrichment_attached"] = attached
+
+    # The data can change at any time, so the page states which commit it was
+    # built from and when — a version a reader can actually go and look at.
+    def git(*a):
+        try:
+            return subprocess.run(["git", *a], cwd=ROOT, capture_output=True,
+                                  text=True, check=True).stdout.strip()
+        except Exception:
+            return ""
+    data["data_commit"] = git("rev-parse", "HEAD")
+    data["data_commit_date"] = git("log", "-1", "--format=%cs")
 
     html = TEMPLATE.read_text().replace("__DATA__", json.dumps(data, ensure_ascii=False))
     OUT.parent.mkdir(exist_ok=True)

@@ -30,9 +30,7 @@
       },
       "e_signature": "E1:D2R2C0P1T1Q1",
       "epistemotype": "EP-1",
-      "signatures": [
-        "S-OFN"
-      ],
+      "signatures": [],
       "compilation_confidence": "high",
       "note": "State-adjacent 'torsion generator' program; funding exposed ~1991; repeatedly targeted by the RAS pseudoscience commission (est. 1998, Kruglyakov).",
       "refs": []
@@ -211,8 +209,7 @@
       "e_signature": "E1:D4R2C1P1T1Q2",
       "epistemotype": "EP-1",
       "signatures": [
-        "S-AET",
-        "S-OFN"
+        "S-AET"
       ],
       "compilation_confidence": "medium",
       "note": "'Coupled shutters/mirrors' apparatus claiming measurable aether drift; self-published corpus; died 1997.",
@@ -244,7 +241,7 @@
         "med": "water_electrolyte",
         "scl": "lab"
       },
-      "e_signature": "E1:D6R3C2P1T2Q3",
+      "e_signature": "E1:D6R3C2P1T3Q3",
       "epistemotype": "EP-3",
       "signatures": [
         "S-LNR"
@@ -367,8 +364,7 @@
       "e_signature": "E1:D1R0C0P2T1Q0",
       "epistemotype": "EP-4",
       "signatures": [
-        "S-SLF",
-        "S-OFN"
+        "S-SLF"
       ],
       "compilation_confidence": "medium",
       "note": "'Raumkraft' sphere device; never publicly demonstrated; survives via period accounts and later esoteric literature — the record indexes the period claim only.",
@@ -403,9 +399,7 @@
       },
       "e_signature": "E1:D5R3C1P1T3Q1",
       "epistemotype": "EP-3",
-      "signatures": [
-        "S-OFN"
-      ],
+      "signatures": [],
       "compilation_confidence": "high",
       "note": "Sensitives reporting glows and sensations from magnets/crystals in darkness; extensive self-published protocols; ancestor lineage of orgone-type claims.",
       "refs": []
@@ -431,7 +425,7 @@
         "med": "air",
         "scl": "lab"
       },
-      "e_signature": "E1:D1R2C0P2T3Q0",
+      "e_signature": "E1:D1R2C0P2T1Q0",
       "epistemotype": "EP-4",
       "signatures": [],
       "compilation_confidence": "high",
@@ -589,9 +583,11 @@
         "med": "air",
         "scl": "lab"
       },
-      "e_signature": "E1:D0R0C0P0T3Q0",
+      "e_signature": "E1:D0R0C0P0T4Q0",
       "epistemotype": "EP-0",
-      "signatures": [],
+      "signatures": [
+        "S-DEK"
+      ],
       "compilation_confidence": "low",
       "note": "Widely reprinted period story of an RF-expanded, load-lifting quartz crystal; commonly assessed as a magazine hoax; indexed as a print claim.",
       "refs": []
@@ -767,11 +763,10 @@
         "med": "air",
         "scl": "lab"
       },
-      "e_signature": "E1:D7R5C3P3T4Q3",
+      "e_signature": "E1:D7R5C3P3T1Q3",
       "epistemotype": "EP-5",
       "signatures": [
-        "S-AET",
-        "S-DEK"
+        "S-AET"
       ],
       "compilation_confidence": "high",
       "note": "Real, foundational effect originally interpreted by its discoverer as aether evidence — interpretation migrated, phenomenon stayed; today the basis of ring-laser gyros.",
@@ -876,8 +871,7 @@
       "e_signature": "E1:D4R1C1P1T3Q2",
       "epistemotype": "EP-1",
       "signatures": [
-        "S-BRN",
-        "S-OFN"
+        "S-BRN"
       ],
       "compilation_confidence": "medium",
       "note": "Cavendish-type setup with electrified masses; claimed modification of gravitational attraction; electrostatic force on the apparatus is the standard account.",
@@ -957,7 +951,9 @@
       },
       "e_signature": "E1:D7R3C2P3T0Q3",
       "epistemotype": "EP-3",
-      "signatures": [],
+      "signatures": [
+        "S-OFN"
+      ],
       "compilation_confidence": "high",
       "note": "Reanalysis suggesting composition-dependent coupling; triggered a worldwide measurement campaign incl. an early claimed positive (Thieberger float experiment).",
       "refs": [
@@ -1022,7 +1018,7 @@
         "med": "water_electrolyte",
         "scl": "lab"
       },
-      "e_signature": "E1:D4R3C1P2T2Q2",
+      "e_signature": "E1:D4R3C1P2T3Q2",
       "epistemotype": "EP-1",
       "signatures": [
         "S-LNR"
@@ -1359,10 +1355,10 @@
         "med": "air",
         "scl": "lab"
       },
-      "e_signature": "E1:D4R2C1P2T1Q1",
+      "e_signature": "E1:D4R2C1P2T4Q1",
       "epistemotype": "EP-1",
       "signatures": [
-        "S-OFN"
+        "S-DEK"
       ],
       "compilation_confidence": "medium",
       "note": "Plant-tumor and clinical claims around broadband spark-gap coils; hospital-adjacent trials reported in period sources.",
@@ -1392,10 +1388,10 @@
         "med": "plasma",
         "scl": "plant"
       },
-      "e_signature": "E1:D5R2C2P2T1Q2",
+      "e_signature": "E1:D5R2C2P2T4Q2",
       "epistemotype": "EP-3",
       "signatures": [
-        "S-OFN"
+        "S-DEK"
       ],
       "compilation_confidence": "high",
       "note": "Large undisclosed-principle machine; animal-trial cures reported with Academy-level advocacy and state funding; device principle never disclosed, program collapsed.",
@@ -1422,11 +1418,10 @@
         "med": "air",
         "scl": "lab"
       },
-      "e_signature": "E1:D3R3C0P1T0Q0",
+      "e_signature": "E1:D3R3C0P1T1Q0",
       "epistemotype": "EP-1",
       "signatures": [
-        "S-SLF",
-        "S-OFN"
+        "S-SLF"
       ],
       "compilation_confidence": "medium",
       "note": "Video-marketed all-magnet motor with investment scheme; the venture was the subject of subsequent legal proceedings. No court outcome is asserted here — none could be verified against a primary source.",
@@ -1634,7 +1629,7 @@
         "med": "water_electrolyte",
         "scl": "micro"
       },
-      "e_signature": "E1:D7R4C2P1T0Q3",
+      "e_signature": "E1:D7R4C2P1T1Q3",
       "epistemotype": "EP-3",
       "signatures": [
         "S-MEM"
@@ -1840,7 +1835,7 @@
         "med": "solid",
         "scl": "lab"
       },
-      "e_signature": "E1:D7R2C3P3T3Q3",
+      "e_signature": "E1:D7R2C3P3T2Q3",
       "epistemotype": "EP-3",
       "signatures": [
         "S-LNR"
@@ -1907,7 +1902,7 @@
         "med": "water_electrolyte",
         "scl": "lab"
       },
-      "e_signature": "E1:D7R4C2P1T2Q2",
+      "e_signature": "E1:D7R4C2P1T3Q2",
       "epistemotype": "EP-3",
       "signatures": [
         "S-LNR"

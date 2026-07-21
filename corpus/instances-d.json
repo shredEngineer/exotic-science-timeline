@@ -36,8 +36,7 @@
       "e_signature": "E1:D5R2C1P1T3Q2",
       "epistemotype": "EP-1",
       "signatures": [
-        "S-PLM",
-        "S-OFN"
+        "S-PLM"
       ],
       "patent_flag": true,
       "compilation_confidence": "high",
