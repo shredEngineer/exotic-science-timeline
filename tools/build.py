@@ -13,7 +13,7 @@ The merge is additive and non-destructive: overlay entries attach to their event
 under an `enrichment` key. Base fields are never overwritten — an overlay that
 tries is a bug, and the build says so rather than silently winning.
 """
-import json, pathlib, sys
+import json, pathlib, shutil, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = ROOT / "base" / "timeline.json"
@@ -69,6 +69,16 @@ def main() -> int:
     html = TEMPLATE.read_text().replace("__DATA__", json.dumps(data, ensure_ascii=False))
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(html)
+
+    # Static assets (favicon, brand fonts) ship alongside the page. Fonts are
+    # self-hosted rather than pulled from a font CDN: a public page must not
+    # hand its visitors' addresses to a third party.
+    assets_src = ROOT / "viewer" / "assets"
+    if assets_src.exists():
+        dest = OUT.parent / "assets"
+        if dest.exists():
+            shutil.rmtree(dest)
+        shutil.copytree(assets_src, dest)
 
     cname = ROOT / "CNAME"
     if cname.exists():

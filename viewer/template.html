@@ -1,162 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EQO/1 Timeline — Nine Centuries of Claims, One Lattice</title>
+<title>Exotic Science Timeline — Nine Centuries of Anomaly Claims, Graded by Evidence</title>
+<meta name="description" content="A searchable record of documented claims about anomalous energy, propulsion, gravity and materials — from 1150 to today. Every entry graded on six evidence axes. Claims, not verdicts.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Exotic Science Timeline">
+<meta property="og:description" content="Nine centuries of documented anomaly claims, graded on six evidence axes.">
+<meta property="og:type" content="website">
 <style>
-  :root{
-    --bg:#101418; --band:#161B21; --band2:#12171D; --ink:#E8E4D8; --dim:#8A93A0;
-    --ep0:#6B7280; --ep1:#B08CD9; --ep2:#D98CB3; --ep3:#7FA8D9; --ep4:#C2A878; --ep5:#6FBFB0;
-    --doc:#9AA3AE; --nar:#9AA3AE;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif}
-  header{padding:22px 20px 10px;max-width:1200px}
-  h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(22px,4vw,34px);margin:0 0 6px;letter-spacing:.2px}
-  .thesis{color:var(--dim);max-width:70ch;margin:0 0 14px}
-  .mono{font-family:ui-monospace,'Cascadia Mono',Menlo,Consolas,monospace}
-  .legend{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px}
-  .chip{display:inline-flex;align-items:center;gap:6px;border:1px solid #2A313A;border-radius:14px;
-        padding:3px 10px;cursor:pointer;user-select:none;color:var(--ink);background:transparent}
-  .chip .sw{width:10px;height:10px;border-radius:50%}
-  .chip.off{opacity:.32}
-  .legend .note{color:var(--dim);flex-basis:100%;font-size:12px}
-  .shapes{color:var(--dim);font-size:12px;margin-top:4px}
-  .scroller{overflow-x:auto;border-top:1px solid #232A33;border-bottom:1px solid #232A33}
-  svg{display:block}
-  .laneLabel{fill:var(--dim);font-size:11px}
-  .eraLabel{fill:var(--dim);font-size:11px;letter-spacing:.12em}
-  .tick{fill:var(--dim);font-size:10.5px}
-  .dot{cursor:pointer;stroke:#0B0E11;stroke-width:1}
-  .dot:focus{outline:none;stroke:var(--ink);stroke-width:2}
-  .arc{fill:none;stroke:var(--dim);stroke-width:1;opacity:.55}
-  .arc.contradicts{stroke-dasharray:4 3}
-  #panel{position:fixed;left:0;right:0;bottom:0;background:#0C1013;border-top:1px solid #2A313A;
-         padding:12px 18px;max-height:38vh;overflow-y:auto;display:none}
-  #panel h2{font-family:Georgia,serif;font-weight:400;font-size:17px;margin:0 0 4px}
-  #panel .meta{color:var(--dim);font-size:12.5px;margin-bottom:6px}
-  #panel .close{position:absolute;right:14px;top:10px;background:none;border:1px solid #2A313A;
-                color:var(--ink);border-radius:12px;padding:2px 10px;cursor:pointer}
-  footer{padding:12px 20px 26px;color:var(--dim);font-size:12.5px;max-width:1200px}
+@font-face{font-family:"Exo 2";src:url("assets/fonts/Exo2-SemiBold.woff2")format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Exo 2";src:url("assets/fonts/Exo2-Bold.woff2")format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-Regular.woff2")format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-SemiBold.woff2")format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("assets/fonts/SourceSans3-Bold.woff2")format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Fira Code";src:url("assets/fonts/FiraCode-Regular.woff2")format("woff2");font-weight:400;font-display:swap}
+
+:root{
+  --background:hsl(216 60% 9.8%); --foreground:hsl(0 0% 96%);
+  --card:hsl(214 50% 10%); --card-subtle:hsl(214 40% 14%);
+  --primary:hsl(21 100% 55%); --secondary:hsl(189 100% 50%);
+  --secondary-muted:hsl(189 50% 30%);
+  --muted-foreground:hsl(0 0% 60%);
+  --border:hsl(214 30% 18%); --radius:0.5rem;
+  --font-heading:"Exo 2",system-ui,sans-serif;
+  --font-body:"Source Sans 3",system-ui,sans-serif;
+  --font-mono:"Fira Code",ui-monospace,monospace;
+}
+*{box-sizing:border-box;border-color:var(--border)}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--background);color:var(--foreground);
+  font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.15;margin:0}
+a{color:var(--secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+code,.mono{font-family:var(--font-mono);font-size:.85em}
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(1rem,3vw,2rem)}
+
+.topbar{position:sticky;top:0;z-index:50;background:hsl(216 60% 9.8% / .92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.topbar .wrap{display:flex;align-items:center;gap:.75rem;height:56px}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--font-heading);font-weight:700}
+.brand img{width:24px;height:24px;border-radius:4px}
+.brand small{font-family:var(--font-body);font-weight:400;color:var(--muted-foreground);font-size:.8rem}
+.topbar nav{margin-left:auto;display:flex;gap:1.25rem;font-size:.9rem}
+.topbar nav a{color:var(--muted-foreground)}
+.topbar nav a:hover{color:var(--secondary);text-decoration:none}
+
+.hero{padding:clamp(2.5rem,6vw,4.5rem) 0 2rem}
+.hero h1{font-size:clamp(2rem,5vw,3.25rem);letter-spacing:-.02em;max-width:22ch}
+.grad{background:linear-gradient(135deg,var(--secondary-muted),var(--secondary));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lede{margin-top:1.1rem;max-width:70ch;font-size:clamp(1rem,1.6vw,1.15rem);color:hsl(0 0% 88%)}
+.lede strong{color:var(--foreground)}
+.note{margin-top:1rem;max-width:70ch;color:var(--muted-foreground);font-size:.95rem}
+
+.stats{display:grid;gap:.75rem;margin:2rem 0 0;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem}
+.stat b{display:block;font-family:var(--font-heading);font-size:1.75rem;color:var(--primary);line-height:1.1}
+.stat span{display:block;margin-top:.25rem;color:var(--muted-foreground);font-size:.85rem}
+
+section{padding:clamp(2rem,5vw,3.5rem) 0;border-top:1px solid var(--border)}
+section.first{border-top:0}
+.sec-head{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;margin-bottom:.5rem}
+.sec-head h2{font-size:clamp(1.35rem,2.6vw,1.85rem)}
+.sec-head p{margin:0;color:var(--muted-foreground);font-size:.95rem}
+.sec-intro{color:var(--muted-foreground);max-width:75ch;margin:.4rem 0 1.5rem}
+
+.controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
+.controls input[type=search],.controls select{background:var(--card-subtle);color:var(--foreground);
+  border:1px solid var(--border);border-radius:var(--radius);padding:.5rem .7rem;
+  font-family:var(--font-body);font-size:.92rem}
+.controls input[type=search]{min-width:min(320px,100%);flex:1 1 260px}
+.controls select{cursor:pointer}
+.controls input:focus,.controls select:focus{outline:2px solid var(--primary);outline-offset:1px}
+.count{color:var(--muted-foreground);font-size:.9rem;margin-left:auto;white-space:nowrap}
+.btn{background:var(--card-subtle);border:1px solid var(--border);color:var(--foreground);
+  border-radius:var(--radius);padding:.5rem .8rem;font:inherit;font-size:.9rem;cursor:pointer}
+.btn:hover{border-color:var(--secondary-muted)}
+
+.tablewrap{border:1px solid var(--border);border-radius:var(--radius);overflow:auto;
+  max-height:78vh;background:var(--card)}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:.93rem}
+thead th{position:sticky;top:0;z-index:2;background:var(--card-subtle);text-align:left;
+  font-family:var(--font-heading);font-weight:600;font-size:.82rem;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--muted-foreground);padding:.65rem .8rem;
+  border-bottom:1px solid var(--border);white-space:nowrap}
+thead th.sortable{cursor:pointer;user-select:none}
+thead th.sortable:hover{color:var(--secondary)}
+thead th .arrow{opacity:.35;margin-left:.3rem}
+thead th[aria-sort] .arrow{opacity:1;color:var(--primary)}
+tbody td{padding:.6rem .8rem;border-bottom:1px solid hsl(214 30% 18% / .6);vertical-align:top}
+tbody tr:hover{background:hsl(189 100% 50% / .04)}
+tbody tr.open{background:hsl(21 100% 55% / .05)}
+td.year{font-family:var(--font-mono);white-space:nowrap;color:var(--secondary)}
+td.claim{min-width:22ch}
+td.claim .lbl{font-weight:600;cursor:pointer}
+td.claim .lbl:hover{color:var(--secondary)}
+td.who{color:var(--muted-foreground);max-width:26ch}
+.detail td{background:hsl(214 40% 14% / .55);color:hsl(0 0% 85%);font-size:.92rem}
+.detail dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;margin:0}
+.detail dt{color:var(--muted-foreground);font-size:.85rem}
+.detail dd{margin:0}
+
+.chip{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.75rem;
+  border:1px solid var(--border);background:var(--card-subtle);white-space:nowrap}
+.chip.lane{color:var(--secondary);border-color:hsl(189 50% 30%)}
+.chip.ep{font-family:var(--font-mono);font-size:.72rem}
+.ep1{color:hsl(21 100% 62%);border-color:hsl(21 60% 34%)}
+.ep2{color:hsl(280 70% 72%);border-color:hsl(280 40% 36%)}
+.ep3{color:hsl(189 100% 60%);border-color:hsl(189 50% 32%)}
+.ep4{color:hsl(45 90% 62%);border-color:hsl(45 55% 34%)}
+.ep5{color:hsl(141 60% 58%);border-color:hsl(141 40% 30%)}
+.ep0{color:var(--muted-foreground)}
+.axes{display:inline-flex;gap:2px;font-family:var(--font-mono);font-size:.72rem}
+.ax{width:1.55rem;text-align:center;border-radius:3px;padding:.1rem 0;
+  background:var(--card-subtle);border:1px solid var(--border);cursor:help}
+.ax.g0{color:hsl(0 0% 45%)} .ax.g1{color:hsl(21 80% 58%)}
+.ax.g2{color:hsl(45 85% 60%)} .ax.g3{color:hsl(141 55% 58%)}
+.ax.gx{color:hsl(0 0% 38%);font-style:italic}
+
+.legend{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1.25rem}
+.legend div{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem}
+.legend h3{font-size:.95rem;margin-bottom:.4rem;color:var(--primary)}
+.legend p{margin:.15rem 0;font-size:.86rem;color:var(--muted-foreground)}
+.legend b{color:var(--foreground);font-family:var(--font-mono);font-size:.82rem}
+
+.tlwrap{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);
+  padding:1rem;overflow-x:auto}
+.tl{display:block;min-width:900px}
+.tl .era{fill:hsl(214 40% 14% / .45)}
+.tl .eralabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-body)}
+.tl .lanelabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-mono)}
+.tl .gridline{stroke:hsl(214 30% 18% / .8);stroke-width:1}
+.tl .arc{fill:none;stroke:hsl(21 100% 55% / .45);stroke-width:1.2}
+.tl .dot{stroke:hsl(216 60% 9.8%);stroke-width:.75;cursor:pointer}
+.tl .dot:hover{stroke:var(--foreground);stroke-width:1.5}
+.tlnote{color:var(--muted-foreground);font-size:.85rem;margin-top:.6rem}
+
+footer{border-top:1px solid var(--border);padding:2.5rem 0 3.5rem;
+  color:var(--muted-foreground);font-size:.9rem}
+footer h3{font-family:var(--font-heading);font-size:1rem;color:var(--foreground);margin-bottom:.4rem}
+.fgrid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+footer p{max-width:65ch;margin:.3rem 0}
+.pin{font-family:var(--font-mono);font-size:.78rem;color:hsl(0 0% 45%);margin-top:1.5rem}
+@media (max-width:640px){
+  .topbar nav{display:none}
+  td.who,thead th.who{display:none}
+}
 </style>
 </head>
 <body>
-<header>
-  <h1>EQO/1 Timeline — nine centuries of claims, one lattice</h1>
-  <p class="thesis">Every mark is a corpus record placed by normalized date, phenomenon lane, and documentation profile.
-     Curved connectors are the signature of the standard: adversarial examinations reaching their claims —
-     Fulton to Redheffer, Wood to Blondlot, Dresden to the EmDrive.</p>
-  <div class="legend" id="legend">
-    <span class="note">Hue encodes the epistemotype — a documentation profile, not a verdict (spec §Q.6.1). Click a chip to filter; click a mark for details.</span>
+
+<div class="topbar"><div class="wrap">
+  <span class="brand"><img src="assets/icon-192.png" alt="">Advanced&nbsp;Rediscovery <small>· Exotic Science Timeline</small></span>
+  <nav>
+    <a href="#record">The record</a>
+    <a href="#reading">How to read it</a>
+    <a href="#chart">Chart</a>
+    <a href="#about">About</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+
+<div class="hero">
+  <h1>Nine centuries of <span class="grad">anomaly claims</span>, graded by evidence.</h1>
+  <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports: what was claimed, by whom, and <strong>how well each one was actually documented</strong>.</p>
+  <p class="note">It takes no position on whether any effect is real. Each entry carries a coordinate describing its evidence — how it was recorded, whether anyone reproduced it, what was controlled for, who examined it. Well-documented claims and thin ones sit in the same table, in the same vocabulary, and the difference becomes visible instead of asserted.</p>
+  <div class="stats" id="stats"></div>
+</div>
+
+<section class="first" id="record">
+  <div class="sec-head">
+    <h2>The record</h2>
+    <p>Newest first. Click any entry to expand it.</p>
   </div>
-  <div class="shapes">Marks: ● observation · ■ demonstration claim · ◆ design description · ▲ analysis · ○ doctrine / narrative (emergence). Opacity = compiler recall confidence.</div>
-</header>
-<div class="scroller"><svg id="chart"></svg></div>
-<footer id="stats" class="mono"></footer>
-<div id="panel"><button class="close" onclick="panel.style.display='none'">close</button><div id="pbody"></div></div>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off">
+    <select id="fLane"><option value="">All classes</option></select>
+    <select id="fEp"><option value="">All evidence profiles</option></select>
+    <select id="fKind"><option value="">All entry types</option></select>
+    <button class="btn" id="reset">Reset</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead><tr>
+        <th class="sortable" data-k="t_start" aria-sort="descending">Date<span class="arrow">▼</span></th>
+        <th class="sortable" data-k="label">Claim<span class="arrow">▼</span></th>
+        <th class="sortable who" data-k="principals">Who<span class="arrow">▼</span></th>
+        <th class="sortable" data-k="lane">Class<span class="arrow">▼</span></th>
+        <th>Evidence</th>
+        <th class="sortable" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
+      </tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="reading">
+  <div class="sec-head"><h2>How to read an entry</h2></div>
+  <p class="sec-intro">Every entry is graded on six ordered axes. The grades describe the <em>documentation</em>, never the truth of the claim — a carefully measured result nobody could reproduce and a vague anecdote look different here, which is the entire point.</p>
+  <div class="legend">
+    <div><h3>The six axes</h3>
+      <p><b>D</b> Documentation — second-hand account through peer-reviewed paper</p>
+      <p><b>R</b> Replication — never attempted through independently reproduced</p>
+      <p><b>C</b> Controls — none through a full energy balance</p>
+      <p><b>P</b> Provenance — anonymous through adversarial examination on record</p>
+      <p><b>T</b> Theory — whether an established mechanism explains it</p>
+      <p><b>Q</b> Quantification — qualitative through measured with uncertainty</p>
+    </div>
+    <div><h3>Reading the grades</h3>
+      <p>Higher means better documented. <b>x</b> means not assessed — which is <em>not</em> a zero: unexamined and poorly evidenced are different things, and conflating them would be the easiest way to lie with this table.</p>
+      <p><b>T</b> is the anomaly test. A zero means no established mechanism is on record — a property of the documentation, not a verdict about reality.</p>
+    </div>
+    <div><h3>Evidence profiles</h3>
+      <p><b>EP-1</b> solitary — one source, no controls</p>
+      <p><b>EP-2</b> demonstrative — public demo, no data</p>
+      <p><b>EP-3</b> lab-contested — measured and disputed</p>
+      <p><b>EP-4</b> historical-anecdotal</p>
+      <p><b>EP-5</b> orthodox-covered — explained by established physics</p>
+    </div>
+  </div>
+</section>
+
+<section id="chart">
+  <div class="sec-head"><h2>The same record, in time</h2>
+    <p>Orange arcs connect a claim to the examination that tested it.</p></div>
+  <p class="sec-intro">Each mark is one entry, placed by date and grouped by the class of effect claimed. Eras are drawn to equal width rather than to scale, so the sparse early centuries stay legible beside the crowded modern ones.</p>
+  <div class="tlwrap"><svg class="tl" id="tl" role="img" aria-label="Timeline of anomaly claims by era and effect class"></svg></div>
+  <p class="tlnote" id="tlnote"></p>
+</section>
+
+<section id="about">
+  <div class="sec-head"><h2>About this record</h2></div>
+  <p class="sec-intro">The classification standard behind it — the registries, the axis definitions and the corpus itself — is public and kept separate from this page: <a href="https://github.com/shredEngineer/eqo">EQO, Epistemic Quantization of Observables</a>. <em>Quantization</em> there means discretization onto a finite lattice, as in signal processing; it is not a quantum-mechanical term, and an <em>observable</em> is a documented observation rather than an operator.</p>
+  <div class="legend">
+    <div><h3>Provenance, stated up front</h3>
+      <p>The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</p></div>
+    <div><h3>Named people</h3>
+      <p>Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</p></div>
+    <div><h3>Licence</h3>
+      <p>Content and data: CC BY 4.0. Code: Apache-2.0.<br>Attribute as: Dr.-Ing. Paul Wilhelm / Advanced Rediscovery, <em>Exotic Science Timeline</em>, CC BY 4.0.</p>
+      <p><a href="https://github.com/shredEngineer/exotic-science-timeline">Source and build</a></p></div>
+  </div>
+</section>
+
+<footer><div class="fgrid">
+  <div><h3>Advanced Rediscovery</h3>
+    <p>Independent deep-tech research. <a href="https://advanced-rediscovery.com">advanced-rediscovery.com</a></p></div>
+  <div><h3>The standard</h3>
+    <p>Open, append-only, community-governed. <a href="https://github.com/shredEngineer/eqo">github.com/shredEngineer/eqo</a></p></div>
+</div>
+<p class="pin" id="pin"></p>
+</footer>
+
+</div>
+
 <script>
 const DATA = __DATA__;
-const EP = {"EP-0":"--ep0","EP-1":"--ep1","EP-2":"--ep2","EP-3":"--ep3","EP-4":"--ep4","EP-5":"--ep5"};
-const EPNAMES = {"EP-0":"EP-0 unquantized","EP-1":"EP-1 solitary","EP-2":"EP-2 demonstrative",
-  "EP-3":"EP-3 lab-contested","EP-4":"EP-4 historical-anecdotal","EP-5":"EP-5 orthodox-covered"};
-const LANES = ["MEC","THM","NUC","EMG","GRA","OPT","ACU","CHM","BIO","INS","DOC","NAR"];
-const LANENAMES = {MEC:"Mechanical",THM:"Thermal",NUC:"Nuclear",EMG:"Electromagnetic",GRA:"Gravitational",
-  OPT:"Optical",ACU:"Acoustic",CHM:"Chemical",BIO:"Biological",INS:"Instrumental",DOC:"Doctrines",NAR:"Narratives"};
-const BP = [[1100,0],[1800,.20],[1900,.40],[1990,.72],[2030,1]];
-const W = 2600, ROW = 42, TOP = 46, LEFT = 118, RIGHT = 30;
-const H = TOP + LANES.length*ROW + 46;
-const cs = getComputedStyle(document.documentElement);
-const col = v => cs.getPropertyValue(v).trim();
-function X(y){
-  for(let i=0;i<BP.length-1;i++){const [a,fa]=BP[i],[b,fb]=BP[i+1];
-    if(y<=b||i===BP.length-2){const f=fa+(fb-fa)*Math.min(Math.max((y-a)/(b-a),0),1);
-      return LEFT + f*(W-LEFT-RIGHT);}}
+
+const LANE = {MEC:"Mechanical",THM:"Thermal",NUC:"Nuclear / material",EMG:"Electromagnetic",
+  GRA:"Gravitational",OPT:"Optical",ACU:"Acoustic",CHM:"Chemical",BIO:"Biological",
+  INS:"Instrument reading",DOC:"Doctrine",NAR:"Narrative",SON:"Other"};
+const KIND = {observation:"Observation",demonstration_claim:"Demonstration",
+  design_description:"Design description",analysis:"Analysis",doctrine:"Doctrine",narrative:"Narrative"};
+const AXNAME = {D:"Documentation",R:"Replication",C:"Controls",P:"Provenance",T:"Theory embedding",Q:"Quantification"};
+const AXMAX  = {D:7,R:5,C:5,P:4,T:4,Q:3};
+
+const ev = DATA.events.slice();
+const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+(function(){
+  const s = DATA.stats||{}, eras = DATA.eras||[];
+  const items = [
+    [s.observation_events ?? ev.length, "documented reports"],
+    [eras.length ? eras[0][0]+"–"+eras[eras.length-1][1] : "—", "years covered"],
+    [s.median_adversarial_lag_years ?? "—", "median years to examination"],
+    [s.contradiction_arcs ?? 0, "examinations that contradicted"]
+  ];
+  document.getElementById("stats").innerHTML =
+    items.map(([v,l])=>`<div class="stat"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
+  document.getElementById("pin").textContent =
+    (DATA.renders_corpus||"corpus")+" · pinned at "+(DATA.base_pin||"unpinned")+
+    (DATA.enrichment_attached ? " · "+DATA.enrichment_attached+" entries enriched" : "");
+})();
+
+function fill(sel, vals, fmt){
+  const el = document.getElementById(sel);
+  vals.forEach(v => { const o=document.createElement("option"); o.value=v; o.textContent=fmt(v); el.appendChild(o); });
 }
-const svg = document.getElementById('chart');
-svg.setAttribute('width',W); svg.setAttribute('height',H);
-const NS='http://www.w3.org/2000/svg';
-const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
-// era bands
-DATA.eras.forEach((e,i)=>{
-  const x1=X(e[0]),x2=X(e[1]);
-  svg.appendChild(el('rect',{x:x1,y:0,width:x2-x1,height:H,fill:i%2?col('--band2'):col('--band')}));
-  const t=el('text',{x:x1+8,y:16,class:'eraLabel'});t.textContent=e[2]+' · '+e[3];svg.appendChild(t);
-});
-// lanes
-LANES.forEach((l,i)=>{
-  const y=TOP+i*ROW;
-  svg.appendChild(el('line',{x1:LEFT-6,y1:y+ROW,x2:W-RIGHT,y2:y+ROW,stroke:'#1D242C','stroke-width':1}));
-  const t=el('text',{x:8,y:y+ROW/2+4,class:'lanelabel lanelabel'});t.setAttribute('class','laneLabel');
-  t.textContent=LANENAMES[l];svg.appendChild(t);
-});
-// ticks
-[1150,1300,1500,1700,1800,1850,1900,1925,1950,1975,1990,2000,2010,2020].forEach(y=>{
-  const x=X(y);svg.appendChild(el('line',{x1:x,y1:TOP-14,x2:x,y2:H-30,stroke:'#1A2129','stroke-width':1}));
-  const t=el('text',{x:x+3,y:H-16,class:'tick mono'});t.setAttribute('class','tick mono');t.textContent=y;svg.appendChild(t);
-});
-// jitter per lane-year to reduce overlap
-const seen={};
-const pos={};
-DATA.events.forEach(ev=>{
-  const li=LANES.indexOf(ev.lane); if(li<0)return;
-  const key=ev.lane+'|'+Math.round(ev.t_start/3);
-  seen[key]=(seen[key]||0)+1;
-  const jit=((seen[key]-1)%3-1)*9;
-  pos[ev.id]={x:X(ev.t_start),y:TOP+li*ROW+ROW/2+jit};
-});
-// arcs first (under dots)
-DATA.arcs.forEach(a=>{
-  const s=pos[a.source],t=pos[a.target]; if(!s||!t)return;
-  const mx=(s.x+t.x)/2, my=Math.min(s.y,t.y)-26-Math.abs(s.x-t.x)*0.02;
-  const p=el('path',{d:`M${t.x},${t.y} Q${mx},${my} ${s.x},${s.y}`,class:'arc '+a.type});
-  svg.appendChild(p);
-});
-// range whiskers + dots
-const OP={high:1,medium:.72,low:.45};
-function shapeFor(ev,x,y,c){
-  const k=ev.record_kind;
-  if(k==='demonstration_claim')return el('rect',{x:x-4.5,y:y-4.5,width:9,height:9,fill:c,class:'dot',tabindex:0});
-  if(k==='design_description')return el('rect',{x:x-5,y:y-5,width:10,height:10,transform:`rotate(45 ${x} ${y})`,fill:c,class:'dot',tabindex:0});
-  if(k==='analysis')return el('polygon',{points:`${x},${y-6} ${x-5.5},${y+4.5} ${x+5.5},${y+4.5}`,fill:c,class:'dot',tabindex:0});
-  if(k==='doctrine'||k==='narrative')return el('circle',{cx:x,cy:y,r:4.5,fill:'none',stroke:c,'stroke-width':1.6,class:'dot',tabindex:0});
-  return el('circle',{cx:x,cy:y,r:5,fill:c,class:'dot',tabindex:0});
+fill("fLane", [...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)), v=>LANE[v]||v);
+fill("fEp",   [...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(), v=>v);
+fill("fKind", [...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort(), v=>KIND[v]||v);
+
+let sortKey="t_start", sortDir=-1;
+
+function axes(sig){
+  if(!sig) return '<span class="chip ep0">not assessed</span>';
+  const m = /^E1:D(.)R(.)C(.)P(.)T(.)Q(.)$/.exec(sig);
+  if(!m) return '<span class="mono">'+esc(sig)+'</span>';
+  return '<span class="axes">' + "DRCPTQ".split("").map((k,i)=>{
+    const v = m[i+1];
+    let cls;
+    if(v==="x") cls="gx";
+    else { const r=+v/AXMAX[k]; cls = r>=.7?"g3":r>=.4?"g2":r>0?"g1":"g0"; }
+    const t = v==="x" ? "not assessed" : v+" of "+AXMAX[k];
+    return '<span class="ax '+cls+'" title="'+AXNAME[k]+': '+t+'">'+k+v+'</span>';
+  }).join("") + "</span>";
 }
-const panel=document.getElementById('panel'),pbody=document.getElementById('pbody');
-DATA.events.forEach(ev=>{
-  const p=pos[ev.id]; if(!p)return;
-  const c=(ev.record_kind==='doctrine'||ev.record_kind==='narrative')?col('--doc'):col(EP[ev.epistemotype]||'--ep0');
-  if(ev.t_end&&ev.t_end!==ev.t_start){
-    svg.appendChild(el('line',{x1:p.x,y1:p.y,x2:X(ev.t_end),y2:p.y,stroke:c,'stroke-width':1.4,opacity:.4,'data-ep':ev.epistemotype,class:'whisk'}));
-  }
-  const s=shapeFor(ev,p.x,p.y,c);
-  s.setAttribute('opacity',OP[ev.confidence]||1);
-  s.setAttribute('data-ep',ev.epistemotype);
-  const ti=el('title',{});ti.textContent=`${ev.label} (${ev.years_raw})`;s.appendChild(ti);
-  const show=()=>{ panel.style.display='block';
-    pbody.innerHTML=`<h2>${ev.label}</h2>
-      <div class="meta mono">${ev.id} · ${ev.years_raw} · lane ${ev.lane} · ${EPNAMES[ev.epistemotype]||ev.record_kind}
-      ${ev.e_signature?(' · '+ev.e_signature):''} · recall ${ev.confidence}</div>
-      <div>${ev.principals?('<b>'+ev.principals+'</b> — '):''}${ev.note}</div>
-      ${ev.signatures.length?('<div class="meta mono">signatures: '+ev.signatures.join(' ')+'</div>'):''}`;};
-  s.addEventListener('click',show);
-  s.addEventListener('keydown',e=>{if(e.key==='Enter')show();});
-  svg.appendChild(s);
+
+function rows(list){
+  document.getElementById("tb").innerHTML = list.map(e=>{
+    const ep=(e.epistemotype||"EP-0").replace("-","").toLowerCase();
+    return '<tr data-id="'+esc(e.id)+'">'+
+      '<td class="year">'+esc(e.years_raw||e.t_start)+'</td>'+
+      '<td class="claim"><span class="lbl">'+esc(e.label)+'</span></td>'+
+      '<td class="who">'+esc(e.principals||"—")+'</td>'+
+      '<td><span class="chip lane">'+esc(LANE[e.lane]||e.lane)+'</span></td>'+
+      '<td>'+axes(e.e_signature)+'</td>'+
+      '<td><span class="chip ep '+esc(ep)+'">'+esc(e.epistemotype||"—")+'</span></td></tr>';
+  }).join("");
+  document.getElementById("count").textContent = list.length+" of "+ev.length+" entries";
+}
+
+function apply(){
+  const q=document.getElementById("q").value.trim().toLowerCase();
+  const fl=document.getElementById("fLane").value, fe=document.getElementById("fEp").value,
+        fk=document.getElementById("fKind").value;
+  const list = ev.filter(e=>{
+    if(fl && e.lane!==fl) return false;
+    if(fe && e.epistemotype!==fe) return false;
+    if(fk && e.record_kind!==fk) return false;
+    if(q){ const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")).toLowerCase();
+      if(hay.indexOf(q)===-1) return false; }
+    return true;
+  });
+  list.sort((a,b)=>{
+    if(sortKey==="t_start") return ((a.t_start??0)-(b.t_start??0))*sortDir;
+    return String(a[sortKey]??"").localeCompare(String(b[sortKey]??""))*sortDir;
+  });
+  rows(list);
+}
+
+document.querySelectorAll("th.sortable").forEach(th=>{
+  th.addEventListener("click",()=>{
+    const k=th.dataset.k;
+    if(k===sortKey) sortDir=-sortDir; else { sortKey=k; sortDir = k==="t_start" ? -1 : 1; }
+    document.querySelectorAll("th.sortable").forEach(o=>{o.removeAttribute("aria-sort");
+      const a=o.querySelector(".arrow"); if(a) a.textContent="▼";});
+    th.setAttribute("aria-sort", sortDir===1?"ascending":"descending");
+    th.querySelector(".arrow").textContent = sortDir===1?"▲":"▼";
+    apply();
+  });
 });
-// legend chips
-const legend=document.getElementById('legend');
-Object.keys(EPNAMES).forEach(k=>{
-  const chip=document.createElement('span');chip.className='chip';chip.innerHTML=
-    `<span class="sw" style="background:${col(EP[k])}"></span>${EPNAMES[k]}`;
-  chip.onclick=()=>{chip.classList.toggle('off');
-    const off=chip.classList.contains('off');
-    svg.querySelectorAll(`[data-ep="${k}"]`).forEach(n=>n.style.display=off?'none':'');};
-  legend.insertBefore(chip,legend.firstChild);
+["q","fLane","fEp","fKind"].forEach(id=>{
+  document.getElementById(id).addEventListener(id==="q"?"input":"change", apply);
 });
-// stats footer
-const st=DATA.stats;
-document.getElementById('stats').textContent =
-  `${st.observation_events} observation records · ${st.arcs} relation arcs · median claim→adversarial-examination lag ${st.median_adversarial_lag_years} yrs · self-runner lineage ${st.self_runner_lineage_span[0]}–${st.self_runner_lineage_span[1]} · renders ${DATA.renders_corpus} · colors are documentation profiles, not verdicts`;
+document.getElementById("reset").addEventListener("click",()=>{
+  document.getElementById("q").value="";
+  ["fLane","fEp","fKind"].forEach(i=>document.getElementById(i).value="");
+  apply();
+});
+
+document.getElementById("tb").addEventListener("click", e=>{
+  const tr = e.target.closest("tr[data-id]"); if(!tr) return;
+  const nxt = tr.nextElementSibling;
+  if(nxt && nxt.classList.contains("detail")){ nxt.remove(); tr.classList.remove("open"); return; }
+  document.querySelectorAll("tr.detail").forEach(d=>d.remove());
+  document.querySelectorAll("tr.open").forEach(o=>o.classList.remove("open"));
+  const d = ev.find(x=>x.id===tr.dataset.id); if(!d) return;
+  tr.classList.add("open");
+  const rel = (DATA.arcs||[]).filter(a=>a.source===d.id||a.target===d.id);
+  const relHtml = rel.length ? rel.map(a=>{
+    const oid = a.source===d.id ? a.target : a.source;
+    const other = ev.find(x=>x.id===oid);
+    return esc(a.type)+" → "+esc(other?other.label:oid);
+  }).join("<br>") : "none recorded";
+  const enr = d.enrichment ? "<dt>Added context</dt><dd>"+esc(JSON.stringify(d.enrichment))+"</dd>" : "";
+  const row = document.createElement("tr");
+  row.className="detail";
+  row.innerHTML = '<td colspan="6"><dl>'+
+    "<dt>What is recorded</dt><dd>"+esc(d.note||"—")+"</dd>"+
+    "<dt>Entry type</dt><dd>"+esc(KIND[d.record_kind]||d.record_kind||"—")+"</dd>"+
+    "<dt>Compiler confidence</dt><dd>"+esc(d.confidence||"—")+" — how reliable the compiler's recall of names and dates is, kept separate from the evidence grades</dd>"+
+    "<dt>Patterns</dt><dd>"+((d.signatures&&d.signatures.length)?d.signatures.map(esc).join(", "):"—")+"</dd>"+
+    "<dt>Linked records</dt><dd>"+relHtml+"</dd>"+
+    "<dt>Identifier</dt><dd><code>"+esc(d.id)+"</code></dd>"+enr+"</dl></td>";
+  tr.after(row);
+});
+
+apply();
+
+function drawTimeline(){
+  const svg=document.getElementById("tl");
+  const eras=DATA.eras||[];
+  const lanes=[...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
+  const W=1180, L=132, R=16, T=34, rowH=22, H=T+lanes.length*rowH+26;
+  const bandW=(W-L-R)/Math.max(eras.length,1);
+  const xOf=y=>{
+    for(let i=0;i<eras.length;i++){
+      const a=eras[i][0], b=eras[i][1];
+      if(y>=a&&y<b) return L+i*bandW+((y-a)/(b-a))*bandW;
+    }
+    return (eras.length && y<eras[0][0]) ? L : W-R;
+  };
+  const yOf=l=>T+lanes.indexOf(l)*rowH+rowH/2;
+  const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",
+    "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
+  let s="";
+  eras.forEach((e,i)=>{
+    if(i%2===0) s+='<rect class="era" x="'+(L+i*bandW)+'" y="'+(T-14)+'" width="'+bandW+'" height="'+(H-T-6)+'"/>';
+    s+='<text class="eralabel" x="'+(L+i*bandW+6)+'" y="'+(T-20)+'">'+esc(e[2])+" · "+e[0]+"–"+e[1]+"</text>";
+  });
+  lanes.forEach(l=>{
+    s+='<line class="gridline" x1="'+L+'" y1="'+yOf(l)+'" x2="'+(W-R)+'" y2="'+yOf(l)+'"/>';
+    s+='<text class="lanelabel" x="8" y="'+(yOf(l)+3)+'">'+esc(LANE[l]||l)+"</text>";
+  });
+  (DATA.arcs||[]).forEach(a=>{
+    const A=ev.find(e=>e.id===a.source), B=ev.find(e=>e.id===a.target);
+    if(!A||!B||A.t_start==null||B.t_start==null) return;
+    const x1=xOf(A.t_start), x2=xOf(B.t_start), y1=yOf(A.lane), y2=yOf(B.lane);
+    s+='<path class="arc" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-16)+" "+x2.toFixed(1)+","+y2+'"/>';
+  });
+  ev.forEach(e=>{
+    if(e.t_start==null) return;
+    s+='<circle class="dot" cx="'+xOf(e.t_start).toFixed(1)+'" cy="'+yOf(e.lane)+'" r="3.6" fill="'+
+      (EPC[e.epistemotype]||EPC["EP-0"])+'"><title>'+esc(e.years_raw||e.t_start)+" — "+esc(e.label)+"</title></circle>";
+  });
+  svg.setAttribute("viewBox","0 0 "+W+" "+H);
+  svg.setAttribute("height",H);
+  svg.innerHTML=s;
+  document.getElementById("tlnote").textContent =
+    ev.length+" entries across "+lanes.length+" classes and "+eras.length+" eras. Colour marks the evidence profile; hover a mark for its entry.";
+}
+requestAnimationFrame(()=>setTimeout(drawTimeline,0));
 </script>
 </body>
 </html>
