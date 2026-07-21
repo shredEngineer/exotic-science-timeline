@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pin: ${{ steps.pin.outputs.pin }}
     steps:
       - uses: actions/checkout@v4
 
@@ -36,6 +38,12 @@ jobs:
       # enablement: true removes the ordering dependency — without it the job
       # fails whenever it runs before Pages has been switched on for the repo,
       # which is every push made during setup.
+      # The deploy job does not check out the repository, so anything it needs
+      # from the tree has to be handed over as an output.
+      - name: Expose the base pin
+        id: pin
+        run: echo "pin=$(cat base/PIN)" >> "$GITHUB_OUTPUT"
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
@@ -65,7 +73,7 @@ jobs:
       - name: Verify the published site serves this build
         run: |
           url="${{ steps.deployment.outputs.page_url }}"
-          pin=$(cat base/PIN)
+          pin="${{ needs.build.outputs.pin }}"
           echo "verifying $url carries $pin"
           for i in 1 2 3 4 5 6; do
             code=$(curl -sS -H 'Cache-Control: no-cache' -o /tmp/page.html \
