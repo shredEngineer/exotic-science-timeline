@@ -1,6 +1,6 @@
 # Exotic Science Timeline
 
-**Nine centuries of anomaly claims, measured for the first time.**
+**Nine centuries of anomaly claims, graded on a single evidence scale.**
 
 An interactive record of documented claims about anomalous energy, propulsion, gravity, and material effects — from a twelfth-century overbalanced wheel to twenty-first-century precision nulls. Every entry carries a graded evidence coordinate rather than a verdict, and the lines connecting claims to the adversarial examinations that followed them are the point of the whole exhibit.
 
@@ -12,7 +12,7 @@ Published by **Advanced Rediscovery**. Data and classification standard: [EQO](h
 
 Each mark is a dated record. Its position is time, its lane is the class of effect claimed, its colour is the region of the evidence lattice it occupies — a documentation profile, deliberately chosen to carry no valuation. The arcs are **resolution arcs**: they connect a claim to the examination that later tested it.
 
-Two figures fall out of the record and are worth stating plainly. The median interval between a claim and its first documented adversarial examination is **six years**. The self-runner lineage — devices claimed to run without input — is **unbroken from 1150 to the present**, which is a statement about people rather than about physics.
+Two things fall out of the record and are worth stating plainly. The median interval between a claim and its first documented adversarial examination is **six years**. And claims of devices that run without input **recur across the entire nine centuries** — from a twelfth-century mercury wheel to the present, in thirty-seven records with long silences between them — which is a statement about people rather than about physics.
 
 Nothing here asserts that any claimed effect is real, and nothing here asserts that any is fabricated. The record grades how well each claim is documented, on six ordered axes, and lets the reader see which claims share an evidential situation regardless of what they claimed.
 
