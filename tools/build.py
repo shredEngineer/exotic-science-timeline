@@ -16,7 +16,7 @@ tries is a bug, and the build says so rather than silently winning.
 import json, pathlib, shutil, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE = ROOT / "base" / "timeline.json"
+BASE = ROOT / "derived" / "timeline.json"
 OVERLAY = ROOT / "overlay" / "overlay.json"
 TEMPLATE = ROOT / "viewer" / "template.html"
 OUT = ROOT / "dist" / "index.html"
@@ -26,7 +26,7 @@ RESERVED = {"enrichment"}
 
 def main() -> int:
     if not BASE.exists():
-        print(f"missing pinned base: {BASE}", file=sys.stderr)
+        print(f"missing dating layer: {BASE} — run tools/timeline-extract.py", file=sys.stderr)
         return 1
 
     data = json.loads(BASE.read_text())
@@ -64,7 +64,6 @@ def main() -> int:
         return 3
 
     data["enrichment_attached"] = attached
-    data["base_pin"] = (ROOT / "base" / "PIN").read_text().strip() if (ROOT / "base" / "PIN").exists() else "unpinned"
 
     html = TEMPLATE.read_text().replace("__DATA__", json.dumps(data, ensure_ascii=False))
     OUT.parent.mkdir(exist_ok=True)
@@ -85,7 +84,7 @@ def main() -> int:
         (OUT.parent / "CNAME").write_text(cname.read_text())
 
     print(f"built {OUT.relative_to(ROOT)}  "
-          f"events={len(events)}  enrichment_attached={attached}  pin={data['base_pin']}")
+          f"events={len(events)}  enrichment_attached={attached}")
     return 0
 
 

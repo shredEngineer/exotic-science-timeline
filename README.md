@@ -16,23 +16,26 @@ Two things fall out of the record and are worth stating plainly. The median inte
 
 Nothing here asserts that any claimed effect is real, and nothing here asserts that any is fabricated. The record grades how well each claim is documented, on six ordered axes, and lets the reader see which claims share an evidential situation regardless of what they claimed.
 
-## How it is built
+## What is here
 
-```
-EQO repository (pinned)        this repository
-  corpus + dating layer   ──►  base/timeline.json  ┐
-                               overlay/overlay.json ├──►  tools/build.py  ──►  dist/index.html
-                               viewer/template.html ┘
-```
+| Path | What it is |
+|------|-----------|
+| `corpus/` | The record itself — 189 identifiers across four append-only releases, classified per [EQO](https://github.com/shredEngineer/eqo) |
+| `derived/timeline.json` | Normalized dating layer over the corpus: events, resolution arcs, eras, statistics |
+| `overlay/overlay.json` | Enrichment keyed by record identifier, written by the research process rather than by hand |
+| `viewer/` | The page template and its self-hosted assets |
+| `tools/` | `timeline-extract.py` regenerates the dating layer · `check-persons.py` is the publication gate · `build.py` assembles the page |
 
-**The base is pinned, never edited here.** `base/timeline.json` is a copy of the dating layer from a specific commit of the standard's repository; `base/PIN` records exactly which one. Updating the base is a deliberate act with its own commit, so the page can always state which corpus version it is showing.
+The **classification standard** is separate and lives in its own repository. This one owns the data and the publication; that one owns the vocabulary and the rules.
 
-**The overlay is separate on purpose.** `overlay/overlay.json` holds enrichment keyed by record identifier and is rewritten wholesale by the upstream research process. It attaches to records under an `enrichment` key and **never overwrites a base field** — the build refuses rather than letting an overlay silently win, and it refuses again if the overlay references a record the pinned base does not contain, because that means the pin moved and the overlay is stale.
+**The overlay is kept apart on purpose.** It attaches to records under an `enrichment` key and **never overwrites a corpus field** — the build refuses rather than letting an overlay silently win, and refuses again if it references a record the corpus does not contain. Without that separation a hand-edit and a generated write would fight over the same lines, and after the third merge nobody could say which statement came from whom.
 
 Build locally:
 
 ```bash
-python3 tools/build.py     # -> dist/index.html
+python3 tools/timeline-extract.py   # corpus -> derived/timeline.json
+python3 tools/check-persons.py      # publication gate
+python3 tools/build.py              # -> dist/index.html
 ```
 
 The output is a single self-contained file: all data inlined, no runtime fetches, no external dependencies. It works offline and can be archived by saving one file.

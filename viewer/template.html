@@ -23,32 +23,53 @@
   --card:hsl(214 50% 10%); --card-subtle:hsl(214 40% 14%);
   --primary:hsl(21 100% 55%); --secondary:hsl(189 100% 50%);
   --secondary-muted:hsl(189 50% 30%);
-  --muted-foreground:hsl(0 0% 60%);
+  --muted-foreground:hsl(0 0% 60%); --dim:#8899AA;
   --border:hsl(214 30% 18%); --radius:0.5rem;
   --font-heading:"Exo 2",system-ui,sans-serif;
   --font-body:"Source Sans 3",system-ui,sans-serif;
   --font-mono:"Fira Code",ui-monospace,monospace;
 }
 *{box-sizing:border-box;border-color:var(--border)}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scrollbar-color:hsl(214 30% 26%) var(--background);scrollbar-width:thin}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:var(--background)}
+::-webkit-scrollbar-thumb{background:hsl(214 30% 24%);border-radius:99px;border:3px solid var(--background)}
+::-webkit-scrollbar-thumb:hover{background:hsl(189 40% 32%)}
 body{margin:0;background:var(--background);color:var(--foreground);
   font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:var(--font-heading);font-weight:700;line-height:1.15;margin:0}
 a{color:var(--secondary);text-decoration:none}
 a:hover{text-decoration:underline}
 code,.mono{font-family:var(--font-mono);font-size:.85em}
-.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(1rem,3vw,2rem)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(1rem,3vw,2rem)}
 
-.topbar{position:sticky;top:0;z-index:50;background:hsl(216 60% 9.8% / .92);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-.topbar .wrap{display:flex;align-items:center;gap:.75rem;height:56px}
-.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--font-heading);font-weight:700}
-.brand img{width:24px;height:24px;border-radius:4px}
-.brand small{font-family:var(--font-body);font-weight:400;color:var(--muted-foreground);font-size:.8rem}
-.topbar nav{margin-left:auto;display:flex;gap:1.25rem;font-size:.9rem}
-.topbar nav a{color:var(--muted-foreground)}
-.topbar nav a:hover{color:var(--secondary);text-decoration:none}
+/* ---------- header: matches the main site ---------- */
+header.site{position:sticky;top:0;z-index:50;transition:top .3s}
+header.site.scrolled{top:1rem}
+header.site .bar{transition:all .3s;background:hsl(216 60% 9.8% / .8);
+  border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
+header.site.scrolled .bar{margin:0 1rem;border:1px solid var(--border);border-bottom:1px solid var(--border);
+  border-radius:999px;box-shadow:0 10px 30px hsl(216 60% 4% / .5)}
+@media(min-width:768px){header.site.scrolled .bar{margin:0 5rem}}
+header.site nav{display:flex;align-items:center;justify-content:space-between;
+  transition:all .3s;padding:1.5rem 1.5rem 1.4375rem}
+@media(min-width:1024px){header.site nav{padding-left:2rem;padding-right:2rem}}
+header.site.scrolled nav{padding:.75rem .75rem .6875rem}
+@media(min-width:1024px){header.site.scrolled nav{padding-left:1.5rem;padding-right:1.5rem}}
+.hgroup{display:flex;align-items:center;gap:1.5rem}
+.hbrand{display:flex;align-items:center;color:var(--foreground);transition:color .3s}
+.hbrand:hover{color:var(--primary);text-decoration:none}
+.hbrand img{position:relative;left:-7px;border-radius:.5rem;width:40px;height:40px;transition:all .5s}
+header.site.scrolled .hbrand img{width:32px;height:32px}
+.hbrand span{margin-left:.5rem;font-family:var(--font-heading);font-weight:600;
+  line-height:1.5rem;font-size:.875rem;transition:all .3s}
+header.site.scrolled .hbrand span{font-size:.75rem}
+.hnav{display:none;align-items:center;gap:1.5rem;margin-left:1rem;list-style:none;padding:0;margin-block:0}
+@media(min-width:1024px){.hnav{display:flex}}
+.hnav a{font-size:.875rem;font-weight:400;color:var(--foreground);transition:color .3s}
+.hnav a:hover{color:var(--primary);text-decoration:none}
 
+/* ---------- hero ---------- */
 .hero{padding:clamp(2.5rem,6vw,4.5rem) 0 2rem}
 .hero h1{font-size:clamp(2rem,5vw,3.25rem);letter-spacing:-.02em;max-width:22ch}
 .grad{background:linear-gradient(135deg,var(--secondary-muted),var(--secondary));
@@ -57,54 +78,30 @@ code,.mono{font-family:var(--font-mono);font-size:.85em}
 .lede strong{color:var(--foreground)}
 .note{margin-top:1rem;max-width:70ch;color:var(--muted-foreground);font-size:.95rem}
 
-.stats{display:grid;gap:.75rem;margin:2rem 0 0;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.stats{display:grid;gap:.75rem;margin:2rem 0 0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem}
-.stat b{display:block;font-family:var(--font-heading);font-size:1.75rem;color:var(--primary);line-height:1.1}
+.stat b{display:block;font-family:var(--font-heading);font-size:1.7rem;color:var(--primary);line-height:1.1}
+.stat b .sep{color:var(--muted-foreground);font-weight:400;padding:0 .12em}
 .stat span{display:block;margin-top:.25rem;color:var(--muted-foreground);font-size:.85rem}
 
-section{padding:clamp(2rem,5vw,3.5rem) 0;border-top:1px solid var(--border)}
-section.first{border-top:0}
-.sec-head{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;margin-bottom:.5rem}
-.sec-head h2{font-size:clamp(1.35rem,2.6vw,1.85rem)}
-.sec-head p{margin:0;color:var(--muted-foreground);font-size:.95rem}
-.sec-intro{color:var(--muted-foreground);max-width:75ch;margin:.4rem 0 1.5rem}
+/* ---------- sections ---------- */
+section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
+.sec-head{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;margin-bottom:.45rem}
+.sec-head h2{font-size:clamp(1.35rem,2.6vw,1.8rem)}
+.sec-head .srclink{margin-left:auto;font-size:.85rem;color:var(--muted-foreground)}
+.sec-head .srclink:hover{color:var(--secondary)}
+.sec-intro{color:var(--muted-foreground);max-width:78ch;margin:.4rem 0 1.4rem}
 
-.controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
-.controls input[type=search],.controls select{background:var(--card-subtle);color:var(--foreground);
-  border:1px solid var(--border);border-radius:var(--radius);padding:.5rem .7rem;
-  font-family:var(--font-body);font-size:.92rem}
-.controls input[type=search]{min-width:min(320px,100%);flex:1 1 260px}
-.controls select{cursor:pointer}
-.controls input:focus,.controls select:focus{outline:2px solid var(--primary);outline-offset:1px}
-.count{color:var(--muted-foreground);font-size:.9rem;margin-left:auto;white-space:nowrap}
-.btn{background:var(--card-subtle);border:1px solid var(--border);color:var(--foreground);
-  border-radius:var(--radius);padding:.5rem .8rem;font:inherit;font-size:.9rem;cursor:pointer}
-.btn:hover{border-color:var(--secondary-muted)}
+/* method infobox */
+.infobox{display:flex;gap:1rem;align-items:flex-start;background:var(--card);
+  border:1px solid var(--border);border-left:3px solid var(--primary);
+  border-radius:var(--radius);padding:1rem 1.15rem;margin:0 0 1.6rem}
+.infobox .k{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--primary);padding-top:.2rem;white-space:nowrap}
+.infobox p{margin:0;font-size:.94rem;color:hsl(0 0% 84%);max-width:82ch}
+.infobox p + p{margin-top:.4rem}
 
-.tablewrap{border:1px solid var(--border);border-radius:var(--radius);overflow:auto;
-  max-height:78vh;background:var(--card)}
-table{border-collapse:separate;border-spacing:0;width:100%;font-size:.93rem}
-thead th{position:sticky;top:0;z-index:2;background:var(--card-subtle);text-align:left;
-  font-family:var(--font-heading);font-weight:600;font-size:.82rem;letter-spacing:.04em;
-  text-transform:uppercase;color:var(--muted-foreground);padding:.65rem .8rem;
-  border-bottom:1px solid var(--border);white-space:nowrap}
-thead th.sortable{cursor:pointer;user-select:none}
-thead th.sortable:hover{color:var(--secondary)}
-thead th .arrow{opacity:.35;margin-left:.3rem}
-thead th[aria-sort] .arrow{opacity:1;color:var(--primary)}
-tbody td{padding:.6rem .8rem;border-bottom:1px solid hsl(214 30% 18% / .6);vertical-align:top}
-tbody tr:hover{background:hsl(189 100% 50% / .04)}
-tbody tr.open{background:hsl(21 100% 55% / .05)}
-td.year{font-family:var(--font-mono);white-space:nowrap;color:var(--secondary)}
-td.claim{min-width:22ch}
-td.claim .lbl{font-weight:600;cursor:pointer}
-td.claim .lbl:hover{color:var(--secondary)}
-td.who{color:var(--muted-foreground);max-width:26ch}
-.detail td{background:hsl(214 40% 14% / .55);color:hsl(0 0% 85%);font-size:.92rem}
-.detail dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1rem;margin:0}
-.detail dt{color:var(--muted-foreground);font-size:.85rem}
-.detail dd{margin:0}
-
+/* ---------- shared badges (one language, table + legend) ---------- */
 .chip{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.75rem;
   border:1px solid var(--border);background:var(--card-subtle);white-space:nowrap}
 .chip.lane{color:var(--secondary);border-color:hsl(189 50% 30%)}
@@ -116,53 +113,138 @@ td.who{color:var(--muted-foreground);max-width:26ch}
 .ep5{color:hsl(141 60% 58%);border-color:hsl(141 40% 30%)}
 .ep0{color:var(--muted-foreground)}
 .axes{display:inline-flex;gap:2px;font-family:var(--font-mono);font-size:.72rem}
-.ax{width:1.55rem;text-align:center;border-radius:3px;padding:.1rem 0;
+.ax{min-width:1.5rem;text-align:center;border-radius:3px;padding:.1rem .12rem;
   background:var(--card-subtle);border:1px solid var(--border);cursor:help}
 .ax.g0{color:hsl(0 0% 45%)} .ax.g1{color:hsl(21 80% 58%)}
 .ax.g2{color:hsl(45 85% 60%)} .ax.g3{color:hsl(141 55% 58%)}
 .ax.gx{color:hsl(0 0% 38%);font-style:italic}
 
-.legend{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1.25rem}
-.legend div{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem}
-.legend h3{font-size:.95rem;margin-bottom:.4rem;color:var(--primary)}
-.legend p{margin:.15rem 0;font-size:.86rem;color:var(--muted-foreground)}
-.legend b{color:var(--foreground);font-family:var(--font-mono);font-size:.82rem}
+/* ---------- reference tables (same skin as the record) ---------- */
+.ref{width:100%;border-collapse:separate;border-spacing:0;font-size:.9rem;
+  border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.ref caption{caption-side:top;text-align:left;font-family:var(--font-heading);font-weight:600;
+  font-size:.95rem;color:var(--primary);padding:0 0 .45rem}
+.ref th{background:var(--card-subtle);text-align:left;font-family:var(--font-heading);
+  font-weight:600;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted-foreground);padding:.5rem .75rem;border-bottom:1px solid var(--border)}
+.ref td{padding:.45rem .75rem;border-bottom:1px solid hsl(214 30% 18% / .55);vertical-align:top}
+.ref tr:last-child td{border-bottom:0}
+.ref td:first-child{white-space:nowrap;width:1%}
+.reftables{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
 
-.tlwrap{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);
-  padding:1rem;overflow-x:auto}
-.tl{display:block;min-width:900px}
+/* ---------- chart ---------- */
+.chartbox{border:1px solid var(--border);border-radius:var(--radius);background:var(--card);
+  padding:.85rem;margin-bottom:1.25rem}
+.charttools{display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem;flex-wrap:wrap}
+.charttools .hint{color:var(--muted-foreground);font-size:.82rem;margin-left:auto}
+.zbtn{background:var(--card-subtle);border:1px solid var(--border);color:var(--foreground);
+  border-radius:var(--radius);width:2rem;height:2rem;font:inherit;font-size:1rem;cursor:pointer;
+  line-height:1;display:inline-flex;align-items:center;justify-content:center}
+.zbtn:hover{border-color:var(--secondary-muted);color:var(--secondary)}
+.zbtn.wide{width:auto;padding:0 .7rem;font-size:.85rem}
+#tl{display:block;width:100%;touch-action:none;cursor:grab}
+#tl.dragging{cursor:grabbing}
 .tl .era{fill:hsl(214 40% 14% / .45)}
 .tl .eralabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-body)}
 .tl .lanelabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-mono)}
 .tl .gridline{stroke:hsl(214 30% 18% / .8);stroke-width:1}
-.tl .arc{fill:none;stroke:hsl(21 100% 55% / .45);stroke-width:1.2}
-.tl .dot{stroke:hsl(216 60% 9.8%);stroke-width:.75;cursor:pointer}
-.tl .dot:hover{stroke:var(--foreground);stroke-width:1.5}
-.tlnote{color:var(--muted-foreground);font-size:.85rem;margin-top:.6rem}
+.tl .arc{fill:none;stroke:hsl(21 100% 55% / .4);stroke-width:1.1}
+.tl .dot{stroke:hsl(216 60% 9.8%);stroke-width:.8;cursor:pointer}
+.tl .dot:hover{stroke:var(--foreground);stroke-width:2}
 
-footer{border-top:1px solid var(--border);padding:2.5rem 0 3.5rem;
-  color:var(--muted-foreground);font-size:.9rem}
-footer h3{font-family:var(--font-heading);font-size:1rem;color:var(--foreground);margin-bottom:.4rem}
-.fgrid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-footer p{max-width:65ch;margin:.3rem 0}
-.pin{font-family:var(--font-mono);font-size:.78rem;color:hsl(0 0% 45%);margin-top:1.5rem}
-@media (max-width:640px){
-  .topbar nav{display:none}
-  td.who,thead th.who{display:none}
+/* ---------- controls ---------- */
+.controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.9rem}
+.controls input[type=search],.controls select{background:var(--card-subtle);color:var(--foreground);
+  border:1px solid var(--border);border-radius:var(--radius);padding:.5rem .7rem;
+  font-family:var(--font-body);font-size:.92rem}
+.controls input[type=search]{flex:1 1 240px;min-width:0}
+.controls select{cursor:pointer}
+.controls input:focus,.controls select:focus{outline:2px solid var(--primary);outline-offset:1px}
+.count{color:var(--muted-foreground);font-size:.9rem;margin-left:auto;white-space:nowrap}
+.btn{background:var(--card-subtle);border:1px solid var(--border);color:var(--foreground);
+  border-radius:var(--radius);padding:.5rem .8rem;font:inherit;font-size:.9rem;cursor:pointer}
+.btn:hover{border-color:var(--secondary-muted)}
+
+/* ---------- the record table: full width, no horizontal scroll ---------- */
+.recordtable{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;
+  font-size:.93rem;border:1px solid var(--border);border-radius:var(--radius);
+  overflow:hidden;background:var(--card)}
+.recordtable thead th{position:sticky;top:64px;z-index:3;background:var(--card-subtle);
+  text-align:left;font-family:var(--font-heading);font-weight:600;font-size:.74rem;
+  letter-spacing:.05em;text-transform:uppercase;color:var(--muted-foreground);
+  padding:.6rem .7rem;border-bottom:1px solid var(--border)}
+.recordtable thead th.sortable{cursor:pointer;user-select:none}
+.recordtable thead th.sortable:hover{color:var(--secondary)}
+.recordtable th .arrow{opacity:.3;margin-left:.25rem}
+.recordtable th[aria-sort] .arrow{opacity:1;color:var(--primary)}
+.recordtable td{padding:.55rem .7rem;border-bottom:1px solid hsl(214 30% 18% / .55);
+  vertical-align:top;overflow-wrap:anywhere}
+.recordtable tbody tr.row:hover{background:hsl(189 100% 50% / .04);cursor:pointer}
+.recordtable tbody tr.row.open{background:hsl(21 100% 55% / .06)}
+.recordtable tbody tr.row.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%,30%{background:hsl(21 100% 55% / .22)}100%{background:transparent}}
+td.tw{text-align:center;color:var(--muted-foreground);padding-left:.4rem;padding-right:.2rem}
+td.tw .tri{display:inline-block;transition:transform .16s}
+tr.row.open td.tw .tri{transform:rotate(90deg);color:var(--primary)}
+td.yr{font-family:var(--font-mono);color:var(--secondary);text-align:right;white-space:nowrap}
+td.claim{font-weight:600}
+td.who{color:var(--muted-foreground)}
+.detail td{background:hsl(214 40% 14% / .5);color:hsl(0 0% 85%);font-size:.92rem}
+.detail dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.1rem;margin:0}
+.detail dt{color:var(--muted-foreground);font-size:.85rem}
+.detail dd{margin:0;overflow-wrap:anywhere}
+@media(max-width:900px){
+  .recordtable col.c-who,.recordtable col.c-lane{width:0}
+  .recordtable td.who,.recordtable th.who,
+  .recordtable td.lane,.recordtable th.lane{display:none}
 }
+
+/* ---------- footer: matches the main site ---------- */
+footer.site{border-top:1px solid hsl(0 0% 100% / .1);padding:4rem 1.5rem 3rem;margin-top:1rem}
+footer.site .inner{max-width:72rem;margin:0 auto}
+.fhead{display:flex;flex-direction:column;align-items:center;gap:1rem;text-align:center;margin-bottom:2.5rem}
+.fhead .name{font-family:var(--font-heading);font-size:1.125rem;font-weight:600;
+  letter-spacing:.02em;color:#fff;margin:0}
+.fhead .tag{max-width:42rem;font-size:.875rem;line-height:1.75rem;color:var(--dim);margin:0}
+.fdonate{display:flex;justify-content:center;margin-bottom:2.5rem}
+.fdonate a{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;
+  border:1px solid hsl(21 100% 55% / .3);background:hsl(0 0% 100% / .03);
+  padding:.5rem 1rem;font-size:.875rem;color:var(--primary);transition:all .2s}
+.fdonate a:hover{border-color:hsl(0 0% 100% / .4);color:#fff;text-decoration:none}
+.fdonate svg{width:1rem;height:1rem;fill:currentColor}
+.fsocial{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:1rem 1.25rem;margin-bottom:2rem}
+.fsocial a{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;
+  color:var(--dim);transition:color .2s}
+.fsocial a:hover{color:#00D9FF;text-decoration:none}
+.fsocial svg{width:1.25rem;height:1.25rem;fill:currentColor}
+@media(max-width:640px){.fsocial a span{display:none}}
+.fdisclaim{max-width:42rem;margin:0 auto 1.5rem;text-align:center;font-size:.75rem;
+  line-height:1.6;color:hsl(210 15% 60% / .55)}
+.flegal{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;
+  font-size:.75rem;color:var(--dim)}
+.flegal a{color:var(--dim);transition:color .2s}
+.flegal a:hover{color:#00D9FF;text-decoration:none}
+.pin{font-family:var(--font-mono);font-size:.72rem;color:hsl(0 0% 38%);
+  text-align:center;margin-top:1.75rem}
 </style>
 </head>
 <body>
 
-<div class="topbar"><div class="wrap">
-  <span class="brand"><img src="assets/icon-192.png" alt="">Advanced&nbsp;Rediscovery <small>· Exotic Science Timeline</small></span>
-  <nav>
-    <a href="#record">The record</a>
-    <a href="#reading">How to read it</a>
-    <a href="#chart">Chart</a>
-    <a href="#about">About</a>
-  </nav>
-</div></div>
+<header class="site" id="hdr"><div class="bar"><nav aria-label="Global">
+  <div class="hgroup">
+    <a class="hbrand" href="https://advanced-rediscovery.com">
+      <img src="assets/logo.webp" alt="Advanced Rediscovery" width="40" height="40">
+      <span>Advanced Rediscovery</span>
+    </a>
+    <ul class="hnav">
+      <li><a href="https://news.advanced-rediscovery.com/" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
+      <li><a href="https://advanced-rediscovery.com/research">Research</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#record">The record</a></li>
+    </ul>
+  </div>
+</nav></div></header>
 
 <div class="wrap">
 
@@ -173,11 +255,47 @@ footer p{max-width:65ch;margin:.3rem 0}
   <div class="stats" id="stats"></div>
 </div>
 
-<section class="first" id="record">
-  <div class="sec-head">
-    <h2>The record</h2>
-    <p>Newest first. Click any entry to expand it.</p>
+<section id="method">
+  <div class="sec-head"><h2>The method, before the data</h2>
+    <a class="srclink" href="https://github.com/shredEngineer/eqo">Standard repository ↗</a></div>
+
+  <div class="infobox">
+    <span class="k">EQO</span>
+    <div>
+      <p><strong>Epistemic Quantization of Observables</strong> is the open classification standard this record is built on. It gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases use the same vocabulary, and the standard forbids itself a credibility score: it assigns coordinates, never verdicts.</p>
+      <p><em>Quantization</em> here means discretization onto a finite lattice, as in signal processing — not quantum mechanics; an <em>observable</em> is a documented observation, not an operator.</p>
+    </div>
   </div>
+
+  <p class="sec-intro">The grades below describe the <em>documentation</em>, never the truth of a claim. A carefully measured result nobody could reproduce and a vague anecdote look different here, which is the entire point.</p>
+
+  <div class="reftables">
+    <table class="ref"><caption>The six evidence axes</caption>
+      <thead><tr><th>Axis</th><th>What it grades</th></tr></thead>
+      <tbody id="axtable"></tbody>
+    </table>
+    <table class="ref"><caption>Evidence profiles</caption>
+      <thead><tr><th>Profile</th><th>Meaning</th></tr></thead>
+      <tbody id="eptable"></tbody>
+    </table>
+  </div>
+  <p class="note" style="margin-top:1.1rem"><b class="mono">x</b> means not assessed — which is <em>not</em> a zero. Unexamined and poorly evidenced are different things, and conflating them would be the easiest way to lie with this table. <b class="mono">T0</b> is the anomaly test: no established mechanism on record, which is a property of the documentation rather than a verdict about reality.</p>
+</section>
+
+<section id="record">
+  <div class="sec-head"><h2>The record</h2>
+    <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline">Data and build ↗</a></div>
+
+  <div class="chartbox">
+    <div class="charttools">
+      <button class="zbtn" id="zin" title="Zoom in" aria-label="Zoom in">+</button>
+      <button class="zbtn" id="zout" title="Zoom out" aria-label="Zoom out">−</button>
+      <button class="zbtn wide" id="zreset">Reset</button>
+      <span class="hint">Scroll to zoom · drag to pan · click a mark to jump to its entry</span>
+    </div>
+    <svg class="tl" id="tl" role="img" aria-label="Timeline of anomaly claims by era and effect class"></svg>
+  </div>
+
   <div class="controls">
     <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off">
     <select id="fLane"><option value="">All classes</option></select>
@@ -186,79 +304,79 @@ footer p{max-width:65ch;margin:.3rem 0}
     <button class="btn" id="reset">Reset</button>
     <span class="count" id="count"></span>
   </div>
-  <div class="tablewrap">
-    <table id="tbl">
-      <thead><tr>
-        <th class="sortable" data-k="t_start" aria-sort="descending">Date<span class="arrow">▼</span></th>
-        <th class="sortable" data-k="label">Claim<span class="arrow">▼</span></th>
-        <th class="sortable who" data-k="principals">Who<span class="arrow">▼</span></th>
-        <th class="sortable" data-k="lane">Class<span class="arrow">▼</span></th>
-        <th>Evidence</th>
-        <th class="sortable" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
-      </tr></thead>
-      <tbody id="tb"></tbody>
-    </table>
-  </div>
-</section>
 
-<section id="reading">
-  <div class="sec-head"><h2>How to read an entry</h2></div>
-  <p class="sec-intro">Every entry is graded on six ordered axes. The grades describe the <em>documentation</em>, never the truth of the claim — a carefully measured result nobody could reproduce and a vague anecdote look different here, which is the entire point.</p>
-  <div class="legend">
-    <div><h3>The six axes</h3>
-      <p><b>D</b> Documentation — second-hand account through peer-reviewed paper</p>
-      <p><b>R</b> Replication — never attempted through independently reproduced</p>
-      <p><b>C</b> Controls — none through a full energy balance</p>
-      <p><b>P</b> Provenance — anonymous through adversarial examination on record</p>
-      <p><b>T</b> Theory — whether an established mechanism explains it</p>
-      <p><b>Q</b> Quantification — qualitative through measured with uncertainty</p>
-    </div>
-    <div><h3>Reading the grades</h3>
-      <p>Higher means better documented. <b>x</b> means not assessed — which is <em>not</em> a zero: unexamined and poorly evidenced are different things, and conflating them would be the easiest way to lie with this table.</p>
-      <p><b>T</b> is the anomaly test. A zero means no established mechanism is on record — a property of the documentation, not a verdict about reality.</p>
-    </div>
-    <div><h3>Evidence profiles</h3>
-      <p><b>EP-1</b> solitary — one source, no controls</p>
-      <p><b>EP-2</b> demonstrative — public demo, no data</p>
-      <p><b>EP-3</b> lab-contested — measured and disputed</p>
-      <p><b>EP-4</b> historical-anecdotal</p>
-      <p><b>EP-5</b> orthodox-covered — explained by established physics</p>
-    </div>
-  </div>
-</section>
-
-<section id="chart">
-  <div class="sec-head"><h2>The same record, in time</h2>
-    <p>Orange arcs connect a claim to the examination that tested it.</p></div>
-  <p class="sec-intro">Each mark is one entry, placed by date and grouped by the class of effect claimed. Eras are drawn to equal width rather than to scale, so the sparse early centuries stay legible beside the crowded modern ones.</p>
-  <div class="tlwrap"><svg class="tl" id="tl" role="img" aria-label="Timeline of anomaly claims by era and effect class"></svg></div>
-  <p class="tlnote" id="tlnote"></p>
+  <table class="recordtable" id="tbl">
+    <colgroup>
+      <col style="width:2.2rem"><col style="width:4.5rem"><col>
+      <col class="c-who" style="width:20%"><col class="c-lane" style="width:9rem">
+      <col style="width:9.5rem"><col style="width:5rem">
+    </colgroup>
+    <thead><tr>
+      <th></th>
+      <th class="sortable" data-k="t_start" aria-sort="descending">Year<span class="arrow">▼</span></th>
+      <th class="sortable" data-k="label">Claim<span class="arrow">▼</span></th>
+      <th class="sortable who" data-k="principals">Who<span class="arrow">▼</span></th>
+      <th class="sortable lane" data-k="lane">Class<span class="arrow">▼</span></th>
+      <th>Evidence</th>
+      <th class="sortable" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
+    </tr></thead>
+    <tbody id="tb"></tbody>
+  </table>
 </section>
 
 <section id="about">
   <div class="sec-head"><h2>About this record</h2></div>
-  <p class="sec-intro">The classification standard behind it — the registries, the axis definitions and the corpus itself — is public and kept separate from this page: <a href="https://github.com/shredEngineer/eqo">EQO, Epistemic Quantization of Observables</a>. <em>Quantization</em> there means discretization onto a finite lattice, as in signal processing; it is not a quantum-mechanical term, and an <em>observable</em> is a documented observation rather than an operator.</p>
-  <div class="legend">
-    <div><h3>Provenance, stated up front</h3>
-      <p>The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</p></div>
-    <div><h3>Named people</h3>
-      <p>Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</p></div>
-    <div><h3>Licence</h3>
-      <p>Content and data: CC BY 4.0. Code: Apache-2.0.<br>Attribute as: Dr.-Ing. Paul Wilhelm / Advanced Rediscovery, <em>Exotic Science Timeline</em>, CC BY 4.0.</p>
-      <p><a href="https://github.com/shredEngineer/exotic-science-timeline">Source and build</a></p></div>
+  <div class="reftables">
+    <table class="ref"><caption>Provenance, stated up front</caption><tbody>
+      <tr><td colspan="2">The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</td></tr>
+    </tbody></table>
+    <table class="ref"><caption>Named people</caption><tbody>
+      <tr><td colspan="2">Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</td></tr>
+    </tbody></table>
+    <table class="ref"><caption>Licence</caption><tbody>
+      <tr><td>Content and data</td><td>CC BY 4.0</td></tr>
+      <tr><td>Code</td><td>Apache-2.0</td></tr>
+      <tr><td>Attribution</td><td>Dr.-Ing. Paul Wilhelm / Advanced Rediscovery, <em>Exotic Science Timeline</em>, CC BY 4.0</td></tr>
+    </tbody></table>
   </div>
 </section>
 
-<footer><div class="fgrid">
-  <div><h3>Advanced Rediscovery</h3>
-    <p>Independent deep-tech research. <a href="https://advanced-rediscovery.com">advanced-rediscovery.com</a></p></div>
-  <div><h3>The standard</h3>
-    <p>Open, append-only, community-governed. <a href="https://github.com/shredEngineer/eqo">github.com/shredEngineer/eqo</a></p></div>
 </div>
-<p class="pin" id="pin"></p>
-</footer>
 
-</div>
+<footer class="site"><div class="inner">
+  <div class="fhead">
+    <p class="name">Advanced Rediscovery</p>
+    <p class="tag">The physics that textbooks skip.</p>
+  </div>
+
+  <div class="fdonate">
+    <a href="https://www.paypal.com/donate/?hosted_button_id=HW5F2W8N2AU3L" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24"><path d="M7.076 21.337H2.47a.641.641 0 01-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797H9.603c-.564 0-1.04.408-1.13.964L7.076 21.337z"/><path opacity=".7" d="M18.429 7.462c-.024.166-.054.333-.09.51-1.149 5.902-5.083 7.937-10.108 7.937h-2.56a1.269 1.269 0 00-1.254 1.072L2.89 24h3.61a1.112 1.112 0 001.098-.913l.045-.24.87-5.52.056-.306a1.112 1.112 0 011.098-.914h.691c4.478 0 7.985-1.818 9.009-7.085.428-2.2.206-4.037-.938-5.56z"/></svg>
+      Donate via PayPal
+    </a>
+  </div>
+
+  <div class="fsocial">
+    <a href="https://x.com/drxwilhelm" target="_blank" rel="noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span>X</span></a>
+    <a href="https://news.advanced-rediscovery.com/" target="_blank" rel="noopener noreferrer" aria-label="Substack"><svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24l9.56-5.39L20.539 24V10.812H1.46zm0-7.835h21.08V0H1.46v2.977z"/></svg><span>Substack</span></a>
+    <a href="https://www.linkedin.com/company/advanced-rediscovery/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
+    <a href="https://github.com/shredEngineer" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>GitHub</span></a>
+    <a href="https://www.youtube.com/@drxwilhelm" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>YouTube</span></a>
+    <a href="https://independent.academia.edu/PaulWilhelm1" target="_blank" rel="noopener noreferrer" aria-label="Academia.edu"><svg viewBox="0 0 24 24"><path d="M22.033 21.18L13.77.459H7.869l1.049 2.623L1.836 21.18C1.574 22.098.787 22.23 0 22.361v1.18h6.82v-1.18C4.984 22.23 3.934 21.967 4.721 20c.131-.131.656-1.574 1.311-3.41h8.393l1.18 3.016c.131.525.262.918.262 1.311 0 1.049-.918 1.443-2.623 1.443v1.18H24v-1.18c-.918-.13-1.705-.393-1.967-1.18zM6.82 14.361a363.303 363.303 0 0 0 3.279-8.525l3.41 8.525H6.82z"/></svg><span>Academia.edu</span></a>
+    <a href="https://zenodo.org/communities/advanced-rediscovery" target="_blank" rel="noopener noreferrer" aria-label="Zenodo"><svg viewBox="0 0 51.046 51.046"><path transform="translate(20.35 -4.735)" d="m 28.324,20.044 c -0.043,-0.106 -0.084,-0.214 -0.131,-0.32 -0.707,-1.602 -1.656,-2.997 -2.848,-4.19 -1.188,-1.187 -2.582,-2.125 -4.184,-2.805 -1.605,-0.678 -3.309,-1.02 -5.104,-1.02 -1.85,0 -3.564,0.342 -5.137,1.02 -1.467,0.628 -2.764,1.488 -3.91,2.552 V 14.84 c 0,-1.557 -1.262,-2.822 -2.82,-2.822 h -19.775 c -1.557,0 -2.82,1.265 -2.82,2.822 0,1.559 1.264,2.82 2.82,2.82 h 15.541 l -18.23,24.546 c -0.362,0.487 -0.557,1.077 -0.557,1.682 v 1.841 c 0,1.558 1.264,2.822 2.822,2.822 H 5.038 c 1.488,0 2.705,-1.153 2.812,-2.614 0.932,0.743 1.967,1.364 3.109,1.848 1.605,0.684 3.299,1.021 5.102,1.021 2.723,0 5.15,-0.726 7.287,-2.187 1.727,-1.176 3.092,-2.639 4.084,-4.389 0.833,-1.472 1.418,-2.633 1.222,-3.729 -0.173,-0.965 -0.695,-1.946 -2.327,-2.378 -0.58,0 -1.376,0.175 -1.833,0.493 -0.463,0.316 -0.793,0.744 -0.982,1.275 l -0.453,0.93 c -0.631,1.365 -1.566,2.443 -2.809,3.244 -1.238,0.803 -2.633,1.201 -4.188,1.201 -1.023,0 -2.004,-0.191 -2.955,-0.579 -0.941,-0.39 -1.758,-0.935 -2.439,-1.64 -0.481,-0.508 -1.026,-1.325 -1.44,-2.248 -0.41,-0.924 -0.617,-1.893 -0.617,-2.916 v -2.476 h 17.715 c 0,0 1.518,-0.155 2.183,-0.771 0.959,-0.887 0.865,-2.15 0.865,-2.15 0,0 -0.044,-5.067 -0.339,-7.578 -0.106,-0.9 -0.51,-2.668 -0.51,-2.668 Z M -11.767,42.91 2.991,23.036 C 2.913,23.623 2.87,24.22 2.87,24.827 v 10.86 c 0,1.799 0.35,3.498 1.059,5.104 0.328,0.752 0.719,1.458 1.156,2.119 H -11.767 Z M 23.71,27.667 H 8.409 v -2.841 c 0,-1.015 0.189,-1.99 0.58,-2.912 0.391,-0.922 0.936,-1.74 1.645,-2.444 0.697,-0.703 1.516,-1.249 2.438,-1.641 0.922,-0.388 1.92,-0.581 2.99,-0.581 1.02,0 2.002,0.193 2.949,0.581 0.949,0.393 1.764,0.938 2.441,1.641 0.682,0.704 1.225,1.521 1.641,2.444 0.414,0.922 0.617,1.896 0.617,2.912 z"/></svg><span>Zenodo</span></a>
+  </div>
+
+  <p class="fdisclaim">The research presented here operates at the boundary of established physics — where rigor matters most. All claims are grounded in cited sources and mathematical derivation. Nothing here should be taken as engineering specification for experimental replication.</p>
+
+  <div class="flegal">
+    <a href="https://advanced-rediscovery.com/legal-notice">Legal Notice</a>
+    <span>·</span>
+    <a href="https://advanced-rediscovery.com/privacy-policy">Privacy Policy</a>
+    <span>·</span>
+    <span>No cookies, no tracking on this page</span>
+  </div>
+  <p class="pin" id="pin"></p>
+</div></footer>
 
 <script>
 const DATA = __DATA__;
@@ -270,174 +388,244 @@ const KIND = {observation:"Observation",demonstration_claim:"Demonstration",
   design_description:"Design description",analysis:"Analysis",doctrine:"Doctrine",narrative:"Narrative"};
 const AXNAME = {D:"Documentation",R:"Replication",C:"Controls",P:"Provenance",T:"Theory embedding",Q:"Quantification"};
 const AXMAX  = {D:7,R:5,C:5,P:4,T:4,Q:3};
+const AXDESC = {D:"How the observation is recorded — second-hand account through peer-reviewed paper",
+  R:"Whether anyone reproduced it — never attempted through independently documented",
+  C:"What was controlled for — none through a full energy balance",
+  P:"Who documented it — anonymous through adversarial examination on record",
+  T:"Whether an established mechanism explains it — none on record through established and claimed",
+  Q:"How it was measured — qualitative through quantitative with uncertainty"};
+const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
+  "EP-3":"Lab-contested — measured and disputed","EP-4":"Historical-anecdotal",
+  "EP-5":"Orthodox-covered — explained by established physics","EP-0":"Unquantized — not yet assessed"};
 
 const ev = DATA.events.slice();
 const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const axCls=(k,v)=>{ if(v==="x") return "gx"; const r=+v/AXMAX[k];
+  return r>=.7?"g3":r>=.4?"g2":r>0?"g1":"g0"; };
 
+/* header shrink, matching the main site */
+const hdr=document.getElementById("hdr");
+addEventListener("scroll",()=>hdr.classList.toggle("scrolled",scrollY>0),{passive:true});
+
+/* ---------- stats ---------- */
 (function(){
-  const s = DATA.stats||{}, eras = DATA.eras||[];
-  const items = [
-    [s.observation_events ?? ev.length, "documented reports"],
-    [eras.length ? eras[0][0]+"–"+eras[eras.length-1][1] : "—", "years covered"],
-    [s.median_adversarial_lag_years ?? "—", "median years to examination"],
-    [s.contradiction_arcs ?? 0, "examinations that contradicted"]
+  const s=DATA.stats||{}, eras=DATA.eras||[];
+  const range = eras.length
+    ? eras[0][0]+'<span class="sep"> … </span>'+eras[eras.length-1][1] : "—";
+  const items=[
+    [esc(s.observation_events ?? ev.length),"documented reports"],
+    [range,"years covered"],
+    [esc(s.median_adversarial_lag_years ?? "—"),"median years to examination"],
+    [esc(s.contradiction_arcs ?? 0),"examinations that contradicted"]
   ];
   document.getElementById("stats").innerHTML =
-    items.map(([v,l])=>`<div class="stat"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
+    items.map(([v,l])=>'<div class="stat"><b>'+v+'</b><span>'+esc(l)+"</span></div>").join("");
   document.getElementById("pin").textContent =
-    (DATA.renders_corpus||"corpus")+" · pinned at "+(DATA.base_pin||"unpinned")+
+    (DATA.renders_corpus||"corpus")+
     (DATA.enrichment_attached ? " · "+DATA.enrichment_attached+" entries enriched" : "");
 })();
 
-function fill(sel, vals, fmt){
-  const el = document.getElementById(sel);
-  vals.forEach(v => { const o=document.createElement("option"); o.value=v; o.textContent=fmt(v); el.appendChild(o); });
-}
-fill("fLane", [...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)), v=>LANE[v]||v);
-fill("fEp",   [...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(), v=>v);
-fill("fKind", [...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort(), v=>KIND[v]||v);
+/* ---------- reference tables use the record's own badges ---------- */
+document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
+  const demo='<span class="axes"><span class="ax '+axCls(k,String(AXMAX[k]))+'">'+k+AXMAX[k]+"</span></span>";
+  return "<tr><td>"+demo+" <span class='mono' style='color:var(--muted-foreground)'>"+esc(AXNAME[k])+
+    "</span></td><td>"+esc(AXDESC[k])+"</td></tr>";
+}).join("");
+document.getElementById("eptable").innerHTML = Object.keys(EPDESC).sort().map(ep=>
+  '<tr><td><span class="chip ep '+ep.replace("-","").toLowerCase()+'">'+esc(ep)+
+  "</span></td><td>"+esc(EPDESC[ep])+"</td></tr>").join("");
 
-let sortKey="t_start", sortDir=-1;
+/* ---------- filters ---------- */
+function fill(sel,vals,fmt){const el=document.getElementById(sel);
+  vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=fmt(v);el.appendChild(o);});}
+fill("fLane",[...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)),v=>LANE[v]||v);
+fill("fEp",[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(),v=>v);
+fill("fKind",[...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort(),v=>KIND[v]||v);
+
+let sortKey="t_start", sortDir=-1, shown=[];
 
 function axes(sig){
-  if(!sig) return '<span class="chip ep0">not assessed</span>';
-  const m = /^E1:D(.)R(.)C(.)P(.)T(.)Q(.)$/.exec(sig);
-  if(!m) return '<span class="mono">'+esc(sig)+'</span>';
-  return '<span class="axes">' + "DRCPTQ".split("").map((k,i)=>{
-    const v = m[i+1];
-    let cls;
-    if(v==="x") cls="gx";
-    else { const r=+v/AXMAX[k]; cls = r>=.7?"g3":r>=.4?"g2":r>0?"g1":"g0"; }
-    const t = v==="x" ? "not assessed" : v+" of "+AXMAX[k];
-    return '<span class="ax '+cls+'" title="'+AXNAME[k]+': '+t+'">'+k+v+'</span>';
-  }).join("") + "</span>";
+  if(!sig) return '<span class="chip ep0">—</span>';
+  const m=/^E1:D(.)R(.)C(.)P(.)T(.)Q(.)$/.exec(sig);
+  if(!m) return '<span class="mono">'+esc(sig)+"</span>";
+  return '<span class="axes">'+"DRCPTQ".split("").map((k,i)=>{
+    const v=m[i+1], t = v==="x" ? "not assessed" : v+" of "+AXMAX[k];
+    return '<span class="ax '+axCls(k,v)+'" title="'+AXNAME[k]+": "+t+'">'+k+v+"</span>";
+  }).join("")+"</span>";
 }
 
 function rows(list){
-  document.getElementById("tb").innerHTML = list.map(e=>{
+  shown=list;
+  document.getElementById("tb").innerHTML=list.map(e=>{
     const ep=(e.epistemotype||"EP-0").replace("-","").toLowerCase();
-    return '<tr data-id="'+esc(e.id)+'">'+
-      '<td class="year">'+esc(e.years_raw||e.t_start)+'</td>'+
-      '<td class="claim"><span class="lbl">'+esc(e.label)+'</span></td>'+
-      '<td class="who">'+esc(e.principals||"—")+'</td>'+
-      '<td><span class="chip lane">'+esc(LANE[e.lane]||e.lane)+'</span></td>'+
-      '<td>'+axes(e.e_signature)+'</td>'+
-      '<td><span class="chip ep '+esc(ep)+'">'+esc(e.epistemotype||"—")+'</span></td></tr>';
+    return '<tr class="row" id="r-'+esc(e.id).replace(/[^a-zA-Z0-9-]/g,"_")+'" data-id="'+esc(e.id)+'">'+
+      '<td class="tw"><span class="tri">▸</span></td>'+
+      '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
+      '<td class="claim">'+esc(e.label)+"</td>"+
+      '<td class="who">'+esc(e.principals||"—")+"</td>"+
+      '<td class="lane"><span class="chip lane">'+esc(LANE[e.lane]||e.lane)+"</span></td>"+
+      "<td>"+axes(e.e_signature)+"</td>"+
+      '<td><span class="chip ep '+ep+'">'+esc(e.epistemotype||"—")+"</span></td></tr>";
   }).join("");
-  document.getElementById("count").textContent = list.length+" of "+ev.length+" entries";
+  document.getElementById("count").textContent=list.length+" of "+ev.length+" entries";
 }
 
 function apply(){
   const q=document.getElementById("q").value.trim().toLowerCase();
-  const fl=document.getElementById("fLane").value, fe=document.getElementById("fEp").value,
+  const fl=document.getElementById("fLane").value,fe=document.getElementById("fEp").value,
         fk=document.getElementById("fKind").value;
-  const list = ev.filter(e=>{
-    if(fl && e.lane!==fl) return false;
-    if(fe && e.epistemotype!==fe) return false;
-    if(fk && e.record_kind!==fk) return false;
-    if(q){ const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")).toLowerCase();
-      if(hay.indexOf(q)===-1) return false; }
+  const list=ev.filter(e=>{
+    if(fl&&e.lane!==fl) return false;
+    if(fe&&e.epistemotype!==fe) return false;
+    if(fk&&e.record_kind!==fk) return false;
+    if(q){const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")).toLowerCase();
+      if(hay.indexOf(q)===-1) return false;}
     return true;
   });
-  list.sort((a,b)=>{
-    if(sortKey==="t_start") return ((a.t_start??0)-(b.t_start??0))*sortDir;
-    return String(a[sortKey]??"").localeCompare(String(b[sortKey]??""))*sortDir;
-  });
+  list.sort((a,b)=> sortKey==="t_start"
+    ? ((a.t_start??0)-(b.t_start??0))*sortDir
+    : String(a[sortKey]??"").localeCompare(String(b[sortKey]??""))*sortDir);
   rows(list);
 }
 
 document.querySelectorAll("th.sortable").forEach(th=>{
   th.addEventListener("click",()=>{
     const k=th.dataset.k;
-    if(k===sortKey) sortDir=-sortDir; else { sortKey=k; sortDir = k==="t_start" ? -1 : 1; }
+    if(k===sortKey) sortDir=-sortDir; else {sortKey=k; sortDir = k==="t_start"?-1:1;}
     document.querySelectorAll("th.sortable").forEach(o=>{o.removeAttribute("aria-sort");
       const a=o.querySelector(".arrow"); if(a) a.textContent="▼";});
-    th.setAttribute("aria-sort", sortDir===1?"ascending":"descending");
-    th.querySelector(".arrow").textContent = sortDir===1?"▲":"▼";
+    th.setAttribute("aria-sort",sortDir===1?"ascending":"descending");
+    th.querySelector(".arrow").textContent=sortDir===1?"▲":"▼";
     apply();
   });
 });
-["q","fLane","fEp","fKind"].forEach(id=>{
-  document.getElementById(id).addEventListener(id==="q"?"input":"change", apply);
-});
+["q","fLane","fEp","fKind"].forEach(id=>
+  document.getElementById(id).addEventListener(id==="q"?"input":"change",apply));
 document.getElementById("reset").addEventListener("click",()=>{
   document.getElementById("q").value="";
   ["fLane","fEp","fKind"].forEach(i=>document.getElementById(i).value="");
   apply();
 });
 
-document.getElementById("tb").addEventListener("click", e=>{
-  const tr = e.target.closest("tr[data-id]"); if(!tr) return;
-  const nxt = tr.nextElementSibling;
-  if(nxt && nxt.classList.contains("detail")){ nxt.remove(); tr.classList.remove("open"); return; }
+function expand(tr){
+  const nxt=tr.nextElementSibling;
+  if(nxt&&nxt.classList.contains("detail")){nxt.remove();tr.classList.remove("open");return;}
   document.querySelectorAll("tr.detail").forEach(d=>d.remove());
-  document.querySelectorAll("tr.open").forEach(o=>o.classList.remove("open"));
-  const d = ev.find(x=>x.id===tr.dataset.id); if(!d) return;
+  document.querySelectorAll("tr.row.open").forEach(o=>o.classList.remove("open"));
+  const d=ev.find(x=>x.id===tr.dataset.id); if(!d) return;
   tr.classList.add("open");
-  const rel = (DATA.arcs||[]).filter(a=>a.source===d.id||a.target===d.id);
-  const relHtml = rel.length ? rel.map(a=>{
-    const oid = a.source===d.id ? a.target : a.source;
-    const other = ev.find(x=>x.id===oid);
-    return esc(a.type)+" → "+esc(other?other.label:oid);
-  }).join("<br>") : "none recorded";
-  const enr = d.enrichment ? "<dt>Added context</dt><dd>"+esc(JSON.stringify(d.enrichment))+"</dd>" : "";
-  const row = document.createElement("tr");
+  const rel=(DATA.arcs||[]).filter(a=>a.source===d.id||a.target===d.id);
+  const relHtml=rel.length?rel.map(a=>{const oid=a.source===d.id?a.target:a.source;
+    const o=ev.find(x=>x.id===oid); return esc(a.type)+" → "+esc(o?o.label:oid);}).join("<br>"):"none recorded";
+  const refs=(d.refs&&d.refs.length)?d.refs.map(esc).join("<br>"):"none cited";
+  const row=document.createElement("tr");
   row.className="detail";
-  row.innerHTML = '<td colspan="6"><dl>'+
+  row.innerHTML='<td colspan="7"><dl>'+
     "<dt>What is recorded</dt><dd>"+esc(d.note||"—")+"</dd>"+
+    "<dt>Dated as</dt><dd>"+esc(d.years_raw||d.t_start||"—")+"</dd>"+
     "<dt>Entry type</dt><dd>"+esc(KIND[d.record_kind]||d.record_kind||"—")+"</dd>"+
-    "<dt>Compiler confidence</dt><dd>"+esc(d.confidence||"—")+" — how reliable the compiler's recall of names and dates is, kept separate from the evidence grades</dd>"+
+    "<dt>Compiler confidence</dt><dd>"+esc(d.confidence||"—")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades</dd>"+
+    "<dt>References</dt><dd>"+refs+"</dd>"+
     "<dt>Patterns</dt><dd>"+((d.signatures&&d.signatures.length)?d.signatures.map(esc).join(", "):"—")+"</dd>"+
     "<dt>Linked records</dt><dd>"+relHtml+"</dd>"+
-    "<dt>Identifier</dt><dd><code>"+esc(d.id)+"</code></dd>"+enr+"</dl></td>";
+    "<dt>Identifier</dt><dd><code>"+esc(d.id)+"</code></dd>"+
+    (d.enrichment?"<dt>Added context</dt><dd>"+esc(JSON.stringify(d.enrichment))+"</dd>":"")+
+    "</dl></td>";
   tr.after(row);
+}
+document.getElementById("tb").addEventListener("click",e=>{
+  const tr=e.target.closest("tr.row"); if(tr) expand(tr);
 });
 
 apply();
 
-function drawTimeline(){
-  const svg=document.getElementById("tl");
-  const eras=DATA.eras||[];
-  const lanes=[...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
-  const W=1180, L=132, R=16, T=34, rowH=22, H=T+lanes.length*rowH+26;
-  const bandW=(W-L-R)/Math.max(eras.length,1);
-  const xOf=y=>{
-    for(let i=0;i<eras.length;i++){
-      const a=eras[i][0], b=eras[i][1];
-      if(y>=a&&y<b) return L+i*bandW+((y-a)/(b-a))*bandW;
-    }
-    return (eras.length && y<eras[0][0]) ? L : W-R;
-  };
-  const yOf=l=>T+lanes.indexOf(l)*rowH+rowH/2;
-  const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",
-    "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
+/* ---------- chart: zoomable, pannable, clickable ---------- */
+const svg=document.getElementById("tl");
+const eras=DATA.eras||[];
+const lanes=[...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
+const W=1180, L=136, R=18, T=36, rowH=21, H=T+lanes.length*rowH+24;
+const bandW=(W-L-R)/Math.max(eras.length,1);
+const xOf=y=>{
+  for(let i=0;i<eras.length;i++){const a=eras[i][0],b=eras[i][1];
+    if(y>=a&&y<b) return L+i*bandW+((y-a)/(b-a))*bandW;}
+  return (eras.length&&y<eras[0][0])?L:W-R;
+};
+const yOf=l=>T+lanes.indexOf(l)*rowH+rowH/2;
+const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",
+  "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
+let view={x:0,w:W};
+
+function paint(){
+  const k=W/view.w, r=Math.min(9,Math.max(3.4,3.4*Math.sqrt(k)));
   let s="";
   eras.forEach((e,i)=>{
-    if(i%2===0) s+='<rect class="era" x="'+(L+i*bandW)+'" y="'+(T-14)+'" width="'+bandW+'" height="'+(H-T-6)+'"/>';
-    s+='<text class="eralabel" x="'+(L+i*bandW+6)+'" y="'+(T-20)+'">'+esc(e[2])+" · "+e[0]+"–"+e[1]+"</text>";
+    if(i%2===0) s+='<rect class="era" x="'+(L+i*bandW)+'" y="'+(T-15)+'" width="'+bandW+'" height="'+(H-T-4)+'"/>';
+    s+='<text class="eralabel" x="'+(L+i*bandW+6)+'" y="'+(T-21)+'">'+esc(e[2])+" · "+e[0]+"–"+e[1]+"</text>";
   });
   lanes.forEach(l=>{
     s+='<line class="gridline" x1="'+L+'" y1="'+yOf(l)+'" x2="'+(W-R)+'" y2="'+yOf(l)+'"/>';
-    s+='<text class="lanelabel" x="8" y="'+(yOf(l)+3)+'">'+esc(LANE[l]||l)+"</text>";
   });
   (DATA.arcs||[]).forEach(a=>{
-    const A=ev.find(e=>e.id===a.source), B=ev.find(e=>e.id===a.target);
+    const A=ev.find(e=>e.id===a.source),B=ev.find(e=>e.id===a.target);
     if(!A||!B||A.t_start==null||B.t_start==null) return;
-    const x1=xOf(A.t_start), x2=xOf(B.t_start), y1=yOf(A.lane), y2=yOf(B.lane);
-    s+='<path class="arc" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-16)+" "+x2.toFixed(1)+","+y2+'"/>';
+    const x1=xOf(A.t_start),x2=xOf(B.t_start),y1=yOf(A.lane),y2=yOf(B.lane);
+    s+='<path class="arc" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-15)+" "+x2.toFixed(1)+","+y2+'"/>';
   });
-  ev.forEach(e=>{
-    if(e.t_start==null) return;
-    s+='<circle class="dot" cx="'+xOf(e.t_start).toFixed(1)+'" cy="'+yOf(e.lane)+'" r="3.6" fill="'+
-      (EPC[e.epistemotype]||EPC["EP-0"])+'"><title>'+esc(e.years_raw||e.t_start)+" — "+esc(e.label)+"</title></circle>";
+  ev.forEach(e=>{ if(e.t_start==null) return;
+    s+='<circle class="dot" data-id="'+esc(e.id)+'" cx="'+xOf(e.t_start).toFixed(1)+'" cy="'+yOf(e.lane)+
+      '" r="'+r.toFixed(2)+'" fill="'+(EPC[e.epistemotype]||EPC["EP-0"])+'"><title>'+
+      esc(e.years_raw||e.t_start)+" — "+esc(e.label)+"</title></circle>";
   });
-  svg.setAttribute("viewBox","0 0 "+W+" "+H);
-  svg.setAttribute("height",H);
+  // lane labels last so they stay readable over the panned content
+  lanes.forEach(l=>{ s+='<text class="lanelabel" x="8" y="'+(yOf(l)+3)+'">'+esc(LANE[l]||l)+"</text>"; });
   svg.innerHTML=s;
-  document.getElementById("tlnote").textContent =
-    ev.length+" entries across "+lanes.length+" classes and "+eras.length+" eras. Colour marks the evidence profile; hover a mark for its entry.";
+  svg.setAttribute("viewBox",view.x+" 0 "+view.w+" "+H);
+  svg.setAttribute("preserveAspectRatio","none");
+  svg.style.height=H+"px";
 }
-requestAnimationFrame(()=>setTimeout(drawTimeline,0));
+function clampView(){
+  view.w=Math.min(W,Math.max(W/14,view.w));
+  view.x=Math.min(W-view.w,Math.max(0,view.x));
+}
+function zoomAt(px,factor){
+  const rect=svg.getBoundingClientRect();
+  const ux=view.x+((px-rect.left)/rect.width)*view.w;
+  view.w*=factor; clampView();
+  view.x=ux-((px-rect.left)/rect.width)*view.w; clampView();
+  paint();
+}
+svg.addEventListener("wheel",e=>{e.preventDefault();zoomAt(e.clientX,e.deltaY>0?1.18:1/1.18);},{passive:false});
+document.getElementById("zin").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1/1.4);};
+document.getElementById("zout").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1.4);};
+document.getElementById("zreset").onclick=()=>{view={x:0,w:W};paint();};
+let drag=null;
+svg.addEventListener("pointerdown",e=>{drag={px:e.clientX,x:view.x};svg.setPointerCapture(e.pointerId);
+  svg.classList.add("dragging");});
+svg.addEventListener("pointermove",e=>{ if(!drag) return;
+  const rect=svg.getBoundingClientRect();
+  view.x=drag.x-((e.clientX-drag.px)/rect.width)*view.w; clampView(); paint();});
+["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,e=>{
+  if(drag&&Math.abs(e.clientX-drag.px)<4){
+    const el=document.elementFromPoint(e.clientX,e.clientY);
+    if(el&&el.classList.contains("dot")) jumpTo(el.dataset.id);
+  }
+  drag=null; svg.classList.remove("dragging");}));
+
+function jumpTo(id){
+  if(!shown.some(e=>e.id===id)){ // clear filters so the entry is reachable
+    document.getElementById("q").value="";
+    ["fLane","fEp","fKind"].forEach(i=>document.getElementById(i).value="");
+    apply();
+  }
+  const tr=document.getElementById("r-"+id.replace(/[^a-zA-Z0-9-]/g,"_"));
+  if(!tr) return;
+  tr.scrollIntoView({behavior:"smooth",block:"center"});
+  if(!tr.classList.contains("open")) expand(tr);
+  tr.classList.remove("flash"); void tr.offsetWidth; tr.classList.add("flash");
+}
+
+paint();
+addEventListener("resize",()=>paint());
 </script>
 </body>
 </html>

@@ -32,6 +32,12 @@ jobs:
       - name: No unsourced allegation against a named person
         run: python3 tools/check-persons.py
 
+      - name: Regenerate the dating layer
+        run: |
+          python3 tools/timeline-extract.py
+          git diff --exit-code derived/timeline.json \
+            || { echo "::error::derived/timeline.json is stale — re-run tools/timeline-extract.py"; exit 1; }
+
       - name: Build
         run: python3 tools/build.py
 
@@ -39,10 +45,11 @@ jobs:
       # fails whenever it runs before Pages has been switched on for the repo,
       # which is every push made during setup.
       # The deploy job does not check out the repository, so anything it needs
-      # from the tree has to be handed over as an output.
-      - name: Expose the base pin
+      # from the tree has to be handed over as an output. A content hash of the
+      # built page identifies THIS build to the post-deploy check.
+      - name: Fingerprint this build
         id: pin
-        run: echo "pin=$(cat base/PIN)" >> "$GITHUB_OUTPUT"
+        run: echo "pin=$(sha256sum dist/index.html | cut -c1-16)" >> "$GITHUB_OUTPUT"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -74,11 +81,12 @@ jobs:
         run: |
           url="${{ steps.deployment.outputs.page_url }}"
           pin="${{ needs.build.outputs.pin }}"
-          echo "verifying $url carries $pin"
+          echo "verifying $url serves build $pin"
           for i in 1 2 3 4 5 6; do
             code=$(curl -sS -H 'Cache-Control: no-cache' -o /tmp/page.html \
                      -w '%{http_code}' --max-time 20 "$url" || echo 000)
-            if [ "$code" = "200" ] && grep -qF "$pin" /tmp/page.html; then
+            got=$(sha256sum /tmp/page.html 2>/dev/null | cut -c1-16)
+            if [ "$code" = "200" ] && [ "$got" = "$pin" ]; then
               served=yes; break
             fi
             echo "attempt $i: http=$code, pin not yet served — retrying"; sleep 10

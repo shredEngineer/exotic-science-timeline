@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Publication gate over the pinned base: no unsourced allegation about a named person.
+"""Publication gate: no unsourced allegation about a named person.
 
-The upstream corpus enforces this on its own records. This is the same gate
-re-asserted at the surface that actually publishes — a page must not inherit its
-legal posture from a pin it cannot re-check.
+A record whose subject is the honest grading of documentation cannot itself
+assert, without a source, that a named individual committed a crime.
 
     python3 tools/check-persons.py     # exit 0 clean, 1 on findings
 
@@ -14,7 +13,7 @@ has not been verified.
 import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-BASE = ROOT / "base" / "timeline.json"
+CORPUS = ROOT / "corpus"
 
 ALLEGATION = re.compile(
     r'\b(fraud|fraudulent|convicted|conviction|criminal|indicted|swindl\w*|'
@@ -26,17 +25,19 @@ ATTRIBUTED = re.compile(r'not verified against a primary source', re.I)
 
 
 def main() -> int:
-    if not BASE.exists():
-        print(f"missing pinned base: {BASE}", file=sys.stderr)
-        return 1
+    records = []
+    for f in sorted(CORPUS.glob("instances-*.json")):
+        d = json.loads(f.read_text())
+        for key in ("instances", "doctrines", "narratives"):
+            for r in d.get(key, []):
+                records.append((f.name, r))
 
-    events = json.loads(BASE.read_text()).get("events", [])
     findings = []
-    for e in events:
+    for fname, e in records:
         principals = (e.get("principals") or "").strip()
         if NO_PERSON.match(principals):
             continue
-        text = str(e.get("note", ""))
+        text = " ".join(str(e.get(k, "")) for k in ("note", "summary", "lore_layer", "factual_kernel"))
         hits = sorted(set(m.lower() for m in ALLEGATION.findall(text)))
         if not hits:
             continue
@@ -44,17 +45,17 @@ def main() -> int:
             continue  # sourced — a reader can check the claim
         if EXCULPATORY.search(text) or ATTRIBUTED.search(text):
             continue
-        findings.append((e["id"], principals, hits, text[:150]))
+        findings.append((e["id"], principals, hits, text.strip()[:150]))
 
     if not findings:
-        print(f"check-persons: clean over {len(events)} events in the pinned base")
+        print(f"check-persons: clean over {len(records)} records")
         return 0
 
-    print(f"check-persons: {len(findings)} finding(s) in the pinned base\n", file=sys.stderr)
+    print(f"check-persons: {len(findings)} finding(s)\n", file=sys.stderr)
     for rid, who, hits, snippet in findings:
         print(f"  {rid}\n    principal : {who}\n    triggers  : {', '.join(hits)}"
               f"\n    text      : {snippet}…\n", file=sys.stderr)
-    print("fix upstream in the corpus, then re-pin base/timeline.json", file=sys.stderr)
+    print("cite a primary source, report the absence of a finding, or attribute without asserting", file=sys.stderr)
     return 1
 
 
