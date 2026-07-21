@@ -83,7 +83,8 @@ header.site.scrolled .hbrand span{font-size:.75rem}
 
 /* ---------- hero ---------- */
 .hero{padding:clamp(2.5rem,6vw,4.5rem) 0 2rem}
-.hero h1{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;max-width:30ch;text-wrap:balance}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;max-width:26ch;text-wrap:balance}
+.nb{white-space:nowrap}  /* an inline-block is a break opportunity; the comma must not orphan */
 .grad{display:inline-block;background:linear-gradient(135deg,var(--secondary-muted),var(--secondary));
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .lede{margin-top:1.15rem;max-width:74ch;font-size:clamp(1rem,1.6vw,1.15rem);color:hsl(0 0% 88%)}
@@ -322,7 +323,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 <div class="wrap">
 
 <div class="hero">
-  <h1>Nine centuries of <span class="grad">anomaly claims</span>, graded by evidence.</h1>
+  <h1>Nine centuries of <span class="nb"><span class="grad">anomaly claims</span>,</span> graded by evidence.</h1>
   <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports, and of <strong>how well each one was documented</strong>.</p>
   <p class="note">It takes no position on whether any effect is real. Every entry is graded on six ordered axes by <a href="https://github.com/shredEngineer/eqo"><strong>EQO</strong></a>, an open standard that classifies what was observed and grades how well it is documented — orthodox and heterodox cases in one vocabulary. It assigns coordinates, never verdicts.</p>
   <div class="stats" id="stats"></div>
@@ -531,10 +532,11 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 /* ---------- stats ---------- */
 (function(){
   const s=DATA.stats||{}, eras=DATA.eras||[];
-  const range = eras.length
-    // no-break spaces: the separator must not be a wrap opportunity even if a
-    // white-space rule is ever overridden downstream
-    ? eras[0][0]+'<span class="sep">\u00a0…\u00a0</span>'+eras[eras.length-1][1] : "—";
+  // the span the records actually cover — the era buckets are round numbers
+  // chosen to group them, and reporting those would overstate the early end
+  const span = s.data_span || (eras.length ? [eras[0][0],eras[eras.length-1][1]] : null);
+  // no-break spaces: the separator must never be a wrap opportunity
+  const range = span ? span[0]+'<span class="sep">\u00a0…\u00a0</span>'+span[1] : "—";
   const items=[
     {v:esc(s.observation_events ?? ev.length), l:"documented reports"},
     {v:range, l:"years covered", nowrap:true},
@@ -621,7 +623,8 @@ function rows(list){
       '<td class="prof"><span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype||"EP-0")+
         '" title="What this profile means">'+esc(e.epistemotype||"—")+"</span></td></tr>";
   }).join("");
-  document.getElementById("count").textContent=list.length+" of "+ev.length+" entries";
+  document.getElementById("count").textContent = (list.length===ev.length)
+    ? ev.length+" entries" : list.length+" of "+ev.length+" entries";
 }
 
 function apply(){

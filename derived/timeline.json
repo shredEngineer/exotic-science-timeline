@@ -7857,6 +7857,11 @@
  ],
  "stats": {
   "events": 188,
+  "data_span": [
+   1150,
+   2026
+  ],
+  "context_events": 21,
   "observation_events": 167,
   "arcs": 18,
   "contradiction_arcs": 17,

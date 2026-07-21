@@ -87,7 +87,13 @@ slf = [e for e in events if "S-SLF" in e["signatures"]]
 eras = [[1100,1800,"I","Mechanical era — wheels & descriptions"],[1800,1900,"II","First instrument era"],
         [1900,1945,"III","Field & radiation era"],[1945,1989,"IV","Postwar laboratory era"],
         [1989,2005,"V","Contested-laboratory era"],[2005,2026,"VI","Video & network era"]]
-stats = {"events":len(events),"observation_events":sum(1 for e in events if e["record_kind"] not in("doctrine","narrative")),
+_starts = [e["t_start"] for e in events if e["t_start"] is not None]
+_ends   = [(e["t_end"] or e["t_start"]) for e in events if e["t_start"] is not None]
+stats = {"events":len(events),
+    # the span the RECORDS cover, never the era buckets: the buckets are round
+    # numbers chosen to group them and would overstate the left endpoint
+    "data_span":[min(_starts),max(_ends)] if _starts else None,
+    "context_events":sum(1 for e in events if e["record_kind"] in ("doctrine","narrative")),"observation_events":sum(1 for e in events if e["record_kind"] not in("doctrine","narrative")),
     "arcs":len(arcs),"contradiction_arcs":len(lags),
     "median_adversarial_lag_years":statistics.median(lags) if lags else None,
     "densest_year":per_year.most_common(1)[0] if per_year else None,
