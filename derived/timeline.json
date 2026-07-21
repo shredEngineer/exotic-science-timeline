@@ -153,7 +153,9 @@
     "S-DEK"
    ],
    "note": "Widely replicated as EHD thrust; effect vanishes in vacuum.",
-   "refs": [],
+   "refs": [
+    "F. X. Canning, C. Melcher, E. Winet, Asymmetrical Capacitors for Propulsion, NASA/CR-2004-213312 (NASA, 2004)"
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -249,7 +251,9 @@
     "S-SRL"
    ],
    "note": "Reported weight change, pink glow, cooling around rotating magnet assembly.",
-   "refs": [],
+   "refs": [
+    "V. V. Roschin, S. M. Godin, Technical Physics Letters 26, 1105 (2000)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA",
@@ -409,7 +413,7 @@
   {
    "id": "ex:miles-mckubre-helium",
    "label": "Helium\u2013excess-heat correlation",
-   "principals": "Melvin Miles; Michael McKubre (SRI)",
+   "principals": "Melvin Miles et al. (China Lake / US Navy)",
    "years": "1990s",
    "effect_types": [
     "P-NUC-ELM-04",
@@ -437,8 +441,10 @@
    "signatures": [
     "S-LNR"
    ],
-   "note": "Reported He-4 commensurate with excess heat in Pd-D cells.",
-   "refs": [],
+   "note": "Reported He-4 commensurate with excess heat in Pd-D cells. McKubre's SRI heat-helium work is a separate, later replication line, not this paper.",
+   "refs": [
+    "M. H. Miles, R. A. Hollins, B. F. Bush, J. J. Lagowski, R. E. Miles, \"Correlation of excess power and helium production during D2O and H2O electrolysis using palladium cathodes,\" J. Electroanal. Chem. 346, 99 (1993)"
+   ],
    "lane": "NUC",
    "lanes": [
     "NUC",
@@ -722,7 +728,9 @@
     }
    ],
    "note": "Partial rebuilds; no confirmed effect.",
-   "refs": [],
+   "refs": [
+    "N. Li, D. Noever, T. Robertson, R. Koczor, W. Brantley, \"Static test for a gravitational force coupled to type II YBCO superconductors,\" Physica C 281, 260-267 (1997)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA"
@@ -762,7 +770,9 @@
    "epistemotype": "EP-1",
    "signatures": [],
    "note": "Claimed force beam from superconducting discharge; preprint only.",
-   "refs": [],
+   "refs": [
+    "E. Podkletnov, G. Modanese, arXiv:physics/0108005 (2001)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA",
@@ -1058,7 +1068,9 @@
     "S-AST"
    ],
    "note": "Anomalous paraconical-pendulum precession during solar eclipses.",
-   "refs": [],
+   "refs": [
+    "M. Allais, Aero/Space Engineering 18(9), 46 (1959); 18(10), 51 (1959)"
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -1337,7 +1349,9 @@
     }
    ],
    "note": "Thrust signals traced to thermal/interaction artifacts at higher precision.",
-   "refs": [],
+   "refs": [
+    "M. Tajmar, O. Neunzig, M. Weikert, CEAS Space Journal 14, 31 (2022)"
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -1379,7 +1393,9 @@
    "epistemotype": "EP-3",
    "signatures": [],
    "note": "Reported acceleration fields near spun cryogenic rings; later attributed to artifacts by the group itself.",
-   "refs": [],
+   "refs": [
+    "M. Tajmar, F. Plesescu, K. Marhold, C. J. de Matos, arXiv:gr-qc/0603033 (2006)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA"
@@ -1426,7 +1442,9 @@
     "S-ANT"
    ],
    "note": "\u00b5N-scale thrust claims on torsion balances; adversarial campaigns ongoing.",
-   "refs": [],
+   "refs": [
+    "J. F. Woodward, \"A New Experimental Approach to Mach's Principle and Relativistic Gravitation,\" Foundations of Physics Letters 3, 497-506 (1990)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA",
@@ -2157,7 +2175,9 @@
     "S-SLF"
    ],
    "note": "1986 NBS measurement: efficiency below 100% on all tests; patent litigation followed.",
-   "refs": [],
+   "refs": [
+    "US National Bureau of Standards, Report of Tests on Joseph Newman's Device (Energy Machine), June 1986"
+   ],
    "lane": "EMG",
    "lanes": [
     "EMG"
@@ -2543,7 +2563,9 @@
    "epistemotype": "EP-3",
    "signatures": [],
    "note": "Particle motions read as 'magnetolysis'/monopoles; never confirmed.",
-   "refs": [],
+   "refs": [
+    "F. Ehrenhaft, \"New Experiments about the Magnetic Current,\" Physical Review 65, 62-63 (1944)"
+   ],
    "lane": "EMG",
    "lanes": [
     "EMG",
@@ -2671,7 +2693,9 @@
    "epistemotype": "EP-3",
    "signatures": [],
    "note": "Below-ground-state hydrogen claims with extensive self-published data; demonstrates the X- private-extension mechanism of \u00a75.",
-   "refs": [],
+   "refs": [
+    "R.L. Mills, W.R. Good, Fusion Technology 28, 1697 (1995)"
+   ],
    "lane": "CHM",
    "lanes": [
     "CHM",
@@ -2718,7 +2742,9 @@
     "S-MEM"
    ],
    "note": "Claimed EM signatures and 'teleported' DNA templates from high dilutions.",
-   "refs": [],
+   "refs": [
+    "L. Montagnier, J. A\u00efssa, S. Ferris, J.-L. Montagnier, C. Lavall\u00e9e, Interdisciplinary Sciences: Computational Life Sciences 1, 81 (2009)"
+   ],
    "lane": "CHM",
    "lanes": [
     "CHM",
@@ -3640,7 +3666,9 @@
    "epistemotype": "EP-3",
    "signatures": [],
    "note": "Persistent low-frequency hum reports; no external source identified for most hearers.",
-   "refs": [],
+   "refs": [
+    "J. H. Mullins and J. P. Kelly, \"The mystery of the Taos hum,\" Echoes (Newsletter of the Acoustical Society of America) 5(3), 1,4,6 (1995)"
+   ],
    "lane": "ACU",
    "lanes": [
     "ACU"
@@ -3801,7 +3829,9 @@
     "S-DEK"
    ],
    "note": "Paradigm case: 1874 open anomaly (T0), resolved via thermal transpiration (T4). Demonstrates temporal lattice migration.",
-   "refs": [],
+   "refs": [
+    "W. Crookes, Philosophical Transactions of the Royal Society of London 164, 501 (1874)"
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -3931,7 +3961,9 @@
    ],
    "compilation_confidence": "high",
    "note": "'Aura' imaging; corona discharge modulated by moisture/pressure is the established account. A migrated case like the radiometer.",
-   "refs": [],
+   "refs": [
+    "S.D. Kirlian, V.Kh. Kirlian, Zhurnal Nauchnoi i Prikladnoi Fotografii i Kinematografii 6, 397 (1961)"
+   ],
    "lane": "OPT",
    "lanes": [
     "OPT"
@@ -4136,7 +4168,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Long-running electrolysis and glow-discharge program; book-length account published 1998; 2019 R20 reactor preprint circulated for community replication.",
-   "refs": [],
+   "refs": [
+    "T. Mizuno, *Nuclear Transmutation: The Reality of Cold Fusion* (Infinite Energy Press, 1998)"
+   ],
    "lane": "NUC",
    "lanes": [
     "NUC",
@@ -4179,7 +4213,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Public demonstration of D2 gas-loaded Pd nanopowder heat by a decorated materials scientist; helium claimed as product.",
-   "refs": [],
+   "refs": [
+    "Y. Arata, Y.-C. Zhang, Journal of the High Temperature Society of Japan 34, 85 (2008)"
+   ],
    "lane": "NUC",
    "lanes": [
     "NUC",
@@ -4349,7 +4385,9 @@
    "signatures": [],
    "compilation_confidence": "high",
    "note": "Sensitives reporting glows and sensations from magnets/crystals in darkness; extensive self-published protocols; ancestor lineage of orgone-type claims.",
-   "refs": [],
+   "refs": [
+    "K. von Reichenbach, *Physikalisch-physiologische Untersuchungen \u00fcber die Dynamide des Magnetismus, der Elektricit\u00e4t, der W\u00e4rme, des Lichtes, der Krystallisation, des Chemismus in ihren Beziehungen zur Lebenskraft*, 2 vols. (Vieweg, Braunschweig, 1849-1850)"
+   ],
    "lane": "BIO",
    "lanes": [
     "BIO",
@@ -4433,7 +4471,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Blinded trials at Passy attributing effects to imagination and imitation \u2014 the earliest C4 adversarial examination in this corpus.",
-   "refs": [],
+   "refs": [
+    "Commissioners (B. Franklin, J.-S. Bailly [ed.], A. Lavoisier, J.-I. Guillotin et al.), Rapport des commissaires charg\u00e9s par le roi de l'examen du magn\u00e9tisme animal, Imprimerie Royale, Paris, 1784"
+   ],
    "lane": "BIO",
    "lanes": [
     "BIO"
@@ -4450,7 +4490,7 @@
    "id": "ex:munich-dowsing-1988",
    "label": "Munich 'barn' dowsing experiments",
    "principals": "Hans-Dieter Betz et al. (LMU, government-funded)",
-   "years": "1986-1988",
+   "years": "1987-1988",
    "effect_types": [
     "P-EMG-KOR-01"
    ],
@@ -4471,19 +4511,21 @@
    "epistemotype": "EP-3",
    "signatures": [],
    "compilation_confidence": "high",
-   "note": "Large screened-dowser study; authors reported a few 'skilled' outliers under double-blind conditions.",
-   "refs": [],
+   "note": "Large screened-dowser study; authors reported a few 'skilled' outliers under double-blind conditions. Enright's 1995 reanalysis found the result attributable to chance (see the linked reanalysis record).",
+   "refs": [
+    "H. Wagner, H.-D. Betz, H. L. Koenig, Schlussbericht 01 KB8602 ('Scheunenexperiment'), Bundesministerium fuer Forschung und Technologie (BMFT), 1990"
+   ],
    "lane": "EMG",
    "lanes": [
     "EMG"
    ],
-   "t_start": 1986,
+   "t_start": 1987,
    "t_end": 1988,
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
    "confidence": "high",
-   "years_raw": "1986-1988"
+   "years_raw": "1987-1988"
   },
   {
    "id": "ex:enright-reanalysis",
@@ -4520,7 +4562,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Statistical reanalysis finding results consistent with chance; selection of outliers as the artifact.",
-   "refs": [],
+   "refs": [
+    "J. T. Enright, Naturwissenschaften 82, 360 (1995)"
+   ],
    "lane": "EMG",
    "lanes": [
     "EMG"
@@ -4559,7 +4603,9 @@
    "signatures": [],
    "compilation_confidence": "high",
    "note": "Charges below e reported in oil-drop-type experiments against Millikan; resolved via droplet physics and selection analysis; opens the promotion counter on P-EMG-SON-01.",
-   "refs": [],
+   "refs": [
+    "F. Ehrenhaft, \"\u00dcber die Messung von Elektrizit\u00e4tsmengen, die kleiner zu sein scheinen als die Ladung des einwertigen Wasserstoffions oder Elektrons und von dessen Vielfachen abweichen,\" Sitzungsber. Kais. Akad. Wiss. Wien, math.-naturwiss. Kl. 119 (IIa), 815 (1910)"
+   ],
    "lane": "EMG",
    "lanes": [
     "EMG"
@@ -4839,7 +4885,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Real, foundational effect originally interpreted by its discoverer as aether evidence \u2014 interpretation migrated, phenomenon stayed; today the basis of ring-laser gyros.",
-   "refs": [],
+   "refs": [
+    "G. Sagnac, Comptes Rendus de l'Acad\u00e9mie des Sciences 157, 708 (1913)"
+   ],
    "lane": "OPT",
    "lanes": [
     "OPT"
@@ -4892,7 +4940,7 @@
    "id": "ex:majorana-shielding",
    "label": "Majorana gravitational-absorption experiments",
    "principals": "Quirino Majorana (Bologna/Turin)",
-   "years": "1919-1922",
+   "years": "1918-1922",
    "effect_types": [
     "P-GRA-GEW-01"
    ],
@@ -4911,18 +4959,20 @@
    ],
    "compilation_confidence": "medium",
    "note": "Published series claiming tiny weight reduction of a mass screened by mercury/lead; never reproduced; modern constraints exclude the claimed magnitude.",
-   "refs": [],
+   "refs": [
+    "Q. Majorana, \"Sull'assorbimento della gravitazione,\" Atti della R. Accademia dei Lincei, Rendiconti, Ser. V, 30, 75-79, 289-294, 350-354, 442-446 (1921); 31, 41-45, 81-86, 141-146, 221-226, 343-346 (1922)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA"
    ],
-   "t_start": 1919,
+   "t_start": 1918,
    "t_end": 1922,
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
    "confidence": "medium",
-   "years_raw": "1919-1922"
+   "years_raw": "1918-1922"
   },
   {
    "id": "ex:brush-gravitation-1920s",
@@ -4947,7 +4997,9 @@
    ],
    "compilation_confidence": "medium",
    "note": "Papers claiming certain complex silicates fall with slightly different acceleration; contradicted by the Eoetvoes tradition of composition-independence.",
-   "refs": [],
+   "refs": [
+    "C.F. Brush, Proceedings of the American Philosophical Society 60, 43 (1921)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA"
@@ -5148,7 +5200,9 @@
    ],
    "compilation_confidence": "high",
    "note": "High-precision nulls closed the fifth-force window; local mass gradients and data treatment explained earlier signals. Model resolution arc entirely inside orthodoxy.",
-   "refs": [],
+   "refs": [
+    "E.G. Adelberger, C.W. Stubbs, B.R. Heckel, Y. Su, H.E. Swanson, G. Smith, J.H. Gundlach, W.F. Rogers, Physical Review D 42, 3267 (1990)"
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA"
@@ -5323,7 +5377,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Arc-gasification fuel marketed with claimed novel 'magnecule' species; conventional syngas chemistry is the discussed account.",
-   "refs": [],
+   "refs": [
+    "R. M. Santilli, Hadronic Journal 21, 789 (1998)"
+   ],
    "lane": "CHM",
    "lanes": [
     "CHM",
@@ -5463,7 +5519,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Year-long blinded examination concluding the devices had no diagnostic value.",
-   "refs": [],
+   "refs": [
+    "Scientific American, \"Our Abrams Verdict\" (concluding installment of the ERA investigation series, monthly Oct. 1923 - Sep. 1924)"
+   ],
    "lane": "INS",
    "lanes": [
     "INS"
@@ -5693,7 +5751,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Large undisclosed-principle machine; animal-trial cures reported with Academy-level advocacy and state funding; device principle never disclosed, program collapsed.",
-   "refs": [],
+   "refs": [
+    "A.-J. Berteaud, A.-M. Bottreau, A. Priore, A.-N. Pautrizel, F. Berlureau, R. Pautrizel, Comptes Rendus de l'Acad\u00e9mie des Sciences (Paris) 272, 1003 (1971)"
+   ],
    "lane": "BIO",
    "lanes": [
     "BIO",
@@ -5900,7 +5960,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Orthodox anchor: an apparent self-runner with a fully documented energy source (barometric pressure); the control case every S-SLF claim is measured against.",
-   "refs": [],
+   "refs": [
+    "A. W. J. G. Ord-Hume, *Perpetual Motion: The History of an Obsession* (George Allen & Unwin, London, 1977), ch. 7"
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -5936,7 +5998,9 @@
    ],
    "compilation_confidence": "high",
    "note": "New radiation reported via faint screen-brightness changes; dozens of confirming papers within France in one year \u2014 a replication bubble.",
-   "refs": [],
+   "refs": [
+    "R. Blondlot, Comptes Rendus de l'Academie des Sciences 136, 735 (1903)"
+   ],
    "lane": "OPT",
    "lanes": [
     "OPT"
@@ -6024,7 +6088,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Capillary-condensed water with anomalous properties; a global replication wave followed.",
-   "refs": [],
+   "refs": [
+    "N. N. Fedyakin, \"Change in the structure of water during condensation in capillaries,\" Kolloidnyi Zhurnal 24, 497 (1962)"
+   ],
    "lane": "CHM",
    "lanes": [
     "CHM"
@@ -6069,7 +6135,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Silicate/organic contamination identified; original group conceded \u2014 a clean self-correction arc.",
-   "refs": [],
+   "refs": [
+    "B. V. Derjaguin, N. V. Churaev, Nature 244, 430 (1973)"
+   ],
    "lane": "CHM",
    "lanes": [
     "CHM"
@@ -6266,7 +6334,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Loose fiber connector and clock drift identified; ICARUS null; textbook fast self-correction.",
-   "refs": [],
+   "refs": [
+    "OPERA Collaboration (T. Adam et al.), \"Measurement of the neutrino velocity with the OPERA detector in the CNGS beam,\" JHEP 10 (2012) 093 (arXiv:1109.4897v4)"
+   ],
    "lane": "INS",
    "lanes": [
     "INS"
@@ -6325,7 +6395,7 @@
   {
    "id": "ex:piantelli-focardi",
    "label": "Piantelli-Focardi Ni-H anomalous heat",
-   "principals": "Francesco Piantelli, Sergio Focardi",
+   "principals": "Francesco Piantelli, Sergio Focardi, Roberto Habel",
    "years": "1990s",
    "effect_types": [
     "P-THM-BIL-01"
@@ -6350,7 +6420,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Nickel-hydrogen excess-heat series published in Il Nuovo Cimento (1994); the direct ancestor of the E-Cat lineage.",
-   "refs": [],
+   "refs": [
+    "S. Focardi, R. Habel, F. Piantelli, Il Nuovo Cimento A 107, 163 (1994)"
+   ],
    "lane": "THM",
    "lanes": [
     "THM"
@@ -6396,7 +6468,9 @@
    ],
    "compilation_confidence": "high",
    "note": "Pd co-deposition with track-detector pits read as energetic particles; chemical-damage accounts discussed.",
-   "refs": [],
+   "refs": [
+    "P. A. Mosier-Boss, S. Szpak, F. E. Gordon, L. P. G. Forsley, European Physical Journal Applied Physics 40, 293 (2007)"
+   ],
    "lane": "NUC",
    "lanes": [
     "NUC"
@@ -6583,7 +6657,9 @@
    "compilation_confidence": "high",
    "record_kind": "analysis",
    "note": "Notebook analyses working the torque balance and dismissing the seekers of perpetual motion \u2014 the earliest analysis-type resolution record in the corpus.",
-   "refs": [],
+   "refs": [
+    "Leonardo da Vinci, *Codex Forster II* (Victoria and Albert Museum, London), fols. 90v-91r, c. 1495 \u2014 date and folio approximate, not verified against the original manuscript"
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -7602,7 +7678,9 @@
    "compilation_confidence": "high",
    "record_kind": "observation",
    "note": "Accepted-as-real phenomenon with open mechanism; candidate conventional theories (silicon combustion, microwave cavities) discussed, none settled.",
-   "refs": [],
+   "refs": [
+    "J. Abrahamson, J. Dinniss, *Nature* 403, 519 (2000)"
+   ],
    "lane": "OPT",
    "lanes": [
     "OPT"
@@ -7685,7 +7763,9 @@
    "compilation_confidence": "medium",
    "record_kind": "observation",
    "note": "Long-lived luminous plasmoids launched from water-surface discharges; reproducible laboratory analog with sub-second lifetimes.",
-   "refs": [],
+   "refs": [
+    "A. I. Egorov, S. I. Stepanov, \"Long-lived plasmoids produced in humid air as analogues of ball lightning,\" Tech. Phys. 47, 1584 (2002) [Zh. Tekh. Fiz. 72(12), 102 (2002)]"
+   ],
    "lane": "OPT",
    "lanes": [
     "OPT"
