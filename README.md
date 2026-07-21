@@ -4,7 +4,7 @@
 
 An interactive record of documented claims about anomalous energy, propulsion, gravity, and material effects — from a twelfth-century overbalanced wheel to twenty-first-century precision nulls. Every entry carries a graded evidence coordinate rather than a verdict, and the lines connecting claims to the adversarial examinations that followed them are the point of the whole exhibit.
 
-Published by **Advanced Rediscovery**. Data and classification standard: [EQO](https://github.com/shredEngineer/eqo).
+Published by [**Advanced Rediscovery**](https://advanced-rediscovery.com). Live at [timeline.advanced-rediscovery.com](https://timeline.advanced-rediscovery.com/). Classification standard: [EQO](https://github.com/shredEngineer/eqo).
 
 ---
 
@@ -26,7 +26,7 @@ Nothing here asserts that any claimed effect is real, and nothing here asserts t
 | `viewer/` | The page template and its self-hosted assets |
 | `tools/` | `timeline-extract.py` regenerates the dating layer · `check-persons.py` is the publication gate · `build.py` assembles the page |
 
-The **classification standard** is separate and lives in its own repository. This one owns the data and the publication; that one owns the vocabulary and the rules.
+The **classification standard** is separate and lives in [its own repository](https://github.com/shredEngineer/eqo). This one owns the data and the publication; that one owns the vocabulary and the rules.
 
 **The overlay is kept apart on purpose.** It attaches to records under an `enrichment` key and **never overwrites a corpus field** — the build refuses rather than letting an overlay silently win, and refuses again if it references a record the corpus does not contain. Without that separation a hand-edit and a generated write would fight over the same lines, and after the third merge nobody could say which statement came from whom.
 
@@ -44,7 +44,9 @@ The output is a single self-contained file: all data inlined, no runtime fetches
 
 Content and data: **CC BY 4.0** (`LICENSE`). Code — the build tool and CI: **Apache-2.0** (`LICENSE-CODE`).
 
-Attribute as: **Dr.-Ing. Paul Wilhelm / Advanced Rediscovery, *Exotic Science Timeline*, CC BY 4.0.** The underlying corpus carries its own attribution; see the standard's repository.
+Attribute as: **Dr.-Ing. Paul Wilhelm / Advanced Rediscovery, *Exotic Science Timeline*, CC BY 4.0.**
+
+The corpus in this repository is part of that attribution — it lives here, not in the standard's repository. The classification standard it is built to, [EQO](https://github.com/shredEngineer/eqo), carries its own separate attribution.
 
 ## Provenance, stated up front
 

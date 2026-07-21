@@ -110,7 +110,7 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 /* ---------- shared badges (one language, table + legend) ---------- */
 .chip{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.75rem;
   border:1px solid var(--border);background:var(--card-subtle);white-space:nowrap}
-.chip.lane{color:var(--secondary);border-color:hsl(189 50% 30%)}
+.chip.lane{color:var(--secondary);border-color:hsl(189 50% 30%);margin:1px 0}
 .chip.ep{font-family:var(--font-mono);font-size:.72rem}
 .ep1{color:hsl(21 100% 62%);border-color:hsl(21 60% 34%)}
 .ep2{color:hsl(280 70% 72%);border-color:hsl(280 40% 36%)}
@@ -298,20 +298,19 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <p class="sec-intro">The grades below describe the <em>documentation</em>, never the truth of a claim. A carefully measured result nobody could reproduce and a vague anecdote look different here, which is the entire point.</p>
 
   <div class="reftables">
-    <table class="ref"><caption>The six evidence axes</caption>
-      <thead><tr><th>Axis</th><th>What it grades</th></tr></thead>
+    <table class="ref"><caption>Evidence axes</caption>
+      <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
       <tbody id="axtable"></tbody>
     </table>
     <table class="ref"><caption>Evidence profiles</caption>
-      <thead><tr><th>Profile</th><th>Meaning</th></tr></thead>
+      <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
       <tbody id="eptable"></tbody>
     </table>
     <table class="ref"><caption>Phenomenon classes</caption>
-      <thead><tr><th>Class</th><th>What it covers</th></tr></thead>
+      <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
       <tbody id="lanetable"></tbody>
     </table>
   </div>
-  <p class="note" style="margin-top:1.1rem"><b class="mono">x</b> means not assessed — which is <em>not</em> a zero. Unexamined and poorly evidenced are different things, and conflating them would be the easiest way to lie with this table. <b class="mono">T0</b> is the anomaly test: no established mechanism on record, which is a property of the documentation rather than a verdict about reality.</p>
 </section>
 
 <section id="record">
@@ -330,7 +329,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 
   <div class="controls">
     <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off">
-    <select id="fLane"><option value="">All classes</option></select>
+    <select id="fLane"><option value="">All phenomena</option></select>
     <select id="fEp"><option value="">All evidence profiles</option></select>
     <select id="fKind"><option value="">All entry types</option></select>
     <button class="btn" id="reset">Reset</button>
@@ -340,7 +339,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <table class="recordtable" id="tbl">
     <colgroup>
       <col style="width:2.2rem"><col style="width:4.5rem"><col>
-      <col class="c-who" style="width:20%"><col class="c-lane" style="width:9rem">
+      <col class="c-who" style="width:20%"><col class="c-lane" style="width:12rem">
       <col style="width:11rem"><col style="width:5.2rem">
     </colgroup>
     <thead><tr>
@@ -348,7 +347,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
       <th class="sortable" data-k="t_start" aria-sort="descending">Year<span class="arrow">▼</span></th>
       <th class="sortable" data-k="label">Claim<span class="arrow">▼</span></th>
       <th class="sortable who" data-k="principals">Who<span class="arrow">▼</span></th>
-      <th class="sortable lane" data-k="lane">Class<span class="arrow">▼</span></th>
+      <th class="sortable lane" data-k="lane">Phenomenon<span class="arrow">▼</span></th>
       <th class="ev">Evidence</th>
       <th class="sortable prof" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
     </tr></thead>
@@ -483,7 +482,15 @@ document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
   const demo='<span class="axes"><span class="ax '+axCls(k,String(AXMAX[k]))+'">'+k+AXMAX[k]+"</span></span>";
   return '<tr id="ax-'+k+'"><td>'+demo+" <span class='mono' style='color:var(--muted-foreground)'>"+esc(AXNAME[k])+
     "</span></td><td>"+esc(AXDESC[k])+"</td></tr>";
-}).join("");
+}).join("") +
+  '<tr id="ax-x"><td><span class="axes"><span class="ax gx">Dx</span></span> ' +
+  "<span class='mono' style='color:var(--muted-foreground)'>Not assessed</span></td>" +
+  "<td>Any axis may read <b class='mono'>x</b>. That is not a zero — unexamined and poorly evidenced " +
+  "are different things, and treating them alike would be the easiest way to mislead with this table.</td></tr>" +
+  '<tr id="ax-T0"><td><span class="axes"><span class="ax g0">T0</span></span> ' +
+  "<span class='mono' style='color:var(--muted-foreground)'>The anomaly test</span></td>" +
+  "<td>No established mechanism is on record for the observation. A property of the documentation, " +
+  "not a verdict about reality.</td></tr>";
 document.getElementById("eptable").innerHTML = Object.keys(EPDESC).sort().map(ep=>
   '<tr id="ep-'+esc(ep)+'"><td><span class="chip ep '+ep.replace("-","").toLowerCase()+'">'+esc(ep)+
   "</span></td><td>"+esc(EPDESC[ep])+"</td></tr>").join("");
@@ -495,7 +502,7 @@ document.getElementById("lanetable").innerHTML =
 /* ---------- filters ---------- */
 function fill(sel,vals,fmt){const el=document.getElementById(sel);
   vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=fmt(v);el.appendChild(o);});}
-fill("fLane",[...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)),v=>LANE[v]||v);
+fill("fLane",[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)),v=>LANE[v]||v);
 fill("fEp",[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(),v=>v);
 fill("fKind",[...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort(),v=>KIND[v]||v);
 
@@ -521,8 +528,8 @@ function rows(list){
       '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
       '<td class="claim">'+esc(e.label)+"</td>"+
       '<td class="who">'+esc(e.principals||"—")+"</td>"+
-      '<td class="lane"><span class="chip lane" data-jump="lane-'+esc(e.lane)+
-        '" title="What this class covers">'+esc(LANE[e.lane]||e.lane)+"</span></td>"+
+      '<td class="lane">'+(e.lanes||[e.lane]).map(l=>'<span class="chip lane" data-jump="lane-'+esc(l)+
+        '" title="What this phenomenon class covers">'+esc(LANE[l]||l)+"</span>").join(" ")+"</td>"+
       '<td class="ev">'+axes(e.e_signature)+"</td>"+
       '<td class="prof"><span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype||"EP-0")+
         '" title="What this profile means">'+esc(e.epistemotype||"—")+"</span></td></tr>";
@@ -535,7 +542,7 @@ function apply(){
   const fl=document.getElementById("fLane").value,fe=document.getElementById("fEp").value,
         fk=document.getElementById("fKind").value;
   const list=ev.filter(e=>{
-    if(fl&&e.lane!==fl) return false;
+    if(fl&&!(e.lanes||[e.lane]).includes(fl)) return false;
     if(fe&&e.epistemotype!==fe) return false;
     if(fk&&e.record_kind!==fk) return false;
     if(q){const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")).toLowerCase();
@@ -580,17 +587,37 @@ function expand(tr){
   const refs=(d.refs&&d.refs.length)?d.refs.map(esc).join("<br>"):"none cited";
   const row=document.createElement("tr");
   row.className="detail";
-  row.innerHTML='<td colspan="7"><dl>'+
-    "<dt>What is recorded</dt><dd>"+esc(d.note||"—")+"</dd>"+
-    "<dt>Dated as</dt><dd>"+esc(d.years_raw||d.t_start||"—")+"</dd>"+
-    "<dt>Entry type</dt><dd>"+esc(KIND[d.record_kind]||d.record_kind||"—")+"</dd>"+
-    "<dt>Compiler confidence</dt><dd>"+esc(d.confidence||"—")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades</dd>"+
-    "<dt>References</dt><dd>"+refs+"</dd>"+
-    "<dt>Patterns</dt><dd>"+((d.signatures&&d.signatures.length)?d.signatures.map(esc).join(", "):"—")+"</dd>"+
-    "<dt>Linked records</dt><dd>"+relHtml+"</dd>"+
-    "<dt>Identifier</dt><dd><code>"+esc(d.id)+"</code></dd>"+
-    (d.enrichment?"<dt>Added context</dt><dd>"+esc(JSON.stringify(d.enrichment))+"</dd>":"")+
-    "</dl></td>";
+  const rows=[];
+  const add=(k,v)=>{ if(v!==undefined&&v!==null&&v!=="") rows.push("<dt>"+k+"</dt><dd>"+v+"</dd>"); };
+  add("What is recorded", esc(d.note||""));
+  add("Dated as", esc(d.years_raw||d.t_start||""));
+  add("Phenomena", (d.effect_types||[]).length
+        ? d.effect_types.map(t=>'<code>'+esc(t)+"</code>").join(" · ") : "");
+  add("Mechanisms on record", (d.mechanisms||[]).length
+        ? d.mechanisms.map(m=>'<code>'+esc(m.ref)+"</code> <span style='color:var(--muted-foreground)'>"+
+            esc(m.role)+"</span>").join("<br>") : "");
+  add("Context", d.context ? Object.keys(d.context).map(k=>
+        "<span style='color:var(--muted-foreground)'>"+esc(k)+"</span> "+
+        esc([].concat(d.context[k]).join(", "))).join(" · ") : "");
+  add("Entry type", esc(KIND[d.record_kind]||d.record_kind||""));
+  add("Patent on file", d.patent_flag===true ? "yes" : (d.patent_flag===false ? "no" : ""));
+  add("Compiler confidence", esc(d.confidence||"")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades");
+  add("References", refs);
+  add("Patterns", (d.signatures||[]).length ? d.signatures.map(esc).join(", ") : "");
+  add("Documented kernel", esc(d.factual_kernel||""));
+  add("Added by the narrative", esc(d.lore_layer||""));
+  add("Narrative provenance", esc(d.narrative_provenance||""));
+  add("Summary", esc(d.summary||""));
+  add("Linked records", relHtml);
+  add("Identifier", "<code>"+esc(d.id)+"</code>");
+  if(d.enrichment) add("Added context", esc(JSON.stringify(d.enrichment)));
+  // anything the corpus grows later still shows up, rather than being dropped
+  const SHOWN=new Set(["note","years_raw","years","effect_types","mechanisms","context","record_kind",
+    "patent_flag","confidence","compilation_confidence","refs","signatures","factual_kernel","lore_layer",
+    "narrative_provenance","summary","id","label","principals","enrichment","lane","lanes","t_start",
+    "t_end","t_precision","ongoing","epistemotype","e_signature","relations","linked_instances","emergence"]);
+  Object.keys(d).filter(k=>!SHOWN.has(k)).forEach(k=>add(esc(k), esc(String(d[k]))));
+  row.innerHTML='<td colspan="7"><dl>'+rows.join("")+"</dl></td>";
   tr.after(row);
 }
 function explain(target){

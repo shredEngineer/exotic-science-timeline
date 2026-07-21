@@ -40,33 +40,43 @@ for f in FILES:
         if r["id"] == "ex:bhaskara-note": continue  # pointer record
         st, en, prec, ong = parse_years(r.get("years",""))
         if st is None: continue
-        lane = r["effect_types"][0].split("-")[1] if r.get("effect_types") else "SON"
-        events.append({"id":r["id"],"label":r["label"],"lane":lane,"t_start":st,"t_end":en,
-            "t_precision":prec,"ongoing":ong,"epistemotype":r.get("epistemotype","EP-0"),
-            "record_kind":r.get("record_kind","observation"),
-            "confidence":r.get("compilation_confidence","high"),
-            "e_signature":r.get("e_signature",""),"signatures":r.get("signatures",[]),
-            "note":r.get("note",""),"principals":r.get("principals",""),"years_raw":r.get("years",""),
-            # refs travel with the event: a downstream consumer must be able to see
-            # that a claim is sourced, or its own checks can never discharge on one.
-            "refs":r.get("refs",[])})
+        # Carry the WHOLE record, then add the derived fields. Enumerating
+        # fields here is how a consumer silently loses data every time the
+        # corpus grows a column — the page must be able to show everything.
+        et = r.get("effect_types") or []
+        lanes = sorted({e.split("-")[1] for e in et}) or ["SON"]
+        ev_rec = dict(r)
+        ev_rec.update({
+            "lane": lanes[0],            # primary class — the chart places by this
+            "lanes": lanes,              # every class the record carries
+            "t_start": st, "t_end": en, "t_precision": prec, "ongoing": ong,
+            "epistemotype": r.get("epistemotype", "EP-0"),
+            "record_kind": r.get("record_kind", "observation"),
+            "confidence": r.get("compilation_confidence", "high"),
+            "years_raw": r.get("years", ""),
+        })
+        events.append(ev_rec)
         for rel in r.get("relations",[]):
             arcs.append({"source":r["id"],"target":rel["ref"],"type":rel["type"]})
     for doc in d.get("doctrines", []):
         st,en,prec,ong = parse_years(doc.get("years",""))
         if st is None: continue
-        events.append({"id":doc["id"],"label":doc["label"],"lane":"DOC","t_start":st,"t_end":en,
+        rec = dict(doc)
+        rec.update({"lane":"DOC","lanes":["DOC"],"t_start":st,"t_end":en,
             "t_precision":prec,"ongoing":ong,"epistemotype":"EP-0","record_kind":"doctrine",
             "confidence":doc.get("compilation_confidence","high"),"e_signature":"",
-            "signatures":[],"note":doc.get("summary",""),"principals":doc.get("principals",""),"years_raw":doc.get("years","")})
+            "signatures":[],"note":doc.get("summary",""),"years_raw":doc.get("years","")})
+        events.append(rec)
     for nar in d.get("narratives", []):
         st,en,prec,ong = parse_years(nar.get("emergence",""))
         if st is None: continue
-        events.append({"id":nar["id"],"label":nar["label"],"lane":"NAR","t_start":st,"t_end":en,
+        rec = dict(nar)
+        rec.update({"lane":"NAR","lanes":["NAR"],"t_start":st,"t_end":en,
             "t_precision":prec,"ongoing":ong,"epistemotype":"EP-0","record_kind":"narrative",
             "confidence":nar.get("compilation_confidence","high"),"e_signature":"",
             "signatures":[],"note":"Kernel: "+nar.get("factual_kernel","")+" / Lore: "+nar.get("lore_layer",""),
-            "principals":"","years_raw":nar.get("emergence","")})
+            "principals":nar.get("principals",""),"years_raw":nar.get("emergence","")})
+        events.append(rec)
 
 emap = {e["id"]:e for e in events}
 arcs = [a for a in arcs if a["source"] in emap and a["target"] in emap]
