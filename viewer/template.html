@@ -87,7 +87,7 @@ header.site.scrolled .hbrand span{font-size:.75rem}
 .stat b{display:block;font-family:var(--font-heading);font-size:1.7rem;color:var(--primary);
   line-height:1.1;white-space:nowrap}
 .stat b.range{font-size:clamp(1.15rem,2.4vw,1.7rem)}
-.stat b .sep{color:var(--muted-foreground);font-weight:400;padding:0 .12em}
+.stat b .sep{color:var(--muted-foreground);font-weight:400;white-space:nowrap}
 .stat span{display:block;margin-top:.25rem;color:var(--muted-foreground);font-size:.85rem}
 
 /* ---------- sections ---------- */
@@ -491,7 +491,9 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 (function(){
   const s=DATA.stats||{}, eras=DATA.eras||[];
   const range = eras.length
-    ? eras[0][0]+'<span class="sep"> … </span>'+eras[eras.length-1][1] : "—";
+    // no-break spaces: the separator must not be a wrap opportunity even if a
+    // white-space rule is ever overridden downstream
+    ? eras[0][0]+'<span class="sep">\u00a0…\u00a0</span>'+eras[eras.length-1][1] : "—";
   const items=[
     {v:esc(s.observation_events ?? ev.length), l:"documented reports"},
     {v:range, l:"years covered", nowrap:true},
