@@ -10,6 +10,8 @@
 <meta property="og:title" content="Exotic Science Timeline">
 <meta property="og:description" content="Nine centuries of documented anomaly claims, graded on six evidence axes.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://timeline.advanced-rediscovery.com/assets/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
 <style>
 @font-face{font-family:"Exo 2";src:url("assets/fonts/Exo2-SemiBold.woff2")format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Exo 2";src:url("assets/fonts/Exo2-Bold.woff2")format("woff2");font-weight:700;font-display:swap}
@@ -71,24 +73,28 @@ header.site.scrolled .hbrand span{font-size:.75rem}
 
 /* ---------- hero ---------- */
 .hero{padding:clamp(2.5rem,6vw,4.5rem) 0 2rem}
-.hero h1{font-size:clamp(2rem,5vw,3.25rem);letter-spacing:-.02em;max-width:22ch}
-.grad{background:linear-gradient(135deg,var(--secondary-muted),var(--secondary));
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.02em;max-width:30ch;text-wrap:balance}
+.grad{display:inline-block;background:linear-gradient(135deg,var(--secondary-muted),var(--secondary));
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.lede{margin-top:1.1rem;max-width:70ch;font-size:clamp(1rem,1.6vw,1.15rem);color:hsl(0 0% 88%)}
+.lede{margin-top:1.15rem;max-width:74ch;font-size:clamp(1rem,1.6vw,1.15rem);color:hsl(0 0% 88%)}
 .lede strong{color:var(--foreground)}
 .note{margin-top:1rem;max-width:70ch;color:var(--muted-foreground);font-size:.95rem}
 
 .jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
-.jump a{border:1px solid var(--border);background:var(--card-subtle);border-radius:999px;
-  padding:.35rem .85rem;font-size:.875rem;color:var(--foreground);transition:all .2s}
-.jump a:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
+.jump a{display:inline-flex;align-items:center;border-radius:999px;background:var(--primary);
+  color:hsl(0 0% 100%);padding:.55rem 1.15rem;font-size:.78rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:.16em;box-shadow:0 8px 20px hsl(216 60% 4% / .45);
+  transition:all .3s}
+.jump a:hover{background:hsl(21 100% 50%);transform:translateY(-2px);
+  box-shadow:0 12px 26px hsl(216 60% 4% / .55);text-decoration:none}
 .stats{display:grid;gap:.75rem;margin:2rem 0 0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem}
 .stat b{display:block;font-family:var(--font-heading);font-size:1.7rem;color:var(--primary);
   line-height:1.1;white-space:nowrap}
 .stat b.range{font-size:clamp(1.15rem,2.4vw,1.7rem)}
 .stat b .sep{color:var(--muted-foreground);font-weight:400;white-space:nowrap}
-.stat span{display:block;margin-top:.25rem;color:var(--muted-foreground);font-size:.85rem}
+.stat > span{display:block;margin-top:.25rem;color:var(--muted-foreground);font-size:.85rem}
+.stat b .sep{display:inline}
 
 /* ---------- sections ---------- */
 section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
@@ -174,8 +180,8 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 #tl{display:block;width:100%;height:auto;touch-action:none;cursor:grab}
 #tl.dragging{cursor:grabbing}
 .tl .era{fill:hsl(214 40% 14% / .45)}
-.tl .eralabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-body)}
-.tl .lanelabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-mono)}
+.tl .eralabel{fill:var(--muted-foreground);font-size:11.5px;font-family:var(--font-body)}
+.tl .lanelabel{fill:var(--muted-foreground);font-size:11.5px;font-family:var(--font-mono)}
 .tl .gridline{stroke:hsl(214 30% 18% / .8);stroke-width:1}
 .tl .arc{fill:none;stroke:hsl(21 100% 55% / .4);stroke-width:1.1}
 .tl .dot{stroke:hsl(216 60% 9.8%);stroke-width:.8;cursor:pointer}
@@ -290,8 +296,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 
 <div class="hero">
   <h1>Nine centuries of <span class="grad">anomaly claims</span>, graded by evidence.</h1>
-  <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports: what was claimed, by whom, and <strong>how well each one was actually documented</strong>.</p>
-  <p class="note">It takes no position on whether any effect is real. Each entry carries a coordinate describing its evidence — how it was recorded, whether anyone reproduced it, what was controlled for, who examined it. Well-documented claims and thin ones sit in the same table, in the same vocabulary, and the difference becomes visible instead of asserted.</p>
+  <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports, and of <strong>how well each one was documented</strong>.</p>
+  <p class="note">It takes no position on whether any effect is real. Every entry is graded on six ordered axes by <a href="https://github.com/shredEngineer/eqo"><strong>EQO</strong></a>, an open standard that classifies what was observed and grades how well it is documented — orthodox and heterodox cases in one vocabulary. It assigns coordinates, never verdicts.</p>
   <div class="stats" id="stats"></div>
   <nav class="jump" aria-label="On this page">
     <a href="#record">The timeline</a>
@@ -303,6 +309,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 <section id="record">
   <div class="sec-head"><h2>Exotic Science Timeline</h2>
     <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline">Data and build ↗</a></div>
+
 
   <div class="chartbox">
     <div class="charttools">
@@ -349,11 +356,11 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <div class="infobox">
     <span class="k">EQO</span>
     <div>
-      <p><a href="https://github.com/shredEngineer/eqo"><strong>Epistemic Quantization of Observables</strong></a> is the open classification standard this record is built on. It gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases use the same vocabulary, and the standard forbids itself a credibility score: it assigns coordinates, never verdicts.</p>
+      <p><a href="https://github.com/shredEngineer/eqo"><strong>Epistemic Quantization of Observables</strong></a> is the open classification standard this record is built on. It gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases share one vocabulary, and the standard forbids itself a credibility score — it assigns coordinates, never verdicts.</p>
     </div>
   </div>
 
-  <p class="sec-intro">The grades describe the <em>documentation</em>, never the truth of a claim. A carefully measured result nobody could reproduce and a vague anecdote look different here, which is the entire point. Every badge in the record above links to the table that defines it.</p>
+  <p class="sec-intro">Every badge in the record links to the row below that defines it.</p>
 
   <div class="reftables">
     <table class="ref"><caption>Evidence axes <a class="capsrc" id="cap-ax" href="#">definition ↗</a></caption>
@@ -688,7 +695,7 @@ const svg=document.getElementById("tl");
 const eras=DATA.eras||[];
 const lanes=[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))]
   .sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
-const L=136, R=18, T=36, rowH=21, H=T+lanes.length*rowH+24;
+const L=150, R=20, T=40, rowH=24, H=T+lanes.length*rowH+26;
 const MINSPAN=1/40;
 let W=1180;                       // replaced by the measured width on every paint
 let u0=0, u1=1;                   // the visible window over the era axis
@@ -710,7 +717,7 @@ const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 1
 function paint(){
   W=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
   const span=u1-u0, zoom=1/span;
-  const r=Math.min(8,3.4+Math.log2(zoom)*0.9);      // readable at every zoom
+  const r=Math.min(9,4.2+Math.log2(zoom)*0.95);     // readable at every zoom
   const vis=u=>u>=u0-0.002&&u<=u1+0.002;
   let s="";
   s+='<defs><clipPath id="plot"><rect x="'+L+'" y="'+(T-16)+'" width="'+plotW()+'" height="'+(H-T)+'"/></clipPath></defs>';
