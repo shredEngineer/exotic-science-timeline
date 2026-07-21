@@ -171,7 +171,7 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
   line-height:1;display:inline-flex;align-items:center;justify-content:center}
 .zbtn:hover{border-color:var(--secondary-muted);color:var(--secondary)}
 .zbtn.wide{width:auto;padding:0 .7rem;font-size:.85rem}
-#tl{display:block;width:100%;touch-action:none;cursor:grab}
+#tl{display:block;width:100%;height:auto;touch-action:none;cursor:grab}
 #tl.dragging{cursor:grabbing}
 .tl .era{fill:hsl(214 40% 14% / .45)}
 .tl .eralabel{fill:var(--muted-foreground);font-size:10px;font-family:var(--font-body)}
@@ -677,79 +677,105 @@ document.addEventListener("click",e=>{
 
 apply();
 
-/* ---------- chart: zoomable, pannable, clickable ---------- */
+/* ---------- chart ----------
+   The coordinate system is pixels, always 1:1 with the rendered size, so nothing
+   is ever stretched: circles stay circular and text stays crisp. Zoom is a
+   window over the DATA domain and triggers a redraw — it is not a viewBox
+   transform, which would scale the drawing itself.                           */
 const svg=document.getElementById("tl");
 const eras=DATA.eras||[];
-const lanes=[...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
-const W=1180, L=136, R=18, T=36, rowH=21, H=T+lanes.length*rowH+24;
-const bandW=(W-L-R)/Math.max(eras.length,1);
-const xOf=y=>{
-  for(let i=0;i<eras.length;i++){const a=eras[i][0],b=eras[i][1];
-    if(y>=a&&y<b) return L+i*bandW+((y-a)/(b-a))*bandW;}
-  return (eras.length&&y<eras[0][0])?L:W-R;
-};
+const lanes=[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))]
+  .sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
+const L=136, R=18, T=36, rowH=21, H=T+lanes.length*rowH+24;
+const MINSPAN=1/40;
+let W=1180;                       // replaced by the measured width on every paint
+let u0=0, u1=1;                   // the visible window over the era axis
+
+// year -> position on a uniform era axis in [0,1]
+function uOf(y){
+  const n=eras.length||1;
+  for(let i=0;i<n;i++){const a=eras[i][0],b=eras[i][1];
+    if(y>=a&&y<b) return (i+(y-a)/(b-a))/n;}
+  return (eras.length&&y<eras[0][0]) ? 0 : 1;
+}
+const plotW=()=>Math.max(80,W-L-R);
+const pxOf=u=>L+((u-u0)/(u1-u0))*plotW();
+const uAtPx=px=>u0+((px-L)/plotW())*(u1-u0);
 const yOf=l=>T+lanes.indexOf(l)*rowH+rowH/2;
 const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",
   "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
-let view={x:0,w:W};
 
 function paint(){
-  const k=W/view.w, r=Math.min(9,Math.max(3.4,3.4*Math.sqrt(k)));
+  W=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
+  const span=u1-u0, zoom=1/span;
+  const r=Math.min(8,3.4+Math.log2(zoom)*0.9);      // readable at every zoom
+  const vis=u=>u>=u0-0.002&&u<=u1+0.002;
   let s="";
+  s+='<defs><clipPath id="plot"><rect x="'+L+'" y="'+(T-16)+'" width="'+plotW()+'" height="'+(H-T)+'"/></clipPath></defs>';
+  s+='<g clip-path="url(#plot)">';
   eras.forEach((e,i)=>{
-    if(i%2===0) s+='<rect class="era" x="'+(L+i*bandW)+'" y="'+(T-15)+'" width="'+bandW+'" height="'+(H-T-4)+'"/>';
-    s+='<text class="eralabel" x="'+(L+i*bandW+6)+'" y="'+(T-21)+'">'+esc(e[2])+" · "+e[0]+"–"+e[1]+"</text>";
+    const a=pxOf(i/eras.length), b=pxOf((i+1)/eras.length);
+    if(b<L||a>W-R) return;
+    if(i%2===0) s+='<rect class="era" x="'+a.toFixed(1)+'" y="'+(T-15)+'" width="'+(b-a).toFixed(1)+'" height="'+(H-T-4)+'"/>';
   });
-  lanes.forEach(l=>{
-    s+='<line class="gridline" x1="'+L+'" y1="'+yOf(l)+'" x2="'+(W-R)+'" y2="'+yOf(l)+'"/>';
-  });
+  lanes.forEach(l=>{ s+='<line class="gridline" x1="'+L+'" y1="'+yOf(l)+'" x2="'+(W-R)+'" y2="'+yOf(l)+'"/>'; });
   (DATA.arcs||[]).forEach(a=>{
     const A=ev.find(e=>e.id===a.source),B=ev.find(e=>e.id===a.target);
     if(!A||!B||A.t_start==null||B.t_start==null) return;
-    const x1=xOf(A.t_start),x2=xOf(B.t_start),y1=yOf(A.lane),y2=yOf(B.lane);
+    const ua=uOf(A.t_start), ub=uOf(B.t_start);
+    if(!vis(ua)&&!vis(ub)) return;
+    const x1=pxOf(ua),x2=pxOf(ub),y1=yOf(A.lane),y2=yOf(B.lane);
     s+='<path class="arc" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-15)+" "+x2.toFixed(1)+","+y2+'"/>';
   });
   ev.forEach(e=>{ if(e.t_start==null) return;
-    s+='<circle class="dot" data-id="'+esc(e.id)+'" cx="'+xOf(e.t_start).toFixed(1)+'" cy="'+yOf(e.lane)+
+    const u=uOf(e.t_start); if(!vis(u)) return;
+    s+='<circle class="dot" data-id="'+esc(e.id)+'" cx="'+pxOf(u).toFixed(1)+'" cy="'+yOf(e.lane)+
       '" r="'+r.toFixed(2)+'" fill="'+(EPC[e.epistemotype]||EPC["EP-0"])+'"><title>'+
       esc(e.years_raw||e.t_start)+" — "+esc(e.label)+"</title></circle>";
   });
-  // lane labels last so they stay readable over the panned content
+  s+="</g>";
+  eras.forEach((e,i)=>{
+    const a=pxOf(i/eras.length);
+    if(a<L-40||a>W-R) return;
+    s+='<text class="eralabel" x="'+Math.max(L+4,a+6).toFixed(1)+'" y="'+(T-21)+'">'+esc(e[2])+" · "+e[0]+"–"+e[1]+"</text>";
+  });
   lanes.forEach(l=>{ s+='<text class="lanelabel" x="8" y="'+(yOf(l)+3)+'">'+esc(LANE[l]||l)+"</text>"; });
+  svg.setAttribute("viewBox","0 0 "+W+" "+H);     // 1 unit == 1 pixel, never stretched
+  svg.setAttribute("height",H);
   svg.innerHTML=s;
-  svg.setAttribute("viewBox",view.x+" 0 "+view.w+" "+H);
-  svg.setAttribute("preserveAspectRatio","none");
-  svg.style.height=H+"px";
 }
-function clampView(){
-  view.w=Math.min(W,Math.max(W/14,view.w));
-  view.x=Math.min(W-view.w,Math.max(0,view.x));
+function clampWindow(){
+  let span=Math.min(1,Math.max(MINSPAN,u1-u0));
+  let mid=(u0+u1)/2;
+  u0=mid-span/2; u1=mid+span/2;
+  if(u0<0){u1-=u0;u0=0;} if(u1>1){u0-=(u1-1);u1=1;}
+  u0=Math.max(0,u0); u1=Math.min(1,u1);
 }
-function zoomAt(px,factor){
+function zoomAt(clientX,factor){
   const rect=svg.getBoundingClientRect();
-  const ux=view.x+((px-rect.left)/rect.width)*view.w;
-  view.w*=factor; clampView();
-  view.x=ux-((px-rect.left)/rect.width)*view.w; clampView();
-  paint();
+  const px=(clientX-rect.left)*(W/rect.width);
+  const anchor=Math.min(1,Math.max(0,uAtPx(px)));
+  const span=Math.min(1,Math.max(MINSPAN,(u1-u0)*factor));
+  const frac=(anchor-u0)/(u1-u0);
+  u0=anchor-frac*span; u1=u0+span;
+  clampWindow(); paint();
 }
 svg.addEventListener("wheel",e=>{
   e.preventDefault();
-  // normalize across deltaMode (pixels / lines / pages) and scale the factor by
-  // how far the user actually scrolled — one fixed step per event makes a
-  // trackpad flick jump dozens of steps.
   const unit = e.deltaMode===1 ? 16 : e.deltaMode===2 ? 100 : 1;
   const d = Math.max(-240, Math.min(240, e.deltaY*unit));
   zoomAt(e.clientX, Math.exp(d*0.0022));
 },{passive:false});
-document.getElementById("zin").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1/1.4);};
-document.getElementById("zout").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1.4);};
-document.getElementById("zreset").onclick=()=>{view={x:0,w:W};paint();};
+document.getElementById("zin").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1/1.5);};
+document.getElementById("zout").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1.5);};
+document.getElementById("zreset").onclick=()=>{u0=0;u1=1;paint();};
 let drag=null;
-svg.addEventListener("pointerdown",e=>{drag={px:e.clientX,x:view.x};svg.setPointerCapture(e.pointerId);
-  svg.classList.add("dragging");});
+svg.addEventListener("pointerdown",e=>{drag={px:e.clientX,u0:u0,u1:u1};
+  svg.setPointerCapture(e.pointerId);svg.classList.add("dragging");});
 svg.addEventListener("pointermove",e=>{ if(!drag) return;
   const rect=svg.getBoundingClientRect();
-  view.x=drag.x-((e.clientX-drag.px)/rect.width)*view.w; clampView(); paint();});
+  const du=((e.clientX-drag.px)*(W/rect.width)/plotW())*(drag.u1-drag.u0);
+  u0=drag.u0-du; u1=drag.u1-du; clampWindow(); paint();});
 ["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,e=>{
   if(drag&&Math.abs(e.clientX-drag.px)<4){
     const el=document.elementFromPoint(e.clientX,e.clientY);
@@ -771,7 +797,8 @@ function jumpTo(id){
 }
 
 paint();
-addEventListener("resize",()=>paint());
+let rAF=null;
+addEventListener("resize",()=>{cancelAnimationFrame(rAF);rAF=requestAnimationFrame(paint);});
 </script>
 </body>
 </html>
