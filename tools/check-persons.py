@@ -40,6 +40,8 @@ def main() -> int:
         hits = sorted(set(m.lower() for m in ALLEGATION.findall(text)))
         if not hits:
             continue
+        if e.get("refs"):
+            continue  # sourced — a reader can check the claim
         if EXCULPATORY.search(text) or ATTRIBUTED.search(text):
             continue
         findings.append((e["id"], principals, hits, text[:150]))

@@ -19,7 +19,8 @@
    ],
    "note": "Video/sample corpus; military delegation visits documented 1983; never independently reproduced under controls.",
    "principals": "John Hutchison",
-   "years_raw": "1979\u20132000s"
+   "years_raw": "1979\u20132000s",
+   "refs": []
   },
   {
    "id": "ex:brown-gravitator-1929",
@@ -38,7 +39,8 @@
    ],
    "note": "Charged asymmetric capacitors; Project Winterhaven proposal 1952.",
    "principals": "Thomas Townsend Brown",
-   "years_raw": "1929\u20131950s"
+   "years_raw": "1929\u20131950s",
+   "refs": []
   },
   {
    "id": "ex:lifter-community",
@@ -58,7 +60,8 @@
    ],
    "note": "Widely replicated as EHD thrust; effect vanishes in vacuum.",
    "principals": "Community (Naudin et al.); NASA EHD studies",
-   "years_raw": "2000s"
+   "years_raw": "2000s",
+   "refs": []
   },
   {
    "id": "ex:searl-seg",
@@ -79,7 +82,8 @@
    ],
    "note": "Spin-up, weight loss, halo, cooling per narrative corpus; no controlled documentation.",
    "principals": "John Searl",
-   "years_raw": "1946\u2013present (lore)"
+   "years_raw": "1946\u2013present (lore)",
+   "refs": []
   },
   {
    "id": "ex:roschin-godin-2000",
@@ -99,7 +103,8 @@
    ],
    "note": "Reported weight change, pink glow, cooling around rotating magnet assembly.",
    "principals": "Sergei Godin, Vladimir Roschin",
-   "years_raw": "2000"
+   "years_raw": "2000",
+   "refs": []
   },
   {
    "id": "ex:fleischmann-pons-1989",
@@ -118,7 +123,10 @@
    ],
    "note": "Pd-D electrolysis; announcement Utah, 23 March 1989.",
    "principals": "Martin Fleischmann, Stanley Pons",
-   "years_raw": "1989"
+   "years_raw": "1989",
+   "refs": [
+    "J. Electroanal. Chem. 261, 301 (1989)"
+   ]
   },
   {
    "id": "ex:caltech-mit-null-1989",
@@ -137,7 +145,10 @@
    ],
    "note": "Adversarial replications reporting null within calorimetric error.",
    "principals": "Lewis et al.; MIT PFC",
-   "years_raw": "1989"
+   "years_raw": "1989",
+   "refs": [
+    "Nature 340, 525 (1989)"
+   ]
   },
   {
    "id": "ex:jones-neutrons-1989",
@@ -156,7 +167,10 @@
    ],
    "note": "Neutron rates far below F-P heat claims.",
    "principals": "Steven Jones (BYU)",
-   "years_raw": "1989"
+   "years_raw": "1989",
+   "refs": [
+    "Nature 338, 737 (1989)"
+   ]
   },
   {
    "id": "ex:miles-mckubre-helium",
@@ -175,7 +189,8 @@
    ],
    "note": "Reported He-4 commensurate with excess heat in Pd-D cells.",
    "principals": "Melvin Miles; Michael McKubre (SRI)",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:iwamura-2002",
@@ -194,7 +209,10 @@
    ],
    "note": "Cs\u2192Pr reported after D2 permeation through Pd/CaO multilayers.",
    "principals": "Yasuhiro Iwamura (Mitsubishi HI)",
-   "years_raw": "2002"
+   "years_raw": "2002",
+   "refs": [
+    "Jpn. J. Appl. Phys. 41, 4642 (2002)"
+   ]
   },
   {
    "id": "ex:taleyarkhan-2002",
@@ -211,7 +229,10 @@
    "signatures": [],
    "note": "Sonofusion claim; later Purdue research-conduct inquiries (2008).",
    "principals": "Rusi Taleyarkhan et al.",
-   "years_raw": "2002"
+   "years_raw": "2002",
+   "refs": [
+    "Science 295, 1868 (2002)"
+   ]
   },
   {
    "id": "ex:rossi-ecat-2011",
@@ -230,7 +251,8 @@
    ],
    "note": "Ni-H reactor demos; Industrial Heat litigation settled 2017.",
    "principals": "Andrea Rossi",
-   "years_raw": "2011\u2013"
+   "years_raw": "2011\u2013",
+   "refs": []
   },
   {
    "id": "ex:google-lenr-2019",
@@ -249,7 +271,10 @@
    ],
    "note": "Multi-lab program; no confirmed excess heat to date.",
    "principals": "Berlinguette et al.",
-   "years_raw": "2015\u20132019"
+   "years_raw": "2015\u20132019",
+   "refs": [
+    "Nature 570, 45 (2019)"
+   ]
   },
   {
    "id": "ex:podkletnov-1992",
@@ -266,7 +291,10 @@
    "signatures": [],
    "note": "0.05\u20130.3% weight loss reported above rotating YBCO disc.",
    "principals": "Eugene Podkletnov",
-   "years_raw": "1992"
+   "years_raw": "1992",
+   "refs": [
+    "Physica C 203, 441 (1992)"
+   ]
   },
   {
    "id": "ex:nasa-msfc-podkletnov",
@@ -283,7 +311,8 @@
    "signatures": [],
    "note": "Partial rebuilds; no confirmed effect.",
    "principals": "Ning Li, Ron Koczor et al.",
-   "years_raw": "1997\u20132002"
+   "years_raw": "1997\u20132002",
+   "refs": []
   },
   {
    "id": "ex:podkletnov-impulse-2001",
@@ -300,7 +329,8 @@
    "signatures": [],
    "note": "Claimed force beam from superconducting discharge; preprint only.",
    "principals": "Eugene Podkletnov, Giovanni Modanese",
-   "years_raw": "2001"
+   "years_raw": "2001",
+   "refs": []
   },
   {
    "id": "ex:ning-li-ac-gravity",
@@ -317,7 +347,8 @@
    "signatures": [],
    "note": "Announced gravity-modification research; no public results.",
    "principals": "Ning Li",
-   "years_raw": "1999\u20132000s"
+   "years_raw": "1999\u20132000s",
+   "refs": []
   },
   {
    "id": "ex:hayasaka-takeuchi-1989",
@@ -336,7 +367,10 @@
    ],
    "note": "Chirality-dependent weight loss reported.",
    "principals": "Hideo Hayasaka, Sakae Takeuchi",
-   "years_raw": "1989"
+   "years_raw": "1989",
+   "refs": [
+    "Phys. Rev. Lett. 63, 2701 (1989)"
+   ]
   },
   {
    "id": "ex:faller-null-1990",
@@ -355,7 +389,10 @@
    ],
    "note": "No anomaly at higher precision.",
    "principals": "James Faller et al.",
-   "years_raw": "1990"
+   "years_raw": "1990",
+   "refs": [
+    "Phys. Rev. Lett. 64, 825 (1990)"
+   ]
   },
   {
    "id": "ex:laithwaite-1974",
@@ -375,7 +412,8 @@
    ],
    "note": "Perceived gyro 'weight loss'; later resolved within classical mechanics.",
    "principals": "Eric Laithwaite",
-   "years_raw": "1974"
+   "years_raw": "1974",
+   "refs": []
   },
   {
    "id": "ex:depalma-spinning-ball-1977",
@@ -394,7 +432,8 @@
    ],
    "note": "Claimed altered fall/rise of rotating steel balls.",
    "principals": "Bruce DePalma",
-   "years_raw": "1977"
+   "years_raw": "1977",
+   "refs": []
   },
   {
    "id": "ex:depalma-n-machine",
@@ -413,7 +452,8 @@
    ],
    "note": "Faraday-disc generator with claimed anomalous output.",
    "principals": "Bruce DePalma",
-   "years_raw": "1980s"
+   "years_raw": "1980s",
+   "refs": []
   },
   {
    "id": "ex:allais-pendulum-1954",
@@ -432,7 +472,8 @@
    ],
    "note": "Anomalous paraconical-pendulum precession during solar eclipses.",
    "principals": "Maurice Allais",
-   "years_raw": "1954, 1959"
+   "years_raw": "1954, 1959",
+   "refs": []
   },
   {
    "id": "ex:saxl-allen-1970",
@@ -451,7 +492,10 @@
    ],
    "note": "Period change reported during solar eclipse.",
    "principals": "Erwin Saxl, Mildred Allen",
-   "years_raw": "1970"
+   "years_raw": "1970",
+   "refs": [
+    "Phys. Rev. D 3, 823 (1971)"
+   ]
   },
   {
    "id": "ex:eclipse-gravimetry-1997",
@@ -470,7 +514,10 @@
    ],
    "note": "Small unexplained residuals during total eclipse; contested.",
    "principals": "Wang, Yang et al.",
-   "years_raw": "1997 (publ. 2000)"
+   "years_raw": "1997 (publ. 2000)",
+   "refs": [
+    "Phys. Rev. D 62, 041101 (2000)"
+   ]
   },
   {
    "id": "ex:kozyrev-detectors",
@@ -490,7 +537,8 @@
    ],
    "note": "'Causal mechanics'; detectors reportedly responding to true star positions.",
    "principals": "Nikolai Kozyrev",
-   "years_raw": "1950s\u20131980s"
+   "years_raw": "1950s\u20131980s",
+   "refs": []
   },
   {
    "id": "ex:emdrive-shawyer",
@@ -509,7 +557,8 @@
    ],
    "note": "Asymmetric resonant cavity thrust claims.",
    "principals": "Roger Shawyer (SPR Ltd)",
-   "years_raw": "2003\u2013"
+   "years_raw": "2003\u2013",
+   "refs": []
   },
   {
    "id": "ex:emdrive-eagleworks-2016",
@@ -528,7 +577,10 @@
    ],
    "note": "~1.2 mN/kW reported on torsion balance in vacuum.",
    "principals": "Harold White et al. (NASA Eagleworks)",
-   "years_raw": "2016"
+   "years_raw": "2016",
+   "refs": [
+    "J. Propulsion & Power 33, 830 (2017)"
+   ]
   },
   {
    "id": "ex:emdrive-dresden-2021",
@@ -548,7 +600,8 @@
    ],
    "note": "Thrust signals traced to thermal/interaction artifacts at higher precision.",
    "principals": "Martin Tajmar et al.",
-   "years_raw": "2018\u20132021"
+   "years_raw": "2018\u20132021",
+   "refs": []
   },
   {
    "id": "ex:tajmar-esa-2006",
@@ -565,7 +618,8 @@
    "signatures": [],
    "note": "Reported acceleration fields near spun cryogenic rings; later attributed to artifacts by the group itself.",
    "principals": "Martin Tajmar et al. (ARC/ESA-funded)",
-   "years_raw": "2006"
+   "years_raw": "2006",
+   "refs": []
   },
   {
    "id": "ex:woodward-mega",
@@ -584,7 +638,8 @@
    ],
    "note": "\u00b5N-scale thrust claims on torsion balances; adversarial campaigns ongoing.",
    "principals": "James Woodward; SSI/NIAC program",
-   "years_raw": "1990s\u20132020s"
+   "years_raw": "1990s\u20132020s",
+   "refs": []
   },
   {
    "id": "ex:dean-drive-1959",
@@ -603,7 +658,8 @@
    ],
    "note": "Popularized via Astounding Science Fiction; friction-rectified vibration is the standard account.",
    "principals": "Norman Dean",
-   "years_raw": "1959"
+   "years_raw": "1959",
+   "refs": []
   },
   {
    "id": "ex:bessler-wheel-1712",
@@ -623,7 +679,8 @@
    ],
    "note": "54-day sealed-room run, Kassel 1717, attested by officials; hidden-drive allegation by a maid.",
    "principals": "Johann Bessler",
-   "years_raw": "1712\u20131717"
+   "years_raw": "1712\u20131717",
+   "refs": []
   },
   {
    "id": "ex:keely-motor-1872",
@@ -640,7 +697,8 @@
    "signatures": [],
    "note": "Posthumous 1899 findings of concealed compressed-air lines.",
    "principals": "John Worrell Keely",
-   "years_raw": "1872\u20131898"
+   "years_raw": "1872\u20131898",
+   "refs": []
   },
   {
    "id": "ex:testatika",
@@ -659,7 +717,8 @@
    ],
    "note": "Influence-machine shown to visitors; independent testing declined.",
    "principals": "Paul Baumann / Methernitha commune",
-   "years_raw": "1960s\u2013present"
+   "years_raw": "1960s\u2013present",
+   "refs": []
   },
   {
    "id": "ex:moray-receiver",
@@ -679,7 +738,8 @@
    ],
    "note": "Multi-kW demonstrations reported by witnesses; device later destroyed.",
    "principals": "T. Henry Moray",
-   "years_raw": "1920s\u20131930s"
+   "years_raw": "1920s\u20131930s",
+   "refs": []
   },
   {
    "id": "ex:hendershot-1928",
@@ -699,7 +759,8 @@
    ],
    "note": "Aviation-era publicity; never independently validated.",
    "principals": "Lester Hendershot",
-   "years_raw": "1928"
+   "years_raw": "1928",
+   "refs": []
   },
   {
    "id": "ex:tesla-us685957-1901",
@@ -718,7 +779,10 @@
    ],
    "note": "Patent documents the claim (filing, not observation grade).",
    "principals": "Nikola Tesla",
-   "years_raw": "1901"
+   "years_raw": "1901",
+   "refs": [
+    "US Patent 685,957 (1901)"
+   ]
   },
   {
    "id": "ex:tesla-oscillator-lore",
@@ -735,7 +799,8 @@
    "signatures": [],
    "note": "Houston Street 'earthquake machine' anecdotes; resonance physics is orthodox, the magnitude lore is not.",
    "principals": "Nikola Tesla (reception)",
-   "years_raw": "1898 (lore)"
+   "years_raw": "1898 (lore)",
+   "refs": []
   },
   {
    "id": "ex:steorn-orbo-2007",
@@ -755,7 +820,8 @@
    ],
    "note": "Economist ad 2006; failed Kinetica demo 2007; own jury 2009: no evidence of energy production.",
    "principals": "Steorn Ltd (Dublin)",
-   "years_raw": "2006\u20132016"
+   "years_raw": "2006\u20132016",
+   "refs": []
   },
   {
    "id": "ex:bearden-meg-2002",
@@ -772,7 +838,10 @@
    "signatures": [],
    "note": "COP>1 claimed for flux-switched transformer; patent granted 2002.",
    "principals": "Tom Bearden et al.",
-   "years_raw": "2002"
+   "years_raw": "2002",
+   "refs": [
+    "US Patent 6,362,718 (2002)"
+   ]
   },
   {
    "id": "ex:sweet-vta-1980s",
@@ -792,7 +861,8 @@
    ],
    "note": "Conditioned-magnet device; witness accounts report self-powering, device weight loss under load, and cooling.",
    "principals": "Floyd Sweet (assoc. Tom Bearden)",
-   "years_raw": "1980s\u2013early 1990s"
+   "years_raw": "1980s\u2013early 1990s",
+   "refs": []
   },
   {
    "id": "ex:lutec-2001",
@@ -811,7 +881,8 @@
    ],
    "note": "Australian magnet-motor company; claims never independently validated.",
    "principals": "John Christie, Lou Brits",
-   "years_raw": "2001"
+   "years_raw": "2001",
+   "refs": []
   },
   {
    "id": "ex:qeg-2014",
@@ -830,7 +901,8 @@
    ],
    "note": "Crowdfunded open-source builds; no build confirmed over-unity.",
    "principals": "Fix the World collective",
-   "years_raw": "2014"
+   "years_raw": "2014",
+   "refs": []
   },
   {
    "id": "ex:kapanadze-videos",
@@ -850,7 +922,8 @@
    ],
    "note": "Meter-and-lamp demonstrations; hidden-supply hypothesis repeatedly raised.",
    "principals": "Tariel Kapanadze",
-   "years_raw": "2000s\u20132010s"
+   "years_raw": "2000s\u20132010s",
+   "refs": []
   },
   {
    "id": "ex:adams-motor",
@@ -869,7 +942,8 @@
    ],
    "note": "Community-replicated as a motor; over-unity claim unconfirmed.",
    "principals": "Robert Adams (NZ)",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:bedini-ssg",
@@ -888,7 +962,8 @@
    ],
    "note": "Widely built pulse motor; desulfation offers a conventional account of battery 'recovery'.",
    "principals": "John Bedini",
-   "years_raw": "1980s\u20132010s"
+   "years_raw": "1980s\u20132010s",
+   "refs": []
   },
   {
    "id": "ex:newman-machine-1986",
@@ -907,7 +982,8 @@
    ],
    "note": "1986 NBS measurement: efficiency below 100% on all tests; patent litigation followed.",
    "principals": "Joseph Newman; NBS (adversarial)",
-   "years_raw": "1980s"
+   "years_raw": "1980s",
+   "refs": []
   },
   {
    "id": "ex:coler-apparatus",
@@ -927,7 +1003,8 @@
    ],
    "note": "Investigated by German navy and postwar British intelligence (BIOS 2394); never reproduced.",
    "principals": "Hans Coler",
-   "years_raw": "1920s\u20131940s"
+   "years_raw": "1920s\u20131940s",
+   "refs": []
   },
   {
    "id": "ex:howard-johnson-1979",
@@ -947,7 +1024,10 @@
    ],
    "note": "Patent granted for magnet-gate geometry; working self-runner never validated.",
    "principals": "Howard Johnson",
-   "years_raw": "1979"
+   "years_raw": "1979",
+   "refs": [
+    "US Patent 4,151,431 (1979)"
+   ]
   },
   {
    "id": "ex:mylow-2009",
@@ -966,7 +1046,8 @@
    ],
    "note": "Claimed Howard-Johnson replication; frame analysis raised a hidden-thread hypothesis.",
    "principals": "'Mylow' (YouTube)",
-   "years_raw": "2009"
+   "years_raw": "2009",
+   "refs": []
   },
   {
    "id": "ex:steven-mark-tpu",
@@ -986,7 +1067,8 @@
    ],
    "note": "Videotaped toroid demos; device and inventor withdrew from scrutiny.",
    "principals": "Steven Mark",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:gray-ema-motor",
@@ -1006,7 +1088,8 @@
    ],
    "note": "Pulsed-discharge motor; 'cold' conductor reports.",
    "principals": "Edwin Gray",
-   "years_raw": "1970s"
+   "years_raw": "1970s",
+   "refs": []
   },
   {
    "id": "ex:papp-engine-1968",
@@ -1025,7 +1108,8 @@
    ],
    "note": "Caltech demonstration ended in fatal explosion; Richard Feynman was present and wrote a skeptical account.",
    "principals": "Josef Papp",
-   "years_raw": "1968"
+   "years_raw": "1968",
+   "refs": []
   },
   {
    "id": "ex:correa-pagd",
@@ -1044,7 +1128,10 @@
    ],
    "note": "Pulsed abnormal glow discharge with claimed net energy.",
    "principals": "Paulo & Alexandra Correa",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": [
+    "US Patent 5,416,391 (1995)"
+   ]
   },
   {
    "id": "ex:chernetsky-discharge",
@@ -1063,7 +1150,8 @@
    ],
    "note": "Soviet-era plasma-discharge over-unity reports.",
    "principals": "Alexander Chernetsky",
-   "years_raw": "1970s\u20131980s"
+   "years_raw": "1970s\u20131980s",
+   "refs": []
   },
   {
    "id": "ex:ehrenhaft-monopoles-1944",
@@ -1080,7 +1168,8 @@
    "signatures": [],
    "note": "Particle motions read as 'magnetolysis'/monopoles; never confirmed.",
    "principals": "Felix Ehrenhaft",
-   "years_raw": "1940s"
+   "years_raw": "1940s",
+   "refs": []
   },
   {
    "id": "ex:meyl-scalar-kits",
@@ -1097,7 +1186,8 @@
    "signatures": [],
    "note": "Demonstration kits; conventional near-field coupling is the standard account.",
    "principals": "Konstantin Meyl",
-   "years_raw": "1990s\u2013"
+   "years_raw": "1990s\u2013",
+   "refs": []
   },
   {
    "id": "ex:hooper-motional-field",
@@ -1114,7 +1204,8 @@
    "signatures": [],
    "note": "Claimed shielding-independent induced fields.",
    "principals": "William Hooper",
-   "years_raw": "1960s\u20131970s"
+   "years_raw": "1960s\u20131970s",
+   "refs": []
   },
   {
    "id": "ex:mills-hydrino",
@@ -1133,7 +1224,8 @@
    ],
    "note": "Below-ground-state hydrogen claims with extensive self-published data; demonstrates the X- private-extension mechanism of \u00a75.",
    "principals": "Randell Mills (Brilliant Light Power)",
-   "years_raw": "1991\u2013"
+   "years_raw": "1991\u2013",
+   "refs": []
   },
   {
    "id": "ex:montagnier-2011",
@@ -1152,7 +1244,8 @@
    ],
    "note": "Claimed EM signatures and 'teleported' DNA templates from high dilutions.",
    "principals": "Luc Montagnier et al.",
-   "years_raw": "2009\u20132011"
+   "years_raw": "2009\u20132011",
+   "refs": []
   },
   {
    "id": "ex:benveniste-1988",
@@ -1171,7 +1264,10 @@
    ],
    "note": "Basophil degranulation at extreme dilution.",
    "principals": "Jacques Benveniste et al.",
-   "years_raw": "1988"
+   "years_raw": "1988",
+   "refs": [
+    "Nature 333, 816 (1988)"
+   ]
   },
   {
    "id": "ex:maddox-check-1988",
@@ -1190,7 +1286,10 @@
    ],
    "note": "Blinded protocol; effect not reproduced.",
    "principals": "John Maddox, James Randi, Walter Stewart",
-   "years_raw": "1988"
+   "years_raw": "1988",
+   "refs": [
+    "Nature 334, 287 (1988)"
+   ]
   },
   {
    "id": "ex:emoto-crystals",
@@ -1209,7 +1308,8 @@
    ],
    "note": "Selection of crystal images correlated with intentions/labels.",
    "principals": "Masaru Emoto",
-   "years_raw": "1990s\u20132000s"
+   "years_raw": "1990s\u20132000s",
+   "refs": []
   },
   {
    "id": "ex:grander-water",
@@ -1229,7 +1329,8 @@
    ],
    "note": "Commercialized 'informed water' devices.",
    "principals": "Johann Grander",
-   "years_raw": "1980s\u2013"
+   "years_raw": "1980s\u2013",
+   "refs": []
   },
   {
    "id": "ex:keshe-gans",
@@ -1248,7 +1349,8 @@
    ],
    "note": "'Gas in nano state' production claims.",
    "principals": "Mehran Keshe",
-   "years_raw": "2010s"
+   "years_raw": "2010s",
+   "refs": []
   },
   {
    "id": "ex:kervran-1960s",
@@ -1265,7 +1367,8 @@
    "signatures": [],
    "note": "Calcium balances in hens etc.; mass-balance errors are the standard account.",
    "principals": "Louis Kervran",
-   "years_raw": "1960s\u20131970s"
+   "years_raw": "1960s\u20131970s",
+   "refs": []
   },
   {
    "id": "ex:reich-einstein-1941",
@@ -1284,7 +1387,8 @@
    ],
    "note": "Einstein reproduced a \u0394T and attributed it to convection; correspondence ended there.",
    "principals": "Wilhelm Reich; Albert Einstein (adversarial)",
-   "years_raw": "1941"
+   "years_raw": "1941",
+   "refs": []
   },
   {
    "id": "ex:rife-beam-ray",
@@ -1303,7 +1407,8 @@
    ],
    "note": "Claimed frequency-specific devitalization of microorganisms.",
    "principals": "Royal Raymond Rife",
-   "years_raw": "1930s"
+   "years_raw": "1930s",
+   "refs": []
   },
   {
    "id": "ex:pyramid-germination",
@@ -1320,7 +1425,8 @@
    "signatures": [],
    "note": "Seed/razor-blade claims; controlled follow-ups null.",
    "principals": "Various (1970s wave)",
-   "years_raw": "1970s"
+   "years_raw": "1970s",
+   "refs": []
   },
   {
    "id": "ex:grebennikov-platform",
@@ -1339,7 +1445,8 @@
    ],
    "note": "Book-documented levitation platform based on insect-shell geometry.",
    "principals": "Viktor Grebennikov",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:leedskalnin-coral-castle",
@@ -1356,7 +1463,8 @@
    "signatures": [],
    "note": "Single-handed megalith construction; documented tripod/rigging evidence offers the standard account.",
    "principals": "Ed Leedskalnin",
-   "years_raw": "1923\u20131951"
+   "years_raw": "1923\u20131951",
+   "refs": []
   },
   {
    "id": "ex:schauberger-repulsine",
@@ -1376,7 +1484,8 @@
    ],
    "note": "Vortex 'implosion' engineering; Repulsine lore.",
    "principals": "Viktor Schauberger",
-   "years_raw": "1930s\u20131940s"
+   "years_raw": "1930s\u20131940s",
+   "refs": []
   },
   {
    "id": "ex:hamel-devices",
@@ -1396,7 +1505,8 @@
    ],
    "note": "Cone-and-magnet constructions; anecdotal flight claims.",
    "principals": "David Hamel",
-   "years_raw": "1980s\u20132000s"
+   "years_raw": "1980s\u20132000s",
+   "refs": []
   },
   {
    "id": "ex:finsrud-sculpture",
@@ -1415,7 +1525,8 @@
    ],
    "note": "Publicly exhibited rolling-ball sculpture in Norway; clever mechanics is the standard account.",
    "principals": "Reidar Finsrud",
-   "years_raw": "1996\u2013present"
+   "years_raw": "1996\u2013present",
+   "refs": []
   },
   {
    "id": "ex:otis-carr-otcx1",
@@ -1434,7 +1545,8 @@
    ],
    "note": "Free-energy saucer venture; secondary sources report a 1961 securities-fraud conviction. Not verified against a primary source.",
    "principals": "Otis T. Carr",
-   "years_raw": "1950s\u20131961"
+   "years_raw": "1950s\u20131961",
+   "refs": []
   },
   {
    "id": "ex:meyer-wfc-1996",
@@ -1451,9 +1563,12 @@
    "signatures": [
     "S-WFC"
    ],
-   "note": "Above-Faraday electrolysis claims; secondary sources report a 1996 Ohio court ruling of fraud. Not verified against a primary source.",
+   "note": "Above-Faraday electrolysis claims sold to investors as technology dealerships; an Ohio court found fraud in 1996 and ordered repayment of USD 25,000 to two investors, after court-appointed experts reported the cell performed conventional electrolysis. Reported contemporaneously in the press; the court record itself was not consulted.",
    "principals": "Stanley Meyer",
-   "years_raw": "1980s\u20131998"
+   "years_raw": "1980s\u20131998",
+   "refs": [
+    "Edwards, Tony. 'End of road for car that ran on water.' The Sunday Times, 1 December 1996, Features p. 12."
+   ]
   },
   {
    "id": "ex:garrett-1935",
@@ -1472,7 +1587,10 @@
    ],
    "note": "Patent documents the claim; demonstration press reports exist.",
    "principals": "Charles H. Garrett",
-   "years_raw": "1935"
+   "years_raw": "1935",
+   "refs": [
+    "US Patent 2,006,676 (1935)"
+   ]
   },
   {
    "id": "ex:dingel-water-car",
@@ -1492,7 +1610,8 @@
    ],
    "note": "Philippine water-car claims; secondary sources report a 2008 estafa conviction. Not verified against a primary source.",
    "principals": "Daniel Dingel",
-   "years_raw": "1969\u20132008"
+   "years_raw": "1969\u20132008",
+   "refs": []
   },
   {
    "id": "ex:yull-brown-gas",
@@ -1511,7 +1630,8 @@
    ],
    "note": "Oxyhydrogen torches are real; 'cool flame melts tungsten' anomaly claims are the delta.",
    "principals": "Yull Brown",
-   "years_raw": "1970s\u20131990s"
+   "years_raw": "1970s\u20131990s",
+   "refs": []
   },
   {
    "id": "ex:griggs-hydrosonic",
@@ -1528,7 +1648,8 @@
    "signatures": [],
    "note": "Cavitation heater; heating is orthodox, COP>1 claim is not confirmed.",
    "principals": "James Griggs",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:pantone-geet",
@@ -1547,7 +1668,8 @@
    ],
    "note": "'Plasma' fuel-reformer claims; community builds, no controlled validation.",
    "principals": "Paul Pantone",
-   "years_raw": "1990s\u20132000s"
+   "years_raw": "1990s\u20132000s",
+   "refs": []
   },
   {
    "id": "ex:taos-hum",
@@ -1564,7 +1686,8 @@
    "signatures": [],
    "note": "Persistent low-frequency hum reports; no external source identified for most hearers.",
    "principals": "Environmental (Taos, NM); Univ. teams",
-   "years_raw": "1990s\u2013"
+   "years_raw": "1990s\u2013",
+   "refs": []
   },
   {
    "id": "ex:golka-ball-lightning",
@@ -1581,7 +1704,8 @@
    "signatures": [],
    "note": "Large Tesla-coil facility aimed at reproducing ball lightning.",
    "principals": "Robert Golka",
-   "years_raw": "1970s\u20131980s"
+   "years_raw": "1970s\u20131980s",
+   "refs": []
   },
   {
    "id": "ex:oregon-vortex",
@@ -1600,7 +1724,8 @@
    ],
    "note": "Tilted-frame illusion geometry is the established account.",
    "principals": "Roadside attractions (various)",
-   "years_raw": "1930\u2013present"
+   "years_raw": "1930\u2013present",
+   "refs": []
   },
   {
    "id": "ex:orb-photography",
@@ -1619,7 +1744,8 @@
    ],
    "note": "Backscatter of flash on near-lens particles is the established account.",
    "principals": "Community (flash photography era)",
-   "years_raw": "1990s\u2013"
+   "years_raw": "1990s\u2013",
+   "refs": []
   },
   {
    "id": "ex:crookes-radiometer-1874",
@@ -1638,7 +1764,8 @@
    ],
    "note": "Paradigm case: 1874 open anomaly (T0), resolved via thermal transpiration (T4). Demonstrates temporal lattice migration.",
    "principals": "William Crookes; Reynolds, Maxwell (resolution)",
-   "years_raw": "1874\u20131879"
+   "years_raw": "1874\u20131879",
+   "refs": []
   },
   {
    "id": "ex:akimov-shipov-torsion",
@@ -1657,7 +1784,8 @@
    ],
    "note": "State-adjacent 'torsion generator' program; funding exposed ~1991; repeatedly targeted by the RAS pseudoscience commission (est. 1998, Kruglyakov).",
    "principals": "Anatoly Akimov, Gennady Shipov (VENT center)",
-   "years_raw": "1980s-1990s"
+   "years_raw": "1980s-1990s",
+   "refs": []
   },
   {
    "id": "ex:filimonenko-warm-fusion",
@@ -1676,7 +1804,8 @@
    ],
    "note": "Soviet hydrolysis-energy claims decades before 1989; known mostly through later LENR-community retellings; program reportedly shut down in the 1960s.",
    "principals": "Ivan Filimonenko",
-   "years_raw": "1957-1960s"
+   "years_raw": "1957-1960s",
+   "refs": []
   },
   {
    "id": "ex:kirlian-photography",
@@ -1695,7 +1824,8 @@
    ],
    "note": "'Aura' imaging; corona discharge modulated by moisture/pressure is the established account. A migrated case like the radiometer.",
    "principals": "Semyon & Valentina Kirlian",
-   "years_raw": "1939ff"
+   "years_raw": "1939ff",
+   "refs": []
   },
   {
    "id": "ex:tolchin-inertioid",
@@ -1714,7 +1844,8 @@
    ],
    "note": "Mechanical 'inertioids' claimed to translate without external reaction; friction rectification is the standard account; ancestor of the Dean-drive family.",
    "principals": "Vladimir Tolchin (Perm)",
-   "years_raw": "1930s-1960s"
+   "years_raw": "1930s-1960s",
+   "refs": []
   },
   {
    "id": "ex:gravitsapa-yubileiny",
@@ -1734,7 +1865,8 @@
    ],
    "note": "Reactionless-thruster test reported aboard a Russian smallsat; publicly criticized by RAS members; no confirmed orbit change attributable to the device.",
    "principals": "Valery Menshikov (NII KP), Yubileiny satellite",
-   "years_raw": "2008-2010"
+   "years_raw": "2008-2010",
+   "refs": []
   },
   {
    "id": "ex:veinik-chronal",
@@ -1753,7 +1885,8 @@
    ],
    "note": "Academician-thermodynamicist turned heterodox; clock-rate and weight claims framed in his own 'chronal' theory.",
    "principals": "Albert Veinik (Minsk)",
-   "years_raw": "1980s-1990s"
+   "years_raw": "1980s-1990s",
+   "refs": []
   },
   {
    "id": "ex:marinov-aether",
@@ -1773,7 +1906,8 @@
    ],
    "note": "'Coupled shutters/mirrors' apparatus claiming measurable aether drift; self-published corpus; died 1997.",
    "principals": "Stefan Marinov",
-   "years_raw": "1970s-1997"
+   "years_raw": "1970s-1997",
+   "refs": []
   },
   {
    "id": "ex:mizuno-lenr",
@@ -1792,7 +1926,8 @@
    ],
    "note": "Long-running electrolysis and glow-discharge program; book-length account published 1998; 2019 R20 reactor preprint circulated for community replication.",
    "principals": "Tadahiko Mizuno (Hokkaido Univ.)",
-   "years_raw": "1990s-2019"
+   "years_raw": "1990s-2019",
+   "refs": []
   },
   {
    "id": "ex:arata-2008",
@@ -1811,7 +1946,8 @@
    ],
    "note": "Public demonstration of D2 gas-loaded Pd nanopowder heat by a decorated materials scientist; helium claimed as product.",
    "principals": "Yoshiaki Arata, Yue-Chang Zhang (Osaka Univ.)",
-   "years_raw": "2008"
+   "years_raw": "2008",
+   "refs": []
   },
   {
    "id": "ex:minato-motor",
@@ -1830,7 +1966,8 @@
    ],
    "note": "Patented pulsed magnet-wheel fans with claimed anomalous efficiency; media coverage, no independent efficiency audit published.",
    "principals": "Kohei Minato",
-   "years_raw": "1990s-2000s"
+   "years_raw": "1990s-2000s",
+   "refs": []
   },
   {
    "id": "ex:seike-gstrain",
@@ -1849,7 +1986,8 @@
    ],
    "note": "Self-published 'ultra relativity' program; Moebius-coil devices with claimed weight and clock effects.",
    "principals": "Shinichi Seike (Gravity Research Lab, Uwajima)",
-   "years_raw": "1970s-1980s"
+   "years_raw": "1970s-1980s",
+   "refs": []
   },
   {
    "id": "ex:schappeller-sphere",
@@ -1869,7 +2007,8 @@
    ],
    "note": "'Raumkraft' sphere device; never publicly demonstrated; survives via period accounts and later esoteric literature \u2014 the record indexes the period claim only.",
    "principals": "Karl Schappeller (Aurach)",
-   "years_raw": "1920s-1930s"
+   "years_raw": "1920s-1930s",
+   "refs": []
   },
   {
    "id": "ex:reichenbach-od",
@@ -1888,7 +2027,8 @@
    ],
    "note": "Sensitives reporting glows and sensations from magnets/crystals in darkness; extensive self-published protocols; ancestor lineage of orgone-type claims.",
    "principals": "Karl von Reichenbach",
-   "years_raw": "1845-1860s"
+   "years_raw": "1845-1860s",
+   "refs": []
   },
   {
    "id": "ex:mesmer-magnetism",
@@ -1905,7 +2045,8 @@
    "signatures": [],
    "note": "Baquet seances producing crises and cures; the claimed agent was a physical magnetic fluid.",
    "principals": "Franz Anton Mesmer (Paris)",
-   "years_raw": "1778-1784"
+   "years_raw": "1778-1784",
+   "refs": []
   },
   {
    "id": "ex:franklin-commission-1784",
@@ -1924,7 +2065,8 @@
    ],
    "note": "Blinded trials at Passy attributing effects to imagination and imitation \u2014 the earliest C4 adversarial examination in this corpus.",
    "principals": "Franklin, Lavoisier, Bailly, Guillotin et al.",
-   "years_raw": "1784"
+   "years_raw": "1784",
+   "refs": []
   },
   {
    "id": "ex:munich-dowsing-1988",
@@ -1941,7 +2083,8 @@
    "signatures": [],
    "note": "Large screened-dowser study; authors reported a few 'skilled' outliers under double-blind conditions.",
    "principals": "Hans-Dieter Betz et al. (LMU, government-funded)",
-   "years_raw": "1986-1988"
+   "years_raw": "1986-1988",
+   "refs": []
   },
   {
    "id": "ex:enright-reanalysis",
@@ -1960,7 +2103,8 @@
    ],
    "note": "Statistical reanalysis finding results consistent with chance; selection of outliers as the artifact.",
    "principals": "James Enright",
-   "years_raw": "1995-1999"
+   "years_raw": "1995-1999",
+   "refs": []
   },
   {
    "id": "ex:ehrenhaft-subelectrons",
@@ -1977,7 +2121,8 @@
    "signatures": [],
    "note": "Charges below e reported in oil-drop-type experiments against Millikan; resolved via droplet physics and selection analysis; opens the promotion counter on P-EMG-SON-01.",
    "principals": "Felix Ehrenhaft (Vienna)",
-   "years_raw": "1910-1920s"
+   "years_raw": "1910-1920s",
+   "refs": []
   },
   {
    "id": "ex:kowsky-frost-1927",
@@ -1994,7 +2139,8 @@
    "signatures": [],
    "note": "Widely reprinted period story of an RF-expanded, load-lifting quartz crystal; commonly assessed as a magazine hoax; indexed as a print claim.",
    "principals": "'Kowsky & Frost' (magazine report)",
-   "years_raw": "1927"
+   "years_raw": "1927",
+   "refs": []
   },
   {
    "id": "ex:hubbard-coil-1919",
@@ -2014,7 +2160,8 @@
    ],
    "note": "Press-covered 'fuelless' coil said to drive a boat; later accounts tie the design to concealed radium energy \u2014 indexed as period claim plus conventional account.",
    "principals": "Alfred Hubbard (Seattle)",
-   "years_raw": "1919-1920s"
+   "years_raw": "1919-1920s",
+   "refs": []
   },
   {
    "id": "ex:michelson-morley-1887",
@@ -2034,7 +2181,10 @@
    ],
    "note": "Orthodox anchor: expected drift absent; the null that reoriented physics.",
    "principals": "Albert Michelson, Edward Morley",
-   "years_raw": "1887"
+   "years_raw": "1887",
+   "refs": [
+    "Am. J. Sci. 34, 333 (1887)"
+   ]
   },
   {
    "id": "ex:miller-drift-1933",
@@ -2053,7 +2203,10 @@
    ],
    "note": "Persistent ~small drift signal claimed across thousands of turns.",
    "principals": "Dayton Miller",
-   "years_raw": "1921-1933"
+   "years_raw": "1921-1933",
+   "refs": [
+    "Rev. Mod. Phys. 5, 203 (1933)"
+   ]
   },
   {
    "id": "ex:shankland-1955",
@@ -2073,7 +2226,10 @@
    ],
    "note": "Signal attributed to thermal gradients and statistical treatment.",
    "principals": "Robert Shankland et al.",
-   "years_raw": "1955"
+   "years_raw": "1955",
+   "refs": [
+    "Rev. Mod. Phys. 27, 167 (1955)"
+   ]
   },
   {
    "id": "ex:sagnac-1913",
@@ -2093,7 +2249,8 @@
    ],
    "note": "Real, foundational effect originally interpreted by its discoverer as aether evidence \u2014 interpretation migrated, phenomenon stayed; today the basis of ring-laser gyros.",
    "principals": "Georges Sagnac",
-   "years_raw": "1913"
+   "years_raw": "1913",
+   "refs": []
   },
   {
    "id": "ex:aspden-effect-1995",
@@ -2112,7 +2269,8 @@
    ],
    "note": "Report that a restarted rotor briefly required anomalously little spin-up energy after a stop; bench anecdote, never systematized.",
    "principals": "Harold Aspden",
-   "years_raw": "1995"
+   "years_raw": "1995",
+   "refs": []
   },
   {
    "id": "ex:majorana-shielding",
@@ -2131,7 +2289,8 @@
    ],
    "note": "Published series claiming tiny weight reduction of a mass screened by mercury/lead; never reproduced; modern constraints exclude the claimed magnitude.",
    "principals": "Quirino Majorana (Bologna/Turin)",
-   "years_raw": "1919-1922"
+   "years_raw": "1919-1922",
+   "refs": []
   },
   {
    "id": "ex:brush-gravitation-1920s",
@@ -2150,7 +2309,8 @@
    ],
    "note": "Papers claiming certain complex silicates fall with slightly different acceleration; contradicted by the Eoetvoes tradition of composition-independence.",
    "principals": "Charles F. Brush",
-   "years_raw": "1910s-1920s"
+   "years_raw": "1910s-1920s",
+   "refs": []
   },
   {
    "id": "ex:nipher-1916",
@@ -2170,7 +2330,8 @@
    ],
    "note": "Cavendish-type setup with electrified masses; claimed modification of gravitational attraction; electrostatic force on the apparatus is the standard account.",
    "principals": "Francis Nipher (St. Louis)",
-   "years_raw": "1916-1918"
+   "years_raw": "1916-1918",
+   "refs": []
   },
   {
    "id": "ex:wallace-kinemassic-1971",
@@ -2189,7 +2350,10 @@
    ],
    "note": "Patented claims of a gravitational-like field from spinning odd-isotope material; patent documents the claim, no published measurements.",
    "principals": "Henry Wm. Wallace (GE engineer)",
-   "years_raw": "1971"
+   "years_raw": "1971",
+   "refs": [
+    "US Patent 3,626,605 (1971)"
+   ]
   },
   {
    "id": "ex:kidd-gyro-1980s",
@@ -2209,7 +2373,8 @@
    ],
    "note": "Twin-gyro rig with claimed net lift; TV-era coverage and university bench visits; no controlled confirmation.",
    "principals": "Sandy Kidd (Scotland)",
-   "years_raw": "1980s"
+   "years_raw": "1980s",
+   "refs": []
   },
   {
    "id": "ex:fischbach-fifth-force-1986",
@@ -2226,7 +2391,10 @@
    "signatures": [],
    "note": "Reanalysis suggesting composition-dependent coupling; triggered a worldwide measurement campaign incl. an early claimed positive (Thieberger float experiment).",
    "principals": "Ephraim Fischbach et al.",
-   "years_raw": "1986"
+   "years_raw": "1986",
+   "refs": [
+    "Phys. Rev. Lett. 56, 3 (1986)"
+   ]
   },
   {
    "id": "ex:eotwash-resolution",
@@ -2245,7 +2413,8 @@
    ],
    "note": "High-precision nulls closed the fifth-force window; local mass gradients and data treatment explained earlier signals. Model resolution arc entirely inside orthodoxy.",
    "principals": "Adelberger, Heckel et al. (Univ. Washington)",
-   "years_raw": "1987-1990s"
+   "years_raw": "1987-1990s",
+   "refs": []
   },
   {
    "id": "ex:patterson-cell",
@@ -2264,7 +2433,8 @@
    ],
    "note": "Coated-bead electrolytic cell shown at trade conferences with high claimed COP; kits circulated; never independently validated or commercialized.",
    "principals": "James Patterson (CETI)",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:klein-hho-2005",
@@ -2283,7 +2453,8 @@
    ],
    "note": "TV-covered torch and car demonstrations under a branded oxyhydrogen; conventional combustion accounts discussed.",
    "principals": "Denny Klein",
-   "years_raw": "2005-2006"
+   "years_raw": "2005-2006",
+   "refs": []
   },
   {
    "id": "ex:kanarev-electrolysis",
@@ -2302,7 +2473,8 @@
    ],
    "note": "Pulsed 'plasma electrolysis' with claimed over-unity hydrogen yield; self-published monographs.",
    "principals": "Philipp Kanarev (Krasnodar)",
-   "years_raw": "2000s"
+   "years_raw": "2000s",
+   "refs": []
   },
   {
    "id": "ex:santilli-magnegas",
@@ -2321,7 +2493,8 @@
    ],
    "note": "Arc-gasification fuel marketed with claimed novel 'magnecule' species; conventional syngas chemistry is the discussed account.",
    "principals": "Ruggero Santilli (MagneGas)",
-   "years_raw": "1998-2010s"
+   "years_raw": "1998-2010s",
+   "refs": []
   },
   {
    "id": "ex:puharich-water-1983",
@@ -2340,7 +2513,10 @@
    ],
    "note": "Patented claims of efficient resonant water dissociation; patent documents the claim.",
    "principals": "Andrija Puharich",
-   "years_raw": "1983"
+   "years_raw": "1983",
+   "refs": [
+    "US Patent 4,394,230 (1983)"
+   ]
   },
   {
    "id": "ex:abrams-era",
@@ -2359,7 +2535,8 @@
    ],
    "note": "'Electronic Reactions of Abrams': diagnosis from blood spots via box instruments; large practitioner network in the early 1920s.",
    "principals": "Albert Abrams (San Francisco)",
-   "years_raw": "1916-1924"
+   "years_raw": "1916-1924",
+   "refs": []
   },
   {
    "id": "ex:sciam-abrams-1924",
@@ -2379,7 +2556,8 @@
    ],
    "note": "Year-long blinded examination concluding the devices had no diagnostic value.",
    "principals": "Scientific American committee",
-   "years_raw": "1923-1924"
+   "years_raw": "1923-1924",
+   "refs": []
   },
   {
    "id": "ex:drown-radionics",
@@ -2398,7 +2576,8 @@
    ],
    "note": "Claimed photographic imaging of distant patients; secondary sources report a 1951 fraud conviction under test conditions. Not verified against a primary source.",
    "principals": "Ruth Drown (Los Angeles)",
-   "years_raw": "1930s-1950s"
+   "years_raw": "1930s-1950s",
+   "refs": []
   },
   {
    "id": "ex:delawarr-camera",
@@ -2417,7 +2596,8 @@
    ],
    "note": "UK radionics laboratory producing 'thought photographs'; 1960 civil litigation ended without a fraud finding.",
    "principals": "George de la Warr (Oxford)",
-   "years_raw": "1950s-1960s"
+   "years_raw": "1950s-1960s",
+   "refs": []
   },
   {
    "id": "ex:hieronymus-machine",
@@ -2436,7 +2616,10 @@
    ],
    "note": "Patented 'emanation' analyzer; Astounding editor J.W. Campbell reported symbolic circuit-diagram versions working equally well \u2014 inadvertently a suggestion-artifact experiment.",
    "principals": "T. Galen Hieronymus",
-   "years_raw": "1949-1960s"
+   "years_raw": "1949-1960s",
+   "refs": [
+    "US Patent 2,482,773 (1949)"
+   ]
   },
   {
    "id": "ex:lakhovsky-mwo",
@@ -2455,7 +2638,8 @@
    ],
    "note": "Plant-tumor and clinical claims around broadband spark-gap coils; hospital-adjacent trials reported in period sources.",
    "principals": "Georges Lakhovsky (Paris)",
-   "years_raw": "1924-1930s"
+   "years_raw": "1924-1930s",
+   "refs": []
   },
   {
    "id": "ex:priore-machine",
@@ -2474,7 +2658,8 @@
    ],
    "note": "Large undisclosed-principle machine; animal-trial cures reported with Academy-level advocacy and state funding; device principle never disclosed, program collapsed.",
    "principals": "Antoine Priore (Bordeaux); Pautrizel, Courrier (advocates)",
-   "years_raw": "1960s-1970s"
+   "years_raw": "1960s-1970s",
+   "refs": []
   },
   {
    "id": "ex:perendev-brady",
@@ -2494,7 +2679,8 @@
    ],
    "note": "Video-marketed all-magnet motor with investment scheme; the venture was the subject of subsequent legal proceedings. No court outcome is asserted here \u2014 none could be verified against a primary source.",
    "principals": "Mike Brady",
-   "years_raw": "2000s"
+   "years_raw": "2000s",
+   "refs": []
   },
   {
    "id": "ex:yildiz-2010",
@@ -2513,7 +2699,8 @@
    ],
    "note": "University-venue demonstration (Delft, 2010) of a self-running magnet motor; teardown under controls never granted.",
    "principals": "Muammer Yildiz",
-   "years_raw": "2010"
+   "years_raw": "2010",
+   "refs": []
   },
   {
    "id": "ex:thane-heins-2008",
@@ -2530,7 +2717,8 @@
    "signatures": [],
    "note": "Motor acceleration under load claimed; press-reported bench visits at university labs; conventional back-EMF/field-weakening accounts discussed.",
    "principals": "Thane Heins (Ottawa)",
-   "years_raw": "2008"
+   "years_raw": "2008",
+   "refs": []
   },
   {
    "id": "ex:bhaskara-wheel",
@@ -2550,7 +2738,8 @@
    ],
    "note": "Earliest known perpetual-wheel description (mercury-filled spokes); the deep-history root of S-SLF; Villard de Honnecourt's 13th-c. sketch continues the lineage.",
    "principals": "Bhaskara II (treatise description)",
-   "years_raw": "12th century"
+   "years_raw": "12th century",
+   "refs": []
   },
   {
    "id": "ex:cox-timepiece",
@@ -2570,7 +2759,8 @@
    ],
    "note": "Orthodox anchor: an apparent self-runner with a fully documented energy source (barometric pressure); the control case every S-SLF claim is measured against.",
    "principals": "James Cox (London)",
-   "years_raw": "1760s"
+   "years_raw": "1760s",
+   "refs": []
   },
   {
    "id": "ex:n-rays-blondlot",
@@ -2589,7 +2779,8 @@
    ],
    "note": "New radiation reported via faint screen-brightness changes; dozens of confirming papers within France in one year \u2014 a replication bubble.",
    "principals": "Rene Blondlot (Nancy)",
-   "years_raw": "1903-1904"
+   "years_raw": "1903-1904",
+   "refs": []
   },
   {
    "id": "ex:wood-nrays-1904",
@@ -2608,7 +2799,10 @@
    ],
    "note": "Covert prism removal left reported observations unchanged; the canonical observer-expectancy exposure.",
    "principals": "Robert W. Wood",
-   "years_raw": "1904"
+   "years_raw": "1904",
+   "refs": [
+    "Nature 70, 530 (1904)"
+   ]
   },
   {
    "id": "ex:polywater-claims",
@@ -2627,7 +2821,8 @@
    ],
    "note": "Capillary-condensed water with anomalous properties; a global replication wave followed.",
    "principals": "Nikolai Fedyakin; Boris Deryagin",
-   "years_raw": "1961-1971"
+   "years_raw": "1961-1971",
+   "refs": []
   },
   {
    "id": "ex:polywater-resolution",
@@ -2647,7 +2842,8 @@
    ],
    "note": "Silicate/organic contamination identified; original group conceded \u2014 a clean self-correction arc.",
    "principals": "Multiple labs; Deryagin (retraction)",
-   "years_raw": "1970-1973"
+   "years_raw": "1970-1973",
+   "refs": []
   },
   {
    "id": "ex:mpemba-1969",
@@ -2664,7 +2860,10 @@
    "signatures": [],
    "note": "Hot-water-freezes-faster reports; multiple conventional mechanisms discussed (evaporation, convection, supercooling, definitions), none settled \u2014 a live orthodox-sector anomaly.",
    "principals": "Erasto Mpemba, Denis Osborne",
-   "years_raw": "1969"
+   "years_raw": "1969",
+   "refs": [
+    "Phys. Educ. 4, 172 (1969)"
+   ]
   },
   {
    "id": "ex:pioneer-anomaly-1998",
@@ -2683,7 +2882,10 @@
    ],
    "note": "Sunward ~1e-9 m/s^2 residual on both spacecraft; open anomaly for 14 years.",
    "principals": "John Anderson et al. (JPL)",
-   "years_raw": "1998"
+   "years_raw": "1998",
+   "refs": [
+    "Phys. Rev. Lett. 81, 2858 (1998)"
+   ]
   },
   {
    "id": "ex:pioneer-resolution-2012",
@@ -2702,7 +2904,10 @@
    ],
    "note": "Anisotropic thermal radiation recoil accounts for the acceleration \u2014 a migrated anomaly, radiometer-style, at spacecraft scale.",
    "principals": "Slava Turyshev et al.",
-   "years_raw": "2012"
+   "years_raw": "2012",
+   "refs": [
+    "Phys. Rev. Lett. 108, 241101 (2012)"
+   ]
   },
   {
    "id": "ex:opera-ftl-2011",
@@ -2721,7 +2926,10 @@
    ],
    "note": "60 ns early neutrino arrival reported with explicit request for scrutiny.",
    "principals": "OPERA collaboration (Gran Sasso)",
-   "years_raw": "2011"
+   "years_raw": "2011",
+   "refs": [
+    "arXiv:1109.4897"
+   ]
   },
   {
    "id": "ex:opera-resolution-2012",
@@ -2740,7 +2948,8 @@
    ],
    "note": "Loose fiber connector and clock drift identified; ICARUS null; textbook fast self-correction.",
    "principals": "OPERA; ICARUS (adversarial)",
-   "years_raw": "2012"
+   "years_raw": "2012",
+   "refs": []
   },
   {
    "id": "ex:nasa-lattice-2020",
@@ -2759,7 +2968,10 @@
    ],
    "note": "Gamma-driven deuteron fusion in metal lattices published in a mainstream venue \u2014 orthodox-adjacent boundary case for the S-LNR neighborhood.",
    "principals": "Steinetz, Benyo et al. (NASA GRC)",
-   "years_raw": "2020"
+   "years_raw": "2020",
+   "refs": [
+    "Phys. Rev. C 101 (2020)"
+   ]
   },
   {
    "id": "ex:piantelli-focardi",
@@ -2778,7 +2990,8 @@
    ],
    "note": "Nickel-hydrogen excess-heat series published in Il Nuovo Cimento (1994); the direct ancestor of the E-Cat lineage.",
    "principals": "Francesco Piantelli, Sergio Focardi",
-   "years_raw": "1990s"
+   "years_raw": "1990s",
+   "refs": []
   },
   {
    "id": "ex:spawar-cr39",
@@ -2797,7 +3010,8 @@
    ],
    "note": "Pd co-deposition with track-detector pits read as energetic particles; chemical-damage accounts discussed.",
    "principals": "Pamela Mosier-Boss, Stanislaw Szpak (SPAWAR)",
-   "years_raw": "2007-2009"
+   "years_raw": "2007-2009",
+   "refs": []
   },
   {
    "id": "ex:peregrinus-1269",
@@ -2817,7 +3031,8 @@
    ],
    "note": "Epistola de magnete closes with a lodestone-driven wheel intended to turn perpetually \u2014 the root document of the magnet-motor lineage, seven centuries before Perendev.",
    "principals": "Petrus Peregrinus de Maricourt",
-   "years_raw": "1269"
+   "years_raw": "1269",
+   "refs": []
   },
   {
    "id": "ex:villard-1230s",
@@ -2837,7 +3052,8 @@
    ],
    "note": "Sketchbook wheel with hinged hammers, asserted to run of itself \u2014 the European entry of the overbalanced-wheel idea.",
    "principals": "Villard de Honnecourt",
-   "years_raw": "c. 1230s"
+   "years_raw": "c. 1230s",
+   "refs": []
   },
   {
    "id": "ex:zimara-windmill-1500s",
@@ -2857,7 +3073,8 @@
    ],
    "note": "Windmill driving bellows that blow the windmill \u2014 the closed-loop archetype in its purest form.",
    "principals": "Marco Antonio Zimara",
-   "years_raw": "early 1500s"
+   "years_raw": "early 1500s",
+   "refs": []
   },
   {
    "id": "ex:fludd-mill-1618",
@@ -2877,7 +3094,8 @@
    ],
    "note": "Recirculating water-screw mill grinding grain from its own outflow; endlessly reprinted ancestor of hydraulic self-runner claims.",
    "principals": "Robert Fludd",
-   "years_raw": "1618"
+   "years_raw": "1618",
+   "refs": []
   },
   {
    "id": "ex:leonardo-refutation-1494",
@@ -2896,7 +3114,8 @@
    ],
    "note": "Notebook analyses working the torque balance and dismissing the seekers of perpetual motion \u2014 the earliest analysis-type resolution record in the corpus.",
    "principals": "Leonardo da Vinci (notebooks)",
-   "years_raw": "c. 1494"
+   "years_raw": "c. 1494",
+   "refs": []
   },
   {
    "id": "ex:drebbel-perpetuum-1607",
@@ -2916,7 +3135,8 @@
    ],
    "note": "Celebrated self-moving globe presented to James I; modern reading: barometric/thermal drive \u2014 Cox's clock avant la lettre, an apparent self-runner with a real energy source.",
    "principals": "Cornelis Drebbel",
-   "years_raw": "c. 1607"
+   "years_raw": "c. 1607",
+   "refs": []
   },
   {
    "id": "ex:somerset-tower-1630s",
@@ -2936,7 +3156,8 @@
    ],
    "note": "Large weighted wheel reportedly shown before the king at the Tower of London; known through the inventor's Century of Inventions and court lore.",
    "principals": "Edward Somerset, 2nd Marquess of Worcester",
-   "years_raw": "1630s (account publ. 1655)"
+   "years_raw": "1630s (account publ. 1655)",
+   "refs": []
   },
   {
    "id": "ex:ever-burning-lamps",
@@ -2955,7 +3176,8 @@
    ],
    "note": "Recurring reports of lamps found alight in opened ancient tombs (the Tulliola account among them); the medieval-to-early-modern free-energy claim par excellence, surviving only as secondary reports.",
    "principals": "Renaissance antiquarian tradition (compiled by Fortunio Liceti)",
-   "years_raw": "reports 1400s-1500s; compilation 1621"
+   "years_raw": "reports 1400s-1500s; compilation 1621",
+   "refs": []
   },
   {
    "id": "ex:redheffer-1812",
@@ -2975,7 +3197,8 @@
    ],
    "note": "Paid-admission perpetual wheel; a Philadelphia inspection already noticed gear wear running the wrong way.",
    "principals": "Charles Redheffer (Philadelphia, then New York)",
-   "years_raw": "1812-1813"
+   "years_raw": "1812-1813",
+   "refs": []
   },
   {
    "id": "ex:fulton-exposure-1813",
@@ -2994,7 +3217,8 @@
    ],
    "note": "Fulton traced an uneven running rhythm to a concealed catgut belt and an elderly man cranking in an upper room \u2014 the template hoax exposure, ninety years before Wood's prism.",
    "principals": "Robert Fulton (New York)",
-   "years_raw": "1813"
+   "years_raw": "1813",
+   "refs": []
   },
   {
    "id": "ex:garabed-1917",
@@ -3014,7 +3238,8 @@
    ],
    "note": "Congress passed a joint resolution to examine the 'Garabed'; the committee identified it as a flywheel storing, not generating, energy \u2014 a legislative-branch P4 record.",
    "principals": "Garabed T. K. Giragossian",
-   "years_raw": "1917-1918"
+   "years_raw": "1917-1918",
+   "refs": []
   },
   {
    "id": "ex:cook-battery-1871",
@@ -3034,7 +3259,10 @@
    ],
    "note": "Community-flagged instance. Patented coil pair claimed to sustain its own current \u2014 the earliest US patent document in the electromagnetic self-runner lineage; compiler's recall dates it 1871, not 1895.",
    "principals": "Daniel McFarland Cook (Mansfield, Ohio)",
-   "years_raw": "1871"
+   "years_raw": "1871",
+   "refs": [
+    "US Patent 119,825 (1871)"
+   ]
   },
   {
    "id": "ex:gary-motor-1879",
@@ -3054,7 +3282,8 @@
    ],
    "note": "'Neutral line' magnet motor with sympathetic national-press coverage; the 19th-century prototype of the magnet-motor media wave.",
    "principals": "Wesley W. Gary",
-   "years_raw": "1870s (magazine coverage 1879)"
+   "years_raw": "1870s (magazine coverage 1879)",
+   "refs": []
   },
   {
    "id": "ex:pogue-carburetor-1930s",
@@ -3071,7 +3300,8 @@
    "signatures": [],
    "note": "Patented vapor carburetors with ~200-mpg claims; never validated under controls; seed of the suppressed-carburetor narrative (nar:pogue-200mpg).",
    "principals": "Charles Nelson Pogue (Winnipeg)",
-   "years_raw": "mid-1930s"
+   "years_raw": "mid-1930s",
+   "refs": []
   },
   {
    "id": "ex:tewari-rlg",
@@ -3090,7 +3320,8 @@
    ],
    "note": "Ex-nuclear-engineering executive; over-unity homopolar-style generator claims framed by his space-vortex theory (doc:tewari-space-vortex).",
    "principals": "Paramahamsa Tewari (India)",
-   "years_raw": "2010s"
+   "years_raw": "2010s",
+   "refs": []
   },
   {
    "id": "doc:haramein-holofractographic",
@@ -3450,7 +3681,10 @@
    ],
    "note": "Micron-scale high-charge-density electron clusters from pulsed sharp cathodes; borehole witness marks and energy-gain claims; conventional account discussed: explosive electron emission / cathode-spot ectons (Mesyats).",
    "principals": "Kenneth R. Shoulders",
-   "years_raw": "1980s-2000s"
+   "years_raw": "1980s-2000s",
+   "refs": [
+    "US Patent 5,018,180 (1991)"
+   ]
   },
   {
    "id": "ex:ball-lightning-natural",
@@ -3467,7 +3701,8 @@
    "signatures": [],
    "note": "Accepted-as-real phenomenon with open mechanism; candidate conventional theories (silicon combustion, microwave cavities) discussed, none settled.",
    "principals": "Global eyewitness/instrument corpus",
-   "years_raw": "documented reports since the 1600s"
+   "years_raw": "documented reports since the 1600s",
+   "refs": []
   },
   {
    "id": "ex:cen-spectrum-2014",
@@ -3484,7 +3719,10 @@
    "signatures": [],
    "note": "Slit-spectrograph capture during a storm showing soil-element lines (Si, Fe, Ca) \u2014 consistent with soil-vaporization accounts.",
    "principals": "Cen, Yuan, Xue",
-   "years_raw": "2012 (publ. 2014)"
+   "years_raw": "2012 (publ. 2014)",
+   "refs": [
+    "Phys. Rev. Lett. 112, 035001 (2014)"
+   ]
   },
   {
    "id": "ex:gatchina-plasmoids",
@@ -3501,7 +3739,8 @@
    "signatures": [],
    "note": "Long-lived luminous plasmoids launched from water-surface discharges; reproducible laboratory analog with sub-second lifetimes.",
    "principals": "Egorov, Stepanov et al. (Gatchina)",
-   "years_raw": "2000s"
+   "years_raw": "2000s",
+   "refs": []
   },
   {
    "id": "doc:evo-framework",
