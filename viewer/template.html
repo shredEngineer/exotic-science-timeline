@@ -171,13 +171,21 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .btn:hover{border-color:var(--secondary-muted)}
 
 /* ---------- the record table: full width, no horizontal scroll ---------- */
+/* NOTE: no overflow on this table — any non-visible overflow on an ancestor
+   silently disables position:sticky on the header cells. Corners are rounded
+   on the edge cells instead of by clipping. */
 .recordtable{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;
   font-size:.93rem;border:1px solid var(--border);border-radius:var(--radius);
-  overflow:hidden;background:var(--card)}
-.recordtable thead th{position:sticky;top:64px;z-index:3;background:var(--card-subtle);
+  background:var(--card)}
+.recordtable thead tr:first-child th:first-child{border-top-left-radius:var(--radius)}
+.recordtable thead tr:first-child th:last-child{border-top-right-radius:var(--radius)}
+.recordtable tbody tr:last-child td:first-child{border-bottom-left-radius:var(--radius)}
+.recordtable tbody tr:last-child td:last-child{border-bottom-right-radius:var(--radius)}
+.recordtable thead th{position:sticky;top:var(--hdrh,56px);z-index:3;background:var(--card-subtle);
   text-align:left;font-family:var(--font-heading);font-weight:600;font-size:.74rem;
   letter-spacing:.05em;text-transform:uppercase;color:var(--muted-foreground);
-  padding:.6rem .7rem;border-bottom:1px solid var(--border)}
+  padding:.6rem .7rem;border-bottom:1px solid var(--border);
+  box-shadow:0 1px 0 var(--border)}
 .recordtable thead th.sortable{cursor:pointer;user-select:none}
 .recordtable thead th.sortable:hover{color:var(--secondary)}
 .recordtable th .arrow{opacity:.3;margin-left:.25rem}
@@ -405,7 +413,15 @@ const axCls=(k,v)=>{ if(v==="x") return "gx"; const r=+v/AXMAX[k];
 
 /* header shrink, matching the main site */
 const hdr=document.getElementById("hdr");
-addEventListener("scroll",()=>hdr.classList.toggle("scrolled",scrollY>0),{passive:true});
+function syncHdr(){
+  hdr.classList.toggle("scrolled",scrollY>0);
+  // the bar shrinks and detaches into a pill; the table header must follow it
+  document.documentElement.style.setProperty("--hdrh",
+    Math.round(hdr.getBoundingClientRect().bottom)+"px");
+}
+addEventListener("scroll",syncHdr,{passive:true});
+addEventListener("resize",syncHdr);
+syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settles
 
 /* ---------- stats ---------- */
 (function(){
@@ -594,7 +610,15 @@ function zoomAt(px,factor){
   view.x=ux-((px-rect.left)/rect.width)*view.w; clampView();
   paint();
 }
-svg.addEventListener("wheel",e=>{e.preventDefault();zoomAt(e.clientX,e.deltaY>0?1.18:1/1.18);},{passive:false});
+svg.addEventListener("wheel",e=>{
+  e.preventDefault();
+  // normalise across deltaMode (pixels / lines / pages) and scale the factor by
+  // how far the user actually scrolled — one fixed step per event makes a
+  // trackpad flick jump dozens of steps.
+  const unit = e.deltaMode===1 ? 16 : e.deltaMode===2 ? 100 : 1;
+  const d = Math.max(-240, Math.min(240, e.deltaY*unit));
+  zoomAt(e.clientX, Math.exp(d*0.0022));
+},{passive:false});
 document.getElementById("zin").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1/1.4);};
 document.getElementById("zout").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1.4);};
 document.getElementById("zreset").onclick=()=>{view={x:0,w:W};paint();};
