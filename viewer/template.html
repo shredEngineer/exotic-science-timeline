@@ -66,8 +66,18 @@ header.site.scrolled .hbrand img{width:32px;height:32px}
 .hbrand span{margin-left:.5rem;font-family:var(--font-heading);font-weight:600;
   line-height:1.5rem;font-size:.875rem;transition:all .3s}
 header.site.scrolled .hbrand span{font-size:.75rem}
-.hnav{display:none;align-items:center;gap:1.5rem;margin-left:1rem;list-style:none;padding:0;margin-block:0}
-@media(min-width:1024px){.hnav{display:flex}}
+/* the site nav stays reachable on every width — hiding it below the desktop
+   breakpoint left phones with no way out of this page at all */
+.hnav{display:flex;align-items:center;gap:1.5rem;margin-left:1rem;list-style:none;padding:0;margin-block:0}
+@media(max-width:900px){
+  .hgroup{gap:.75rem}
+  .hnav{gap:.9rem;margin-left:0}
+  .hnav a{font-size:.8rem}
+}
+@media(max-width:560px){
+  .hbrand span{display:none}       /* the mark carries the brand at this width */
+  .hnav a{font-size:.78rem}
+}
 .hnav a{font-size:.875rem;font-weight:400;color:var(--foreground);transition:color .3s}
 .hnav a:hover{color:var(--primary);text-decoration:none}
 
@@ -240,10 +250,22 @@ td.who{color:var(--muted-foreground)}
 .detail dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.1rem;margin:0}
 .detail dt{color:var(--muted-foreground);font-size:.85rem}
 .detail dd{margin:0;overflow-wrap:anywhere}
+/* Narrow screens: the fixed column widths add up to more than the viewport,
+   which starves the Claim column until it breaks one character per line. Drop
+   the fixed layout entirely and let the remaining columns size themselves. */
 @media(max-width:900px){
-  .recordtable col.c-who,.recordtable col.c-lane{width:0}
+  .recordtable{table-layout:auto}
+  .recordtable col{width:auto}
   .recordtable td.who,.recordtable th.who,
   .recordtable td.lane,.recordtable th.lane{display:none}
+}
+@media(max-width:640px){
+  /* evidence axes and profile live in the expanded detail at this width */
+  .recordtable td.ev,.recordtable th.ev{display:none}
+  .recordtable td{padding:.5rem .4rem}
+  .recordtable thead th{padding:.5rem .4rem;font-size:.68rem}
+  td.claim{overflow-wrap:normal;word-break:normal}
+  .detail td{padding-left:.8rem}
 }
 
 /* ---------- footer: matches the main site ---------- */
@@ -746,7 +768,10 @@ function paint(){
   eras.forEach((e,i)=>{
     const a=pxOf(i/eras.length);
     if(a<L-40||a>W-R) return;
-    s+='<text class="eralabel" x="'+Math.max(L+4,a+6).toFixed(1)+'" y="'+(T-21)+'">'+esc(e[2])+" · "+e[0]+"–"+e[1]+"</text>";
+    const bw=pxOf((i+1)/eras.length)-a;
+    if(bw<34) return;                      // no room for a legible label
+    const label = bw<110 ? esc(e[2]) : esc(e[2])+" · "+e[0]+"–"+e[1];
+    s+='<text class="eralabel" x="'+Math.max(L+4,a+6).toFixed(1)+'" y="'+(T-21)+'">'+label+"</text>";
   });
   lanes.forEach(l=>{ s+='<text class="lanelabel" x="8" y="'+(yOf(l)+3)+'">'+esc(LANE[l]||l)+"</text>"; });
   svg.setAttribute("viewBox","0 0 "+W+" "+H);     // 1 unit == 1 pixel, never stretched
