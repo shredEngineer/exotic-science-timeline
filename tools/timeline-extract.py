@@ -99,6 +99,39 @@ stats = {"events":len(events),
     "densest_year":per_year.most_common(1)[0] if per_year else None,
     "self_runner_lineage_span":[min(e["t_start"] for e in slf),max((e["t_end"] or e["t_start"]) for e in slf)] if slf else None,
     "per_era":{lbl:sum(1 for e in events if a<=e["t_start"]<b) for a,b,_,lbl in [(x[0],x[1],x[2],x[2]+" "+x[3]) for x in eras]}}
+
+# --- structural aggregation: what the record shows, class- and grade-based ---
+# every reading is recomputed from the records, so a corpus edit updates the
+# dashboard rather than leaving a hand-written sentence to drift out of true
+import re as _re
+_obs = [e for e in events if e["record_kind"] not in ("doctrine","narrative")]
+_No = len(_obs)
+def _grade(sig, ax):
+    m = _re.search(ax + r"(\d)", sig or "")
+    return int(m.group(1)) if m else None
+_by_lane = Counter()
+for e in _obs:
+    for l in (e.get("lanes") or [e["lane"]]): _by_lane[l] += 1
+_by_ep = Counter(e.get("epistemotype") for e in _obs)
+# a record is an OPEN ANOMALY when its theory-embedding axis is 0: no documented
+# edge to an established mechanism. This is the standard's graph-property test.
+_t0 = sum(1 for e in _obs if _grade(e.get("e_signature"), "T") == 0)
+_examined = len({a["target"] for a in arcs})
+_never_repl = sum(1 for e in _obs if _grade(e.get("e_signature"), "R") == 0)
+_peer = sum(1 for e in _obs if _grade(e.get("e_signature"), "D") == 7)
+_secondhand = sum(1 for e in _obs if _grade(e.get("e_signature"), "D") in (0, 1))
+_dec = Counter((e["t_start"] // 10 * 10) for e in _obs if e.get("t_start") is not None)
+stats["aggregates"] = {
+    "n": _No,
+    "by_lane": _by_lane.most_common(),
+    "by_ep": _by_ep.most_common(),
+    "open_anomaly": _t0,
+    "examined": _examined,
+    "never_replicated": _never_repl,
+    "peer_reviewed": _peer,
+    "secondhand": _secondhand,
+    "densest_decade": _dec.most_common(1)[0] if _dec else None,
+}
 out = {"renders_corpus":RENDERS,"events":events,"arcs":arcs,"eras":eras,"stats":stats}
 OUT.parent.mkdir(exist_ok=True)
 json.dump(out, open(OUT,"w"), indent=1)

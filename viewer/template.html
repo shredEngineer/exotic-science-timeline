@@ -197,6 +197,45 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .tl .lanelabel{fill:var(--muted-foreground);font-size:11.5px;font-family:var(--font-mono)}
 .tl .gridline{stroke:hsl(214 30% 18% / .8);stroke-width:1}
 .tl .arc{fill:none;stroke:hsl(21 100% 55% / .4);stroke-width:1.1}
+.tl .arc.rep{stroke:hsl(189 100% 50% / .5)}     /* a reproduction reads apart from a refutation */
+/* floating tooltip — one engine for chart dots and every spec-enum badge */
+#tip{position:fixed;z-index:60;max-width:22rem;padding:.6rem .7rem;border-radius:.5rem;
+  background:hsl(214 55% 8% / .98);border:1px solid var(--border);
+  box-shadow:0 8px 28px hsl(216 60% 4% / .6);font-size:.82rem;line-height:1.4;
+  color:var(--foreground);pointer-events:none;opacity:0;transition:opacity .09s;
+  transform:translateY(2px)}
+#tip.on{opacity:1}
+#tip .th{font-weight:600;margin-bottom:.25rem}
+#tip .tk{color:var(--muted-foreground);font-size:.74rem;text-transform:uppercase;
+  letter-spacing:.04em;margin:.4rem 0 .1rem}
+#tip dl{display:grid;grid-template-columns:auto 1fr;gap:.05rem .5rem;margin:.2rem 0 0}
+#tip dt{color:var(--muted-foreground)}
+#tip .sig{font-family:var(--font-mono);font-size:.76rem;color:var(--secondary)}
+.tl .dot{cursor:pointer;transition:r .08s}
+.tl .dot:hover{stroke:var(--foreground);stroke-width:1.5}
+/* chart legend */
+.chartlegend{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;align-items:center;
+  margin:.5rem .2rem 0;font-size:.78rem;color:var(--muted-foreground)}
+.chartlegend .grp{display:flex;flex-wrap:wrap;gap:.3rem .7rem;align-items:center}
+.chartlegend .sw{display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap}
+.chartlegend .dotsw{width:.6rem;height:.6rem;border-radius:50%;display:inline-block}
+.chartlegend .arcsw{width:1.1rem;height:0;border-top:2px solid;display:inline-block;border-radius:2px}
+.chartlegend .sep{opacity:.4}
+/* structural dashboard */
+.dash{margin:1.4rem 0 .2rem}
+.dash h3{font-size:1.05rem;margin:0 0 .2rem}
+.dash .sub{color:var(--muted-foreground);font-size:.85rem;margin:0 0 1rem}
+.classbars{display:grid;grid-template-columns:auto 1fr auto;gap:.28rem .7rem;align-items:center;
+  margin:0 0 1.2rem;font-size:.82rem}
+.classbars .cn{color:var(--foreground);white-space:nowrap}
+.classbars .track{background:var(--card-subtle);border-radius:999px;height:.62rem;overflow:hidden}
+.classbars .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--secondary-muted),var(--secondary))}
+.classbars .cv{color:var(--muted-foreground);font-variant-numeric:tabular-nums;text-align:right}
+.classbars a.cn:hover{color:var(--primary)}
+.readings{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem}
+.reading{background:var(--card);border:1px solid var(--border);border-radius:.5rem;padding:.8rem .9rem}
+.reading b{color:var(--primary);font-size:1.15rem;font-variant-numeric:tabular-nums}
+.reading p{margin:.3rem 0 0;font-size:.85rem;color:var(--muted-foreground);line-height:1.45}
 .tl .dot{stroke:hsl(216 60% 9.8%);stroke-width:.8;cursor:pointer}
 .tl .dot:hover{stroke:var(--foreground);stroke-width:2}
 
@@ -347,7 +386,10 @@ footer.site .inner{max-width:72rem;margin:0 auto}
       <span class="hint">Scroll to zoom · drag to pan · click a mark to jump to its entry</span>
     </div>
     <svg class="tl" id="tl" role="img" aria-label="Timeline of anomaly claims by era and effect class"></svg>
+    <div class="chartlegend" id="chartlegend"></div>
   </div>
+
+  <div class="dash" id="dash"></div>
 
   <div class="controls">
     <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off">
@@ -503,7 +545,7 @@ const REG = {                       // enum family -> canonical section of the s
 };
 // every structured enum renders as a badge that leads to where it is defined
 const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+href+
-  '" target="_blank" rel="noopener noreferrer"'+(title?' title="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
+  '" target="_blank" rel="noopener noreferrer"'+(title?' data-tip="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
 const ROLE = {claimed:"claimed",discussed:"discussed",excluded_per_source:"excluded by the source"};
 const RELT = {contradicts:"contradicts",replicates:"replicates",confirms_per_source:"confirmed by the source"};
 const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuum behaviour"],
@@ -511,11 +553,54 @@ const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuu
 const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
   "EP-3":"Lab-contested — measured and disputed","EP-4":"Historical-anecdotal",
   "EP-5":"Orthodox-covered — explained by established physics","EP-0":"Unquantized — not yet assessed"};
+const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",  // dot colour per profile
+  "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
 
 const ev = DATA.events.slice();
 const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const axCls=(k,v)=>{ if(v==="x") return "gx"; const r=+v/AXMAX[k];
   return r>=.7?"g3":r>=.4?"g2":r>0?"g1":"g0"; };
+
+/* ---------- one tooltip engine: chart dots (rich) + any [data-tip] (text) ---------- */
+const tipEl=(()=>{const d=document.createElement("div");d.id="tip";document.body.appendChild(d);return d;})();
+function tipShow(html,x,y){
+  tipEl.innerHTML=html; tipEl.classList.add("on");
+  const r=tipEl.getBoundingClientRect(), pad=10, vw=innerWidth, vh=innerHeight;
+  let left=x+14, top=y+14;
+  if(left+r.width+pad>vw) left=x-r.width-14;
+  if(left<pad) left=pad;
+  if(top+r.height+pad>vh) top=y-r.height-14;
+  if(top<pad) top=pad;
+  tipEl.style.left=left+"px"; tipEl.style.top=top+"px";
+}
+const tipHide=()=>tipEl.classList.remove("on");
+// rich card for a chart dot, from the full record
+function dotCard(e){
+  const lanes=(e.lanes||[e.lane]).map(l=>LANE[l]||l).join(" · ");
+  const epd=EPDESC[e.epistemotype]||"not assessed";
+  const mech=(e.mechanisms||[]).length;
+  let h='<div class="th">'+esc(e.label)+'</div>';
+  h+='<dl>';
+  h+='<dt>Dated</dt><dd>'+esc(e.years_raw||e.years||e.t_start||"—")+'</dd>';
+  if(e.principals) h+='<dt>Who</dt><dd>'+esc(e.principals)+'</dd>';
+  h+='<dt>Class</dt><dd>'+esc(lanes)+'</dd>';
+  h+='<dt>Profile</dt><dd>'+esc(e.epistemotype||"—")+' — '+esc(epd)+'</dd>';
+  if(mech) h+='<dt>Mechanisms</dt><dd>'+mech+' on record</dd>';
+  h+='</dl>';
+  if(e.e_signature) h+='<div class="sig">'+esc(e.e_signature)+'</div>';
+  h+='<div class="tk" style="margin-top:.4rem;text-transform:none;letter-spacing:0">Click the mark to open the full record ↓</div>';
+  return h;
+}
+// generic text tooltip for spec-enum badges
+document.addEventListener("mouseover",ev=>{
+  const t=ev.target.closest("[data-tip]"); if(!t) return;
+  tipShow('<div>'+esc(t.getAttribute("data-tip"))+'</div>',ev.clientX,ev.clientY);
+});
+document.addEventListener("mouseout",ev=>{ if(ev.target.closest("[data-tip]")) tipHide(); });
+document.addEventListener("mousemove",ev=>{
+  if(tipEl.classList.contains("on")&&ev.target.closest("[data-tip]"))
+    tipShow(tipEl.innerHTML,ev.clientX,ev.clientY);
+},{passive:true});
 
 /* header shrink, matching the main site */
 const hdr=document.getElementById("hdr");
@@ -557,6 +642,63 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   const pinEl=document.getElementById("pin");
   if(pinEl) pinEl.textContent = DATA.enrichment_attached
     ? DATA.enrichment_attached+" entries enriched" : "";
+})();
+
+/* ---------- chart legend: what a dot's colour and an arc mean ---------- */
+(function(){
+  const el=document.getElementById("chartlegend"); if(!el) return;
+  const eps=["EP-1","EP-2","EP-3","EP-4","EP-5","EP-0"];
+  const dots=eps.map(k=>'<span class="sw" data-tip="'+esc(k+" — "+(EPDESC[k]||""))+
+    '"><span class="dotsw" style="background:'+EPC[k]+'"></span>'+esc(k)+"</span>").join("");
+  el.innerHTML=
+    '<span class="grp"><span style="color:var(--foreground)">Dot colour · evidence profile:</span>'+dots+"</span>"+
+    '<span class="sep">|</span>'+
+    '<span class="grp"><span style="color:var(--foreground)">Curved link · a later examination and the claim it addressed:</span>'+
+    '<span class="sw" data-tip="A later record that contradicted an earlier claim — e.g. a null-result re-test.">'+
+    '<span class="arcsw" style="border-color:hsl(21 100% 55%)"></span>contradicted</span>'+
+    '<span class="sw" data-tip="A later record that reproduced an earlier claim under the standard\'s replication grades.">'+
+    '<span class="arcsw" style="border-color:hsl(189 100% 50%)"></span>reproduced</span></span>';
+})();
+
+/* ---------- structural dashboard: what the record shows, class- and grade-based ---------- */
+(function(){
+  const el=document.getElementById("dash"), a=(DATA.stats||{}).aggregates; if(!el||!a) return;
+  const N=a.n, lanes=a.by_lane, top=lanes[0], top2=lanes[1], last=lanes[lanes.length-1];
+  const max=top[1];
+  const bars=lanes.map(([k,v])=>{
+    const nm=LANE[k]||k, pct=(v/max*100).toFixed(1);
+    return '<a class="cn" href="#record" data-lane="'+esc(k)+'" data-tip="'+esc(nm+" — "+(LANEDESC[k]||""))+'">'+esc(nm)+"</a>"+
+      '<span class="track"><span class="fill" style="width:'+pct+'%"></span></span>'+
+      '<span class="cv">'+v+"</span>";
+  }).join("");
+  const ep1=(a.by_ep.find(x=>x[0]==="EP-1")||[])[1]||0;
+  const dd=a.densest_decade;
+  const readings=[
+    ["b:"+top[1], (LANE[top[0]]||top[0])+" and "+(LANE[top2[0]]||top2[0]).toLowerCase()+
+      " effects dominate the record — "+top[1]+" and "+top2[1]+" of "+N+". "+
+      (LANE[last[0]]||last[0])+" claims are rarest, at "+last[1]+"."],
+    ["b:"+a.open_anomaly, a.open_anomaly+" records are open anomalies — no documented edge to an "+
+      "established mechanism. In this standard that absent edge, not a label, is what makes an observation anomalous."],
+    ["b:"+a.examined, "Examination is the exception: "+a.examined+" claims carry a documented re-test on record"+
+      ((DATA.stats||{}).median_adversarial_lag_years!=null
+        ? ", and where one exists it followed the claim by a median of "+DATA.stats.median_adversarial_lag_years+" years." : ".")],
+    ["b:"+a.peer_reviewed, "Documentation splits: "+a.peer_reviewed+" records reach peer-reviewed publication, "+
+      "while "+a.secondhand+" rest on a single or second-hand account. The grade records that gap rather than hiding it."],
+    ["b:"+(dd?dd[0]+"s":"—"), (dd?"The "+dd[0]+"s hold the most records of any decade — "+dd[1]+". ":"")+
+      "Density rises toward the present, as cheaper instruments and faster publishing leave more of a trail — not necessarily as more happened."],
+    ["b:EP-1", "The commonest evidence profile is EP-1: a solitary anomaly, one source and no controls ("+ep1+" records). "+
+      "It marks something documented cleanly enough to state, not something established."],
+  ];
+  el.innerHTML=
+    '<h3>What the record shows</h3>'+
+    '<p class="sub">Every figure below is recomputed from the '+N+' documented reports — it moves when the corpus does.</p>'+
+    '<div class="classbars">'+bars+"</div>"+
+    '<div class="readings">'+readings.map(([b,p])=>
+      '<div class="reading"><b>'+esc(b.slice(2))+"</b><p>"+esc(p)+"</p></div>").join("")+"</div>";
+  // a class bar filters the table to that phenomenon
+  el.querySelectorAll("a.cn[data-lane]").forEach(x=>x.addEventListener("click",e=>{
+    const f=document.getElementById("fLane"); if(f){ f.value=x.dataset.lane; apply(); }
+  }));
 })();
 
 /* ---------- reference tables use the record's own badges ---------- */
@@ -603,8 +745,8 @@ function axes(sig){
   if(!m) return '<span class="mono">'+esc(sig)+"</span>";
   return '<span class="axes">'+"DRCPTQ".split("").map((k,i)=>{
     const v=m[i+1], t = v==="x" ? "not assessed" : v+" of "+AXMAX[k];
-    return '<span class="ax '+axCls(k,v)+'" data-jump="ax-'+k+'" title="'+AXNAME[k]+": "+t+
-      ' — click for the scale">'+k+v+"</span>";
+    return '<span class="ax '+axCls(k,v)+'" data-jump="ax-'+k+'" data-tip="'+esc(AXNAME[k]+" — "+t+". "+AXDESC[k])+
+      '">'+k+v+"</span>";
   }).join("")+"</span>";
 }
 
@@ -618,10 +760,10 @@ function rows(list){
       '<td class="claim">'+esc(e.label)+"</td>"+
       '<td class="who">'+esc(e.principals||"—")+"</td>"+
       '<td class="lane">'+(e.lanes||[e.lane]).map(l=>'<span class="chip lane" data-jump="lane-'+esc(l)+
-        '" title="What this phenomenon class covers">'+esc(LANE[l]||l)+"</span>").join(" ")+"</td>"+
+        '" data-tip="'+esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'">'+esc(LANE[l]||l)+"</span>").join(" ")+"</td>"+
       '<td class="ev">'+axes(e.e_signature)+"</td>"+
       '<td class="prof"><span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype||"EP-0")+
-        '" title="What this profile means">'+esc(e.epistemotype||"—")+"</span></td></tr>";
+        '" data-tip="'+esc((e.epistemotype||"")+" — "+(EPDESC[e.epistemotype]||"not assessed"))+'">'+esc(e.epistemotype||"—")+"</span></td></tr>";
   }).join("");
   document.getElementById("count").textContent = (list.length===ev.length)
     ? ev.length+" entries" : list.length+" of "+ev.length+" entries";
@@ -766,8 +908,6 @@ const plotW=()=>Math.max(80,W-L-R);
 const pxOf=u=>L+((u-u0)/(u1-u0))*plotW();
 const uAtPx=px=>u0+((px-L)/plotW())*(u1-u0);
 const yOf=l=>T+lanes.indexOf(l)*rowH+rowH/2;
-const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",
-  "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
 
 function paint(){
   W=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
@@ -789,13 +929,12 @@ function paint(){
     const ua=uOf(A.t_start), ub=uOf(B.t_start);
     if(!vis(ua)&&!vis(ub)) return;
     const x1=pxOf(ua),x2=pxOf(ub),y1=yOf(A.lane),y2=yOf(B.lane);
-    s+='<path class="arc" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-15)+" "+x2.toFixed(1)+","+y2+'"/>';
+    s+='<path class="arc'+(a.type==="contradicts"?"":" rep")+'" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-15)+" "+x2.toFixed(1)+","+y2+'"/>';
   });
   ev.forEach(e=>{ if(e.t_start==null) return;
     const u=uOf(e.t_start); if(!vis(u)) return;
     s+='<circle class="dot" data-id="'+esc(e.id)+'" cx="'+pxOf(u).toFixed(1)+'" cy="'+yOf(e.lane)+
-      '" r="'+r.toFixed(2)+'" fill="'+(EPC[e.epistemotype]||EPC["EP-0"])+'"><title>'+
-      esc(e.years_raw||e.t_start)+" — "+esc(e.label)+"</title></circle>";
+      '" r="'+r.toFixed(2)+'" fill="'+(EPC[e.epistemotype]||EPC["EP-0"])+'"></circle>';
   });
   s+="</g>";
   eras.forEach((e,i)=>{
@@ -827,6 +966,17 @@ function zoomAt(clientX,factor){
   u0=anchor-frac*span; u1=u0+span;
   clampWindow(); paint();
 }
+svg.addEventListener("mouseover",e=>{
+  const t=e.target.closest?e.target.closest(".dot"):null; if(!t) return;
+  const rec=ev.find(x=>x.id===t.dataset.id); if(rec) tipShow(dotCard(rec),e.clientX,e.clientY);
+});
+svg.addEventListener("mousemove",e=>{
+  if(!tipEl.classList.contains("on")) return;
+  const t=e.target.closest?e.target.closest(".dot"):null;
+  if(t){ const rec=ev.find(x=>x.id===t.dataset.id); if(rec) tipShow(dotCard(rec),e.clientX,e.clientY); }
+  else if(!e.target.closest("[data-tip]")) tipHide();
+},{passive:true});
+svg.addEventListener("mouseleave",tipHide);
 svg.addEventListener("wheel",e=>{
   e.preventDefault();
   const unit = e.deltaMode===1 ? 16 : e.deltaMode===2 ? 100 : 1;

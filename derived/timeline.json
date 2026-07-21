@@ -7881,6 +7881,86 @@
    "IV Postwar laboratory era": 59,
    "V Contested-laboratory era": 49,
    "VI Video & network era": 22
+  },
+  "aggregates": {
+   "n": 167,
+   "by_lane": [
+    [
+     "EMG",
+     47
+    ],
+    [
+     "MEC",
+     42
+    ],
+    [
+     "GRA",
+     29
+    ],
+    [
+     "OPT",
+     25
+    ],
+    [
+     "THM",
+     20
+    ],
+    [
+     "CHM",
+     20
+    ],
+    [
+     "NUC",
+     15
+    ],
+    [
+     "BIO",
+     14
+    ],
+    [
+     "INS",
+     11
+    ],
+    [
+     "ACU",
+     3
+    ]
+   ],
+   "by_ep": [
+    [
+     "EP-1",
+     53
+    ],
+    [
+     "EP-3",
+     46
+    ],
+    [
+     "EP-4",
+     27
+    ],
+    [
+     "EP-5",
+     24
+    ],
+    [
+     "EP-0",
+     13
+    ],
+    [
+     "EP-2",
+     4
+    ]
+   ],
+   "open_anomaly": 18,
+   "examined": 17,
+   "never_replicated": 11,
+   "peer_reviewed": 38,
+   "secondhand": 37,
+   "densest_decade": [
+    1990,
+    27
+   ]
   }
  }
 }
