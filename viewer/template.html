@@ -78,9 +78,15 @@ header.site.scrolled .hbrand span{font-size:.75rem}
 .lede strong{color:var(--foreground)}
 .note{margin-top:1rem;max-width:70ch;color:var(--muted-foreground);font-size:.95rem}
 
+.jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.jump a{border:1px solid var(--border);background:var(--card-subtle);border-radius:999px;
+  padding:.35rem .85rem;font-size:.875rem;color:var(--foreground);transition:all .2s}
+.jump a:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
 .stats{display:grid;gap:.75rem;margin:2rem 0 0;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
 .stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.1rem}
-.stat b{display:block;font-family:var(--font-heading);font-size:1.7rem;color:var(--primary);line-height:1.1}
+.stat b{display:block;font-family:var(--font-heading);font-size:1.7rem;color:var(--primary);
+  line-height:1.1;white-space:nowrap}
+.stat b.range{font-size:clamp(1.15rem,2.4vw,1.7rem)}
 .stat b .sep{color:var(--muted-foreground);font-weight:400;padding:0 .12em}
 .stat span{display:block;margin-top:.25rem;color:var(--muted-foreground);font-size:.85rem}
 
@@ -118,6 +124,11 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .ax.g0{color:hsl(0 0% 45%)} .ax.g1{color:hsl(21 80% 58%)}
 .ax.g2{color:hsl(45 85% 60%)} .ax.g3{color:hsl(141 55% 58%)}
 .ax.gx{color:hsl(0 0% 38%);font-style:italic}
+[data-jump]{cursor:pointer}
+[data-jump]:hover{border-color:var(--primary);color:var(--primary)}
+.ref tr.hit{animation:refhit 2s ease-out}
+@keyframes refhit{0%,35%{background:hsl(21 100% 55% / .2)}100%{background:transparent}}
+.ref tr.hit td:first-child{box-shadow:inset 2px 0 0 var(--primary)}
 
 /* ---------- reference tables (same skin as the record) ---------- */
 .ref{width:100%;border-collapse:separate;border-spacing:0;font-size:.9rem;
@@ -192,6 +203,8 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .recordtable th[aria-sort] .arrow{opacity:1;color:var(--primary)}
 .recordtable td{padding:.55rem .7rem;border-bottom:1px solid hsl(214 30% 18% / .55);
   vertical-align:top;overflow-wrap:anywhere}
+.recordtable td.ev,.recordtable th.ev{padding-right:1.6rem}
+.recordtable td.prof,.recordtable th.prof{padding-left:.2rem}
 .recordtable tbody tr.row:hover{background:hsl(189 100% 50% / .04);cursor:pointer}
 .recordtable tbody tr.row.open{background:hsl(21 100% 55% / .06)}
 .recordtable tbody tr.row.flash{animation:flash 1.4s ease-out}
@@ -242,7 +255,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   text-align:center;margin-top:1.75rem}
 </style>
 </head>
-<body>
+<body id="top">
 
 <header class="site" id="hdr"><div class="bar"><nav aria-label="Global">
   <div class="hgroup">
@@ -253,8 +266,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <ul class="hnav">
       <li><a href="https://news.advanced-rediscovery.com/" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
       <li><a href="https://advanced-rediscovery.com/research">Research</a></li>
-      <li><a href="#method">Method</a></li>
-      <li><a href="#record">The record</a></li>
+      <li><a href="#top" aria-current="page">Timeline</a></li>
     </ul>
   </div>
 </nav></div></header>
@@ -266,6 +278,11 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports: what was claimed, by whom, and <strong>how well each one was actually documented</strong>.</p>
   <p class="note">It takes no position on whether any effect is real. Each entry carries a coordinate describing its evidence — how it was recorded, whether anyone reproduced it, what was controlled for, who examined it. Well-documented claims and thin ones sit in the same table, in the same vocabulary, and the difference becomes visible instead of asserted.</p>
   <div class="stats" id="stats"></div>
+  <nav class="jump" aria-label="On this page">
+    <a href="#method">The method</a>
+    <a href="#record">The record</a>
+    <a href="#about">About</a>
+  </nav>
 </div>
 
 <section id="method">
@@ -288,6 +305,10 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <table class="ref"><caption>Evidence profiles</caption>
       <thead><tr><th>Profile</th><th>Meaning</th></tr></thead>
       <tbody id="eptable"></tbody>
+    </table>
+    <table class="ref"><caption>Phenomenon classes</caption>
+      <thead><tr><th>Class</th><th>What it covers</th></tr></thead>
+      <tbody id="lanetable"></tbody>
     </table>
   </div>
   <p class="note" style="margin-top:1.1rem"><b class="mono">x</b> means not assessed — which is <em>not</em> a zero. Unexamined and poorly evidenced are different things, and conflating them would be the easiest way to lie with this table. <b class="mono">T0</b> is the anomaly test: no established mechanism on record, which is a property of the documentation rather than a verdict about reality.</p>
@@ -320,7 +341,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <colgroup>
       <col style="width:2.2rem"><col style="width:4.5rem"><col>
       <col class="c-who" style="width:20%"><col class="c-lane" style="width:9rem">
-      <col style="width:9.5rem"><col style="width:5rem">
+      <col style="width:11rem"><col style="width:5.2rem">
     </colgroup>
     <thead><tr>
       <th></th>
@@ -328,8 +349,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
       <th class="sortable" data-k="label">Claim<span class="arrow">▼</span></th>
       <th class="sortable who" data-k="principals">Who<span class="arrow">▼</span></th>
       <th class="sortable lane" data-k="lane">Class<span class="arrow">▼</span></th>
-      <th>Evidence</th>
-      <th class="sortable" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
+      <th class="ev">Evidence</th>
+      <th class="sortable prof" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
     </tr></thead>
     <tbody id="tb"></tbody>
   </table>
@@ -402,6 +423,20 @@ const AXDESC = {D:"How the observation is recorded — second-hand account throu
   P:"Who documented it — anonymous through adversarial examination on record",
   T:"Whether an established mechanism explains it — none on record through established and claimed",
   Q:"How it was measured — qualitative through quantitative with uncertainty"};
+const LANEDESC = {
+  MEC:"Levitation, thrust, spin-up, deformation, oscillation, fluid motion — and mechanical self-runners",
+  THM:"Heat balance, local heating, cooling without a documented sink, anomalous transport",
+  NUC:"Elemental and isotopic analysis, radiation, fusion products, microcraters and new phases",
+  EMG:"Field signatures, induction, electrical energy balance, discharge and plasma, correlations",
+  GRA:"Weight change, field shadows, gyroscope anomalies, inertia and free-fall deviations",
+  OPT:"Glow and aura, plasma balls, refraction and imaging anomalies, mist formation",
+  ACU:"Spontaneous tones, infra- and ultrasound, resonance transfer over distance",
+  CHM:"Reaction and combustion anomalies, electrochemical figures, phase and substance properties",
+  BIO:"Growth effects, physiological sensations, cellular findings, effects on microorganisms",
+  INS:"The instrument reading is the sole observable, or the instrument itself is affected",
+  DOC:"Theory-first bodies of claim, indexed as their own object type rather than as observations",
+  NAR:"Lore and conspiracy complexes, split into documented kernel and added layer",
+  SON:"Residual — anything the classes above do not cover"};
 const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
   "EP-3":"Lab-contested — measured and disputed","EP-4":"Historical-anecdotal",
   "EP-5":"Orthodox-covered — explained by established physics","EP-0":"Unquantized — not yet assessed"};
@@ -429,13 +464,14 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   const range = eras.length
     ? eras[0][0]+'<span class="sep"> … </span>'+eras[eras.length-1][1] : "—";
   const items=[
-    [esc(s.observation_events ?? ev.length),"documented reports"],
-    [range,"years covered"],
-    [esc(s.median_adversarial_lag_years ?? "—"),"median years to examination"],
-    [esc(s.contradiction_arcs ?? 0),"examinations that contradicted"]
+    {v:esc(s.observation_events ?? ev.length), l:"documented reports"},
+    {v:range, l:"years covered", nowrap:true},
+    {v:esc(s.median_adversarial_lag_years ?? "—"), l:"median years to examination"},
+    {v:esc(s.contradiction_arcs ?? 0), l:"examinations that contradicted"}
   ];
-  document.getElementById("stats").innerHTML =
-    items.map(([v,l])=>'<div class="stat"><b>'+v+'</b><span>'+esc(l)+"</span></div>").join("");
+  document.getElementById("stats").innerHTML = items.map(it=>
+    '<div class="stat"><b'+(it.nowrap?' class="range"':"")+">"+it.v+
+    "</b><span>"+esc(it.l)+"</span></div>").join("");
   const pinEl=document.getElementById("pin");
   if(pinEl) pinEl.textContent = DATA.enrichment_attached
     ? DATA.enrichment_attached+" entries enriched" : "";
@@ -443,13 +479,18 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 
 /* ---------- reference tables use the record's own badges ---------- */
 document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
+  // row id lets a badge in the record jump straight to its explanation
   const demo='<span class="axes"><span class="ax '+axCls(k,String(AXMAX[k]))+'">'+k+AXMAX[k]+"</span></span>";
-  return "<tr><td>"+demo+" <span class='mono' style='color:var(--muted-foreground)'>"+esc(AXNAME[k])+
+  return '<tr id="ax-'+k+'"><td>'+demo+" <span class='mono' style='color:var(--muted-foreground)'>"+esc(AXNAME[k])+
     "</span></td><td>"+esc(AXDESC[k])+"</td></tr>";
 }).join("");
 document.getElementById("eptable").innerHTML = Object.keys(EPDESC).sort().map(ep=>
-  '<tr><td><span class="chip ep '+ep.replace("-","").toLowerCase()+'">'+esc(ep)+
+  '<tr id="ep-'+esc(ep)+'"><td><span class="chip ep '+ep.replace("-","").toLowerCase()+'">'+esc(ep)+
   "</span></td><td>"+esc(EPDESC[ep])+"</td></tr>").join("");
+document.getElementById("lanetable").innerHTML =
+  [...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)).map(l=>
+  '<tr id="lane-'+esc(l)+'"><td><span class="chip lane">'+esc(LANE[l]||l)+
+  "</span></td><td>"+esc(LANEDESC[l]||"—")+"</td></tr>").join("");
 
 /* ---------- filters ---------- */
 function fill(sel,vals,fmt){const el=document.getElementById(sel);
@@ -466,7 +507,8 @@ function axes(sig){
   if(!m) return '<span class="mono">'+esc(sig)+"</span>";
   return '<span class="axes">'+"DRCPTQ".split("").map((k,i)=>{
     const v=m[i+1], t = v==="x" ? "not assessed" : v+" of "+AXMAX[k];
-    return '<span class="ax '+axCls(k,v)+'" title="'+AXNAME[k]+": "+t+'">'+k+v+"</span>";
+    return '<span class="ax '+axCls(k,v)+'" data-jump="ax-'+k+'" title="'+AXNAME[k]+": "+t+
+      ' — click for the scale">'+k+v+"</span>";
   }).join("")+"</span>";
 }
 
@@ -479,9 +521,11 @@ function rows(list){
       '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
       '<td class="claim">'+esc(e.label)+"</td>"+
       '<td class="who">'+esc(e.principals||"—")+"</td>"+
-      '<td class="lane"><span class="chip lane">'+esc(LANE[e.lane]||e.lane)+"</span></td>"+
-      "<td>"+axes(e.e_signature)+"</td>"+
-      '<td><span class="chip ep '+ep+'">'+esc(e.epistemotype||"—")+"</span></td></tr>";
+      '<td class="lane"><span class="chip lane" data-jump="lane-'+esc(e.lane)+
+        '" title="What this class covers">'+esc(LANE[e.lane]||e.lane)+"</span></td>"+
+      '<td class="ev">'+axes(e.e_signature)+"</td>"+
+      '<td class="prof"><span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype||"EP-0")+
+        '" title="What this profile means">'+esc(e.epistemotype||"—")+"</span></td></tr>";
   }).join("");
   document.getElementById("count").textContent=list.length+" of "+ev.length+" entries";
 }
@@ -549,8 +593,17 @@ function expand(tr){
     "</dl></td>";
   tr.after(row);
 }
-document.getElementById("tb").addEventListener("click",e=>{
-  const tr=e.target.closest("tr.row"); if(tr) expand(tr);
+function explain(target){
+  const el=document.getElementById(target); if(!el) return;
+  document.querySelectorAll(".ref tr.hit").forEach(r=>r.classList.remove("hit"));
+  el.scrollIntoView({behavior:"smooth",block:"center"});
+  void el.offsetWidth; el.classList.add("hit");
+}
+// a badge explains itself; it must not also toggle the row it sits in
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-jump]");
+  if(b){ e.stopPropagation(); explain(b.dataset.jump); return; }
+  const tr=e.target.closest("#tb tr.row"); if(tr) expand(tr);
 });
 
 apply();
