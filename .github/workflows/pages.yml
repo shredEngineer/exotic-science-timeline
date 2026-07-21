@@ -59,16 +59,24 @@ jobs:
 
       # A green deploy step is not proof the site serves. Fetch what the world
       # fetches, and fail if it does not come back.
-      - name: Verify the published site responds
+      # A 200 is not proof the NEW build is being served: a CDN can answer with
+      # the previous revision. Verify the served page carries the pin this run
+      # just built, not merely that something answered.
+      - name: Verify the published site serves this build
         run: |
           url="${{ steps.deployment.outputs.page_url }}"
-          echo "verifying $url"
-          for i in 1 2 3 4 5; do
-            code=$(curl -sS -o /tmp/page.html -w '%{http_code}' --max-time 20 "$url" || echo 000)
-            [ "$code" = "200" ] && break
-            echo "attempt $i: http=$code — retrying"; sleep 10
+          pin=$(cat base/PIN)
+          echo "verifying $url carries $pin"
+          for i in 1 2 3 4 5 6; do
+            code=$(curl -sS -H 'Cache-Control: no-cache' -o /tmp/page.html \
+                     -w '%{http_code}' --max-time 20 "$url" || echo 000)
+            if [ "$code" = "200" ] && grep -qF "$pin" /tmp/page.html; then
+              served=yes; break
+            fi
+            echo "attempt $i: http=$code, pin not yet served — retrying"; sleep 10
           done
-          [ "$code" = "200" ] || { echo "::error::published site returned $code"; exit 1; }
+          [ "${served:-no}" = "yes" ] || {
+            echo "::error::published site did not serve this build (http=$code)"; exit 1; }
           grep -q 'const DATA' /tmp/page.html \
             || { echo "::error::page served but carries no data block"; exit 1; }
-          echo "ok: http=200 and the data block is present"
+          echo "ok: this build is live and carries its data"
