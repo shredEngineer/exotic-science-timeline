@@ -1,2823 +1,2853 @@
 {
-  "eqo_version": "1.0.0",
-  "corpus": "EQO/1 canonical instance corpus — consolidated exemplar records",
-  "provenance_note": "Compiled from publicly documented claims as known to the compiling model. Each record's own D/P axes encode its documentation status; 'x' marks unassessed values. Verify against primary sources before citation; corrections follow Governance G.1.",
-  "instances": [
-    {
-      "id": "ex:hutchison-corpus",
-      "label": "Hutchison effect corpus",
-      "principals": "John Hutchison",
-      "years": "1979–2000s",
-      "effect_types": [
-        "P-MEC-DEF-01",
-        "P-MEC-DEF-03",
-        "P-MEC-DEF-05",
-        "P-MEC-DEF-06",
-        "P-MEC-LEV-01",
-        "P-MEC-FLU-01",
-        "P-OPT-EMI-01",
-        "P-EMG-ENT-03",
-        "P-INS-ELK-01",
-        "P-INS-ELK-02",
-        "P-BIO-WRK-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-SCW",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-CAM",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc",
-          "rf"
-        ],
-        "med": "air",
-        "vac": "x",
-        "scl": "lab",
-        "per": "permanent"
-      },
-      "e_signature": "E1:D3R2C0P1T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-HUT"
-      ],
-      "note": "Video/sample corpus; military delegation visits documented 1983; never independently reproduced under controls.",
-      "refs": []
-    },
-    {
-      "id": "ex:brown-gravitator-1929",
-      "label": "Biefeld-Brown gravitator trials",
-      "principals": "Thomas Townsend Brown",
-      "years": "1929–1950s",
-      "effect_types": [
-        "P-GRA-GEW-01",
-        "P-MEC-KIN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-EGR",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-EHD",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-ART-STA",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc"
-        ],
-        "med": "air",
-        "vac": "x",
-        "scl": "lab",
-        "per": "transient"
-      },
-      "e_signature": "E1:D4R2C1P1T3Q2",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-BRN"
-      ],
-      "note": "Charged asymmetric capacitors; Project Winterhaven proposal 1952.",
-      "refs": []
-    },
-    {
-      "id": "ex:lifter-community",
-      "label": "Lifter replications and vacuum tests",
-      "principals": "Community (Naudin et al.); NASA EHD studies",
-      "years": "2000s",
-      "effect_types": [
-        "P-MEC-KIN-01",
-        "P-MEC-LEV-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-EHD",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc"
-        ],
-        "med": "air",
-        "vac": "vanishes",
-        "scl": "lab",
-        "per": "transient"
-      },
-      "e_signature": "E1:D5R5C3P3T4Q2",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-BRN",
-        "S-DEK"
-      ],
-      "note": "Widely replicated as EHD thrust; effect vanishes in vacuum.",
-      "refs": []
-    },
-    {
-      "id": "ex:searl-seg",
-      "label": "Searl Effect Generator narrative",
-      "principals": "John Searl",
-      "years": "1946–present (lore)",
-      "effect_types": [
-        "P-MEC-KIN-03",
-        "P-GRA-GEW-01",
-        "P-OPT-EMI-01",
-        "P-THM-KLT-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic",
-          "mechanical"
-        ],
-        "med": "air",
-        "vac": "x",
-        "scl": "lab",
-        "per": "x"
-      },
-      "e_signature": "E1:D1R2C0P1T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF",
-        "S-SRL"
-      ],
-      "note": "Spin-up, weight loss, halo, cooling per narrative corpus; no controlled documentation.",
-      "refs": []
-    },
-    {
-      "id": "ex:roschin-godin-2000",
-      "label": "Roschin–Godin magnetic rotor experiment",
-      "principals": "Sergei Godin, Vladimir Roschin",
-      "years": "2000",
-      "effect_types": [
-        "P-GRA-GEW-01",
-        "P-OPT-EMI-01",
-        "P-THM-KLT-01",
-        "P-MEC-KIN-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic",
-          "mechanical"
-        ],
-        "med": "air",
-        "vac": "x",
-        "scl": "lab",
-        "per": "transient"
-      },
-      "e_signature": "E1:D5R1C1P2T1Q2",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-SRL"
-      ],
-      "note": "Reported weight change, pink glow, cooling around rotating magnet assembly.",
-      "refs": []
-    },
-    {
-      "id": "ex:fleischmann-pons-1989",
-      "label": "Fleischmann–Pons excess heat announcement",
-      "principals": "Martin Fleischmann, Stanley Pons",
-      "years": "1989",
-      "effect_types": [
-        "P-THM-BIL-01",
-        "P-NUC-STR-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-LEN",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-CAL",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "vac": "x",
-        "scl": "lab",
-        "per": "decaying"
-      },
-      "e_signature": "E1:D7R3C2P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-LNR"
-      ],
-      "note": "Pd-D electrolysis; announcement Utah, 23 March 1989.",
-      "refs": [
-        "J. Electroanal. Chem. 261, 301 (1989)"
-      ]
-    },
-    {
-      "id": "ex:caltech-mit-null-1989",
-      "label": "Caltech/MIT cold-fusion rechecks",
-      "principals": "Lewis et al.; MIT PFC",
-      "years": "1989",
-      "effect_types": [
-        "P-THM-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-CAL",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C3P4T4Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-DEK",
-        "S-LNR"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:fleischmann-pons-1989"
-        }
-      ],
-      "note": "Adversarial replications reporting null within calorimetric error.",
-      "refs": [
-        "Nature 340, 525 (1989)"
-      ]
-    },
-    {
-      "id": "ex:jones-neutrons-1989",
-      "label": "Jones low-rate fusion neutrons",
-      "principals": "Steven Jones (BYU)",
-      "years": "1989",
-      "effect_types": [
-        "P-NUC-STR-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-LEN",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C2P1T2Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-LNR"
-      ],
-      "note": "Neutron rates far below F-P heat claims.",
-      "refs": [
-        "Nature 338, 737 (1989)"
-      ]
-    },
-    {
-      "id": "ex:miles-mckubre-helium",
-      "label": "Helium–excess-heat correlation",
-      "principals": "Melvin Miles; Michael McKubre (SRI)",
-      "years": "1990s",
-      "effect_types": [
-        "P-NUC-ELM-04",
-        "P-THM-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-LEN",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-KON",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D6R4C3P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-LNR"
-      ],
-      "note": "Reported He-4 commensurate with excess heat in Pd-D cells.",
-      "refs": []
-    },
-    {
-      "id": "ex:iwamura-2002",
-      "label": "Iwamura permeation transmutation findings",
-      "principals": "Yasuhiro Iwamura (Mitsubishi HI)",
-      "years": "2002",
-      "effect_types": [
-        "P-NUC-ELM-01",
-        "P-NUC-ELM-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-LEN",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-KON",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "chemical"
-        ],
-        "med": "solid",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C3P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-LNR"
-      ],
-      "note": "Cs→Pr reported after D2 permeation through Pd/CaO multilayers.",
-      "refs": [
-        "Jpn. J. Appl. Phys. 41, 4642 (2002)"
-      ]
-    },
-    {
-      "id": "ex:taleyarkhan-2002",
-      "label": "Acoustic cavitation 'bubble fusion'",
-      "principals": "Rusi Taleyarkhan et al.",
-      "years": "2002",
-      "effect_types": [
-        "P-NUC-STR-02",
-        "P-OPT-EMI-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-KAV",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-LEN",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-ART-STT",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "acoustic"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C3P1T4Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-DEK"
-      ],
-      "note": "Sonofusion claim; later Purdue research-conduct inquiries (2008).",
-      "refs": [
-        "Science 295, 1868 (2002)"
-      ]
-    },
-    {
-      "id": "ex:rossi-ecat-2011",
-      "label": "Rossi E-Cat demonstrations",
-      "principals": "Andrea Rossi",
-      "years": "2011–",
-      "effect_types": [
-        "P-THM-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-LEN",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-CAL",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "thermal",
-          "electrochemical"
-        ],
-        "med": "solid",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R2C1P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-LNR"
-      ],
-      "note": "Ni-H reactor demos; Industrial Heat litigation settled 2017.",
-      "refs": []
-    },
-    {
-      "id": "ex:google-lenr-2019",
-      "label": "Google-funded LENR reinvestigation",
-      "principals": "Berlinguette et al.",
-      "years": "2015–2019",
-      "effect_types": [
-        "P-THM-BIL-01",
-        "P-NUC-STR-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-LEN",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C4P4T2Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-LNR"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:fleischmann-pons-1989"
-        }
-      ],
-      "note": "Multi-lab program; no confirmed excess heat to date.",
-      "refs": [
-        "Nature 570, 45 (2019)"
-      ]
-    },
-    {
-      "id": "ex:podkletnov-1992",
-      "label": "Rotating-superconductor weight reduction",
-      "principals": "Eugene Podkletnov",
-      "years": "1992",
-      "effect_types": [
-        "P-GRA-GEW-02",
-        "P-GRA-GEW-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-POD",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-THK",
-          "role": "excluded_per_source"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf",
-          "magnetostatic"
-        ],
-        "med": "cryo",
-        "vac": "x",
-        "scl": "lab",
-        "per": "transient"
-      },
-      "e_signature": "E1:D7R3C2P1T2Q3",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "note": "0.05–0.3% weight loss reported above rotating YBCO disc.",
-      "refs": [
-        "Physica C 203, 441 (1992)"
-      ]
-    },
-    {
-      "id": "ex:nasa-msfc-podkletnov",
-      "label": "NASA MSFC gravity-shielding rebuilds",
-      "principals": "Ning Li, Ron Koczor et al.",
-      "years": "1997–2002",
-      "effect_types": [
-        "P-GRA-GEW-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-POD",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "med": "cryo",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D5R3C3P3T2Q2",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "relations": [
-        {
-          "type": "replicates",
-          "ref": "ex:podkletnov-1992"
-        }
-      ],
-      "note": "Partial rebuilds; no confirmed effect.",
-      "refs": []
-    },
-    {
-      "id": "ex:podkletnov-impulse-2001",
-      "label": "'Impulse gravity generator' preprint",
-      "principals": "Eugene Podkletnov, Giovanni Modanese",
-      "years": "2001",
-      "effect_types": [
-        "P-GRA-INR-01",
-        "P-MEC-KIN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-POD",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc",
-          "transient"
-        ],
-        "med": "cryo",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D5R1C1P1T2Q2",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "note": "Claimed force beam from superconducting discharge; preprint only.",
-      "refs": []
-    },
-    {
-      "id": "ex:ning-li-ac-gravity",
-      "label": "AC Gravity LLC claims",
-      "principals": "Ning Li",
-      "years": "1999–2000s",
-      "effect_types": [
-        "P-GRA-GEW-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-POD",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "cryo"
-      },
-      "e_signature": "E1:D1R0C0P1T2Q0",
-      "epistemotype": "EP-0",
-      "signatures": [],
-      "note": "Announced gravity-modification research; no public results.",
-      "refs": []
-    },
-    {
-      "id": "ex:hayasaka-takeuchi-1989",
-      "label": "Right-spinning gyroscope weight loss",
-      "principals": "Hideo Hayasaka, Sakae Takeuchi",
-      "years": "1989",
-      "effect_types": [
-        "P-GRA-GEW-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-VIB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C3P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-GYR"
-      ],
-      "note": "Chirality-dependent weight loss reported.",
-      "refs": [
-        "Phys. Rev. Lett. 63, 2701 (1989)"
-      ]
-    },
-    {
-      "id": "ex:faller-null-1990",
-      "label": "Gyroscope null replication",
-      "principals": "James Faller et al.",
-      "years": "1990",
-      "effect_types": [
-        "P-GRA-GEW-04"
-      ],
-      "mechanisms": [],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C4P4T4Q3",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK",
-        "S-GYR"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:hayasaka-takeuchi-1989"
-        }
-      ],
-      "note": "No anomaly at higher precision.",
-      "refs": [
-        "Phys. Rev. Lett. 64, 825 (1990)"
-      ]
-    },
-    {
-      "id": "ex:laithwaite-1974",
-      "label": "Laithwaite gyroscope lecture",
-      "principals": "Eric Laithwaite",
-      "years": "1974",
-      "effect_types": [
-        "P-MEC-KIN-04",
-        "P-GRA-GEW-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RES",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R2C1P3T3Q1",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-GYR"
-      ],
-      "note": "Perceived gyro 'weight loss'; later resolved within classical mechanics.",
-      "refs": []
-    },
-    {
-      "id": "ex:depalma-spinning-ball-1977",
-      "label": "Spinning ball drop experiment",
-      "principals": "Bruce DePalma",
-      "years": "1977",
-      "effect_types": [
-        "P-GRA-INR-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-VIB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R1C1P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-GYR"
-      ],
-      "note": "Claimed altered fall/rise of rotating steel balls.",
-      "refs": []
-    },
-    {
-      "id": "ex:depalma-n-machine",
-      "label": "N-machine homopolar over-unity claims",
-      "principals": "Bruce DePalma",
-      "years": "1980s",
-      "effect_types": [
-        "P-EMG-IND-01",
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-PWR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical",
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R2C1P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Faraday-disc generator with claimed anomalous output.",
-      "refs": []
-    },
-    {
-      "id": "ex:allais-pendulum-1954",
-      "label": "Allais eclipse pendulum anomalies",
-      "principals": "Maurice Allais",
-      "years": "1954, 1959",
-      "effect_types": [
-        "P-MEC-KIN-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ALL",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-THK",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab",
-        "mod": [
-          "astronomical"
-        ]
-      },
-      "e_signature": "E1:D5R4C2P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-AST"
-      ],
-      "note": "Anomalous paraconical-pendulum precession during solar eclipses.",
-      "refs": []
-    },
-    {
-      "id": "ex:saxl-allen-1970",
-      "label": "Torsion pendulum during 1970 eclipse",
-      "principals": "Erwin Saxl, Mildred Allen",
-      "years": "1970",
-      "effect_types": [
-        "P-GRA-INR-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ALL",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab",
-        "mod": [
-          "astronomical"
-        ]
-      },
-      "e_signature": "E1:D7R3C2P3T2Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-AST"
-      ],
-      "note": "Period change reported during solar eclipse.",
-      "refs": [
-        "Phys. Rev. D 3, 823 (1971)"
-      ]
-    },
-    {
-      "id": "ex:eclipse-gravimetry-1997",
-      "label": "Eclipse gravimeter residuals",
-      "principals": "Wang, Yang et al.",
-      "years": "1997 (publ. 2000)",
-      "effect_types": [
-        "P-GRA-SIG-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ALL",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-ART-THK",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "scl": "lab",
-        "mod": [
-          "astronomical"
-        ]
-      },
-      "e_signature": "E1:D7R3C3P3T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-AST"
-      ],
-      "note": "Small unexplained residuals during total eclipse; contested.",
-      "refs": [
-        "Phys. Rev. D 62, 041101 (2000)"
-      ]
-    },
-    {
-      "id": "ex:kozyrev-detectors",
-      "label": "Kozyrev torsion/astronomical detector claims",
-      "principals": "Nikolai Kozyrev",
-      "years": "1950s–1980s",
-      "effect_types": [
-        "P-EMG-KOR-01",
-        "P-INS-MSS-04",
-        "P-GRA-SIG-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-AET",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "scl": "lab",
-        "mod": [
-          "astronomical"
-        ]
-      },
-      "e_signature": "E1:D4R2C1P1T1Q2",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-AST"
-      ],
-      "note": "'Causal mechanics'; detectors reportedly responding to true star positions.",
-      "refs": []
-    },
-    {
-      "id": "ex:emdrive-shawyer",
-      "label": "EmDrive original claims",
-      "principals": "Roger Shawyer (SPR Ltd)",
-      "years": "2003–",
-      "effect_types": [
-        "P-MEC-KIN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-EMD",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf"
-        ],
-        "med": "air",
-        "vac": "x",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R2C1P1T2Q1",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-ANT"
-      ],
-      "note": "Asymmetric resonant cavity thrust claims.",
-      "refs": []
-    },
-    {
-      "id": "ex:emdrive-eagleworks-2016",
-      "label": "Eagleworks EmDrive vacuum measurement",
-      "principals": "Harold White et al. (NASA Eagleworks)",
-      "years": "2016",
-      "effect_types": [
-        "P-MEC-KIN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-EMD",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-THK",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf"
-        ],
-        "med": "vacuum",
-        "vac": "persists",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C3P3T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-ANT"
-      ],
-      "note": "~1.2 mN/kW reported on torsion balance in vacuum.",
-      "refs": [
-        "J. Propulsion & Power 33, 830 (2017)"
-      ]
-    },
-    {
-      "id": "ex:emdrive-dresden-2021",
-      "label": "TU Dresden SpaceDrive null results",
-      "principals": "Martin Tajmar et al.",
-      "years": "2018–2021",
-      "effect_types": [
-        "P-MEC-KIN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-THK",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-VIB",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf"
-        ],
-        "med": "vacuum",
-        "vac": "persists",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C4P4T4Q3",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-ANT",
-        "S-DEK"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:emdrive-eagleworks-2016"
-        }
-      ],
-      "note": "Thrust signals traced to thermal/interaction artifacts at higher precision.",
-      "refs": []
-    },
-    {
-      "id": "ex:tajmar-esa-2006",
-      "label": "Rotating-superconductor acceleration signals",
-      "principals": "Martin Tajmar et al. (ARC/ESA-funded)",
-      "years": "2006",
-      "effect_types": [
-        "P-GRA-INR-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-POD",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-ART-VIB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "cryo",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D6R3C3P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "note": "Reported acceleration fields near spun cryogenic rings; later attributed to artifacts by the group itself.",
-      "refs": []
-    },
-    {
-      "id": "ex:woodward-mega",
-      "label": "Mach-effect thruster measurements",
-      "principals": "James Woodward; SSI/NIAC program",
-      "years": "1990s–2020s",
-      "effect_types": [
-        "P-GRA-INR-01",
-        "P-MEC-KIN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MEG",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-VIB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf",
-          "mechanical"
-        ],
-        "med": "vacuum",
-        "vac": "persists",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D6R3C3P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-ANT"
-      ],
-      "note": "µN-scale thrust claims on torsion balances; adversarial campaigns ongoing.",
-      "refs": []
-    },
-    {
-      "id": "ex:dean-drive-1959",
-      "label": "Dean Drive reactionless-thrust claims",
-      "principals": "Norman Dean",
-      "years": "1959",
-      "effect_types": [
-        "P-MEC-KIN-07"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-VIB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R1C0P2T3Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-ANT"
-      ],
-      "note": "Popularized via Astounding Science Fiction; friction-rectified vibration is the standard account.",
-      "refs": []
-    },
-    {
-      "id": "ex:bessler-wheel-1712",
-      "label": "Bessler (Orffyreus) wheel",
-      "principals": "Johann Bessler",
-      "years": "1712–1717",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab",
-        "per": "persistent"
-      },
-      "e_signature": "E1:D1R2C2P3T3Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "54-day sealed-room run, Kassel 1717, attested by officials; hidden-drive allegation by a maid.",
-      "refs": []
-    },
-    {
-      "id": "ex:keely-motor-1872",
-      "label": "Keely sympathetic-vibration motors",
-      "principals": "John Worrell Keely",
-      "years": "1872–1898",
-      "effect_types": [
-        "P-ACU-TRN-01",
-        "P-MEC-KIN-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-KEE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "acoustic",
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R2C0P2T3Q0",
-      "epistemotype": "EP-4",
-      "signatures": [],
-      "note": "Posthumous 1899 findings of concealed compressed-air lines.",
-      "refs": []
-    },
-    {
-      "id": "ex:testatika",
-      "label": "Testatika (Methernitha) machine",
-      "principals": "Paul Baumann / Methernitha commune",
-      "years": "1960s–present",
-      "effect_types": [
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-TRB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "air",
-        "scl": "lab",
-        "per": "persistent"
-      },
-      "e_signature": "E1:D3R2C0P2T3Q0",
-      "epistemotype": "EP-2",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Influence-machine shown to visitors; independent testing declined.",
-      "refs": []
-    },
-    {
-      "id": "ex:moray-receiver",
-      "label": "Moray radiant-energy receiver",
-      "principals": "T. Henry Moray",
-      "years": "1920s–1930s",
-      "effect_types": [
-        "P-EMG-BIL-04",
-        "P-EMG-IND-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R2C1P2T1Q1",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-RDE"
-      ],
-      "note": "Multi-kW demonstrations reported by witnesses; device later destroyed.",
-      "refs": []
-    },
-    {
-      "id": "ex:hendershot-1928",
-      "label": "Hendershot fuelless generator",
-      "principals": "Lester Hendershot",
-      "years": "1928",
-      "effect_types": [
-        "P-EMG-BIL-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R1C0P2T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-RDE"
-      ],
-      "note": "Aviation-era publicity; never independently validated.",
-      "refs": []
-    },
-    {
-      "id": "ex:tesla-us685957-1901",
-      "label": "Tesla radiant-energy apparatus patent",
-      "principals": "Nikola Tesla",
-      "years": "1901",
-      "effect_types": [
-        "P-EMG-BIL-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air"
-      },
-      "e_signature": "E1:D0RxC0P1TxQ0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-RDE"
-      ],
-      "patent_flag": true,
-      "note": "Patent documents the claim (filing, not observation grade).",
-      "refs": [
-        "US Patent 685,957 (1901)"
-      ]
-    },
-    {
-      "id": "ex:tesla-oscillator-lore",
-      "label": "Tesla mechanical-oscillator resonance lore",
-      "principals": "Nikola Tesla (reception)",
-      "years": "1898 (lore)",
-      "effect_types": [
-        "P-ACU-TRN-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RES",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "solid"
-      },
-      "e_signature": "E1:D0R0C0P2T3Q0",
-      "epistemotype": "EP-4",
-      "signatures": [],
-      "note": "Houston Street 'earthquake machine' anecdotes; resonance physics is orthodox, the magnitude lore is not.",
-      "refs": []
-    },
-    {
-      "id": "ex:steorn-orbo-2007",
-      "label": "Steorn Orbo",
-      "principals": "Steorn Ltd (Dublin)",
-      "years": "2006–2016",
-      "effect_types": [
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R1C0P1T1Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Economist ad 2006; failed Kinetica demo 2007; own jury 2009: no evidence of energy production.",
-      "refs": []
-    },
-    {
-      "id": "ex:bearden-meg-2002",
-      "label": "Motionless Electromagnetic Generator",
-      "principals": "Tom Bearden et al.",
-      "years": "2002",
-      "effect_types": [
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-PWR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "lf_ac",
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R2C1P1T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "patent_flag": true,
-      "note": "COP>1 claimed for flux-switched transformer; patent granted 2002.",
-      "refs": [
-        "US Patent 6,362,718 (2002)"
-      ]
-    },
-    {
-      "id": "ex:sweet-vta-1980s",
-      "label": "Sweet Vacuum Triode Amplifier (VTA)",
-      "principals": "Floyd Sweet (assoc. Tom Bearden)",
-      "years": "1980s–early 1990s",
-      "effect_types": [
-        "P-EMG-BIL-02",
-        "P-GRA-GEW-01",
-        "P-THM-KLT-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R1C0P2T1Q1",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Conditioned-magnet device; witness accounts report self-powering, device weight loss under load, and cooling.",
-      "refs": []
-    },
-    {
-      "id": "ex:lutec-2001",
-      "label": "Lutec 1000 over-unity claims",
-      "principals": "John Christie, Lou Brits",
-      "years": "2001",
-      "effect_types": [
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-PWR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R1C0P1T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Australian magnet-motor company; claims never independently validated.",
-      "refs": []
-    },
-    {
-      "id": "ex:qeg-2014",
-      "label": "Quantum Energy Generator (QEG)",
-      "principals": "Fix the World collective",
-      "years": "2014",
-      "effect_types": [
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-PWR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical",
-          "lf_ac"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R3C0P2T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Crowdfunded open-source builds; no build confirmed over-unity.",
-      "refs": []
-    },
-    {
-      "id": "ex:kapanadze-videos",
-      "label": "Kapanadze generator videos",
-      "principals": "Tariel Kapanadze",
-      "years": "2000s–2010s",
-      "effect_types": [
-        "P-EMG-BIL-01",
-        "P-EMG-BIL-02",
-        "P-INS-MSS-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R2C0P1T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF",
-        "S-RDE"
-      ],
-      "note": "Meter-and-lamp demonstrations; hidden-supply hypothesis repeatedly raised.",
-      "refs": []
-    },
-    {
-      "id": "ex:adams-motor",
-      "label": "Adams pulsed magnet motor",
-      "principals": "Robert Adams (NZ)",
-      "years": "1990s",
-      "effect_types": [
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-PWR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R2C0P2T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Community-replicated as a motor; over-unity claim unconfirmed.",
-      "refs": []
-    },
-    {
-      "id": "ex:bedini-ssg",
-      "label": "Bedini SSG and battery rejuvenation",
-      "principals": "John Bedini",
-      "years": "1980s–2010s",
-      "effect_types": [
-        "P-EMG-BIL-02",
-        "P-EMG-BIL-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ELY",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic",
-          "transient"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R3C1P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Widely built pulse motor; desulfation offers a conventional account of battery 'recovery'.",
-      "refs": []
-    },
-    {
-      "id": "ex:newman-machine-1986",
-      "label": "Newman Energy Machine and NBS test",
-      "principals": "Joseph Newman; NBS (adversarial)",
-      "years": "1980s",
-      "effect_types": [
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-PWR",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D5R3C3P4T4Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-DEK",
-        "S-SLF"
-      ],
-      "note": "1986 NBS measurement: efficiency below 100% on all tests; patent litigation followed.",
-      "refs": []
-    },
-    {
-      "id": "ex:coler-apparatus",
-      "label": "Coler Magnetstromapparat",
-      "principals": "Hans Coler",
-      "years": "1920s–1940s",
-      "effect_types": [
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R2C1P3T1Q1",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Investigated by German navy and postwar British intelligence (BIOS 2394); never reproduced.",
-      "refs": []
-    },
-    {
-      "id": "ex:howard-johnson-1979",
-      "label": "Howard Johnson permanent-magnet motor",
-      "principals": "Howard Johnson",
-      "years": "1979",
-      "effect_types": [
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R3C0P1T1Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "patent_flag": true,
-      "note": "Patent granted for magnet-gate geometry; working self-runner never validated.",
-      "refs": [
-        "US Patent 4,151,431 (1979)"
-      ]
-    },
-    {
-      "id": "ex:mylow-2009",
-      "label": "Mylow magnet-motor videos",
-      "principals": "'Mylow' (YouTube)",
-      "years": "2009",
-      "effect_types": [
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R1C0P1T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Claimed Howard-Johnson replication; frame analysis raised a hidden-thread hypothesis.",
-      "refs": []
-    },
-    {
-      "id": "ex:steven-mark-tpu",
-      "label": "Steven Mark Toroidal Power Unit",
-      "principals": "Steven Mark",
-      "years": "1990s",
-      "effect_types": [
-        "P-EMG-BIL-02",
-        "P-EMG-ENT-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R1C0P1T1Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Videotaped toroid demos; device and inventor withdrew from scrutiny.",
-      "refs": []
-    },
-    {
-      "id": "ex:gray-ema-motor",
-      "label": "Gray EMA motor / 'cold electricity'",
-      "principals": "Edwin Gray",
-      "years": "1970s",
-      "effect_types": [
-        "P-THM-KLT-02",
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc",
-          "transient"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R1C0P2T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Pulsed-discharge motor; 'cold' conductor reports.",
-      "refs": []
-    },
-    {
-      "id": "ex:papp-engine-1968",
-      "label": "Papp noble-gas engine demo",
-      "principals": "Josef Papp",
-      "years": "1968",
-      "effect_types": [
-        "P-EMG-ENT-01",
-        "P-MEC-KIN-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "transient"
-        ],
-        "med": "inert_gas",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R1C0P4T1Q0",
-      "epistemotype": "EP-2",
-      "signatures": [
-        "S-PLM"
-      ],
-      "note": "Caltech demonstration ended in fatal explosion; Richard Feynman was present and wrote a skeptical account.",
-      "refs": []
-    },
-    {
-      "id": "ex:correa-pagd",
-      "label": "Correa PAGD reactors",
-      "principals": "Paulo & Alexandra Correa",
-      "years": "1990s",
-      "effect_types": [
-        "P-EMG-ENT-01",
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-KOR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc"
-        ],
-        "med": "plasma",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D5R2C2P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-PLM"
-      ],
-      "patent_flag": true,
-      "note": "Pulsed abnormal glow discharge with claimed net energy.",
-      "refs": [
-        "US Patent 5,416,391 (1995)"
-      ]
-    },
-    {
-      "id": "ex:chernetsky-discharge",
-      "label": "Chernetsky self-generating discharge",
-      "principals": "Alexander Chernetsky",
-      "years": "1970s–1980s",
-      "effect_types": [
-        "P-EMG-ENT-01",
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_ac"
-        ],
-        "med": "plasma",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R2C0P2T1Q1",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-PLM"
-      ],
-      "note": "Soviet-era plasma-discharge over-unity reports.",
-      "refs": []
-    },
-    {
-      "id": "ex:ehrenhaft-monopoles-1944",
-      "label": "Ehrenhaft magnetic-monopole reports",
-      "principals": "Felix Ehrenhaft",
-      "years": "1940s",
-      "effect_types": [
-        "P-EMG-FLD-01",
-        "P-MEC-KIN-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-STT",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-TRB",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "optical",
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "micro"
-      },
-      "e_signature": "E1:D7R3C2P1T3Q2",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "note": "Particle motions read as 'magnetolysis'/monopoles; never confirmed.",
-      "refs": []
-    },
-    {
-      "id": "ex:meyl-scalar-kits",
-      "label": "Meyl scalar-wave transmission kits",
-      "principals": "Konstantin Meyl",
-      "years": "1990s–",
-      "effect_types": [
-        "P-EMG-FLD-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-SCW",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-IND",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R3C1P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "note": "Demonstration kits; conventional near-field coupling is the standard account.",
-      "refs": []
-    },
-    {
-      "id": "ex:hooper-motional-field",
-      "label": "Hooper motional-field generator",
-      "principals": "William Hooper",
-      "years": "1960s–1970s",
-      "effect_types": [
-        "P-EMG-IND-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-IND",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "lf_ac"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R1C1P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "patent_flag": true,
-      "note": "Claimed shielding-independent induced fields.",
-      "refs": []
-    },
-    {
-      "id": "ex:mills-hydrino",
-      "label": "Mills hydrino / SunCell program",
-      "principals": "Randell Mills (Brilliant Light Power)",
-      "years": "1991–",
-      "effect_types": [
-        "P-THM-BIL-01",
-        "P-OPT-EMI-05",
-        "P-CHM-PHS-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "X-HYD",
-          "role": "claimed",
-          "namespace": "private: hydrino states (GUT-CP)"
-        },
-        {
-          "ref": "M-ART-CAL",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical",
-          "transient"
-        ],
-        "med": "plasma",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D6R3C2P1T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "note": "Below-ground-state hydrogen claims with extensive self-published data; demonstrates the X- private-extension mechanism of §5.",
-      "refs": []
-    },
-    {
-      "id": "ex:montagnier-2011",
-      "label": "Montagnier DNA electromagnetic signals",
-      "principals": "Luc Montagnier et al.",
-      "years": "2009–2011",
-      "effect_types": [
-        "P-EMG-KOR-01",
-        "P-CHM-PHS-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-WST",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-KON",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D5R3C2P1T3Q2",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-MEM"
-      ],
-      "note": "Claimed EM signatures and 'teleported' DNA templates from high dilutions.",
-      "refs": []
-    },
-    {
-      "id": "ex:benveniste-1988",
-      "label": "Benveniste high-dilution study",
-      "principals": "Jacques Benveniste et al.",
-      "years": "1988",
-      "effect_types": [
-        "P-CHM-PHS-02",
-        "P-BIO-WRK-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-WST",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "chemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C2P1T1Q3",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-MEM"
-      ],
-      "note": "Basophil degranulation at extreme dilution.",
-      "refs": [
-        "Nature 333, 816 (1988)"
-      ]
-    },
-    {
-      "id": "ex:maddox-check-1988",
-      "label": "Nature supervised recheck of Benveniste",
-      "principals": "John Maddox, James Randi, Walter Stewart",
-      "years": "1988",
-      "effect_types": [
-        "P-CHM-PHS-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-STT",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R3C4P4T4Q3",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK",
-        "S-MEM"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:benveniste-1988"
-        }
-      ],
-      "note": "Blinded protocol; effect not reproduced.",
-      "refs": [
-        "Nature 334, 287 (1988)"
-      ]
-    },
-    {
-      "id": "ex:emoto-crystals",
-      "label": "Emoto water-crystal photographs",
-      "principals": "Masaru Emoto",
-      "years": "1990s–2000s",
-      "effect_types": [
-        "P-CHM-PHS-02",
-        "P-OPT-MED-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-WST",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-STT",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "med": "water_electrolyte",
-        "scl": "micro"
-      },
-      "e_signature": "E1:D2R2C0P1T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-MEM"
-      ],
-      "note": "Selection of crystal images correlated with intentions/labels.",
-      "refs": []
-    },
-    {
-      "id": "ex:grander-water",
-      "label": "Grander water vitalization",
-      "principals": "Johann Grander",
-      "years": "1980s–",
-      "effect_types": [
-        "P-CHM-PHS-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-WST",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "water_electrolyte"
-      },
-      "e_signature": "E1:D1R2C0P2T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-MEM"
-      ],
-      "note": "Commercialized 'informed water' devices.",
-      "refs": []
-    },
-    {
-      "id": "ex:keshe-gans",
-      "label": "Keshe GANS material claims",
-      "principals": "Mehran Keshe",
-      "years": "2010s",
-      "effect_types": [
-        "P-NUC-MAT-01",
-        "P-CHM-PHS-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R2C0P1T1Q0",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "note": "'Gas in nano state' production claims.",
-      "refs": []
-    },
-    {
-      "id": "ex:kervran-1960s",
-      "label": "Kervran biological transmutations",
-      "principals": "Louis Kervran",
-      "years": "1960s–1970s",
-      "effect_types": [
-        "P-NUC-ELM-05",
-        "P-BIO-WRK-04"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-KVN",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-KON",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "chemical"
-        ],
-        "med": "solid",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R3C1P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "note": "Calcium balances in hens etc.; mass-balance errors are the standard account.",
-      "refs": []
-    },
-    {
-      "id": "ex:reich-einstein-1941",
-      "label": "Orgone accumulator ΔT and Einstein examination",
-      "principals": "Wilhelm Reich; Albert Einstein (adversarial)",
-      "years": "1941",
-      "effect_types": [
-        "P-THM-TRN-01",
-        "P-BIO-WRK-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ORG",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-THK",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D4R2C2P4T3Q2",
-      "epistemotype": "EP-3",
-      "signatures": [
-        "S-ORG"
-      ],
-      "note": "Einstein reproduced a ΔT and attributed it to convection; correspondence ended there.",
-      "refs": []
-    },
-    {
-      "id": "ex:rife-beam-ray",
-      "label": "Rife beam-ray and universal microscope",
-      "principals": "Royal Raymond Rife",
-      "years": "1930s",
-      "effect_types": [
-        "P-BIO-WRK-04",
-        "P-BIO-WRK-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RES",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "rf",
-          "optical"
-        ],
-        "med": "air",
-        "scl": "micro"
-      },
-      "e_signature": "E1:D2R2C0P2T4Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-DEK"
-      ],
-      "note": "Claimed frequency-specific devitalization of microorganisms.",
-      "refs": []
-    },
-    {
-      "id": "ex:pyramid-germination",
-      "label": "Pyramid-power germination trials",
-      "principals": "Various (1970s wave)",
-      "years": "1970s",
-      "effect_types": [
-        "P-BIO-WRK-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-STT",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R3C1P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "note": "Seed/razor-blade claims; controlled follow-ups null.",
-      "refs": []
-    },
-    {
-      "id": "ex:grebennikov-platform",
-      "label": "Grebennikov cavity-structure platform",
-      "principals": "Viktor Grebennikov",
-      "years": "1990s",
-      "effect_types": [
-        "P-MEC-LEV-01",
-        "P-BIO-WRK-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ORG",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R1C0P1T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [],
-      "note": "Book-documented levitation platform based on insect-shell geometry.",
-      "refs": []
-    },
-    {
-      "id": "ex:leedskalnin-coral-castle",
-      "label": "Leedskalnin Coral Castle handling lore",
-      "principals": "Ed Leedskalnin",
-      "years": "1923–1951",
-      "effect_types": [
-        "P-MEC-LEV-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "macro"
-      },
-      "e_signature": "E1:D1R0C0P2T3Q0",
-      "epistemotype": "EP-4",
-      "signatures": [],
-      "note": "Single-handed megalith construction; documented tripod/rigging evidence offers the standard account.",
-      "refs": []
-    },
-    {
-      "id": "ex:schauberger-repulsine",
-      "label": "Schauberger implosion devices",
-      "principals": "Viktor Schauberger",
-      "years": "1930s–1940s",
-      "effect_types": [
-        "P-MEC-FLU-01",
-        "P-THM-KLT-01",
-        "P-MEC-LEV-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-AET",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R1C0P2T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-IMP"
-      ],
-      "note": "Vortex 'implosion' engineering; Repulsine lore.",
-      "refs": []
-    },
-    {
-      "id": "ex:hamel-devices",
-      "label": "Hamel magnetic devices",
-      "principals": "David Hamel",
-      "years": "1980s–2000s",
-      "effect_types": [
-        "P-MEC-LEV-01",
-        "P-EMG-BIL-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R1C0P2T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Cone-and-magnet constructions; anecdotal flight claims.",
-      "refs": []
-    },
-    {
-      "id": "ex:finsrud-sculpture",
-      "label": "Finsrud perpetual-motion sculpture",
-      "principals": "Reidar Finsrud",
-      "years": "1996–present",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-AUF",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "lab",
-        "per": "persistent"
-      },
-      "e_signature": "E1:D3R1C0P3T3Q0",
-      "epistemotype": "EP-2",
-      "signatures": [
-        "S-SLF"
-      ],
-      "note": "Publicly exhibited rolling-ball sculpture in Norway; clever mechanics is the standard account.",
-      "refs": []
-    },
-    {
-      "id": "ex:otis-carr-otcx1",
-      "label": "Otis Carr OTC-X1 craft",
-      "principals": "Otis T. Carr",
-      "years": "1950s–1961",
-      "effect_types": [
-        "P-MEC-LEV-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "air"
-      },
-      "e_signature": "E1:D0R0C0P2T1Q0",
-      "epistemotype": "EP-0",
-      "signatures": [],
-      "note": "Free-energy saucer venture (OTC-X1, 'Utron' accumulator); a 1959 public demonstration did not take place. Convicted in Oklahoma in 1961 of selling securities without registering them — a registration offense, not a finding of fraud — and fined USD 5,000; conviction affirmed on appeal.",
-      "refs": [
-        "Carr v. State, 1961 OK CR 15, 359 P.2d 606 (Okla. Crim. App., 11 Jan 1961), case no. A-12907 — conviction under 71 O.S.A. § 53 affirmed."
-      ]
-    },
-    {
-      "id": "ex:meyer-wfc-1996",
-      "label": "Meyer water fuel cell",
-      "principals": "Stanley Meyer",
-      "years": "1980s–1998",
-      "effect_types": [
-        "P-CHM-RKT-05",
-        "P-CHM-RKT-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RDT",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ELY",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "transient",
-          "electrochemical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R2C0P1T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-WFC"
-      ],
-      "note": "Above-Faraday electrolysis claims sold to investors as technology dealerships; an Ohio court found fraud in 1996 and ordered repayment of USD 25,000 to two investors, after court-appointed experts reported the cell performed conventional electrolysis. Reported contemporaneously in the press; the court record itself was not consulted.",
-      "refs": [
-        "Edwards, Tony. 'End of road for car that ran on water.' The Sunday Times, 1 December 1996, Features p. 12."
-      ]
-    },
-    {
-      "id": "ex:garrett-1935",
-      "label": "Garrett water-carburetor patent",
-      "principals": "Charles H. Garrett",
-      "years": "1935",
-      "effect_types": [
-        "P-CHM-RKT-05"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ELY",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "water_electrolyte"
-      },
-      "e_signature": "E1:D0RxC0P1TxQ0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-WFC"
-      ],
-      "patent_flag": true,
-      "note": "Patent documents the claim; demonstration press reports exist.",
-      "refs": [
-        "US Patent 2,006,676 (1935)"
-      ]
-    },
-    {
-      "id": "ex:dingel-water-car",
-      "label": "Dingel water-powered car",
-      "principals": "Daniel Dingel",
-      "years": "1969–2008",
-      "effect_types": [
-        "P-CHM-RKT-05"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ELY",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "water_electrolyte",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R1C0P2T4Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-DEK",
-        "S-WFC"
-      ],
-      "note": "Philippine water-car claims; the state science department assessed the device and rejected it. Convicted of estafa in 2008 by the Parañaque City Regional Trial Court over research funds taken from a Taiwanese investor and never applied to the promised prototypes — a misappropriation finding, not a verdict on the device. An appeal was announced; its outcome is not established here.",
-      "refs": [
-        "Allison Lopez, 'Inventor, 82, gets 20 years for estafa', Philippine Daily Inquirer, 20 December 2008 — Paranaque City RTC Branch 257, decision of 9 December 2008, USD 380,000 in damages."
-      ]
-    },
-    {
-      "id": "ex:yull-brown-gas",
-      "label": "Brown's Gas anomalous-flame claims",
-      "principals": "Yull Brown",
-      "years": "1970s–1990s",
-      "effect_types": [
-        "P-CHM-RKT-01",
-        "P-CHM-RKT-06"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-CHX",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "electrochemical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R3C1P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-WFC"
-      ],
-      "note": "Oxyhydrogen torches are real; 'cool flame melts tungsten' anomaly claims are the delta.",
-      "refs": []
-    },
-    {
-      "id": "ex:griggs-hydrosonic",
-      "label": "Griggs hydrosonic pump over-unity claims",
-      "principals": "James Griggs",
-      "years": "1990s",
-      "effect_types": [
-        "P-THM-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-KAV",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-ART-CAL",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical"
-        ],
-        "med": "water_electrolyte",
-        "scl": "plant"
-      },
-      "e_signature": "E1:D4R2C1P1T4Q2",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-DEK"
-      ],
-      "note": "Cavitation heater; heating is orthodox, COP>1 claim is not confirmed.",
-      "refs": []
-    },
-    {
-      "id": "ex:pantone-geet",
-      "label": "Pantone GEET fuel processor",
-      "principals": "Paul Pantone",
-      "years": "1990s–2000s",
-      "effect_types": [
-        "P-CHM-RKT-01",
-        "P-EMG-ENT-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-CHX",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "thermal"
-        ],
-        "med": "plasma",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R3C0P2T3Q0",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-PLM"
-      ],
-      "note": "'Plasma' fuel-reformer claims; community builds, no controlled validation.",
-      "refs": []
-    },
-    {
-      "id": "ex:taos-hum",
-      "label": "Taos Hum investigations",
-      "principals": "Environmental (Taos, NM); Univ. teams",
-      "years": "1990s–",
-      "effect_types": [
-        "P-ACU-EMI-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-PER",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "macro",
-        "mod": [
-          "geographic"
-        ]
-      },
-      "e_signature": "E1:D5R4C2P3T3Q2",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "note": "Persistent low-frequency hum reports; no external source identified for most hearers.",
-      "refs": []
-    },
-    {
-      "id": "ex:golka-ball-lightning",
-      "label": "Golka ball-lightning attempts",
-      "principals": "Robert Golka",
-      "years": "1970s–1980s",
-      "effect_types": [
-        "P-OPT-PLS-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-KOR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_ac",
-          "transient"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R2C1P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "note": "Large Tesla-coil facility aimed at reproducing ball lightning.",
-      "refs": []
-    },
-    {
-      "id": "ex:oregon-vortex",
-      "label": "Oregon Vortex / mystery-spot zones",
-      "principals": "Roadside attractions (various)",
-      "years": "1930–present",
-      "effect_types": [
-        "P-GRA-GEW-05",
-        "P-OPT-MED-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-PER",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "passive"
-        ],
-        "med": "air",
-        "scl": "macro"
-      },
-      "e_signature": "E1:D2R4C1P3T4Q1",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK"
-      ],
-      "note": "Tilted-frame illusion geometry is the established account.",
-      "refs": []
-    },
-    {
-      "id": "ex:orb-photography",
-      "label": "Orb photography corpus",
-      "principals": "Community (flash photography era)",
-      "years": "1990s–",
-      "effect_types": [
-        "P-OPT-MED-02"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-CAM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "optical"
-        ],
-        "med": "air"
-      },
-      "e_signature": "E1:D2R5C1P3T4Q0",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK"
-      ],
-      "note": "Backscatter of flash on near-lens particles is the established account.",
-      "refs": []
-    },
-    {
-      "id": "ex:crookes-radiometer-1874",
-      "label": "Crookes radiometer (migrated anomaly)",
-      "principals": "William Crookes; Reynolds, Maxwell (resolution)",
-      "years": "1874–1879",
-      "effect_types": [
-        "P-MEC-KIN-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-RAD",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "optical"
-        ],
-        "med": "vacuum",
-        "vac": "partial_only",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D7R5C3P4T4Q3",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK"
-      ],
-      "note": "Paradigm case: 1874 open anomaly (T0), resolved via thermal transpiration (T4). Demonstrates temporal lattice migration.",
-      "refs": []
+ "eqo_version": "1.0.0",
+ "corpus": "EQO/1 canonical instance corpus — consolidated exemplar records",
+ "provenance_note": "Compiled from publicly documented claims as known to the compiling model. Each record's own D/P axes encode its documentation status; 'x' marks unassessed values. Verify against primary sources before citation; corrections follow Governance G.1.",
+ "instances": [
+  {
+   "id": "ex:hutchison-corpus",
+   "label": "Hutchison effect corpus",
+   "principals": "John Hutchison",
+   "years": "1979–2000s",
+   "effect_types": [
+    "P-MEC-DEF-01",
+    "P-MEC-DEF-03",
+    "P-MEC-DEF-05",
+    "P-MEC-DEF-06",
+    "P-MEC-LEV-01",
+    "P-MEC-FLU-01",
+    "P-OPT-EMI-01",
+    "P-EMG-ENT-03",
+    "P-INS-ELK-01",
+    "P-INS-ELK-02",
+    "P-BIO-WRK-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-SCW",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-CAM",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
     }
-  ]
+   ],
+   "context": {
+    "inp": [
+     "hv_dc",
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "permanent"
+   },
+   "e_signature": "E1:D3R2C0P1T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-HUT"
+   ],
+   "note": "Video/sample corpus; military delegation visits documented 1983; never independently reproduced under controls.",
+   "refs": []
+  },
+  {
+   "id": "ex:brown-gravitator-1929",
+   "label": "Biefeld-Brown gravitator trials",
+   "principals": "Thomas Townsend Brown",
+   "years": "1929–1950s",
+   "effect_types": [
+    "P-GRA-GEW-01",
+    "P-MEC-KIN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EGR",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-EHD",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-STA",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D4R2C1P1T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-BRN"
+   ],
+   "note": "Charged asymmetric capacitors; Project Winterhaven proposal 1952.",
+   "refs": []
+  },
+  {
+   "id": "ex:lifter-community",
+   "label": "Lifter replications and vacuum tests",
+   "principals": "Community (Naudin et al.); NASA EHD studies",
+   "years": "2000s",
+   "effect_types": [
+    "P-MEC-KIN-01",
+    "P-MEC-LEV-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EHD",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc"
+    ],
+    "med": "air",
+    "vac": "vanishes",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D5R5C3P3T4Q2",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-BRN",
+    "S-DEK"
+   ],
+   "note": "Widely replicated as EHD thrust; effect vanishes in vacuum.",
+   "refs": [
+    "F. X. Canning, C. Melcher, E. Winet, Asymmetrical Capacitors for Propulsion, NASA/CR-2004-213312 (NASA, 2004)"
+   ]
+  },
+  {
+   "id": "ex:searl-seg",
+   "label": "Searl Effect Generator narrative",
+   "principals": "John Searl",
+   "years": "1946–present (lore)",
+   "effect_types": [
+    "P-MEC-KIN-03",
+    "P-GRA-GEW-01",
+    "P-OPT-EMI-01",
+    "P-THM-KLT-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic",
+     "mechanical"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D1R2C0P1T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF",
+    "S-SRL"
+   ],
+   "note": "Spin-up, weight loss, halo, cooling per narrative corpus; no controlled documentation.",
+   "refs": []
+  },
+  {
+   "id": "ex:roschin-godin-2000",
+   "label": "Roschin–Godin magnetic rotor experiment",
+   "principals": "Sergei Godin, Vladimir Roschin",
+   "years": "2000",
+   "effect_types": [
+    "P-GRA-GEW-01",
+    "P-OPT-EMI-01",
+    "P-THM-KLT-01",
+    "P-MEC-KIN-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic",
+     "mechanical"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D5R1C1P2T1Q2",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-SRL"
+   ],
+   "note": "Reported weight change, pink glow, cooling around rotating magnet assembly.",
+   "refs": [
+    "V. V. Roschin, S. M. Godin, Technical Physics Letters 26, 1105 (2000)"
+   ]
+  },
+  {
+   "id": "ex:fleischmann-pons-1989",
+   "label": "Fleischmann–Pons excess heat announcement",
+   "principals": "Martin Fleischmann, Stanley Pons",
+   "years": "1989",
+   "effect_types": [
+    "P-THM-BIL-01",
+    "P-NUC-STR-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-LEN",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-CAL",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "decaying"
+   },
+   "e_signature": "E1:D7R3C2P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-LNR"
+   ],
+   "note": "Pd-D electrolysis; announcement Utah, 23 March 1989.",
+   "refs": [
+    "J. Electroanal. Chem. 261, 301 (1989)"
+   ]
+  },
+  {
+   "id": "ex:caltech-mit-null-1989",
+   "label": "Caltech/MIT cold-fusion rechecks",
+   "principals": "Lewis et al.; MIT PFC",
+   "years": "1989",
+   "effect_types": [
+    "P-THM-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-CAL",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C3P4T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK",
+    "S-LNR"
+   ],
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:fleischmann-pons-1989"
+    }
+   ],
+   "note": "Adversarial replications reporting null within calorimetric error.",
+   "refs": [
+    "Nature 340, 525 (1989)"
+   ]
+  },
+  {
+   "id": "ex:jones-neutrons-1989",
+   "label": "Jones low-rate fusion neutrons",
+   "principals": "Steven Jones (BYU)",
+   "years": "1989",
+   "effect_types": [
+    "P-NUC-STR-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-LEN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C2P1T2Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-LNR"
+   ],
+   "note": "Neutron rates far below F-P heat claims.",
+   "refs": [
+    "Nature 338, 737 (1989)"
+   ]
+  },
+  {
+   "id": "ex:miles-mckubre-helium",
+   "label": "Helium–excess-heat correlation",
+   "principals": "Melvin Miles et al. (China Lake / US Navy)",
+   "years": "1990s",
+   "effect_types": [
+    "P-NUC-ELM-04",
+    "P-THM-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-LEN",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-KON",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D6R4C3P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-LNR"
+   ],
+   "note": "Reported He-4 commensurate with excess heat in Pd-D cells. McKubre's SRI heat-helium work is a separate, later replication line, not this paper.",
+   "refs": [
+    "M. H. Miles, R. A. Hollins, B. F. Bush, J. J. Lagowski, R. E. Miles, \"Correlation of excess power and helium production during D2O and H2O electrolysis using palladium cathodes,\" J. Electroanal. Chem. 346, 99 (1993)"
+   ]
+  },
+  {
+   "id": "ex:iwamura-2002",
+   "label": "Iwamura permeation transmutation findings",
+   "principals": "Yasuhiro Iwamura (Mitsubishi HI)",
+   "years": "2002",
+   "effect_types": [
+    "P-NUC-ELM-01",
+    "P-NUC-ELM-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-LEN",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-KON",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "chemical"
+    ],
+    "med": "solid",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C3P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-LNR"
+   ],
+   "note": "Cs→Pr reported after D2 permeation through Pd/CaO multilayers.",
+   "refs": [
+    "Jpn. J. Appl. Phys. 41, 4642 (2002)"
+   ]
+  },
+  {
+   "id": "ex:taleyarkhan-2002",
+   "label": "Acoustic cavitation 'bubble fusion'",
+   "principals": "Rusi Taleyarkhan et al.",
+   "years": "2002",
+   "effect_types": [
+    "P-NUC-STR-02",
+    "P-OPT-EMI-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-KAV",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-LEN",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-STT",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "acoustic"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C3P1T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK"
+   ],
+   "note": "Sonofusion claim; later Purdue research-conduct inquiries (2008).",
+   "refs": [
+    "Science 295, 1868 (2002)"
+   ]
+  },
+  {
+   "id": "ex:rossi-ecat-2011",
+   "label": "Rossi E-Cat demonstrations",
+   "principals": "Andrea Rossi",
+   "years": "2011–",
+   "effect_types": [
+    "P-THM-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-LEN",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-CAL",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "thermal",
+     "electrochemical"
+    ],
+    "med": "solid",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R2C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-LNR"
+   ],
+   "note": "Ni-H reactor demos; Industrial Heat litigation settled 2017.",
+   "refs": []
+  },
+  {
+   "id": "ex:google-lenr-2019",
+   "label": "Google-funded LENR reinvestigation",
+   "principals": "Berlinguette et al.",
+   "years": "2015–2019",
+   "effect_types": [
+    "P-THM-BIL-01",
+    "P-NUC-STR-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-LEN",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C4P4T2Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-LNR"
+   ],
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:fleischmann-pons-1989"
+    }
+   ],
+   "note": "Multi-lab program; no confirmed excess heat to date.",
+   "refs": [
+    "Nature 570, 45 (2019)"
+   ]
+  },
+  {
+   "id": "ex:podkletnov-1992",
+   "label": "Rotating-superconductor weight reduction",
+   "principals": "Eugene Podkletnov",
+   "years": "1992",
+   "effect_types": [
+    "P-GRA-GEW-02",
+    "P-GRA-GEW-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-POD",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-THK",
+     "role": "excluded_per_source"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf",
+     "magnetostatic"
+    ],
+    "med": "cryo",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D7R3C2P1T2Q3",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "note": "0.05–0.3% weight loss reported above rotating YBCO disc.",
+   "refs": [
+    "Physica C 203, 441 (1992)"
+   ]
+  },
+  {
+   "id": "ex:nasa-msfc-podkletnov",
+   "label": "NASA MSFC gravity-shielding rebuilds",
+   "principals": "Ning Li, Ron Koczor et al.",
+   "years": "1997–2002",
+   "effect_types": [
+    "P-GRA-GEW-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-POD",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "med": "cryo",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D5R3C3P3T2Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:podkletnov-1992"
+    }
+   ],
+   "note": "Partial rebuilds; no confirmed effect.",
+   "refs": [
+    "N. Li, D. Noever, T. Robertson, R. Koczor, W. Brantley, \"Static test for a gravitational force coupled to type II YBCO superconductors,\" Physica C 281, 260-267 (1997)"
+   ]
+  },
+  {
+   "id": "ex:podkletnov-impulse-2001",
+   "label": "'Impulse gravity generator' preprint",
+   "principals": "Eugene Podkletnov, Giovanni Modanese",
+   "years": "2001",
+   "effect_types": [
+    "P-GRA-INR-01",
+    "P-MEC-KIN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-POD",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc",
+     "transient"
+    ],
+    "med": "cryo",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D5R1C1P1T2Q2",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "note": "Claimed force beam from superconducting discharge; preprint only.",
+   "refs": [
+    "E. Podkletnov, G. Modanese, arXiv:physics/0108005 (2001)"
+   ]
+  },
+  {
+   "id": "ex:ning-li-ac-gravity",
+   "label": "AC Gravity LLC claims",
+   "principals": "Ning Li",
+   "years": "1999–2000s",
+   "effect_types": [
+    "P-GRA-GEW-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-POD",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "med": "cryo"
+   },
+   "e_signature": "E1:D1R0C0P1T2Q0",
+   "epistemotype": "EP-0",
+   "signatures": [],
+   "note": "Announced gravity-modification research; no public results.",
+   "refs": []
+  },
+  {
+   "id": "ex:hayasaka-takeuchi-1989",
+   "label": "Right-spinning gyroscope weight loss",
+   "principals": "Hideo Hayasaka, Sakae Takeuchi",
+   "years": "1989",
+   "effect_types": [
+    "P-GRA-GEW-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C3P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-GYR"
+   ],
+   "note": "Chirality-dependent weight loss reported.",
+   "refs": [
+    "Phys. Rev. Lett. 63, 2701 (1989)"
+   ]
+  },
+  {
+   "id": "ex:faller-null-1990",
+   "label": "Gyroscope null replication",
+   "principals": "James Faller et al.",
+   "years": "1990",
+   "effect_types": [
+    "P-GRA-GEW-04"
+   ],
+   "mechanisms": [],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C4P4T4Q3",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK",
+    "S-GYR"
+   ],
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:hayasaka-takeuchi-1989"
+    }
+   ],
+   "note": "No anomaly at higher precision.",
+   "refs": [
+    "Phys. Rev. Lett. 64, 825 (1990)"
+   ]
+  },
+  {
+   "id": "ex:laithwaite-1974",
+   "label": "Laithwaite gyroscope lecture",
+   "principals": "Eric Laithwaite",
+   "years": "1974",
+   "effect_types": [
+    "P-MEC-KIN-04",
+    "P-GRA-GEW-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RES",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R2C1P3T3Q1",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-GYR"
+   ],
+   "note": "Perceived gyro 'weight loss'; later resolved within classical mechanics.",
+   "refs": []
+  },
+  {
+   "id": "ex:depalma-spinning-ball-1977",
+   "label": "Spinning ball drop experiment",
+   "principals": "Bruce DePalma",
+   "years": "1977",
+   "effect_types": [
+    "P-GRA-INR-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R1C1P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-GYR"
+   ],
+   "note": "Claimed altered fall/rise of rotating steel balls.",
+   "refs": []
+  },
+  {
+   "id": "ex:depalma-n-machine",
+   "label": "N-machine homopolar over-unity claims",
+   "principals": "Bruce DePalma",
+   "years": "1980s",
+   "effect_types": [
+    "P-EMG-IND-01",
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical",
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R2C1P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Faraday-disc generator with claimed anomalous output.",
+   "refs": []
+  },
+  {
+   "id": "ex:allais-pendulum-1954",
+   "label": "Allais eclipse pendulum anomalies",
+   "principals": "Maurice Allais",
+   "years": "1954, 1959",
+   "effect_types": [
+    "P-MEC-KIN-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ALL",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-THK",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab",
+    "mod": [
+     "astronomical"
+    ]
+   },
+   "e_signature": "E1:D5R4C2P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-AST"
+   ],
+   "note": "Anomalous paraconical-pendulum precession during solar eclipses.",
+   "refs": [
+    "M. Allais, Aero/Space Engineering 18(9), 46 (1959); 18(10), 51 (1959)"
+   ]
+  },
+  {
+   "id": "ex:saxl-allen-1970",
+   "label": "Torsion pendulum during 1970 eclipse",
+   "principals": "Erwin Saxl, Mildred Allen",
+   "years": "1970",
+   "effect_types": [
+    "P-GRA-INR-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ALL",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab",
+    "mod": [
+     "astronomical"
+    ]
+   },
+   "e_signature": "E1:D7R3C2P3T2Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-AST"
+   ],
+   "note": "Period change reported during solar eclipse.",
+   "refs": [
+    "Phys. Rev. D 3, 823 (1971)"
+   ]
+  },
+  {
+   "id": "ex:eclipse-gravimetry-1997",
+   "label": "Eclipse gravimeter residuals",
+   "principals": "Wang, Yang et al.",
+   "years": "1997 (publ. 2000)",
+   "effect_types": [
+    "P-GRA-SIG-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ALL",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-THK",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "scl": "lab",
+    "mod": [
+     "astronomical"
+    ]
+   },
+   "e_signature": "E1:D7R3C3P3T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-AST"
+   ],
+   "note": "Small unexplained residuals during total eclipse; contested.",
+   "refs": [
+    "Phys. Rev. D 62, 041101 (2000)"
+   ]
+  },
+  {
+   "id": "ex:kozyrev-detectors",
+   "label": "Kozyrev torsion/astronomical detector claims",
+   "principals": "Nikolai Kozyrev",
+   "years": "1950s–1980s",
+   "effect_types": [
+    "P-EMG-KOR-01",
+    "P-INS-MSS-04",
+    "P-GRA-SIG-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-AET",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "scl": "lab",
+    "mod": [
+     "astronomical"
+    ]
+   },
+   "e_signature": "E1:D4R2C1P1T1Q2",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-AST"
+   ],
+   "note": "'Causal mechanics'; detectors reportedly responding to true star positions.",
+   "refs": []
+  },
+  {
+   "id": "ex:emdrive-shawyer",
+   "label": "EmDrive original claims",
+   "principals": "Roger Shawyer (SPR Ltd)",
+   "years": "2003–",
+   "effect_types": [
+    "P-MEC-KIN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EMD",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R2C1P1T2Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-ANT"
+   ],
+   "note": "Asymmetric resonant cavity thrust claims.",
+   "refs": []
+  },
+  {
+   "id": "ex:emdrive-eagleworks-2016",
+   "label": "Eagleworks EmDrive vacuum measurement",
+   "principals": "Harold White et al. (NASA Eagleworks)",
+   "years": "2016",
+   "effect_types": [
+    "P-MEC-KIN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EMD",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-THK",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "vacuum",
+    "vac": "persists",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C3P3T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-ANT"
+   ],
+   "note": "~1.2 mN/kW reported on torsion balance in vacuum.",
+   "refs": [
+    "J. Propulsion & Power 33, 830 (2017)"
+   ]
+  },
+  {
+   "id": "ex:emdrive-dresden-2021",
+   "label": "TU Dresden SpaceDrive null results",
+   "principals": "Martin Tajmar et al.",
+   "years": "2018–2021",
+   "effect_types": [
+    "P-MEC-KIN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-THK",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-VIB",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "vacuum",
+    "vac": "persists",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C4P4T4Q3",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-ANT",
+    "S-DEK"
+   ],
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:emdrive-eagleworks-2016"
+    }
+   ],
+   "note": "Thrust signals traced to thermal/interaction artifacts at higher precision.",
+   "refs": [
+    "M. Tajmar, O. Neunzig, M. Weikert, CEAS Space Journal 14, 31 (2022)"
+   ]
+  },
+  {
+   "id": "ex:tajmar-esa-2006",
+   "label": "Rotating-superconductor acceleration signals",
+   "principals": "Martin Tajmar et al. (ARC/ESA-funded)",
+   "years": "2006",
+   "effect_types": [
+    "P-GRA-INR-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-POD",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "cryo",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D6R3C3P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "note": "Reported acceleration fields near spun cryogenic rings; later attributed to artifacts by the group itself.",
+   "refs": [
+    "M. Tajmar, F. Plesescu, K. Marhold, C. J. de Matos, arXiv:gr-qc/0603033 (2006)"
+   ]
+  },
+  {
+   "id": "ex:woodward-mega",
+   "label": "Mach-effect thruster measurements",
+   "principals": "James Woodward; SSI/NIAC program",
+   "years": "1990s–2020s",
+   "effect_types": [
+    "P-GRA-INR-01",
+    "P-MEC-KIN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MEG",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf",
+     "mechanical"
+    ],
+    "med": "vacuum",
+    "vac": "persists",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D6R3C3P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-ANT"
+   ],
+   "note": "µN-scale thrust claims on torsion balances; adversarial campaigns ongoing.",
+   "refs": [
+    "J. F. Woodward, \"A New Experimental Approach to Mach's Principle and Relativistic Gravitation,\" Foundations of Physics Letters 3, 497-506 (1990)"
+   ]
+  },
+  {
+   "id": "ex:dean-drive-1959",
+   "label": "Dean Drive reactionless-thrust claims",
+   "principals": "Norman Dean",
+   "years": "1959",
+   "effect_types": [
+    "P-MEC-KIN-07"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R1C0P2T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-ANT"
+   ],
+   "note": "Popularized via Astounding Science Fiction; friction-rectified vibration is the standard account.",
+   "refs": []
+  },
+  {
+   "id": "ex:bessler-wheel-1712",
+   "label": "Bessler (Orffyreus) wheel",
+   "principals": "Johann Bessler",
+   "years": "1712–1717",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D1R2C2P3T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "54-day sealed-room run, Kassel 1717, attested by officials; hidden-drive allegation by a maid.",
+   "refs": []
+  },
+  {
+   "id": "ex:keely-motor-1872",
+   "label": "Keely sympathetic-vibration motors",
+   "principals": "John Worrell Keely",
+   "years": "1872–1898",
+   "effect_types": [
+    "P-ACU-TRN-01",
+    "P-MEC-KIN-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-KEE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "acoustic",
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R2C0P2T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "note": "Posthumous 1899 findings of concealed compressed-air lines.",
+   "refs": []
+  },
+  {
+   "id": "ex:testatika",
+   "label": "Testatika (Methernitha) machine",
+   "principals": "Paul Baumann / Methernitha commune",
+   "years": "1960s–present",
+   "effect_types": [
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-TRB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "air",
+    "scl": "lab",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D3R2C0P2T3Q0",
+   "epistemotype": "EP-2",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Influence-machine shown to visitors; independent testing declined.",
+   "refs": []
+  },
+  {
+   "id": "ex:moray-receiver",
+   "label": "Moray radiant-energy receiver",
+   "principals": "T. Henry Moray",
+   "years": "1920s–1930s",
+   "effect_types": [
+    "P-EMG-BIL-04",
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R2C1P2T1Q1",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-RDE"
+   ],
+   "note": "Multi-kW demonstrations reported by witnesses; device later destroyed.",
+   "refs": []
+  },
+  {
+   "id": "ex:hendershot-1928",
+   "label": "Hendershot fuelless generator",
+   "principals": "Lester Hendershot",
+   "years": "1928",
+   "effect_types": [
+    "P-EMG-BIL-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R1C0P2T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-RDE"
+   ],
+   "note": "Aviation-era publicity; never independently validated.",
+   "refs": []
+  },
+  {
+   "id": "ex:tesla-us685957-1901",
+   "label": "Tesla radiant-energy apparatus patent",
+   "principals": "Nikola Tesla",
+   "years": "1901",
+   "effect_types": [
+    "P-EMG-BIL-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air"
+   },
+   "e_signature": "E1:D0RxC0P1TxQ0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-RDE"
+   ],
+   "patent_flag": true,
+   "note": "Patent documents the claim (filing, not observation grade).",
+   "refs": [
+    "US Patent 685,957 (1901)"
+   ]
+  },
+  {
+   "id": "ex:tesla-oscillator-lore",
+   "label": "Tesla mechanical-oscillator resonance lore",
+   "principals": "Nikola Tesla (reception)",
+   "years": "1898 (lore)",
+   "effect_types": [
+    "P-ACU-TRN-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RES",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "solid"
+   },
+   "e_signature": "E1:D0R0C0P2T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "note": "Houston Street 'earthquake machine' anecdotes; resonance physics is orthodox, the magnitude lore is not.",
+   "refs": []
+  },
+  {
+   "id": "ex:steorn-orbo-2007",
+   "label": "Steorn Orbo",
+   "principals": "Steorn Ltd (Dublin)",
+   "years": "2006–2016",
+   "effect_types": [
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R1C0P1T1Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Economist ad 2006; failed Kinetica demo 2007; own jury 2009: no evidence of energy production.",
+   "refs": []
+  },
+  {
+   "id": "ex:bearden-meg-2002",
+   "label": "Motionless Electromagnetic Generator",
+   "principals": "Tom Bearden et al.",
+   "years": "2002",
+   "effect_types": [
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "lf_ac",
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R2C1P1T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "patent_flag": true,
+   "note": "COP>1 claimed for flux-switched transformer; patent granted 2002.",
+   "refs": [
+    "US Patent 6,362,718 (2002)"
+   ]
+  },
+  {
+   "id": "ex:sweet-vta-1980s",
+   "label": "Sweet Vacuum Triode Amplifier (VTA)",
+   "principals": "Floyd Sweet (assoc. Tom Bearden)",
+   "years": "1980s–early 1990s",
+   "effect_types": [
+    "P-EMG-BIL-02",
+    "P-GRA-GEW-01",
+    "P-THM-KLT-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R1C0P2T1Q1",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Conditioned-magnet device; witness accounts report self-powering, device weight loss under load, and cooling.",
+   "refs": []
+  },
+  {
+   "id": "ex:lutec-2001",
+   "label": "Lutec 1000 over-unity claims",
+   "principals": "John Christie, Lou Brits",
+   "years": "2001",
+   "effect_types": [
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R1C0P1T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Australian magnet-motor company; claims never independently validated.",
+   "refs": []
+  },
+  {
+   "id": "ex:qeg-2014",
+   "label": "Quantum Energy Generator (QEG)",
+   "principals": "Fix the World collective",
+   "years": "2014",
+   "effect_types": [
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical",
+     "lf_ac"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R3C0P2T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Crowdfunded open-source builds; no build confirmed over-unity.",
+   "refs": []
+  },
+  {
+   "id": "ex:kapanadze-videos",
+   "label": "Kapanadze generator videos",
+   "principals": "Tariel Kapanadze",
+   "years": "2000s–2010s",
+   "effect_types": [
+    "P-EMG-BIL-01",
+    "P-EMG-BIL-02",
+    "P-INS-MSS-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R2C0P1T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF",
+    "S-RDE"
+   ],
+   "note": "Meter-and-lamp demonstrations; hidden-supply hypothesis repeatedly raised.",
+   "refs": []
+  },
+  {
+   "id": "ex:adams-motor",
+   "label": "Adams pulsed magnet motor",
+   "principals": "Robert Adams (NZ)",
+   "years": "1990s",
+   "effect_types": [
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R2C0P2T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Community-replicated as a motor; over-unity claim unconfirmed.",
+   "refs": []
+  },
+  {
+   "id": "ex:bedini-ssg",
+   "label": "Bedini SSG and battery rejuvenation",
+   "principals": "John Bedini",
+   "years": "1980s–2010s",
+   "effect_types": [
+    "P-EMG-BIL-02",
+    "P-EMG-BIL-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ELY",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic",
+     "transient"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R3C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Widely built pulse motor; desulfation offers a conventional account of battery 'recovery'.",
+   "refs": []
+  },
+  {
+   "id": "ex:newman-machine-1986",
+   "label": "Newman Energy Machine and NBS test",
+   "principals": "Joseph Newman; NBS (adversarial)",
+   "years": "1980s",
+   "effect_types": [
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D5R3C3P4T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK",
+    "S-SLF"
+   ],
+   "note": "1986 NBS measurement: efficiency below 100% on all tests; patent litigation followed.",
+   "refs": [
+    "US National Bureau of Standards, Report of Tests on Joseph Newman's Device (Energy Machine), June 1986"
+   ]
+  },
+  {
+   "id": "ex:coler-apparatus",
+   "label": "Coler Magnetstromapparat",
+   "principals": "Hans Coler",
+   "years": "1920s–1940s",
+   "effect_types": [
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R2C1P3T1Q1",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Investigated by German navy and postwar British intelligence (BIOS 2394); never reproduced.",
+   "refs": []
+  },
+  {
+   "id": "ex:howard-johnson-1979",
+   "label": "Howard Johnson permanent-magnet motor",
+   "principals": "Howard Johnson",
+   "years": "1979",
+   "effect_types": [
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R3C0P1T1Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "patent_flag": true,
+   "note": "Patent granted for magnet-gate geometry; working self-runner never validated.",
+   "refs": [
+    "US Patent 4,151,431 (1979)"
+   ]
+  },
+  {
+   "id": "ex:mylow-2009",
+   "label": "Mylow magnet-motor videos",
+   "principals": "'Mylow' (YouTube)",
+   "years": "2009",
+   "effect_types": [
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R1C0P1T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Claimed Howard-Johnson replication; frame analysis raised a hidden-thread hypothesis.",
+   "refs": []
+  },
+  {
+   "id": "ex:steven-mark-tpu",
+   "label": "Steven Mark Toroidal Power Unit",
+   "principals": "Steven Mark",
+   "years": "1990s",
+   "effect_types": [
+    "P-EMG-BIL-02",
+    "P-EMG-ENT-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R1C0P1T1Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Videotaped toroid demos; device and inventor withdrew from scrutiny.",
+   "refs": []
+  },
+  {
+   "id": "ex:gray-ema-motor",
+   "label": "Gray EMA motor / 'cold electricity'",
+   "principals": "Edwin Gray",
+   "years": "1970s",
+   "effect_types": [
+    "P-THM-KLT-02",
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc",
+     "transient"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R1C0P2T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Pulsed-discharge motor; 'cold' conductor reports.",
+   "refs": []
+  },
+  {
+   "id": "ex:papp-engine-1968",
+   "label": "Papp noble-gas engine demo",
+   "principals": "Josef Papp",
+   "years": "1968",
+   "effect_types": [
+    "P-EMG-ENT-01",
+    "P-MEC-KIN-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "transient"
+    ],
+    "med": "inert_gas",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R1C0P4T1Q0",
+   "epistemotype": "EP-2",
+   "signatures": [
+    "S-PLM"
+   ],
+   "note": "Caltech demonstration ended in fatal explosion; Richard Feynman was present and wrote a skeptical account.",
+   "refs": []
+  },
+  {
+   "id": "ex:correa-pagd",
+   "label": "Correa PAGD reactors",
+   "principals": "Paulo & Alexandra Correa",
+   "years": "1990s",
+   "effect_types": [
+    "P-EMG-ENT-01",
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-KOR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc"
+    ],
+    "med": "plasma",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D5R2C2P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-PLM"
+   ],
+   "patent_flag": true,
+   "note": "Pulsed abnormal glow discharge with claimed net energy.",
+   "refs": [
+    "US Patent 5,416,391 (1995)"
+   ]
+  },
+  {
+   "id": "ex:chernetsky-discharge",
+   "label": "Chernetsky self-generating discharge",
+   "principals": "Alexander Chernetsky",
+   "years": "1970s–1980s",
+   "effect_types": [
+    "P-EMG-ENT-01",
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_ac"
+    ],
+    "med": "plasma",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R2C0P2T1Q1",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-PLM"
+   ],
+   "note": "Soviet-era plasma-discharge over-unity reports.",
+   "refs": []
+  },
+  {
+   "id": "ex:ehrenhaft-monopoles-1944",
+   "label": "Ehrenhaft magnetic-monopole reports",
+   "principals": "Felix Ehrenhaft",
+   "years": "1940s",
+   "effect_types": [
+    "P-EMG-FLD-01",
+    "P-MEC-KIN-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-STT",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-TRB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "optical",
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "micro"
+   },
+   "e_signature": "E1:D7R3C2P1T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "note": "Particle motions read as 'magnetolysis'/monopoles; never confirmed.",
+   "refs": [
+    "F. Ehrenhaft, \"New Experiments about the Magnetic Current,\" Physical Review 65, 62-63 (1944)"
+   ]
+  },
+  {
+   "id": "ex:meyl-scalar-kits",
+   "label": "Meyl scalar-wave transmission kits",
+   "principals": "Konstantin Meyl",
+   "years": "1990s–",
+   "effect_types": [
+    "P-EMG-FLD-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-SCW",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-IND",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R3C1P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "note": "Demonstration kits; conventional near-field coupling is the standard account.",
+   "refs": []
+  },
+  {
+   "id": "ex:hooper-motional-field",
+   "label": "Hooper motional-field generator",
+   "principals": "William Hooper",
+   "years": "1960s–1970s",
+   "effect_types": [
+    "P-EMG-IND-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-IND",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "lf_ac"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R1C1P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "patent_flag": true,
+   "note": "Claimed shielding-independent induced fields.",
+   "refs": []
+  },
+  {
+   "id": "ex:mills-hydrino",
+   "label": "Mills hydrino / SunCell program",
+   "principals": "Randell Mills (Brilliant Light Power)",
+   "years": "1991–",
+   "effect_types": [
+    "P-THM-BIL-01",
+    "P-OPT-EMI-05",
+    "P-CHM-PHS-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "X-HYD",
+     "role": "claimed",
+     "namespace": "private: hydrino states (GUT-CP)"
+    },
+    {
+     "ref": "M-ART-CAL",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical",
+     "transient"
+    ],
+    "med": "plasma",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D6R3C2P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "note": "Below-ground-state hydrogen claims with extensive self-published data; demonstrates the X- private-extension mechanism of §5.",
+   "refs": [
+    "R.L. Mills, W.R. Good, Fusion Technology 28, 1697 (1995)"
+   ]
+  },
+  {
+   "id": "ex:montagnier-2011",
+   "label": "Montagnier DNA electromagnetic signals",
+   "principals": "Luc Montagnier et al.",
+   "years": "2009–2011",
+   "effect_types": [
+    "P-EMG-KOR-01",
+    "P-CHM-PHS-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-WST",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-KON",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D5R3C2P1T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-MEM"
+   ],
+   "note": "Claimed EM signatures and 'teleported' DNA templates from high dilutions.",
+   "refs": [
+    "L. Montagnier, J. Aïssa, S. Ferris, J.-L. Montagnier, C. Lavallée, Interdisciplinary Sciences: Computational Life Sciences 1, 81 (2009)"
+   ]
+  },
+  {
+   "id": "ex:benveniste-1988",
+   "label": "Benveniste high-dilution study",
+   "principals": "Jacques Benveniste et al.",
+   "years": "1988",
+   "effect_types": [
+    "P-CHM-PHS-02",
+    "P-BIO-WRK-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-WST",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "chemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C2P1T1Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-MEM"
+   ],
+   "note": "Basophil degranulation at extreme dilution.",
+   "refs": [
+    "Nature 333, 816 (1988)"
+   ]
+  },
+  {
+   "id": "ex:maddox-check-1988",
+   "label": "Nature supervised recheck of Benveniste",
+   "principals": "John Maddox, James Randi, Walter Stewart",
+   "years": "1988",
+   "effect_types": [
+    "P-CHM-PHS-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-STT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R3C4P4T4Q3",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK",
+    "S-MEM"
+   ],
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:benveniste-1988"
+    }
+   ],
+   "note": "Blinded protocol; effect not reproduced.",
+   "refs": [
+    "Nature 334, 287 (1988)"
+   ]
+  },
+  {
+   "id": "ex:emoto-crystals",
+   "label": "Emoto water-crystal photographs",
+   "principals": "Masaru Emoto",
+   "years": "1990s–2000s",
+   "effect_types": [
+    "P-CHM-PHS-02",
+    "P-OPT-MED-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-WST",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-STT",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "med": "water_electrolyte",
+    "scl": "micro"
+   },
+   "e_signature": "E1:D2R2C0P1T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-MEM"
+   ],
+   "note": "Selection of crystal images correlated with intentions/labels.",
+   "refs": []
+  },
+  {
+   "id": "ex:grander-water",
+   "label": "Grander water vitalization",
+   "principals": "Johann Grander",
+   "years": "1980s–",
+   "effect_types": [
+    "P-CHM-PHS-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-WST",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "med": "water_electrolyte"
+   },
+   "e_signature": "E1:D1R2C0P2T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-MEM"
+   ],
+   "note": "Commercialized 'informed water' devices.",
+   "refs": []
+  },
+  {
+   "id": "ex:keshe-gans",
+   "label": "Keshe GANS material claims",
+   "principals": "Mehran Keshe",
+   "years": "2010s",
+   "effect_types": [
+    "P-NUC-MAT-01",
+    "P-CHM-PHS-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R2C0P1T1Q0",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "note": "'Gas in nano state' production claims.",
+   "refs": []
+  },
+  {
+   "id": "ex:kervran-1960s",
+   "label": "Kervran biological transmutations",
+   "principals": "Louis Kervran",
+   "years": "1960s–1970s",
+   "effect_types": [
+    "P-NUC-ELM-05",
+    "P-BIO-WRK-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-KVN",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-KON",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "chemical"
+    ],
+    "med": "solid",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R3C1P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "note": "Calcium balances in hens etc.; mass-balance errors are the standard account.",
+   "refs": []
+  },
+  {
+   "id": "ex:reich-einstein-1941",
+   "label": "Orgone accumulator ΔT and Einstein examination",
+   "principals": "Wilhelm Reich; Albert Einstein (adversarial)",
+   "years": "1941",
+   "effect_types": [
+    "P-THM-TRN-01",
+    "P-BIO-WRK-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ORG",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-THK",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D4R2C2P4T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-ORG"
+   ],
+   "note": "Einstein reproduced a ΔT and attributed it to convection; correspondence ended there.",
+   "refs": []
+  },
+  {
+   "id": "ex:rife-beam-ray",
+   "label": "Rife beam-ray and universal microscope",
+   "principals": "Royal Raymond Rife",
+   "years": "1930s",
+   "effect_types": [
+    "P-BIO-WRK-04",
+    "P-BIO-WRK-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RES",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf",
+     "optical"
+    ],
+    "med": "air",
+    "scl": "micro"
+   },
+   "e_signature": "E1:D2R2C0P2T4Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-DEK"
+   ],
+   "note": "Claimed frequency-specific devitalization of microorganisms.",
+   "refs": []
+  },
+  {
+   "id": "ex:pyramid-germination",
+   "label": "Pyramid-power germination trials",
+   "principals": "Various (1970s wave)",
+   "years": "1970s",
+   "effect_types": [
+    "P-BIO-WRK-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-STT",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R3C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "note": "Seed/razor-blade claims; controlled follow-ups null.",
+   "refs": []
+  },
+  {
+   "id": "ex:grebennikov-platform",
+   "label": "Grebennikov cavity-structure platform",
+   "principals": "Viktor Grebennikov",
+   "years": "1990s",
+   "effect_types": [
+    "P-MEC-LEV-01",
+    "P-BIO-WRK-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ORG",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R1C0P1T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "note": "Book-documented levitation platform based on insect-shell geometry.",
+   "refs": []
+  },
+  {
+   "id": "ex:leedskalnin-coral-castle",
+   "label": "Leedskalnin Coral Castle handling lore",
+   "principals": "Ed Leedskalnin",
+   "years": "1923–1951",
+   "effect_types": [
+    "P-MEC-LEV-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "macro"
+   },
+   "e_signature": "E1:D1R0C0P2T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "note": "Single-handed megalith construction; documented tripod/rigging evidence offers the standard account.",
+   "refs": []
+  },
+  {
+   "id": "ex:schauberger-repulsine",
+   "label": "Schauberger implosion devices",
+   "principals": "Viktor Schauberger",
+   "years": "1930s–1940s",
+   "effect_types": [
+    "P-MEC-FLU-01",
+    "P-THM-KLT-01",
+    "P-MEC-LEV-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-AET",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R1C0P2T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-IMP"
+   ],
+   "note": "Vortex 'implosion' engineering; Repulsine lore.",
+   "refs": []
+  },
+  {
+   "id": "ex:hamel-devices",
+   "label": "Hamel magnetic devices",
+   "principals": "David Hamel",
+   "years": "1980s–2000s",
+   "effect_types": [
+    "P-MEC-LEV-01",
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R1C0P2T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Cone-and-magnet constructions; anecdotal flight claims.",
+   "refs": []
+  },
+  {
+   "id": "ex:finsrud-sculpture",
+   "label": "Finsrud perpetual-motion sculpture",
+   "principals": "Reidar Finsrud",
+   "years": "1996–present",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "lab",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D3R1C0P3T3Q0",
+   "epistemotype": "EP-2",
+   "signatures": [
+    "S-SLF"
+   ],
+   "note": "Publicly exhibited rolling-ball sculpture in Norway; clever mechanics is the standard account.",
+   "refs": []
+  },
+  {
+   "id": "ex:otis-carr-otcx1",
+   "label": "Otis Carr OTC-X1 craft",
+   "principals": "Otis T. Carr",
+   "years": "1950s–1961",
+   "effect_types": [
+    "P-MEC-LEV-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "med": "air"
+   },
+   "e_signature": "E1:D0R0C0P2T1Q0",
+   "epistemotype": "EP-0",
+   "signatures": [],
+   "note": "Free-energy saucer venture (OTC-X1, 'Utron' accumulator); a 1959 public demonstration did not take place. Convicted in Oklahoma in 1961 of selling securities without registering them — a registration offense, not a finding of fraud — and fined USD 5,000; conviction affirmed on appeal.",
+   "refs": [
+    "Carr v. State, 1961 OK CR 15, 359 P.2d 606 (Okla. Crim. App., 11 Jan 1961), case no. A-12907 — conviction under 71 O.S.A. § 53 affirmed."
+   ]
+  },
+  {
+   "id": "ex:meyer-wfc-1996",
+   "label": "Meyer water fuel cell",
+   "principals": "Stanley Meyer",
+   "years": "1980s–1998",
+   "effect_types": [
+    "P-CHM-RKT-05",
+    "P-CHM-RKT-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ELY",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "transient",
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R2C0P1T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-WFC"
+   ],
+   "note": "Above-Faraday electrolysis claims sold to investors as technology dealerships; an Ohio court found fraud in 1996 and ordered repayment of USD 25,000 to two investors, after court-appointed experts reported the cell performed conventional electrolysis. Reported contemporaneously in the press; the court record itself was not consulted.",
+   "refs": [
+    "Edwards, Tony. 'End of road for car that ran on water.' The Sunday Times, 1 December 1996, Features p. 12."
+   ]
+  },
+  {
+   "id": "ex:garrett-1935",
+   "label": "Garrett water-carburetor patent",
+   "principals": "Charles H. Garrett",
+   "years": "1935",
+   "effect_types": [
+    "P-CHM-RKT-05"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ELY",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte"
+   },
+   "e_signature": "E1:D0RxC0P1TxQ0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-WFC"
+   ],
+   "patent_flag": true,
+   "note": "Patent documents the claim; demonstration press reports exist.",
+   "refs": [
+    "US Patent 2,006,676 (1935)"
+   ]
+  },
+  {
+   "id": "ex:dingel-water-car",
+   "label": "Dingel water-powered car",
+   "principals": "Daniel Dingel",
+   "years": "1969–2008",
+   "effect_types": [
+    "P-CHM-RKT-05"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ELY",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "med": "water_electrolyte",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R1C0P2T4Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-DEK",
+    "S-WFC"
+   ],
+   "note": "Philippine water-car claims; the state science department assessed the device and rejected it. Convicted of estafa in 2008 by the Parañaque City Regional Trial Court over research funds taken from a Taiwanese investor and never applied to the promised prototypes — a misappropriation finding, not a verdict on the device. An appeal was announced; its outcome is not established here.",
+   "refs": [
+    "Allison Lopez, 'Inventor, 82, gets 20 years for estafa', Philippine Daily Inquirer, 20 December 2008 — Paranaque City RTC Branch 257, decision of 9 December 2008, USD 380,000 in damages."
+   ]
+  },
+  {
+   "id": "ex:yull-brown-gas",
+   "label": "Brown's Gas anomalous-flame claims",
+   "principals": "Yull Brown",
+   "years": "1970s–1990s",
+   "effect_types": [
+    "P-CHM-RKT-01",
+    "P-CHM-RKT-06"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-CHX",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R3C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-WFC"
+   ],
+   "note": "Oxyhydrogen torches are real; 'cool flame melts tungsten' anomaly claims are the delta.",
+   "refs": []
+  },
+  {
+   "id": "ex:griggs-hydrosonic",
+   "label": "Griggs hydrosonic pump over-unity claims",
+   "principals": "James Griggs",
+   "years": "1990s",
+   "effect_types": [
+    "P-THM-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-KAV",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-CAL",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "water_electrolyte",
+    "scl": "plant"
+   },
+   "e_signature": "E1:D4R2C1P1T4Q2",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-DEK"
+   ],
+   "note": "Cavitation heater; heating is orthodox, COP>1 claim is not confirmed.",
+   "refs": []
+  },
+  {
+   "id": "ex:pantone-geet",
+   "label": "Pantone GEET fuel processor",
+   "principals": "Paul Pantone",
+   "years": "1990s–2000s",
+   "effect_types": [
+    "P-CHM-RKT-01",
+    "P-EMG-ENT-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-CHX",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "thermal"
+    ],
+    "med": "plasma",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R3C0P2T3Q0",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-PLM"
+   ],
+   "note": "'Plasma' fuel-reformer claims; community builds, no controlled validation.",
+   "refs": []
+  },
+  {
+   "id": "ex:taos-hum",
+   "label": "Taos Hum investigations",
+   "principals": "Environmental (Taos, NM); Univ. teams",
+   "years": "1990s–",
+   "effect_types": [
+    "P-ACU-EMI-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-PER",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "macro",
+    "mod": [
+     "geographic"
+    ]
+   },
+   "e_signature": "E1:D5R4C2P3T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "note": "Persistent low-frequency hum reports; no external source identified for most hearers.",
+   "refs": [
+    "J. H. Mullins and J. P. Kelly, \"The mystery of the Taos hum,\" Echoes (Newsletter of the Acoustical Society of America) 5(3), 1,4,6 (1995)"
+   ]
+  },
+  {
+   "id": "ex:golka-ball-lightning",
+   "label": "Golka ball-lightning attempts",
+   "principals": "Robert Golka",
+   "years": "1970s–1980s",
+   "effect_types": [
+    "P-OPT-PLS-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-KOR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_ac",
+     "transient"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R2C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "note": "Large Tesla-coil facility aimed at reproducing ball lightning.",
+   "refs": []
+  },
+  {
+   "id": "ex:oregon-vortex",
+   "label": "Oregon Vortex / mystery-spot zones",
+   "principals": "Roadside attractions (various)",
+   "years": "1930–present",
+   "effect_types": [
+    "P-GRA-GEW-05",
+    "P-OPT-MED-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-PER",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "scl": "macro"
+   },
+   "e_signature": "E1:D2R4C1P3T4Q1",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "note": "Tilted-frame illusion geometry is the established account.",
+   "refs": []
+  },
+  {
+   "id": "ex:orb-photography",
+   "label": "Orb photography corpus",
+   "principals": "Community (flash photography era)",
+   "years": "1990s–",
+   "effect_types": [
+    "P-OPT-MED-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-CAM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "optical"
+    ],
+    "med": "air"
+   },
+   "e_signature": "E1:D2R5C1P3T4Q0",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "note": "Backscatter of flash on near-lens particles is the established account.",
+   "refs": []
+  },
+  {
+   "id": "ex:crookes-radiometer-1874",
+   "label": "Crookes radiometer (migrated anomaly)",
+   "principals": "William Crookes; Reynolds, Maxwell (resolution)",
+   "years": "1874–1879",
+   "effect_types": [
+    "P-MEC-KIN-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RAD",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "optical"
+    ],
+    "med": "vacuum",
+    "vac": "partial_only",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D7R5C3P4T4Q3",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "note": "Paradigm case: 1874 open anomaly (T0), resolved via thermal transpiration (T4). Demonstrates temporal lattice migration.",
+   "refs": [
+    "W. Crookes, Philosophical Transactions of the Royal Society of London 164, 501 (1874)"
+   ]
+  }
+ ]
 }

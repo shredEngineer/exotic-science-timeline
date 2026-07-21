@@ -1,684 +1,686 @@
 {
-  "eqo_corpus_release": "C",
-  "targets_eqo_version": "1.2.0",
-  "append_only_to": "corpus/instances-a.json + corpus/instances-b.json (untouched)",
-  "provenance_note": "Same compilation rules as Release B (Addendum A.1). New tiers per Addendum B: doctrines (theory-first corpora) and narratives (lore/conspiracy complexes with factual_kernel vs lore_layer split). Hoaxes are ordinary observation records with M-ART-FAB/M-ART-AUF resolution edges. record_kind distinguishes descriptions, demonstrations, observations, analyses.",
-  "instances": [
+ "eqo_corpus_release": "C",
+ "targets_eqo_version": "1.2.0",
+ "append_only_to": "corpus/instances-a.json + corpus/instances-b.json (untouched)",
+ "provenance_note": "Same compilation rules as Release B (Addendum A.1). New tiers per Addendum B: doctrines (theory-first corpora) and narratives (lore/conspiracy complexes with factual_kernel vs lore_layer split). Hoaxes are ordinary observation records with M-ART-FAB/M-ART-AUF resolution edges. record_kind distinguishes descriptions, demonstrations, observations, analyses.",
+ "instances": [
+  {
+   "id": "ex:bhaskara-note",
+   "label": "(see base corpus ex:bhaskara-wheel — root of the medieval lineage below)",
+   "principals": "-",
+   "years": "-",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "e_signature": "E1:DxRxCxPxTxQx",
+   "epistemotype": "EP-0",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "record_kind": "analysis",
+   "note": "Pointer record only; kept for lineage readability in this file.",
+   "refs": []
+  },
+  {
+   "id": "ex:peregrinus-1269",
+   "label": "Peregrinus perpetual magnetic wheel design",
+   "principals": "Petrus Peregrinus de Maricourt",
+   "years": "1269",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
     {
-      "id": "ex:bhaskara-note",
-      "label": "(see base corpus ex:bhaskara-wheel — root of the medieval lineage below)",
-      "principals": "-",
-      "years": "-",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "e_signature": "E1:DxRxCxPxTxQx",
-      "epistemotype": "EP-0",
-      "signatures": [],
-      "compilation_confidence": "high",
-      "record_kind": "analysis",
-      "note": "Pointer record only; kept for lineage readability in this file.",
-      "refs": []
-    },
-    {
-      "id": "ex:peregrinus-1269",
-      "label": "Peregrinus perpetual magnetic wheel design",
-      "principals": "Petrus Peregrinus de Maricourt",
-      "years": "1269",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air"
-      },
-      "e_signature": "E1:D0R0C0P1T1Q0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-SLF"
-      ],
-      "compilation_confidence": "high",
-      "record_kind": "design_description",
-      "note": "Epistola de magnete closes with a lodestone-driven wheel intended to turn perpetually — the root document of the magnet-motor lineage, seven centuries before Perendev.",
-      "refs": []
-    },
-    {
-      "id": "ex:villard-1230s",
-      "label": "Villard de Honnecourt overbalanced wheel",
-      "principals": "Villard de Honnecourt",
-      "years": "c. 1230s",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [],
-      "context": {
-        "med": "air"
-      },
-      "e_signature": "E1:D0R0C0P1T0Q0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-SLF",
-        "S-OFN"
-      ],
-      "compilation_confidence": "high",
-      "record_kind": "design_description",
-      "note": "Sketchbook wheel with hinged hammers, asserted to run of itself — the European entry of the overbalanced-wheel idea.",
-      "refs": []
-    },
-    {
-      "id": "ex:zimara-windmill-1500s",
-      "label": "Zimara self-blowing windmill proposal",
-      "principals": "Marco Antonio Zimara",
-      "years": "early 1500s",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [],
-      "context": {
-        "med": "air"
-      },
-      "e_signature": "E1:D0R0C0P1T0Q0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-SLF",
-        "S-OFN"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "design_description",
-      "note": "Windmill driving bellows that blow the windmill — the closed-loop archetype in its purest form.",
-      "refs": []
-    },
-    {
-      "id": "ex:fludd-mill-1618",
-      "label": "Fludd closed-cycle water mill",
-      "principals": "Robert Fludd",
-      "years": "1618",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [],
-      "context": {
-        "med": "water_electrolyte"
-      },
-      "e_signature": "E1:D0R0C0P1T0Q0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-SLF",
-        "S-OFN"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "design_description",
-      "note": "Recirculating water-screw mill grinding grain from its own outflow; endlessly reprinted ancestor of hydraulic self-runner claims.",
-      "refs": []
-    },
-    {
-      "id": "ex:leonardo-refutation-1494",
-      "label": "Leonardo's refutation of overbalanced wheels",
-      "principals": "Leonardo da Vinci (notebooks)",
-      "years": "c. 1494",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MCH",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "med": "air"
-      },
-      "e_signature": "E1:D5R5C2P3T4Q1",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:bhaskara-wheel"
-        },
-        {
-          "type": "contradicts",
-          "ref": "ex:villard-1230s"
-        }
-      ],
-      "compilation_confidence": "high",
-      "record_kind": "analysis",
-      "note": "Notebook analyses working the torque balance and dismissing the seekers of perpetual motion — the earliest analysis-type resolution record in the corpus.",
-      "refs": []
-    },
-    {
-      "id": "ex:drebbel-perpetuum-1607",
-      "label": "Drebbel perpetuum mobile at the Stuart court",
-      "principals": "Cornelis Drebbel",
-      "years": "c. 1607",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-AER",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "med": "air",
-        "per": "persistent"
-      },
-      "e_signature": "E1:D1R2C0P3T3Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "demonstration_claim",
-      "note": "Celebrated self-moving globe presented to James I; modern reading: barometric/thermal drive — Cox's clock avant la lettre, an apparent self-runner with a real energy source.",
-      "refs": []
-    },
-    {
-      "id": "ex:somerset-tower-1630s",
-      "label": "Marquess of Worcester wheel demonstration",
-      "principals": "Edward Somerset, 2nd Marquess of Worcester",
-      "years": "1630s (account publ. 1655)",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [],
-      "context": {
-        "med": "air",
-        "scl": "macro"
-      },
-      "e_signature": "E1:D1R1C0P2T0Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF",
-        "S-OFN"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "demonstration_claim",
-      "note": "Large weighted wheel reportedly shown before the king at the Tower of London; known through the inventor's Century of Inventions and court lore.",
-      "refs": []
-    },
-    {
-      "id": "ex:ever-burning-lamps",
-      "label": "Sepulchral ever-burning lamp reports",
-      "principals": "Renaissance antiquarian tradition (compiled by Fortunio Liceti)",
-      "years": "reports 1400s-1500s; compilation 1621",
-      "effect_types": [
-        "P-OPT-EMI-01",
-        "P-CHM-RKT-06"
-      ],
-      "mechanisms": [],
-      "context": {
-        "med": "air",
-        "per": "permanent"
-      },
-      "e_signature": "E1:D0R2C0P2T0Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-OFN"
-      ],
-      "compilation_confidence": "high",
-      "record_kind": "observation",
-      "note": "Recurring reports of lamps found alight in opened ancient tombs (the Tulliola account among them); the medieval-to-early-modern free-energy claim par excellence, surviving only as secondary reports.",
-      "refs": []
-    },
-    {
-      "id": "ex:redheffer-1812",
-      "label": "Redheffer perpetual motion machine",
-      "principals": "Charles Redheffer (Philadelphia, then New York)",
-      "years": "1812-1813",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [],
-      "context": {
-        "med": "air",
-        "scl": "lab",
-        "per": "persistent"
-      },
-      "e_signature": "E1:D1R2C1P3T0Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF",
-        "S-OFN"
-      ],
-      "compilation_confidence": "high",
-      "record_kind": "demonstration_claim",
-      "note": "Paid-admission perpetual wheel; a Philadelphia inspection already noticed gear wear running the wrong way.",
-      "refs": []
-    },
-    {
-      "id": "ex:fulton-exposure-1813",
-      "label": "Fulton's exposure of the Redheffer machine",
-      "principals": "Robert Fulton (New York)",
-      "years": "1813",
-      "effect_types": [
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-AUF",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R2C3P4T4Q0",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-DEK"
-      ],
-      "relations": [
-        {
-          "type": "contradicts",
-          "ref": "ex:redheffer-1812"
-        }
-      ],
-      "compilation_confidence": "high",
-      "record_kind": "analysis",
-      "note": "Fulton traced an uneven running rhythm to a concealed catgut belt and an elderly man cranking in an upper room — the template hoax exposure, ninety years before Wood's prism.",
-      "refs": []
-    },
-    {
-      "id": "ex:garabed-1917",
-      "label": "Garabed free-energy claim before the US Congress",
-      "principals": "Garabed T. K. Giragossian",
-      "years": "1917-1918",
-      "effect_types": [
-        "P-EMG-BIL-01",
-        "P-MEC-KIN-10"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MCH",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R1C3P4T3Q1",
-      "epistemotype": "EP-5",
-      "signatures": [
-        "S-SLF"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "demonstration_claim",
-      "note": "Congress passed a joint resolution to examine the 'Garabed'; the committee identified it as a flywheel storing, not generating, energy — a legislative-branch P4 record.",
-      "refs": []
-    },
-    {
-      "id": "ex:cook-battery-1871",
-      "label": "Cook electro-magnetic self-acting battery",
-      "principals": "Daniel McFarland Cook (Mansfield, Ohio)",
-      "years": "1871",
-      "effect_types": [
-        "P-EMG-BIL-02",
-        "P-EMG-IND-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D0RxC0P1T1Q0",
-      "epistemotype": "EP-0",
-      "signatures": [
-        "S-SLF"
-      ],
-      "patent_flag": true,
-      "compilation_confidence": "medium",
-      "record_kind": "design_description",
-      "note": "Community-flagged instance. Patented coil pair claimed to sustain its own current — the earliest US patent document in the electromagnetic self-runner lineage; compiler's recall dates it 1871, not 1895.",
-      "refs": [
-        "US Patent 119,825 (1871)"
-      ]
-    },
-    {
-      "id": "ex:gary-motor-1879",
-      "label": "Gary neutral-line magnetic motor",
-      "principals": "Wesley W. Gary",
-      "years": "1870s (magazine coverage 1879)",
-      "effect_types": [
-        "P-EMG-BIL-02",
-        "P-EMG-FLD-03"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-MGM",
-          "role": "claimed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D1R2C0P2T1Q0",
-      "epistemotype": "EP-4",
-      "signatures": [
-        "S-SLF"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "demonstration_claim",
-      "note": "'Neutral line' magnet motor with sympathetic national-press coverage; the 19th-century prototype of the magnet-motor media wave.",
-      "refs": []
-    },
-    {
-      "id": "ex:pogue-carburetor-1930s",
-      "label": "Pogue high-mileage vapor carburetor",
-      "principals": "Charles Nelson Pogue (Winnipeg)",
-      "years": "mid-1930s",
-      "effect_types": [
-        "P-CHM-RKT-06"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-CHX",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "thermal",
-          "chemical"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D2R3C0P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [],
-      "patent_flag": true,
-      "compilation_confidence": "high",
-      "record_kind": "demonstration_claim",
-      "note": "Patented vapor carburetors with ~200-mpg claims; never validated under controls; seed of the suppressed-carburetor narrative (nar:pogue-200mpg).",
-      "refs": []
-    },
-    {
-      "id": "ex:tewari-rlg",
-      "label": "Tewari reactionless generator claims",
-      "principals": "Paramahamsa Tewari (India)",
-      "years": "2010s",
-      "effect_types": [
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ART-PWR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "mechanical",
-          "magnetostatic"
-        ],
-        "med": "air",
-        "scl": "lab"
-      },
-      "e_signature": "E1:D3R2C1P2T3Q1",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-SLF"
-      ],
-      "compilation_confidence": "medium",
-      "record_kind": "demonstration_claim",
-      "note": "Ex-nuclear-engineering executive; over-unity homopolar-style generator claims framed by his space-vortex theory (doc:tewari-space-vortex).",
-      "refs": []
+     "ref": "M-MGM",
+     "role": "claimed"
     }
-  ],
-  "doctrines": [
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air"
+   },
+   "e_signature": "E1:D0R0C0P1T1Q0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "design_description",
+   "note": "Epistola de magnete closes with a lodestone-driven wheel intended to turn perpetually — the root document of the magnet-motor lineage, seven centuries before Perendev.",
+   "refs": []
+  },
+  {
+   "id": "ex:villard-1230s",
+   "label": "Villard de Honnecourt overbalanced wheel",
+   "principals": "Villard de Honnecourt",
+   "years": "c. 1230s",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [],
+   "context": {
+    "med": "air"
+   },
+   "e_signature": "E1:D0R0C0P1T0Q0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-SLF",
+    "S-OFN"
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "design_description",
+   "note": "Sketchbook wheel with hinged hammers, asserted to run of itself — the European entry of the overbalanced-wheel idea.",
+   "refs": []
+  },
+  {
+   "id": "ex:zimara-windmill-1500s",
+   "label": "Zimara self-blowing windmill proposal",
+   "principals": "Marco Antonio Zimara",
+   "years": "early 1500s",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [],
+   "context": {
+    "med": "air"
+   },
+   "e_signature": "E1:D0R0C0P1T0Q0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-SLF",
+    "S-OFN"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "design_description",
+   "note": "Windmill driving bellows that blow the windmill — the closed-loop archetype in its purest form.",
+   "refs": []
+  },
+  {
+   "id": "ex:fludd-mill-1618",
+   "label": "Fludd closed-cycle water mill",
+   "principals": "Robert Fludd",
+   "years": "1618",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [],
+   "context": {
+    "med": "water_electrolyte"
+   },
+   "e_signature": "E1:D0R0C0P1T0Q0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-SLF",
+    "S-OFN"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "design_description",
+   "note": "Recirculating water-screw mill grinding grain from its own outflow; endlessly reprinted ancestor of hydraulic self-runner claims.",
+   "refs": []
+  },
+  {
+   "id": "ex:leonardo-refutation-1494",
+   "label": "Leonardo's refutation of overbalanced wheels",
+   "principals": "Leonardo da Vinci (notebooks)",
+   "years": "c. 1494",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
     {
-      "id": "doc:haramein-holofractographic",
-      "label": "Haramein holofractographic unified theory",
-      "principals": "Nassim Haramein (Resonance Science Foundation)",
-      "years": "2000s-present",
-      "summary": "Schwarzschild-proton and vacuum-geometry papers proposing a unified field; presented largely outside peer-reviewed venues.",
-      "linked_instances": [],
-      "compilation_confidence": "high",
-      "note": "Theory-first corpus; no bench-observation records to link."
-    },
-    {
-      "id": "doc:heim-theory",
-      "label": "Heim multidimensional field theory",
-      "principals": "Burkhard Heim",
-      "years": "1950s-1980s",
-      "summary": "Six/eight-dimensional structured field theory with a claimed particle-mass formula; propulsion implications discussed posthumously.",
-      "linked_instances": [],
-      "compilation_confidence": "high",
-      "note": "Pure theory after Heim's 1944 laboratory accident; no observation corpus of his own."
-    },
-    {
-      "id": "doc:shipov-physical-vacuum",
-      "label": "Shipov physical-vacuum / torsion theory",
-      "principals": "Gennady Shipov",
-      "years": "1980s-present",
-      "summary": "Theory of the physical vacuum underpinning the torsion-field program.",
-      "linked_instances": [
-        "ex:akimov-shipov-torsion"
-      ],
-      "compilation_confidence": "high",
-      "note": "The experimental wing is recorded separately; this entry is the doctrine."
-    },
-    {
-      "id": "doc:bearden-scalar-em",
-      "label": "Bearden scalar electromagnetics",
-      "principals": "Tom Bearden",
-      "years": "1980s-2000s",
-      "summary": "Scalar-wave and vacuum-engineering corpus (Energy from the Vacuum) framing MEG-type devices.",
-      "linked_instances": [
-        "ex:bearden-meg-2002",
-        "ex:sweet-vta-1980s"
-      ],
-      "compilation_confidence": "high",
-      "note": "Doctrine layer of the M-ZPE/M-SCW device cluster."
-    },
-    {
-      "id": "doc:mills-gutcp",
-      "label": "Mills Grand Unified Theory of Classical Physics",
-      "principals": "Randell Mills",
-      "years": "1991-present",
-      "summary": "Classical-physics reformulation predicting hydrino states below the hydrogen ground state.",
-      "linked_instances": [
-        "ex:mills-hydrino"
-      ],
-      "compilation_confidence": "high",
-      "note": "The theory behind the X-HYD private-extension mechanism."
-    },
-    {
-      "id": "doc:larson-reciprocal",
-      "label": "Larson Reciprocal System",
-      "principals": "Dewey B. Larson",
-      "years": "1959-1980s",
-      "summary": "Motion-as-fundamental cosmology with a persistent study community.",
-      "linked_instances": [],
-      "compilation_confidence": "medium",
-      "note": "Doctrine without a device corpus."
-    },
-    {
-      "id": "doc:laviolette-subquantum",
-      "label": "LaViolette subquantum kinetics",
-      "principals": "Paul LaViolette",
-      "years": "1980s-present",
-      "summary": "Reaction-diffusion ether model; author also popularized electrogravitics-in-aerospace claims.",
-      "linked_instances": [],
-      "compilation_confidence": "medium",
-      "note": "Crosslinks narratively to the electrogravitics lore around ex:brown-gravitator-1929."
-    },
-    {
-      "id": "doc:aetherometry",
-      "label": "Correa aetherometry",
-      "principals": "Paulo & Alexandra Correa",
-      "years": "1990s-present",
-      "summary": "Massfree-energy framework built atop the PAGD experimental line.",
-      "linked_instances": [
-        "ex:correa-pagd"
-      ],
-      "compilation_confidence": "medium",
-      "note": "Doctrine layer of an experiment-bearing program."
-    },
-    {
-      "id": "doc:welteislehre",
-      "label": "Hoerbiger World Ice Theory",
-      "principals": "Hanns Hoerbiger",
-      "years": "1912-1940s",
-      "summary": "Cosmic-ice cosmology with mass following in interwar Central Europe.",
-      "linked_instances": [],
-      "compilation_confidence": "high",
-      "note": "Previously listed under omissions; now referenceable as doctrine — no discrete observations, by design of this tier."
-    },
-    {
-      "id": "doc:tewari-space-vortex",
-      "label": "Tewari space vortex theory",
-      "principals": "Paramahamsa Tewari",
-      "years": "1980s-2010s",
-      "summary": "Vacuum-vortex model of the electron motivating reactionless-generator work.",
-      "linked_instances": [
-        "ex:tewari-rlg"
-      ],
-      "compilation_confidence": "medium",
-      "note": "Doctrine-instance pair with the RLG record."
+     "ref": "M-MCH",
+     "role": "claimed"
     }
-  ],
-  "narratives": [
+   ],
+   "context": {
+    "med": "air"
+   },
+   "e_signature": "E1:D5R5C2P3T4Q1",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "relations": [
     {
-      "id": "nar:philadelphia-experiment",
-      "label": "Philadelphia Experiment",
-      "emergence": "1955 (Allende letters to M. K. Jessup); book wave 1979",
-      "narrative_provenance": "Carl Allen/'Carlos Allende' correspondence and annotated Jessup volume; Berlitz & Moore popularization; ONR public denials.",
-      "factual_kernel": "USS Eldridge existed; wartime degaussing research against magnetic mines was real.",
-      "lore_layer": "Optical invisibility, teleportation to Norfolk, fused crewmen.",
-      "linked_instances": [],
-      "compilation_confidence": "high"
+     "type": "contradicts",
+     "ref": "ex:bhaskara-wheel"
     },
     {
-      "id": "nar:die-glocke",
-      "label": "Die Glocke (Nazi bell device)",
-      "emergence": "2000 (Witkowski) / 2001 (Cook, The Hunt for Zero Point)",
-      "narrative_provenance": "Claimed unpublished interrogation sources cited by Witkowski; no primary-period documents produced.",
-      "factual_kernel": "SS technical programs and the Wenceslas-mine area exist.",
-      "lore_layer": "Bell-shaped antigravity/time device, Xerum-525, Kecksburg tie-in.",
-      "linked_instances": [],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:nazi-ufo-vril",
-      "label": "Nazi-UFO / Vril complex",
-      "emergence": "1950s claims (Lusar-era); esoteric expansion 1960s-1990s",
-      "narrative_provenance": "Postwar individual claims of saucer projects; Pauwels/Bergier and later channelled 'Vril Society' literature.",
-      "factual_kernel": "Advanced conventional German aeronautics existed; the 'Vril Society' itself lacks primary-period evidence.",
-      "lore_layer": "Flight discs, Thule/Vril occult engineering, Antarctic bases.",
-      "linked_instances": [
-        "ex:schappeller-sphere"
-      ],
-      "compilation_confidence": "medium"
-    },
-    {
-      "id": "nar:tesla-papers",
-      "label": "Tesla suppressed-papers narrative",
-      "emergence": "from 1943; recurrent waves with FOIA releases",
-      "narrative_provenance": "Office of Alien Property custody of Tesla's effects; public FBI file; John G. Trump's review memorandum.",
-      "factual_kernel": "Custody of the estate and a government review are documented; the review found nothing operational.",
-      "lore_layer": "Hidden death-ray and free-energy technology withheld from humanity.",
-      "linked_instances": [
-        "ex:tesla-us685957-1901",
-        "ex:tesla-oscillator-lore"
-      ],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:suppressed-inventor",
-      "label": "Suppressed-inventor master narrative",
-      "emergence": "recurring since the 1920s",
-      "narrative_provenance": "Retold across the free-energy literature; each generation adds its martyr.",
-      "factual_kernel": "Moray reported attacks on his lab; Meyer died suddenly in 1998 with death officially attributed to natural causes; several inventors faced real legal action (documented in the respective records).",
-      "lore_layer": "A coordinated cartel systematically silencing working devices.",
-      "linked_instances": [
-        "ex:moray-receiver",
-        "ex:meyer-wfc-1996",
-        "ex:gray-ema-motor"
-      ],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:pogue-200mpg",
-      "label": "Suppressed 200-mpg carburetor",
-      "emergence": "late 1930s; folklore staple by the 1950s",
-      "narrative_provenance": "Newspaper claims around Pogue's devices; oral automotive folklore.",
-      "factual_kernel": "Pogue's patents and mileage claims are documented.",
-      "lore_layer": "Oil interests bought and buried the device.",
-      "linked_instances": [
-        "ex:pogue-carburetor-1930s"
-      ],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:haarp-claims",
-      "label": "HAARP weather/mind-control claims",
-      "emergence": "1990s",
-      "narrative_provenance": "Activist books and broadcast culture around the Gakona facility.",
-      "factual_kernel": "HAARP is a real ionospheric research heater, now university-operated, with published science.",
-      "lore_layer": "Weather weaponization, earthquake induction, mass mind control.",
-      "linked_instances": [],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:hutchison-seizures",
-      "label": "Hutchison equipment-seizure lore",
-      "emergence": "1980s-1990s (claimant's own accounts)",
-      "narrative_provenance": "Hutchison's interviews and community retellings.",
-      "factual_kernel": "Hutchison reports confiscations of his apparatus; delegation interest in the 1980s is documented.",
-      "lore_layer": "State suppression of a working effect.",
-      "linked_instances": [
-        "ex:hutchison-corpus"
-      ],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:montauk",
-      "label": "Montauk Project",
-      "emergence": "1992 (Nichols & Moon book series)",
-      "narrative_provenance": "Book-driven; derivative continuation of the Philadelphia narrative.",
-      "factual_kernel": "Camp Hero radar station exists.",
-      "lore_layer": "Time tunnels, psychic chair, child experiments.",
-      "linked_instances": [],
-      "compilation_confidence": "high"
-    },
-    {
-      "id": "nar:patent-suppression",
-      "label": "Free-energy patent-suppression narrative",
-      "emergence": "1970s-present",
-      "narrative_provenance": "Community readings of the US Invention Secrecy Act and annual secrecy-order counts.",
-      "factual_kernel": "The Invention Secrecy Act (1951) and standing secrecy orders are real and documented via FOIA; the USPTO's historical working-model demand for perpetual-motion filings is real.",
-      "lore_layer": "Systematic burial of functioning energy patents.",
-      "linked_instances": [
-        "ex:bearden-meg-2002",
-        "ex:howard-johnson-1979"
-      ],
-      "compilation_confidence": "high"
+     "type": "contradicts",
+     "ref": "ex:villard-1230s"
     }
-  ]
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "analysis",
+   "note": "Notebook analyses working the torque balance and dismissing the seekers of perpetual motion — the earliest analysis-type resolution record in the corpus.",
+   "refs": [
+    "Leonardo da Vinci, *Codex Forster II* (Victoria and Albert Museum, London), fols. 90v-91r, c. 1495 — date and folio approximate, not verified against the original manuscript"
+   ]
+  },
+  {
+   "id": "ex:drebbel-perpetuum-1607",
+   "label": "Drebbel perpetuum mobile at the Stuart court",
+   "principals": "Cornelis Drebbel",
+   "years": "c. 1607",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-AER",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "med": "air",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D1R2C0P3T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "Celebrated self-moving globe presented to James I; modern reading: barometric/thermal drive — Cox's clock avant la lettre, an apparent self-runner with a real energy source.",
+   "refs": []
+  },
+  {
+   "id": "ex:somerset-tower-1630s",
+   "label": "Marquess of Worcester wheel demonstration",
+   "principals": "Edward Somerset, 2nd Marquess of Worcester",
+   "years": "1630s (account publ. 1655)",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [],
+   "context": {
+    "med": "air",
+    "scl": "macro"
+   },
+   "e_signature": "E1:D1R1C0P2T0Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF",
+    "S-OFN"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "Large weighted wheel reportedly shown before the king at the Tower of London; known through the inventor's Century of Inventions and court lore.",
+   "refs": []
+  },
+  {
+   "id": "ex:ever-burning-lamps",
+   "label": "Sepulchral ever-burning lamp reports",
+   "principals": "Renaissance antiquarian tradition (compiled by Fortunio Liceti)",
+   "years": "reports 1400s-1500s; compilation 1621",
+   "effect_types": [
+    "P-OPT-EMI-01",
+    "P-CHM-RKT-06"
+   ],
+   "mechanisms": [],
+   "context": {
+    "med": "air",
+    "per": "permanent"
+   },
+   "e_signature": "E1:D0R2C0P2T0Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-OFN"
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "observation",
+   "note": "Recurring reports of lamps found alight in opened ancient tombs (the Tulliola account among them); the medieval-to-early-modern free-energy claim par excellence, surviving only as secondary reports.",
+   "refs": []
+  },
+  {
+   "id": "ex:redheffer-1812",
+   "label": "Redheffer perpetual motion machine",
+   "principals": "Charles Redheffer (Philadelphia, then New York)",
+   "years": "1812-1813",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [],
+   "context": {
+    "med": "air",
+    "scl": "lab",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D1R2C1P3T0Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF",
+    "S-OFN"
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "demonstration_claim",
+   "note": "Paid-admission perpetual wheel; a Philadelphia inspection already noticed gear wear running the wrong way.",
+   "refs": []
+  },
+  {
+   "id": "ex:fulton-exposure-1813",
+   "label": "Fulton's exposure of the Redheffer machine",
+   "principals": "Robert Fulton (New York)",
+   "years": "1813",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-AUF",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R2C3P4T4Q0",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:redheffer-1812"
+    }
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "analysis",
+   "note": "Fulton traced an uneven running rhythm to a concealed catgut belt and an elderly man cranking in an upper room — the template hoax exposure, ninety years before Wood's prism.",
+   "refs": []
+  },
+  {
+   "id": "ex:garabed-1917",
+   "label": "Garabed free-energy claim before the US Congress",
+   "principals": "Garabed T. K. Giragossian",
+   "years": "1917-1918",
+   "effect_types": [
+    "P-EMG-BIL-01",
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R1C3P4T3Q1",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "Congress passed a joint resolution to examine the 'Garabed'; the committee identified it as a flywheel storing, not generating, energy — a legislative-branch P4 record.",
+   "refs": []
+  },
+  {
+   "id": "ex:cook-battery-1871",
+   "label": "Cook electro-magnetic self-acting battery",
+   "principals": "Daniel McFarland Cook (Mansfield, Ohio)",
+   "years": "1871",
+   "effect_types": [
+    "P-EMG-BIL-02",
+    "P-EMG-IND-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D0RxC0P1T1Q0",
+   "epistemotype": "EP-0",
+   "signatures": [
+    "S-SLF"
+   ],
+   "patent_flag": true,
+   "compilation_confidence": "medium",
+   "record_kind": "design_description",
+   "note": "Community-flagged instance. Patented coil pair claimed to sustain its own current — the earliest US patent document in the electromagnetic self-runner lineage; compiler's recall dates it 1871, not 1895.",
+   "refs": [
+    "US Patent 119,825 (1871)"
+   ]
+  },
+  {
+   "id": "ex:gary-motor-1879",
+   "label": "Gary neutral-line magnetic motor",
+   "principals": "Wesley W. Gary",
+   "years": "1870s (magazine coverage 1879)",
+   "effect_types": [
+    "P-EMG-BIL-02",
+    "P-EMG-FLD-03"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MGM",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D1R2C0P2T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "'Neutral line' magnet motor with sympathetic national-press coverage; the 19th-century prototype of the magnet-motor media wave.",
+   "refs": []
+  },
+  {
+   "id": "ex:pogue-carburetor-1930s",
+   "label": "Pogue high-mileage vapor carburetor",
+   "principals": "Charles Nelson Pogue (Winnipeg)",
+   "years": "mid-1930s",
+   "effect_types": [
+    "P-CHM-RKT-06"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-CHX",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "thermal",
+     "chemical"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D2R3C0P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "patent_flag": true,
+   "compilation_confidence": "high",
+   "record_kind": "demonstration_claim",
+   "note": "Patented vapor carburetors with ~200-mpg claims; never validated under controls; seed of the suppressed-carburetor narrative (nar:pogue-200mpg).",
+   "refs": []
+  },
+  {
+   "id": "ex:tewari-rlg",
+   "label": "Tewari reactionless generator claims",
+   "principals": "Paramahamsa Tewari (India)",
+   "years": "2010s",
+   "effect_types": [
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical",
+     "magnetostatic"
+    ],
+    "med": "air",
+    "scl": "lab"
+   },
+   "e_signature": "E1:D3R2C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "Ex-nuclear-engineering executive; over-unity homopolar-style generator claims framed by his space-vortex theory (doc:tewari-space-vortex).",
+   "refs": []
+  }
+ ],
+ "doctrines": [
+  {
+   "id": "doc:haramein-holofractographic",
+   "label": "Haramein holofractographic unified theory",
+   "principals": "Nassim Haramein (Resonance Science Foundation)",
+   "years": "2000s-present",
+   "summary": "Schwarzschild-proton and vacuum-geometry papers proposing a unified field; presented largely outside peer-reviewed venues.",
+   "linked_instances": [],
+   "compilation_confidence": "high",
+   "note": "Theory-first corpus; no bench-observation records to link."
+  },
+  {
+   "id": "doc:heim-theory",
+   "label": "Heim multidimensional field theory",
+   "principals": "Burkhard Heim",
+   "years": "1950s-1980s",
+   "summary": "Six/eight-dimensional structured field theory with a claimed particle-mass formula; propulsion implications discussed posthumously.",
+   "linked_instances": [],
+   "compilation_confidence": "high",
+   "note": "Pure theory after Heim's 1944 laboratory accident; no observation corpus of his own."
+  },
+  {
+   "id": "doc:shipov-physical-vacuum",
+   "label": "Shipov physical-vacuum / torsion theory",
+   "principals": "Gennady Shipov",
+   "years": "1980s-present",
+   "summary": "Theory of the physical vacuum underpinning the torsion-field program.",
+   "linked_instances": [
+    "ex:akimov-shipov-torsion"
+   ],
+   "compilation_confidence": "high",
+   "note": "The experimental wing is recorded separately; this entry is the doctrine."
+  },
+  {
+   "id": "doc:bearden-scalar-em",
+   "label": "Bearden scalar electromagnetics",
+   "principals": "Tom Bearden",
+   "years": "1980s-2000s",
+   "summary": "Scalar-wave and vacuum-engineering corpus (Energy from the Vacuum) framing MEG-type devices.",
+   "linked_instances": [
+    "ex:bearden-meg-2002",
+    "ex:sweet-vta-1980s"
+   ],
+   "compilation_confidence": "high",
+   "note": "Doctrine layer of the M-ZPE/M-SCW device cluster."
+  },
+  {
+   "id": "doc:mills-gutcp",
+   "label": "Mills Grand Unified Theory of Classical Physics",
+   "principals": "Randell Mills",
+   "years": "1991-present",
+   "summary": "Classical-physics reformulation predicting hydrino states below the hydrogen ground state.",
+   "linked_instances": [
+    "ex:mills-hydrino"
+   ],
+   "compilation_confidence": "high",
+   "note": "The theory behind the X-HYD private-extension mechanism."
+  },
+  {
+   "id": "doc:larson-reciprocal",
+   "label": "Larson Reciprocal System",
+   "principals": "Dewey B. Larson",
+   "years": "1959-1980s",
+   "summary": "Motion-as-fundamental cosmology with a persistent study community.",
+   "linked_instances": [],
+   "compilation_confidence": "medium",
+   "note": "Doctrine without a device corpus."
+  },
+  {
+   "id": "doc:laviolette-subquantum",
+   "label": "LaViolette subquantum kinetics",
+   "principals": "Paul LaViolette",
+   "years": "1980s-present",
+   "summary": "Reaction-diffusion ether model; author also popularized electrogravitics-in-aerospace claims.",
+   "linked_instances": [],
+   "compilation_confidence": "medium",
+   "note": "Crosslinks narratively to the electrogravitics lore around ex:brown-gravitator-1929."
+  },
+  {
+   "id": "doc:aetherometry",
+   "label": "Correa aetherometry",
+   "principals": "Paulo & Alexandra Correa",
+   "years": "1990s-present",
+   "summary": "Massfree-energy framework built atop the PAGD experimental line.",
+   "linked_instances": [
+    "ex:correa-pagd"
+   ],
+   "compilation_confidence": "medium",
+   "note": "Doctrine layer of an experiment-bearing program."
+  },
+  {
+   "id": "doc:welteislehre",
+   "label": "Hoerbiger World Ice Theory",
+   "principals": "Hanns Hoerbiger",
+   "years": "1912-1940s",
+   "summary": "Cosmic-ice cosmology with mass following in interwar Central Europe.",
+   "linked_instances": [],
+   "compilation_confidence": "high",
+   "note": "Previously listed under omissions; now referenceable as doctrine — no discrete observations, by design of this tier."
+  },
+  {
+   "id": "doc:tewari-space-vortex",
+   "label": "Tewari space vortex theory",
+   "principals": "Paramahamsa Tewari",
+   "years": "1980s-2010s",
+   "summary": "Vacuum-vortex model of the electron motivating reactionless-generator work.",
+   "linked_instances": [
+    "ex:tewari-rlg"
+   ],
+   "compilation_confidence": "medium",
+   "note": "Doctrine-instance pair with the RLG record."
+  }
+ ],
+ "narratives": [
+  {
+   "id": "nar:philadelphia-experiment",
+   "label": "Philadelphia Experiment",
+   "emergence": "1955 (Allende letters to M. K. Jessup); book wave 1979",
+   "narrative_provenance": "Carl Allen/'Carlos Allende' correspondence and annotated Jessup volume; Berlitz & Moore popularization; ONR public denials.",
+   "factual_kernel": "USS Eldridge existed; wartime degaussing research against magnetic mines was real.",
+   "lore_layer": "Optical invisibility, teleportation to Norfolk, fused crewmen.",
+   "linked_instances": [],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:die-glocke",
+   "label": "Die Glocke (Nazi bell device)",
+   "emergence": "2000 (Witkowski) / 2001 (Cook, The Hunt for Zero Point)",
+   "narrative_provenance": "Claimed unpublished interrogation sources cited by Witkowski; no primary-period documents produced.",
+   "factual_kernel": "SS technical programs and the Wenceslas-mine area exist.",
+   "lore_layer": "Bell-shaped antigravity/time device, Xerum-525, Kecksburg tie-in.",
+   "linked_instances": [],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:nazi-ufo-vril",
+   "label": "Nazi-UFO / Vril complex",
+   "emergence": "1950s claims (Lusar-era); esoteric expansion 1960s-1990s",
+   "narrative_provenance": "Postwar individual claims of saucer projects; Pauwels/Bergier and later channelled 'Vril Society' literature.",
+   "factual_kernel": "Advanced conventional German aeronautics existed; the 'Vril Society' itself lacks primary-period evidence.",
+   "lore_layer": "Flight discs, Thule/Vril occult engineering, Antarctic bases.",
+   "linked_instances": [
+    "ex:schappeller-sphere"
+   ],
+   "compilation_confidence": "medium"
+  },
+  {
+   "id": "nar:tesla-papers",
+   "label": "Tesla suppressed-papers narrative",
+   "emergence": "from 1943; recurrent waves with FOIA releases",
+   "narrative_provenance": "Office of Alien Property custody of Tesla's effects; public FBI file; John G. Trump's review memorandum.",
+   "factual_kernel": "Custody of the estate and a government review are documented; the review found nothing operational.",
+   "lore_layer": "Hidden death-ray and free-energy technology withheld from humanity.",
+   "linked_instances": [
+    "ex:tesla-us685957-1901",
+    "ex:tesla-oscillator-lore"
+   ],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:suppressed-inventor",
+   "label": "Suppressed-inventor master narrative",
+   "emergence": "recurring since the 1920s",
+   "narrative_provenance": "Retold across the free-energy literature; each generation adds its martyr.",
+   "factual_kernel": "Moray reported attacks on his lab; Meyer died suddenly in 1998 with death officially attributed to natural causes; several inventors faced real legal action (documented in the respective records).",
+   "lore_layer": "A coordinated cartel systematically silencing working devices.",
+   "linked_instances": [
+    "ex:moray-receiver",
+    "ex:meyer-wfc-1996",
+    "ex:gray-ema-motor"
+   ],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:pogue-200mpg",
+   "label": "Suppressed 200-mpg carburetor",
+   "emergence": "late 1930s; folklore staple by the 1950s",
+   "narrative_provenance": "Newspaper claims around Pogue's devices; oral automotive folklore.",
+   "factual_kernel": "Pogue's patents and mileage claims are documented.",
+   "lore_layer": "Oil interests bought and buried the device.",
+   "linked_instances": [
+    "ex:pogue-carburetor-1930s"
+   ],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:haarp-claims",
+   "label": "HAARP weather/mind-control claims",
+   "emergence": "1990s",
+   "narrative_provenance": "Activist books and broadcast culture around the Gakona facility.",
+   "factual_kernel": "HAARP is a real ionospheric research heater, now university-operated, with published science.",
+   "lore_layer": "Weather weaponization, earthquake induction, mass mind control.",
+   "linked_instances": [],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:hutchison-seizures",
+   "label": "Hutchison equipment-seizure lore",
+   "emergence": "1980s-1990s (claimant's own accounts)",
+   "narrative_provenance": "Hutchison's interviews and community retellings.",
+   "factual_kernel": "Hutchison reports confiscations of his apparatus; delegation interest in the 1980s is documented.",
+   "lore_layer": "State suppression of a working effect.",
+   "linked_instances": [
+    "ex:hutchison-corpus"
+   ],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:montauk",
+   "label": "Montauk Project",
+   "emergence": "1992 (Nichols & Moon book series)",
+   "narrative_provenance": "Book-driven; derivative continuation of the Philadelphia narrative.",
+   "factual_kernel": "Camp Hero radar station exists.",
+   "lore_layer": "Time tunnels, psychic chair, child experiments.",
+   "linked_instances": [],
+   "compilation_confidence": "high"
+  },
+  {
+   "id": "nar:patent-suppression",
+   "label": "Free-energy patent-suppression narrative",
+   "emergence": "1970s-present",
+   "narrative_provenance": "Community readings of the US Invention Secrecy Act and annual secrecy-order counts.",
+   "factual_kernel": "The Invention Secrecy Act (1951) and standing secrecy orders are real and documented via FOIA; the USPTO's historical working-model demand for perpetual-motion filings is real.",
+   "lore_layer": "Systematic burial of functioning energy patents.",
+   "linked_instances": [
+    "ex:bearden-meg-2002",
+    "ex:howard-johnson-1979"
+   ],
+   "compilation_confidence": "high"
+  }
+ ]
 }

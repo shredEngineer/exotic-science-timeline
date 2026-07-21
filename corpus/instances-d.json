@@ -1,162 +1,166 @@
 {
-  "eqo_corpus_release": "D",
-  "targets_eqo_version": "1.3.0",
-  "append_only_to": "corpus/instances-a.json + instances-b.json + instances-c.json (untouched)",
-  "provenance_note": "Discharge/EVO cluster records added as evidential basis for the LHD companion volume. Same compilation rules as Releases B/C.",
-  "instances": [
+ "eqo_corpus_release": "D",
+ "targets_eqo_version": "1.3.0",
+ "append_only_to": "corpus/instances-a.json + instances-b.json + instances-c.json (untouched)",
+ "provenance_note": "Discharge/EVO cluster records added as evidential basis for the LHD companion volume. Same compilation rules as Releases B/C.",
+ "instances": [
+  {
+   "id": "ex:shoulders-ev-clusters",
+   "label": "Shoulders charge-cluster (EV/EVO) bench corpus",
+   "principals": "Kenneth R. Shoulders",
+   "years": "1980s-2000s",
+   "effect_types": [
+    "P-EMG-ENT-01",
+    "P-NUC-MAT-02",
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
     {
-      "id": "ex:shoulders-ev-clusters",
-      "label": "Shoulders charge-cluster (EV/EVO) bench corpus",
-      "principals": "Kenneth R. Shoulders",
-      "years": "1980s-2000s",
-      "effect_types": [
-        "P-EMG-ENT-01",
-        "P-NUC-MAT-02",
-        "P-EMG-BIL-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-ZPE",
-          "role": "claimed"
-        },
-        {
-          "ref": "M-KOR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc",
-          "transient"
-        ],
-        "med": "vacuum",
-        "vac": "persists",
-        "scl": "micro"
-      },
-      "e_signature": "E1:D5R2C1P1T3Q2",
-      "epistemotype": "EP-1",
-      "signatures": [
-        "S-PLM"
-      ],
-      "patent_flag": true,
-      "compilation_confidence": "high",
-      "record_kind": "observation",
-      "note": "Micron-scale high-charge-density electron clusters from pulsed sharp cathodes; borehole witness marks and energy-gain claims; conventional account discussed: explosive electron emission / cathode-spot ectons (Mesyats).",
-      "refs": [
-        "US Patent 5,018,180 (1991)"
-      ]
+     "ref": "M-ZPE",
+     "role": "claimed"
     },
     {
-      "id": "ex:ball-lightning-natural",
-      "label": "Natural ball lightning observation corpus",
-      "principals": "Global eyewitness/instrument corpus",
-      "years": "documented reports since the 1600s",
-      "effect_types": [
-        "P-OPT-PLS-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-CHX",
-          "role": "discussed"
-        },
-        {
-          "ref": "M-KOR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "transient"
-        ],
-        "med": "air",
-        "scl": "macro",
-        "per": "decaying"
-      },
-      "e_signature": "E1:D5R4C1P3T3Q1",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "compilation_confidence": "high",
-      "record_kind": "observation",
-      "note": "Accepted-as-real phenomenon with open mechanism; candidate conventional theories (silicon combustion, microwave cavities) discussed, none settled.",
-      "refs": []
-    },
-    {
-      "id": "ex:cen-spectrum-2014",
-      "label": "Accidental ball-lightning spectrum (Lanzhou)",
-      "principals": "Cen, Yuan, Xue",
-      "years": "2012 (publ. 2014)",
-      "effect_types": [
-        "P-OPT-PLS-01",
-        "P-OPT-EMI-05"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-CHX",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "transient"
-        ],
-        "med": "air",
-        "scl": "macro"
-      },
-      "e_signature": "E1:D7R1C2P3T3Q3",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "compilation_confidence": "high",
-      "record_kind": "observation",
-      "note": "Slit-spectrograph capture during a storm showing soil-element lines (Si, Fe, Ca) — consistent with soil-vaporization accounts.",
-      "refs": [
-        "Phys. Rev. Lett. 112, 035001 (2014)"
-      ]
-    },
-    {
-      "id": "ex:gatchina-plasmoids",
-      "label": "Gatchina water-discharge plasmoids",
-      "principals": "Egorov, Stepanov et al. (Gatchina)",
-      "years": "2000s",
-      "effect_types": [
-        "P-OPT-PLS-01"
-      ],
-      "mechanisms": [
-        {
-          "ref": "M-KOR",
-          "role": "discussed"
-        }
-      ],
-      "context": {
-        "inp": [
-          "hv_dc",
-          "transient"
-        ],
-        "med": "air",
-        "scl": "lab",
-        "per": "decaying"
-      },
-      "e_signature": "E1:D5R4C2P3T3Q2",
-      "epistemotype": "EP-3",
-      "signatures": [],
-      "compilation_confidence": "medium",
-      "record_kind": "observation",
-      "note": "Long-lived luminous plasmoids launched from water-surface discharges; reproducible laboratory analog with sub-second lifetimes.",
-      "refs": []
+     "ref": "M-KOR",
+     "role": "discussed"
     }
-  ],
-  "doctrines": [
+   ],
+   "context": {
+    "inp": [
+     "hv_dc",
+     "transient"
+    ],
+    "med": "vacuum",
+    "vac": "persists",
+    "scl": "micro"
+   },
+   "e_signature": "E1:D5R2C1P1T3Q2",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-PLM"
+   ],
+   "patent_flag": true,
+   "compilation_confidence": "high",
+   "record_kind": "observation",
+   "note": "Micron-scale high-charge-density electron clusters from pulsed sharp cathodes; borehole witness marks and energy-gain claims; conventional account discussed: explosive electron emission / cathode-spot ectons (Mesyats).",
+   "refs": [
+    "US Patent 5,018,180 (1991)"
+   ]
+  },
+  {
+   "id": "ex:ball-lightning-natural",
+   "label": "Natural ball lightning observation corpus",
+   "principals": "Global eyewitness/instrument corpus",
+   "years": "documented reports since the 1600s",
+   "effect_types": [
+    "P-OPT-PLS-01"
+   ],
+   "mechanisms": [
     {
-      "id": "doc:evo-framework",
-      "label": "EVO interpretive framework",
-      "principals": "Kenneth R. Shoulders (origin); MFMP / Bob Greenyer (contemporary school)",
-      "years": "1987-present",
-      "summary": "Reads discharge and LENR witness marks (boreholes, micro-craters, strike patterns) as signatures of exotic vacuum objects / charge clusters; contemporary open-science analyses extend the reading across the heterodox corpus.",
-      "linked_instances": [
-        "ex:shoulders-ev-clusters",
-        "ex:hutchison-corpus"
-      ],
-      "compilation_confidence": "high",
-      "note": "Doctrine layer of the discharge cluster; the observational records stand separately."
+     "ref": "M-CHX",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-KOR",
+     "role": "discussed"
     }
-  ]
+   ],
+   "context": {
+    "inp": [
+     "transient"
+    ],
+    "med": "air",
+    "scl": "macro",
+    "per": "decaying"
+   },
+   "e_signature": "E1:D5R4C1P3T3Q1",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "record_kind": "observation",
+   "note": "Accepted-as-real phenomenon with open mechanism; candidate conventional theories (silicon combustion, microwave cavities) discussed, none settled.",
+   "refs": [
+    "J. Abrahamson, J. Dinniss, *Nature* 403, 519 (2000)"
+   ]
+  },
+  {
+   "id": "ex:cen-spectrum-2014",
+   "label": "Accidental ball-lightning spectrum (Lanzhou)",
+   "principals": "Cen, Yuan, Xue",
+   "years": "2012 (publ. 2014)",
+   "effect_types": [
+    "P-OPT-PLS-01",
+    "P-OPT-EMI-05"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-CHX",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "transient"
+    ],
+    "med": "air",
+    "scl": "macro"
+   },
+   "e_signature": "E1:D7R1C2P3T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "record_kind": "observation",
+   "note": "Slit-spectrograph capture during a storm showing soil-element lines (Si, Fe, Ca) — consistent with soil-vaporization accounts.",
+   "refs": [
+    "Phys. Rev. Lett. 112, 035001 (2014)"
+   ]
+  },
+  {
+   "id": "ex:gatchina-plasmoids",
+   "label": "Gatchina water-discharge plasmoids",
+   "principals": "Egorov, Stepanov et al. (Gatchina)",
+   "years": "2000s",
+   "effect_types": [
+    "P-OPT-PLS-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-KOR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc",
+     "transient"
+    ],
+    "med": "air",
+    "scl": "lab",
+    "per": "decaying"
+   },
+   "e_signature": "E1:D5R4C2P3T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "record_kind": "observation",
+   "note": "Long-lived luminous plasmoids launched from water-surface discharges; reproducible laboratory analog with sub-second lifetimes.",
+   "refs": [
+    "A. I. Egorov, S. I. Stepanov, \"Long-lived plasmoids produced in humid air as analogues of ball lightning,\" Tech. Phys. 47, 1584 (2002) [Zh. Tekh. Fiz. 72(12), 102 (2002)]"
+   ]
+  }
+ ],
+ "doctrines": [
+  {
+   "id": "doc:evo-framework",
+   "label": "EVO interpretive framework",
+   "principals": "Kenneth R. Shoulders (origin); MFMP / Bob Greenyer (contemporary school)",
+   "years": "1987-present",
+   "summary": "Reads discharge and LENR witness marks (boreholes, micro-craters, strike patterns) as signatures of exotic vacuum objects / charge clusters; contemporary open-science analyses extend the reading across the heterodox corpus.",
+   "linked_instances": [
+    "ex:shoulders-ev-clusters",
+    "ex:hutchison-corpus"
+   ],
+   "compilation_confidence": "high",
+   "note": "Doctrine layer of the discharge cluster; the observational records stand separately."
+  }
+ ]
 }
