@@ -3354,8 +3354,10 @@
    "signatures": [
     "S-OFN"
    ],
-   "note": "Free-energy saucer venture; secondary sources report a 1961 securities-fraud conviction. Not verified against a primary source.",
-   "refs": [],
+   "note": "Free-energy saucer venture (OTC-X1, 'Utron' accumulator); a 1959 public demonstration did not take place. Convicted in Oklahoma in 1961 of selling securities without registering them \u2014 a registration offense, not a finding of fraud \u2014 and fined USD 5,000; conviction affirmed on appeal.",
+   "refs": [
+    "Carr v. State, 1961 OK CR 15, 359 P.2d 606 (Okla. Crim. App., 11 Jan 1961), case no. A-12907 \u2014 conviction under 71 O.S.A. \u00a7 53 affirmed."
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
