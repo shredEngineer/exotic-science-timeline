@@ -1258,8 +1258,10 @@
         "S-RDN"
       ],
       "compilation_confidence": "high",
-      "note": "Claimed photographic imaging of distant patients; secondary sources report a 1951 fraud conviction under test conditions. Not verified against a primary source.",
-      "refs": []
+      "note": "Claimed photographic imaging and treatment of distant patients from a blood sample. A 1949 University of Chicago test of the diagnostic device failed: three of the first blood specimens were so badly misread that the remaining seven were not attempted. Convicted in 1951 of introducing a misbranded device into interstate commerce and fined USD 1,000 — a labelling offence under food and drug law, not a fraud finding. A 1963 California grand-theft charge did not come to trial; she died in 1965.",
+      "refs": [
+        "Ralph Lee Smith, 'The Incredible Drown Case', Today's Health (American Medical Association), April 1968 — reproduced at quackwatch.org/chiropractic/hx/drown/."
+      ]
     },
     {
       "id": "ex:delawarr-camera",

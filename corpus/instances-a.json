@@ -2571,8 +2571,10 @@
         "S-DEK",
         "S-WFC"
       ],
-      "note": "Philippine water-car claims; secondary sources report a 2008 estafa conviction. Not verified against a primary source.",
-      "refs": []
+      "note": "Philippine water-car claims; the state science department assessed the device and rejected it. Convicted of estafa in 2008 by the Parañaque City Regional Trial Court over research funds taken from a Taiwanese investor and never applied to the promised prototypes — a misappropriation finding, not a verdict on the device. An appeal was announced; its outcome is not established here.",
+      "refs": [
+        "Allison Lopez, 'Inventor, 82, gets 20 years for estafa', Philippine Daily Inquirer, 20 December 2008 — Paranaque City RTC Branch 257, decision of 9 December 2008, USD 380,000 in damages."
+      ]
     },
     {
       "id": "ex:yull-brown-gas",
