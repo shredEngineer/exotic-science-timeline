@@ -25,6 +25,11 @@ jobs:
         with:
           python-version: '3.12'
 
+      # Publication gate, re-asserted at the surface that actually publishes.
+      # The pinned base passed this upstream; a page must not rely on that alone.
+      - name: No unsourced allegation against a named person
+        run: python3 tools/check-persons.py
+
       - name: Build
         run: python3 tools/build.py
 
