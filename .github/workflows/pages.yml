@@ -33,8 +33,13 @@ jobs:
       - name: Build
         run: python3 tools/build.py
 
+      # enablement: true removes the ordering dependency — without it the job
+      # fails whenever it runs before Pages has been switched on for the repo,
+      # which is every push made during setup.
       - name: Configure Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -51,3 +56,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # A green deploy step is not proof the site serves. Fetch what the world
+      # fetches, and fail if it does not come back.
+      - name: Verify the published site responds
+        run: |
+          url="${{ steps.deployment.outputs.page_url }}"
+          echo "verifying $url"
+          for i in 1 2 3 4 5; do
+            code=$(curl -sS -o /tmp/page.html -w '%{http_code}' --max-time 20 "$url" || echo 000)
+            [ "$code" = "200" ] && break
+            echo "attempt $i: http=$code — retrying"; sleep 10
+          done
+          [ "$code" = "200" ] || { echo "::error::published site returned $code"; exit 1; }
+          grep -q 'const DATA' /tmp/page.html \
+            || { echo "::error::page served but carries no data block"; exit 1; }
+          echo "ok: http=200 and the data block is present"
