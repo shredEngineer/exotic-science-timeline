@@ -176,10 +176,9 @@
         "per": "persistent"
       },
       "e_signature": "E1:D1R2C0P3T3Q0",
-      "epistemotype": "EP-5",
+      "epistemotype": "EP-4",
       "signatures": [
-        "S-SLF",
-        "S-DEK"
+        "S-SLF"
       ],
       "compilation_confidence": "medium",
       "record_kind": "demonstration_claim",
