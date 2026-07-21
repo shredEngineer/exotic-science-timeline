@@ -125,6 +125,13 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .ax.g2{color:hsl(45 85% 60%)} .ax.g3{color:hsl(141 55% 58%)}
 .ax.gx{color:hsl(0 0% 38%);font-style:italic}
 [data-jump]{cursor:pointer}
+a.chip{text-decoration:none}
+a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
+.chip.enum{font-family:var(--font-mono);font-size:.72rem;color:var(--muted-foreground)}
+.chip.role{font-size:.7rem;color:hsl(45 80% 62%);border-color:hsl(45 45% 32%)}
+.chip.ctx{font-size:.72rem;color:hsl(189 70% 62%);border-color:hsl(189 40% 28%)}
+.enumrow{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
+.enumrow .kf{color:var(--muted-foreground);font-size:.78rem;font-family:var(--font-mono);margin-right:.15rem}
 [data-jump]:hover{border-color:var(--primary);color:var(--primary)}
 .ref tr.hit{animation:refhit 2s ease-out}
 @keyframes refhit{0%,35%{background:hsl(21 100% 55% / .2)}100%{background:transparent}}
@@ -133,6 +140,9 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 /* ---------- reference tables (same skin as the record) ---------- */
 .ref{width:100%;border-collapse:separate;border-spacing:0;font-size:.9rem;
   border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card)}
+.capsrc{font-family:var(--font-body);font-weight:400;font-size:.78rem;
+  color:var(--muted-foreground);margin-left:.5rem}
+.capsrc:hover{color:var(--secondary)}
 .ref caption{caption-side:top;text-align:left;font-family:var(--font-heading);font-weight:600;
   font-size:.95rem;color:var(--primary);padding:0 0 .45rem}
 .ref th{background:var(--card-subtle);text-align:left;font-family:var(--font-heading);
@@ -146,6 +156,9 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .prose-card h3{font-family:var(--font-heading);font-weight:600;font-size:.95rem;color:var(--primary);margin:0 0 .4rem}
 .prose-card p{margin:0;font-size:.9rem;color:var(--muted-foreground);overflow-wrap:anywhere}
 .prose-card p strong{color:var(--foreground)}
+.ref.bare{border:0;background:transparent;border-radius:0;font-size:.88rem}
+.ref.bare td{padding:.3rem 0}
+.ref.bare td:first-child{padding-right:1rem;color:var(--muted-foreground)}
 .reftables{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
 
 /* ---------- chart ---------- */
@@ -215,7 +228,9 @@ tr.row.open td.tw .tri{transform:rotate(90deg);color:var(--primary)}
 td.yr{font-family:var(--font-mono);color:var(--secondary);text-align:right;white-space:nowrap}
 td.claim{font-weight:600}
 td.who{color:var(--muted-foreground)}
-.detail td{background:hsl(214 40% 14% / .5);color:hsl(0 0% 85%);font-size:.92rem}
+.detail td{background:hsl(214 40% 14% / .5);color:hsl(0 0% 85%);font-size:.92rem;
+  padding-left:calc(2.2rem + 4.5rem + .7rem)}
+@media(max-width:640px){.detail td{padding-left:.9rem}}
 .detail dl{display:grid;grid-template-columns:max-content 1fr;gap:.35rem 1.1rem;margin:0}
 .detail dt{color:var(--muted-foreground);font-size:.85rem}
 .detail dd{margin:0;overflow-wrap:anywhere}
@@ -298,15 +313,15 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <p class="sec-intro">The grades below describe the <em>documentation</em>, never the truth of a claim. A carefully measured result nobody could reproduce and a vague anecdote look different here, which is the entire point.</p>
 
   <div class="reftables">
-    <table class="ref"><caption>Evidence axes</caption>
+    <table class="ref"><caption>Evidence axes <a class="capsrc" id="cap-ax" href="#">definition ↗</a></caption>
       <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
       <tbody id="axtable"></tbody>
     </table>
-    <table class="ref"><caption>Evidence profiles</caption>
+    <table class="ref"><caption>Evidence profiles <a class="capsrc" id="cap-ep" href="#">definition ↗</a></caption>
       <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
       <tbody id="eptable"></tbody>
     </table>
-    <table class="ref"><caption>Phenomenon classes</caption>
+    <table class="ref"><caption>Phenomenon classes <a class="capsrc" id="cap-lane" href="#">definition ↗</a></caption>
       <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
       <tbody id="lanetable"></tbody>
     </table>
@@ -362,11 +377,12 @@ footer.site .inner{max-width:72rem;margin:0 auto}
       <p>The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</p></div>
     <div class="prose-card"><h3>Named people</h3>
       <p>Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</p></div>
-    <table class="ref"><caption>Licence</caption><tbody>
-      <tr><td>Content and data</td><td>CC BY 4.0</td></tr>
-      <tr><td>Code</td><td>Apache-2.0</td></tr>
-      <tr><td>Attribution</td><td>Dr.-Ing. Paul Wilhelm / Advanced Rediscovery, <em>Exotic Science Timeline</em>, CC BY 4.0</td></tr>
-    </tbody></table>
+    <div class="prose-card"><h3>License</h3>
+      <table class="ref bare"><tbody>
+        <tr><td>Content and data</td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
+        <tr><td>Code</td><td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></td></tr>
+        <tr><td>Attribution</td><td>Dr.-Ing. Paul Wilhelm / <a href="https://advanced-rediscovery.com">Advanced Rediscovery</a>, <em>Exotic Science Timeline</em></td></tr>
+      </tbody></table></div>
   </div>
 </section>
 
@@ -436,6 +452,19 @@ const LANEDESC = {
   DOC:"Theory-first bodies of claim, indexed as their own object type rather than as observations",
   NAR:"Lore and conspiracy complexes, split into documented kernel and added layer",
   SON:"Residual — anything the classes above do not cover"};
+const SPEC="https://github.com/shredEngineer/eqo/blob/main/SPECIFICATION.md";
+const REG = {                       // enum family -> canonical section of the standard
+  P: SPEC+"#part-ii--registry-p-phenomena",
+  M: SPEC+"#part-iii--registry-m-mechanisms",
+  K: SPEC+"#part-iv--registry-k-context-facets",
+  E: SPEC+"#part-v--registry-e-epistemic-axes",
+  S: SPEC+"#part-vi--registry-s-signatures-category-compositions",
+  KIND: "https://github.com/shredEngineer/eqo/blob/main/ADDENDUM-B.md#b2-new-record-field-record_kind",
+  ROLE: SPEC+"#part-iii--registry-m-mechanisms"
+};
+// every structured enum renders as a badge that leads to where it is defined
+const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+href+
+  '" target="_blank" rel="noopener noreferrer"'+(title?' title="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
 const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
   "EP-3":"Lab-contested — measured and disputed","EP-4":"Historical-anecdotal",
   "EP-5":"Orthodox-covered — explained by established physics","EP-0":"Unquantized — not yet assessed"};
@@ -498,6 +527,12 @@ document.getElementById("lanetable").innerHTML =
   [...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)).map(l=>
   '<tr id="lane-'+esc(l)+'"><td><span class="chip lane">'+esc(LANE[l]||l)+
   "</span></td><td>"+esc(LANEDESC[l]||"—")+"</td></tr>").join("");
+
+(function(){
+  const map={"cap-ax":REG.E,"cap-ep":SPEC+"#q4-epistemotypes-named-reference-regions","cap-lane":REG.P};
+  Object.keys(map).forEach(id=>{const a=document.getElementById(id);
+    if(a){a.href=map[id];a.target="_blank";a.rel="noopener noreferrer";}});
+})();
 
 /* ---------- filters ---------- */
 function fill(sel,vals,fmt){const el=document.getElementById(sel);
@@ -592,18 +627,24 @@ function expand(tr){
   add("What is recorded", esc(d.note||""));
   add("Dated as", esc(d.years_raw||d.t_start||""));
   add("Phenomena", (d.effect_types||[]).length
-        ? d.effect_types.map(t=>'<code>'+esc(t)+"</code>").join(" · ") : "");
+        ? '<span class="enumrow">'+d.effect_types.map(t=>pill(t,REG.P,"enum",
+            "Phenomenon leaf — defined in Registry P")).join("")+"</span>" : "");
   add("Mechanisms on record", (d.mechanisms||[]).length
-        ? d.mechanisms.map(m=>'<code>'+esc(m.ref)+"</code> <span style='color:var(--muted-foreground)'>"+
-            esc(m.role)+"</span>").join("<br>") : "");
-  add("Context", d.context ? Object.keys(d.context).map(k=>
-        "<span style='color:var(--muted-foreground)'>"+esc(k)+"</span> "+
-        esc([].concat(d.context[k]).join(", "))).join(" · ") : "");
-  add("Entry type", esc(KIND[d.record_kind]||d.record_kind||""));
+        ? '<span class="enumrow">'+d.mechanisms.map(m=>
+            pill(m.ref,REG.M,"enum","Mechanism — defined in Registry M")+
+            pill(m.role,REG.ROLE,"role","Edge role assigned by the source")).join("")+"</span>" : "");
+  add("Context", d.context
+        ? Object.keys(d.context).map(k=>'<span class="enumrow"><span class="kf">'+esc(k)+"</span>"+
+            [].concat(d.context[k]).map(v=>pill(v,REG.K,"ctx","Context facet — defined in Registry K")).join("")+
+            "</span>").join("") : "");
+  add("Entry type", d.record_kind ? pill(KIND[d.record_kind]||d.record_kind, REG.KIND,"enum",
+        "Record kind — defined in Addendum B") : "");
   add("Patent on file", d.patent_flag===true ? "yes" : (d.patent_flag===false ? "no" : ""));
-  add("Compiler confidence", esc(d.confidence||"")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades");
+  add("Compiler confidence", (d.confidence?'<span class="chip enum">'+esc(d.confidence)+"</span>":"")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades");
   add("References", refs);
-  add("Patterns", (d.signatures||[]).length ? d.signatures.map(esc).join(", ") : "");
+  add("Patterns", (d.signatures||[]).length
+        ? '<span class="enumrow">'+d.signatures.map(sg=>pill(sg,REG.S,"enum",
+            "Signature pattern — defined in Registry S")).join("")+"</span>" : "");
   add("Documented kernel", esc(d.factual_kernel||""));
   add("Added by the narrative", esc(d.lore_layer||""));
   add("Narrative provenance", esc(d.narrative_provenance||""));
@@ -692,7 +733,7 @@ function zoomAt(px,factor){
 }
 svg.addEventListener("wheel",e=>{
   e.preventDefault();
-  // normalise across deltaMode (pixels / lines / pages) and scale the factor by
+  // normalize across deltaMode (pixels / lines / pages) and scale the factor by
   // how far the user actually scrolled — one fixed step per event makes a
   // trackpad flick jump dozens of steps.
   const unit = e.deltaMode===1 ? 16 : e.deltaMode===2 ? 100 : 1;

@@ -10,7 +10,7 @@ Published by [**Advanced Rediscovery**](https://advanced-rediscovery.com). Live 
 
 ## What this shows
 
-Each mark is a dated record. Its position is time, its lane is the class of effect claimed, its colour is the region of the evidence lattice it occupies — a documentation profile, deliberately chosen to carry no valuation. The arcs are **resolution arcs**: they connect a claim to the examination that later tested it.
+Each mark is a dated record. Its position is time, its lane is the class of effect claimed, its color is the region of the evidence lattice it occupies — a documentation profile, deliberately chosen to carry no valuation. The arcs are **resolution arcs**: they connect a claim to the examination that later tested it.
 
 Two things fall out of the record and are worth stating plainly. The median interval between a claim and its first documented adversarial examination is **six years**. And claims of devices that run without input **recur across the entire nine centuries** — from a twelfth-century mercury wheel to the present, in thirty-seven records with long silences between them — which is a statement about people rather than about physics.
 
@@ -40,7 +40,7 @@ python3 tools/build.py              # -> dist/index.html
 
 The output is a single self-contained file: all data inlined, no runtime fetches, no external dependencies. It works offline and can be archived by saving one file.
 
-## Licence
+## License
 
 Content and data: **CC BY 4.0** (`LICENSE`). Code — the build tool and CI: **Apache-2.0** (`LICENSE-CODE`).
 
