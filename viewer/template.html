@@ -130,6 +130,11 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .ref td{padding:.45rem .75rem;border-bottom:1px solid hsl(214 30% 18% / .55);vertical-align:top}
 .ref tr:last-child td{border-bottom:0}
 .ref td:first-child{white-space:nowrap;width:1%}
+.ref td[colspan]{white-space:normal;width:auto}
+.prose-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.15rem}
+.prose-card h3{font-family:var(--font-heading);font-weight:600;font-size:.95rem;color:var(--primary);margin:0 0 .4rem}
+.prose-card p{margin:0;font-size:.9rem;color:var(--muted-foreground);overflow-wrap:anywhere}
+.prose-card p strong{color:var(--foreground)}
 .reftables{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
 
 /* ---------- chart ---------- */
@@ -256,14 +261,12 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 </div>
 
 <section id="method">
-  <div class="sec-head"><h2>The method, before the data</h2>
-    <a class="srclink" href="https://github.com/shredEngineer/eqo">Standard repository ↗</a></div>
+  <div class="sec-head"><h2>The method, before the data</h2></div>
 
   <div class="infobox">
     <span class="k">EQO</span>
     <div>
-      <p><strong>Epistemic Quantization of Observables</strong> is the open classification standard this record is built on. It gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases use the same vocabulary, and the standard forbids itself a credibility score: it assigns coordinates, never verdicts.</p>
-      <p><em>Quantization</em> here means discretization onto a finite lattice, as in signal processing — not quantum mechanics; an <em>observable</em> is a documented observation, not an operator.</p>
+      <p><a href="https://github.com/shredEngineer/eqo"><strong>Epistemic Quantization of Observables</strong></a> is the open classification standard this record is built on. It gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases use the same vocabulary, and the standard forbids itself a credibility score: it assigns coordinates, never verdicts.</p>
     </div>
   </div>
 
@@ -327,12 +330,10 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 <section id="about">
   <div class="sec-head"><h2>About this record</h2></div>
   <div class="reftables">
-    <table class="ref"><caption>Provenance, stated up front</caption><tbody>
-      <tr><td colspan="2">The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</td></tr>
-    </tbody></table>
-    <table class="ref"><caption>Named people</caption><tbody>
-      <tr><td colspan="2">Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</td></tr>
-    </tbody></table>
+    <div class="prose-card"><h3>Provenance, stated up front</h3>
+      <p>The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</p></div>
+    <div class="prose-card"><h3>Named people</h3>
+      <p>Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</p></div>
     <table class="ref"><caption>Licence</caption><tbody>
       <tr><td>Content and data</td><td>CC BY 4.0</td></tr>
       <tr><td>Code</td><td>Apache-2.0</td></tr>
@@ -375,7 +376,6 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <span>·</span>
     <span>No cookies, no tracking on this page</span>
   </div>
-  <p class="pin" id="pin"></p>
 </div></footer>
 
 <script>
@@ -420,9 +420,9 @@ addEventListener("scroll",()=>hdr.classList.toggle("scrolled",scrollY>0),{passiv
   ];
   document.getElementById("stats").innerHTML =
     items.map(([v,l])=>'<div class="stat"><b>'+v+'</b><span>'+esc(l)+"</span></div>").join("");
-  document.getElementById("pin").textContent =
-    (DATA.renders_corpus||"corpus")+
-    (DATA.enrichment_attached ? " · "+DATA.enrichment_attached+" entries enriched" : "");
+  const pinEl=document.getElementById("pin");
+  if(pinEl) pinEl.textContent = DATA.enrichment_attached
+    ? DATA.enrichment_attached+" entries enriched" : "";
 })();
 
 /* ---------- reference tables use the record's own badges ---------- */
