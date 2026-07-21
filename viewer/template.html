@@ -148,6 +148,7 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .chip.ctx{font-size:.72rem;color:hsl(189 70% 62%);border-color:hsl(189 40% 28%)}
 .chip.key{font-family:var(--font-mono);font-size:.7rem;color:var(--muted-foreground);
   background:transparent;border-style:dashed}
+.chip.na{font-size:.72rem;color:var(--muted-foreground);font-style:italic;border-style:dashed}
 .enumrow{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
 [data-jump]:hover{border-color:var(--primary);color:var(--primary)}
 .ref tr.hit{animation:refhit 2s ease-out}
@@ -496,11 +497,14 @@ const REG = {                       // enum family -> canonical section of the s
   E: SPEC+"#part-v--registry-e-epistemic-axes",
   S: SPEC+"#part-vi--registry-s-signatures-category-compositions",
   KIND: "https://github.com/shredEngineer/eqo/blob/main/ADDENDUM-B.md#b2-new-record-field-record_kind",
-  ROLE: SPEC+"#part-iii--registry-m-mechanisms"
+  ROLE: SPEC+"#part-iii--registry-m-mechanisms",
+  REL: SPEC+"#4-architecture"
 };
 // every structured enum renders as a badge that leads to where it is defined
 const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+href+
   '" target="_blank" rel="noopener noreferrer"'+(title?' title="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
+const ROLE = {claimed:"claimed",discussed:"discussed",excluded_per_source:"excluded by the source"};
+const RELT = {contradicts:"contradicts",replicates:"replicates",confirms_per_source:"confirmed by the source"};
 const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuum behaviour"],
   scl:["K-SCL","Scale"],per:["K-PER","Persistence"],mod:["K-MOD","Documented modulators"]};
 const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
@@ -666,7 +670,10 @@ function expand(tr){
   tr.classList.add("open");
   const rel=(DATA.arcs||[]).filter(a=>a.source===d.id||a.target===d.id);
   const relHtml=rel.length?rel.map(a=>{const oid=a.source===d.id?a.target:a.source;
-    const o=ev.find(x=>x.id===oid); return esc(a.type)+" → "+esc(o?o.label:oid);}).join("<br>"):"none recorded";
+    const o=ev.find(x=>x.id===oid);
+    return '<span class="enumrow">'+pill(RELT[a.type]||a.type,REG.REL,"role",
+      "Observation reference — defined in the specification")+esc(o?o.label:oid)+"</span>";
+  }).join(""):"none recorded";
   const refs=(d.refs&&d.refs.length)?d.refs.map(esc).join("<br>"):"none cited";
   const row=document.createElement("tr");
   row.className="detail";
@@ -680,12 +687,14 @@ function expand(tr){
   add("Mechanisms on record", (d.mechanisms||[]).length
         ? '<span class="enumrow">'+d.mechanisms.map(m=>
             pill(m.ref,REG.M,"enum","Mechanism — defined in Registry M")+
-            pill(m.role,REG.ROLE,"role","Edge role assigned by the source")).join("")+"</span>" : "");
+            pill(ROLE[m.role]||m.role,REG.ROLE,"role","Edge role — how the source relates this mechanism")).join("")+"</span>" : "");
   add("Context", d.context
         ? Object.keys(d.context).map(k=>{
             const f=KFACET[k]||[k.toUpperCase(),k];
             return '<span class="enumrow">'+pill(f[0],REG.K,"key",f[1]+" — Registry K")+
-              [].concat(d.context[k]).map(v=>pill(v,REG.K,"ctx",f[1]+" value — Registry K")).join("")+
+              [].concat(d.context[k]).map(v=>v==="x"
+                  ? '<span class="chip na" title="Registry K default — the facet was not assessed">not assessed</span>'
+                  : pill(v,REG.K,"ctx",f[1]+" value — Registry K")).join("")+
               "</span>";
           }).join("") : "");
   add("Entry type", d.record_kind ? pill(KIND[d.record_kind]||d.record_kind, REG.KIND,"enum",
