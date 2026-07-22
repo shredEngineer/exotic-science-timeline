@@ -115,14 +115,6 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .sec-head .srclink:hover{color:var(--secondary)}
 .sec-intro{color:var(--muted-foreground);max-width:78ch;margin:.4rem 0 1.4rem}
 
-/* method infobox */
-.infobox{display:flex;gap:1rem;align-items:flex-start;background:var(--card);
-  border:1px solid var(--border);border-left:3px solid var(--primary);
-  border-radius:var(--radius);padding:1rem 1.15rem;margin:0 0 1.6rem}
-.infobox .k{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--primary);padding-top:.2rem;white-space:nowrap}
-.infobox p{margin:0;font-size:.94rem;color:hsl(0 0% 84%);max-width:82ch}
-.infobox p + p{margin-top:.4rem}
 
 /* ---------- shared badges (one language, table + legend) ---------- */
 .chip{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.75rem;
@@ -433,12 +425,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <div class="sec-head"><h2>Epistemic Quantization of Observables</h2>
     <a class="srclink" href="https://github.com/shredEngineer/eqo">The standard ↗</a></div>
 
-  <div class="infobox">
-    <span class="k">EQO</span>
-    <div>
-      <p><a href="https://github.com/shredEngineer/eqo"><strong>Epistemic Quantization of Observables</strong></a> is the open classification standard this record is built on. It gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases share one vocabulary, and the standard forbids itself a credibility score — it assigns coordinates, never verdicts.</p>
-    </div>
-  </div>
+  <p class="sec-intro"><a href="https://github.com/shredEngineer/eqo"><strong>EQO</strong></a> — the open classification standard this record is built on — gives every documented observation a phenomenon class, a physical context, the explanations on record for it, and a six-axis coordinate describing its evidence. Orthodox and heterodox cases share one vocabulary, and the standard forbids itself a credibility score: it assigns coordinates, never verdicts.</p>
 
   <div class="reftables">
     <table class="ref"><caption>Evidence axes <a class="capsrc" id="cap-ax" href="#">definition ↗</a></caption>
