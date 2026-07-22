@@ -794,6 +794,15 @@ function apply(){
       if(hay.indexOf(q)===-1) return false;}
     return true;
   });
+  // Filter state lives in the URL (shareable/bookmarkable), written without a
+  // reload; absent params keep the address clean.
+  try{
+    const usp=new URLSearchParams();
+    if(q) usp.set("q",document.getElementById("q").value.trim());
+    if(fl) usp.set("ph",fl); if(fe) usp.set("ep",fe); if(fk) usp.set("kind",fk);
+    const qs=usp.toString();
+    history.replaceState(null,"",qs?("?"+qs):location.pathname);
+  }catch(_){/* non-http contexts */}
   list.sort((a,b)=> sortKey==="t_start"
     ? ((a.t_start??0)-(b.t_start??0))*sortDir
     : String(a[sortKey]??"").localeCompare(String(b[sortKey]??""))*sortDir);
@@ -811,6 +820,15 @@ document.querySelectorAll("th.sortable").forEach(th=>{
     apply();
   });
 });
+// Restore filter state from the URL before the first render (options exist by now).
+(function(){
+  try{
+    const u=new URLSearchParams(location.search);
+    const qv=u.get("q"); if(qv) document.getElementById("q").value=qv;
+    const map={ph:"fLane",ep:"fEp",kind:"fKind"};
+    for(const k in map){ const v=u.get(k); if(v) document.getElementById(map[k]).value=v; }
+  }catch(_){/* non-http contexts */}
+})();
 ["q","fLane","fEp","fKind"].forEach(id=>
   document.getElementById(id).addEventListener(id==="q"?"input":"change",apply));
 document.getElementById("reset").addEventListener("click",()=>{
