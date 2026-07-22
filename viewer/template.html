@@ -846,9 +846,10 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 document.getElementById("sigread").innerHTML =
   'Every record carries one compact <strong>evidence coordinate</strong>, e.g. '+
   '<span class="mono" style="color:var(--secondary)">E1:</span>'+axes("E1:D7R3C2P1T4Q3")+'. '+
-  '<span class="mono">E1</span> names the version of the axis set. Then come six pairs, always in the order '+
-  'D·R·C·P·T·Q: the <strong>letter</strong> is the axis, the <strong>digit</strong> is the grade on that axis\'s ladder. '+
-  'Higher means <em>better documented</em> — never "more true". An <span class="mono">x</span> means the axis was not '+
+  '<span class="mono" style="color:var(--secondary)">E1</span> names the version of the axis set. Then come six pairs, always in the order '+
+  '<span class="axes">'+"DRCPTQ".split("").map(k=>'<span class="ax">'+k+"</span>").join("")+'</span>'+
+  ': the <strong>letter</strong> is the axis, the <strong>digit</strong> is the grade on that axis\'s ladder. '+
+  'Higher means <em>better documented</em> — never "more true". An <span class="axes"><span class="ax gx">x</span></span> means the axis was not '+
   'assessed: missing data, not a zero.';
 document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
   // row id lets a badge in the record jump straight to its explanation;
