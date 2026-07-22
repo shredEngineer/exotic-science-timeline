@@ -89,7 +89,7 @@ header.site.scrolled .hbrand span{font-size:.75rem}
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .lede{margin-top:1.15rem;max-width:74ch;font-size:clamp(1rem,1.6vw,1.15rem);color:hsl(0 0% 88%)}
 .lede strong{color:var(--foreground)}
-.note{margin-top:1rem;max-width:70ch;color:var(--muted-foreground);font-size:.95rem}
+.note{margin-top:1rem;max-width:82ch;color:var(--muted-foreground);font-size:.95rem}
 
 .jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
 .jump a{display:inline-flex;align-items:center;border-radius:999px;background:var(--primary);
@@ -329,7 +329,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 @media(max-width:640px){.fsocial a span{display:none}}
 .fdisclaim{max-width:42rem;margin:0 auto 1.5rem;text-align:center;font-size:.75rem;
   line-height:1.6;color:hsl(210 15% 60% / .55)}
-#dataver a{font-family:var(--font-mono)}   /* the commit hash reads as code inside the About card */
+#dataver a{font-family:var(--font-mono)}   /* the commit hash reads as code inside the Metadata card */
+.metanote{margin:.6rem 0 0;font-size:.8rem;color:var(--muted-foreground)}
 .flegal{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;
   font-size:.75rem;color:var(--dim)}
 .flegal a{color:var(--dim);transition:color .2s}
@@ -452,14 +453,14 @@ footer.site .inner{max-width:72rem;margin:0 auto}
       <p>The corpus was compiled with the assistance of a large language model from publicly documented claims. Every record carries its own documentation and provenance grades, plus a separate confidence field for the compiler's own recall. <strong>Verify against primary sources before citing.</strong> This is not a caveat bolted on at the end — the instrument exists to make exactly this kind of grading explicit, and exempting itself would be incoherent.</p></div>
     <div class="prose-card"><h3>Named people</h3>
       <p>Historical figures appear by the record only, with observation kept separate from interpretation. Where a legal outcome is reported but could not be checked against a primary source, the entry says so rather than asserting it. A build fails automatically if any entry alleges wrongdoing by a named person without a source.</p></div>
-    <div class="prose-card"><h3>License</h3>
+    <div class="prose-card"><h3>Metadata</h3>
       <table class="ref bare"><tbody>
         <tr><td>Content and data</td><td><a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></td></tr>
         <tr><td>Code</td><td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></td></tr>
         <tr><td>Attribution</td><td>Dr.-Ing. Paul Wilhelm / <a href="https://advanced-rediscovery.com">Advanced Rediscovery</a>, <em>Exotic Science Timeline</em></td></tr>
-      </tbody></table></div>
-    <div class="prose-card"><h3>Data version</h3>
-      <p id="dataver"></p></div>
+        <tr><td>Data version</td><td id="dataver"></td></tr>
+      </tbody></table>
+      <p class="metanote">The corpus is append-only; the linked commit pins exactly the data this page showed.</p></div>
   </div>
 </section>
 
@@ -635,10 +636,8 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   const dv=document.getElementById("dataver");
   if(dv && DATA.data_commit){
     const sha=DATA.data_commit, short=sha.slice(0,7), date=DATA.data_commit_date||"";
-    dv.innerHTML="Built from corpus commit "+
-      '<a href="https://github.com/shredEngineer/exotic-science-timeline/commit/'+sha+
-      '" target="_blank" rel="noopener noreferrer">'+short+"</a>"+
-      (date?" ("+date+")":"")+". The corpus is append-only, so this page updates as records are added — the linked commit pins exactly the data it showed.";
+    dv.innerHTML='<a href="https://github.com/shredEngineer/exotic-science-timeline/commit/'+sha+
+      '" target="_blank" rel="noopener noreferrer">'+short+"</a>"+(date?" · "+date:"");
   }
   const pinEl=document.getElementById("pin");
   if(pinEl) pinEl.textContent = DATA.enrichment_attached
