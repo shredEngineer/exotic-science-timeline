@@ -210,6 +210,8 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
   margin:.5rem .2rem 0;font-size:.78rem;color:var(--muted-foreground)}
 .chartlegend .grp{display:flex;flex-wrap:wrap;gap:.3rem .7rem;align-items:center}
 .chartlegend .sw{display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap}
+.chartlegend a.sw{color:inherit;text-decoration:none}
+.chartlegend a.sw:hover{color:var(--foreground)}
 .chartlegend .dotsw{width:.6rem;height:.6rem;border-radius:50%;display:inline-block}
 .chartlegend .arcsw{width:1.1rem;height:0;border-top:2px solid;display:inline-block;border-radius:2px}
 .chartlegend .sep{opacity:.4}
@@ -536,11 +538,15 @@ const REG = {                       // enum family -> canonical section of the s
   S: SPEC+"#part-vi--registry-s-signatures-category-compositions",
   KIND: "https://github.com/shredEngineer/eqo/blob/main/ADDENDUM-B.md#b2-new-record-field-record_kind",
   ROLE: SPEC+"#part-iii--registry-m-mechanisms",
-  REL: SPEC+"#4-architecture"
+  REL: SPEC+"#4-architecture",
+  EP: SPEC+"#q4-epistemotypes-named-reference-regions"
 };
 // every structured enum renders as a badge that leads to where it is defined
 const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+href+
   '" target="_blank" rel="noopener noreferrer"'+(title?' data-tip="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
+// a standard enum shown anywhere on the page is a linked badge to its definition (never bare text)
+const epChip=ep=>'<a class="chip ep '+(ep||"EP-0").replace("-","").toLowerCase()+'" href="'+REG.EP+
+  '" target="_blank" rel="noopener noreferrer" data-tip="'+esc((ep||"")+" — "+(EPDESC[ep]||"not assessed"))+'">'+esc(ep||"—")+"</a>";
 const ROLE = {claimed:"claimed",discussed:"discussed",excluded_per_source:"excluded by the source"};
 const RELT = {contradicts:"contradicts",replicates:"replicates",confirms_per_source:"confirmed by the source"};
 const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuum behaviour"],
@@ -579,7 +585,7 @@ function dotCard(e){
   h+='<dt>Dated</dt><dd>'+esc(e.years_raw||e.years||e.t_start||"—")+'</dd>';
   if(e.principals) h+='<dt>Who</dt><dd>'+esc(e.principals)+'</dd>';
   h+='<dt>Class</dt><dd>'+esc(lanes)+'</dd>';
-  h+='<dt>Profile</dt><dd>'+esc(e.epistemotype||"—")+' — '+esc(epd)+'</dd>';
+  h+='<dt>Profile</dt><dd>'+epChip(e.epistemotype)+' — '+esc(epd)+'</dd>';
   if(mech) h+='<dt>Mechanisms</dt><dd>'+mech+' on record</dd>';
   h+='</dl>';
   if(e.e_signature) h+='<div class="sig">'+esc(e.e_signature)+'</div>';
@@ -643,8 +649,9 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 (function(){
   const el=document.getElementById("chartlegend"); if(!el) return;
   const eps=["EP-1","EP-2","EP-3","EP-4","EP-5","EP-0"];
-  const dots=eps.map(k=>'<span class="sw" data-tip="'+esc(k+" — "+(EPDESC[k]||""))+
-    '"><span class="dotsw" style="background:'+EPC[k]+'"></span>'+esc(k)+"</span>").join("");
+  // the EP codes are standard enums → each swatch is a link to the epistemotype definition
+  const dots=eps.map(k=>'<a class="sw" href="'+REG.EP+'" target="_blank" rel="noopener noreferrer" data-tip="'+esc(k+" — "+(EPDESC[k]||""))+
+    '"><span class="dotsw" style="background:'+EPC[k]+'"></span>'+esc(k)+"</a>").join("");
   el.innerHTML=
     '<span class="grp"><span style="color:var(--foreground)">Dot colour · evidence profile:</span>'+dots+"</span>"+
     '<span class="sep">|</span>'+
@@ -681,15 +688,16 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
       "while "+a.secondhand+" rest on a single or second-hand account. The grade records that gap rather than hiding it."],
     ["b:"+(dd?dd[0]+"s":"—"), (dd?"The "+dd[0]+"s hold the most records of any decade — "+dd[1]+". ":"")+
       "Density rises toward the present, as cheaper instruments and faster publishing leave more of a trail — not necessarily as more happened."],
-    ["b:EP-1", "The commonest evidence profile is EP-1: a solitary anomaly, one source and no controls ("+ep1+" records). "+
+    ["b:"+epChip("EP-1"), "The commonest evidence profile is "+epChip("EP-1")+": a solitary anomaly, one source and no controls ("+ep1+" records). "+
       "It marks something documented cleanly enough to state, not something established."],
   ];
   el.innerHTML=
     '<h3>What the record shows</h3>'+
     '<p class="sub">Which effects fill the record, how well they are evidenced, and how rarely they are ever checked.</p>'+
     '<div class="classbars">'+bars+"</div>"+
+    // b and p are author-authored HTML (may carry a linked enum badge) — never user data, so not escaped
     '<div class="readings">'+readings.map(([b,p])=>
-      '<div class="reading"><b>'+esc(b.slice(2))+"</b><p>"+esc(p)+"</p></div>").join("")+"</div>";
+      '<div class="reading"><b>'+b.slice(2)+"</b><p>"+p+"</p></div>").join("")+"</div>";
   // a class bar filters the table to that phenomenon
   el.querySelectorAll("a.cn[data-lane]").forEach(x=>x.addEventListener("click",e=>{
     const f=document.getElementById("fLane"); if(f){ f.value=x.dataset.lane; apply(); }
