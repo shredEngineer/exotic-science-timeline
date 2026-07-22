@@ -674,7 +674,7 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
       '<span class="track"><span class="fill" style="width:'+pct+'%"></span></span>'+
       '<span class="cv">'+v+"</span>";
   }).join("");
-  const ep1=(a.by_ep.find(x=>x[0]==="EP-1")||[])[1]||0;
+  const topEp=a.by_ep[0];       // [code, count] — by_ep is sorted most-common-first, so [0] IS the commonest
   const dd=a.densest_decade;
   const readings=[
     ["b:"+top[1], laneChip(top[0])+" and "+laneChip(top2[0])+
@@ -689,8 +689,8 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
       "while "+a.secondhand+" rest on a single or second-hand account. The grade records that gap rather than hiding it."],
     ["b:"+(dd?dd[0]+"s":"—"), (dd?"The "+dd[0]+"s hold the most records of any decade — "+dd[1]+". ":"")+
       "Density rises toward the present, as cheaper instruments and faster publishing leave more of a trail — not necessarily as more happened."],
-    ["b:"+ep1, "The commonest evidence profile is "+epChip("EP-1")+" — a solitary anomaly, one source and no controls. "+
-      "It marks something documented cleanly enough to state, not something established."],
+    ["b:"+topEp[1], "The commonest evidence profile is "+epChip(topEp[0])+": "+EPDESC[topEp[0]]+". "+
+      "That is a statement about how the record is documented, not about what is established."],
   ];
   el.innerHTML=
     '<h3>What the record shows</h3>'+
