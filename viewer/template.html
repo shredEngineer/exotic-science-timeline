@@ -223,13 +223,16 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .chartlegend .sep{opacity:.4}
 /* structural dashboard */
 .dash{margin:1.4rem 0 .2rem}
-.dash h3{font-size:1.05rem;margin:0 0 .2rem}
-.dash .sub{color:var(--muted-foreground);font-size:.85rem;margin:0 0 1rem}
+/* one block-subheading pattern shared by the chart, the dashboard and the table */
+.blockhead{margin:1.7rem 0 .7rem}
+.blockhead h3,.dash h3{font-size:1.05rem;margin:0 0 .2rem}
+.blockhead .sub,.dash .sub{color:var(--muted-foreground);font-size:.85rem;margin:0 0 1rem}
 .classbars{display:grid;grid-template-columns:auto 1fr auto;gap:.28rem .7rem;align-items:center;
   margin:0 0 1.2rem;font-size:.82rem}
 .classbars .cn{color:var(--foreground);white-space:nowrap}
-.classbars .track{background:var(--card-subtle);border-radius:999px;height:.62rem;overflow:hidden}
-.classbars .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--secondary-muted),var(--secondary))}
+.classbars .track{display:block;background:var(--card-subtle);border-radius:999px;height:.62rem;overflow:hidden}
+/* the fill is a span; without display:block an inline box ignores width/height and renders empty */
+.classbars .fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--secondary-muted),var(--secondary))}
 .classbars .cv{color:var(--muted-foreground);font-variant-numeric:tabular-nums;text-align:right}
 .classbars a.cn:hover{color:var(--primary)}
 .readings{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.8rem}
@@ -332,9 +335,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 @media(max-width:640px){.fsocial a span{display:none}}
 .fdisclaim{max-width:42rem;margin:0 auto 1.5rem;text-align:center;font-size:.75rem;
   line-height:1.6;color:hsl(210 15% 60% / .55)}
-.dataver{text-align:center;font-size:.78rem;color:var(--dim);margin:0 0 1rem}
-.dataver a{font-family:var(--font-mono);color:var(--dim)}
-.dataver a:hover{color:#00D9FF}
+#dataver a{font-family:var(--font-mono)}   /* the commit hash reads as code inside the About card */
 .flegal{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;
   font-size:.75rem;color:var(--dim)}
 .flegal a{color:var(--dim);transition:color .2s}
@@ -364,7 +365,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 <div class="hero">
   <h1>Nine centuries of <span class="nb"><span class="grad">anomaly claims</span>,</span> graded by evidence.</h1>
   <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports, and of <strong>how well each one was documented</strong>.</p>
-  <p class="note">It takes no position on whether any effect is real. Every entry is graded on six ordered axes by <a href="https://github.com/shredEngineer/eqo"><strong>EQO</strong></a>, an open standard that classifies what was observed and grades how well it is documented — orthodox and heterodox cases in one vocabulary. It assigns coordinates, never verdicts.</p>
+  <p class="note">It takes no position on whether any effect is real. Every entry is graded on six ordered axes by <a href="https://github.com/shredEngineer/eqo"><strong>EQO</strong></a>, an open standard that puts orthodox and heterodox cases in one vocabulary and forbids itself a credibility score — it assigns coordinates, never verdicts.</p>
   <div class="stats" id="stats"></div>
   <nav class="jump" aria-label="On this page">
     <a href="#record">The timeline</a>
@@ -377,6 +378,10 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   <div class="sec-head"><h2>Exotic Science Timeline</h2>
     <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline">Data and build ↗</a></div>
 
+  <div class="blockhead">
+    <h3>Nine centuries at a glance</h3>
+    <p class="sub">One mark per record, across date and effect class.</p>
+  </div>
 
   <div class="chartbox">
     <div class="charttools">
@@ -390,6 +395,11 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   </div>
 
   <div class="dash" id="dash"></div>
+
+  <div class="blockhead">
+    <h3>The full record</h3>
+    <p class="sub">Open any row for its full evidence coordinate, mechanisms and sources.</p>
+  </div>
 
   <div class="controls">
     <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off">
@@ -430,8 +440,6 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     </div>
   </div>
 
-  <p class="sec-intro">Every badge in the record links to the row below that defines it.</p>
-
   <div class="reftables">
     <table class="ref"><caption>Evidence axes <a class="capsrc" id="cap-ax" href="#">definition ↗</a></caption>
       <thead><tr><th>Badge</th><th>What it means</th></tr></thead>
@@ -461,6 +469,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
         <tr><td>Code</td><td><a href="https://www.apache.org/licenses/LICENSE-2.0">Apache-2.0</a></td></tr>
         <tr><td>Attribution</td><td>Dr.-Ing. Paul Wilhelm / <a href="https://advanced-rediscovery.com">Advanced Rediscovery</a>, <em>Exotic Science Timeline</em></td></tr>
       </tbody></table></div>
+    <div class="prose-card"><h3>Data version</h3>
+      <p id="dataver"></p></div>
   </div>
 </section>
 
@@ -490,8 +500,6 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   </div>
 
   <p class="fdisclaim">This page catalogues claims made by other people and grades how well each one is documented. It endorses none of them. Where a record carries a citation, the citation is given; where it does not, its documentation grade says so — that absence is a finding, not an omission. Nothing here should be taken as engineering specification for experimental replication.</p>
-
-  <p class="dataver" id="dataver"></p>
 
   <div class="flegal">
     <a href="https://advanced-rediscovery.com/legal-notice">Legal Notice</a>
@@ -634,10 +642,10 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   const dv=document.getElementById("dataver");
   if(dv && DATA.data_commit){
     const sha=DATA.data_commit, short=sha.slice(0,7), date=DATA.data_commit_date||"";
-    dv.innerHTML="This page was built from data version "+
+    dv.innerHTML="Built from corpus commit "+
       '<a href="https://github.com/shredEngineer/exotic-science-timeline/commit/'+sha+
       '" target="_blank" rel="noopener noreferrer">'+short+"</a>"+
-      (date?" of "+date:"")+". The record is append-only and changes over time.";
+      (date?" ("+date+")":"")+". The corpus is append-only, so this page updates as records are added — the linked commit pins exactly the data it showed.";
   }
   const pinEl=document.getElementById("pin");
   if(pinEl) pinEl.textContent = DATA.enrichment_attached
@@ -691,7 +699,7 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   ];
   el.innerHTML=
     '<h3>What the record shows</h3>'+
-    '<p class="sub">Every figure below is recomputed from the '+N+' documented reports — it moves when the corpus does.</p>'+
+    '<p class="sub">Which effects fill the record, how well they are evidenced, and how rarely they are ever checked.</p>'+
     '<div class="classbars">'+bars+"</div>"+
     '<div class="readings">'+readings.map(([b,p])=>
       '<div class="reading"><b>'+esc(b.slice(2))+"</b><p>"+esc(p)+"</p></div>").join("")+"</div>";
