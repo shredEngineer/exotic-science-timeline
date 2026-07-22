@@ -76,7 +76,19 @@ def main() -> int:
     data["data_commit"] = git("rev-parse", "HEAD")
     data["data_commit_date"] = git("log", "-1", "--format=%cs")
 
-    html = TEMPLATE.read_text().replace("__DATA__", json.dumps(data, ensure_ascii=False))
+    # Span-derived framing facts are templated from the data, never hand-written,
+    # so the prose and the meta tags can never drift from the corpus's actual span.
+    span = data["stats"].get("data_span") or [None, None]
+    start, end = span[0], span[1]
+    WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven",
+             "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"]
+    n = round((end - start) / 100) if (start and end) else 0
+    centuries = WORDS[n].capitalize() if 0 <= n < len(WORDS) else str(n)
+
+    html = (TEMPLATE.read_text()
+            .replace("__DATA__", json.dumps(data, ensure_ascii=False))
+            .replace("__SPAN_START__", str(start))
+            .replace("__CENTURIES_CAP__", centuries))
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(html)
 

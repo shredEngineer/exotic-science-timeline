@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exotic Science Timeline — Nine Centuries of Anomaly Claims, Graded by Evidence</title>
-<meta name="description" content="A searchable record of documented claims about anomalous energy, propulsion, gravity and materials — from 1150 to today. Every entry graded on six evidence axes. Claims, not verdicts.">
+<title>Exotic Science Timeline — __CENTURIES_CAP__ Centuries of Anomaly Claims, Graded by Evidence</title>
+<meta name="description" content="A searchable record of documented claims about anomalous energy, propulsion, gravity and materials — from __SPAN_START__ to today. Every entry graded on six evidence axes. Claims, not verdicts.">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:title" content="Exotic Science Timeline">
-<meta property="og:description" content="Nine centuries of documented anomaly claims, graded on six evidence axes.">
+<meta property="og:description" content="__CENTURIES_CAP__ centuries of documented anomaly claims, graded on six evidence axes.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://timeline.advanced-rediscovery.com/assets/apple-touch-icon.png">
 <meta name="twitter:card" content="summary">
@@ -223,7 +223,7 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .blockhead .sub,.dash .sub{color:var(--muted-foreground);font-size:.85rem;margin:0 0 1rem}
 .classbars{display:grid;grid-template-columns:auto 1fr auto;gap:.28rem .7rem;align-items:center;
   margin:0 0 1.2rem;font-size:.82rem}
-.classbars .cn{color:var(--foreground);white-space:nowrap}
+.classbars .cn{white-space:nowrap;justify-self:start}   /* lane chip provides its own colour */
 .classbars .track{display:block;background:var(--card-subtle);border-radius:999px;height:.62rem;overflow:hidden}
 /* the fill is a span; without display:block an inline box ignores width/height and renders empty */
 .classbars .fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--secondary-muted),var(--secondary))}
@@ -358,8 +358,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 <div class="wrap">
 
 <div class="hero">
-  <h1>Nine centuries of <span class="nb"><span class="grad">anomaly claims</span>,</span> graded by evidence.</h1>
-  <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since 1150</strong>. This is the record of those reports, and of <strong>how well each one was documented</strong>.</p>
+  <h1>__CENTURIES_CAP__ centuries of <span class="nb"><span class="grad">anomaly claims</span>,</span> graded by evidence.</h1>
+  <p class="lede">People have been reporting machines that run without fuel, weights that change on a scale, and heat that no chemistry accounts for — <strong>since __SPAN_START__</strong>. This is the record of those reports, and of <strong>how well each one was documented</strong>.</p>
   <p class="note">It takes no position on whether any effect is real. Every entry is graded on six ordered axes by <a href="https://github.com/shredEngineer/eqo"><strong>EQO</strong></a>, an open standard that puts orthodox and heterodox cases in one vocabulary and forbids itself a credibility score — it assigns coordinates, never verdicts.</p>
   <div class="stats" id="stats"></div>
   <nav class="jump" aria-label="On this page">
@@ -374,7 +374,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline">Data and build ↗</a></div>
 
   <div class="blockhead">
-    <h3>Nine centuries at a glance</h3>
+    <h3>__CENTURIES_CAP__ centuries at a glance</h3>
     <p class="sub">One mark per record, across date and effect class.</p>
   </div>
 
@@ -548,6 +548,7 @@ const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+hre
 // a standard enum shown anywhere on the page is a linked badge to its definition (never bare text)
 const epChip=ep=>'<a class="chip ep '+(ep||"EP-0").replace("-","").toLowerCase()+'" href="'+REG.EP+
   '" target="_blank" rel="noopener noreferrer" data-tip="'+esc((ep||"")+" — "+(EPDESC[ep]||"not assessed"))+'">'+esc(ep||"—")+"</a>";
+const laneChip=k=>pill(LANE[k]||k, REG.P, "lane", (LANE[k]||k)+" — "+(LANEDESC[k]||""));
 const ROLE = {claimed:"claimed",discussed:"discussed",excluded_per_source:"excluded by the source"};
 const RELT = {contradicts:"contradicts",replicates:"replicates",confirms_per_source:"confirmed by the source"};
 const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuum behaviour"],
@@ -668,16 +669,17 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   const max=top[1];
   const bars=lanes.map(([k,v])=>{
     const nm=LANE[k]||k, pct=(v/max*100).toFixed(1);
-    return '<a class="cn" href="#record" data-lane="'+esc(k)+'" data-tip="'+esc(nm+" — "+(LANEDESC[k]||""))+'">'+esc(nm)+"</a>"+
+    // the class name is a phenomenon enum → a badge linking to Registry P; click still filters
+    return '<a class="cn chip lane" data-lane="'+esc(k)+'" href="'+REG.P+'" target="_blank" rel="noopener noreferrer" data-tip="'+esc(nm+" — "+(LANEDESC[k]||""))+'">'+esc(nm)+"</a>"+
       '<span class="track"><span class="fill" style="width:'+pct+'%"></span></span>'+
       '<span class="cv">'+v+"</span>";
   }).join("");
   const ep1=(a.by_ep.find(x=>x[0]==="EP-1")||[])[1]||0;
   const dd=a.densest_decade;
   const readings=[
-    ["b:"+top[1], (LANE[top[0]]||top[0])+" and "+(LANE[top2[0]]||top2[0]).toLowerCase()+
+    ["b:"+top[1], laneChip(top[0])+" and "+laneChip(top2[0])+
       " effects dominate the record — "+top[1]+" and "+top2[1]+" of "+N+". "+
-      (LANE[last[0]]||last[0])+" claims are rarest, at "+last[1]+"."],
+      laneChip(last[0])+" claims are rarest, at "+last[1]+"."],
     ["b:"+a.open_anomaly, a.open_anomaly+" records are open anomalies — no documented edge to an "+
       "established mechanism. In this standard that absent edge, not a label, is what makes an observation anomalous."],
     ["b:"+a.examined, "Examination is the exception: "+a.examined+" claims carry a documented re-test on record"+
@@ -697,9 +699,11 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
     // b and p are author-authored HTML (may carry a linked enum badge) — never user data, so not escaped
     '<div class="readings">'+readings.map(([b,p])=>
       '<div class="reading"><b>'+b.slice(2)+"</b><p>"+p+"</p></div>").join("")+"</div>";
-  // a class bar filters the table to that phenomenon
+  // a class bar filters the table to that phenomenon (the href is its Registry-P definition, for hover/middle-click)
   el.querySelectorAll("a.cn[data-lane]").forEach(x=>x.addEventListener("click",e=>{
+    e.preventDefault();
     const f=document.getElementById("fLane"); if(f){ f.value=x.dataset.lane; apply(); }
+    document.getElementById("record").scrollIntoView({behavior:"smooth"});
   }));
 })();
 
