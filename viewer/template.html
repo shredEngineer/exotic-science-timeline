@@ -842,6 +842,16 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 })();
 
 /* ---------- reference tables use the record's own badges ---------- */
+// registry symbols never render as prose: tokenize free text and chip every
+// axis letter, axis-grade pair, and unassessed x it contains (rendering gate)
+function symTokens(s){
+  return esc(s).split(/(\s+|,)/).map(w=>{
+    if(/^[DRCPTQ][0-9]$/.test(w)) return '<span class="axes"><span class="ax '+axCls(w[0],w[1])+'">'+w+"</span></span>";
+    if(/^[DRCPTQ]$/.test(w)) return '<span class="axes"><span class="ax">'+w+"</span></span>";
+    if(/^x$/.test(w)) return '<span class="axes"><span class="ax gx">x</span></span>';
+    return w;
+  }).join("");
+}
 // the syntax primer: a live example coordinate (hover any badge), then the reading rules
 document.getElementById("sigread").innerHTML =
   'Every record carries one compact <strong>evidence coordinate</strong>, e.g. '+
@@ -863,7 +873,7 @@ document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
 }).join("") +
   '<tr id="ax-x"><td><span class="axes"><span class="ax gx">Dx</span></span> ' +
   "<span class='mono' style='color:var(--muted-foreground)'>Not assessed</span></td>" +
-  "<td>Any axis may read <b class='mono'>x</b>. That is not a zero — unexamined and poorly evidenced " +
+  '<td>Any axis may read <span class="axes"><span class="ax gx">x</span></span>. That is not a zero — unexamined and poorly evidenced ' +
   "are different things, and treating them alike would be the easiest way to mislead with this table.</td></tr>" +
   '<tr id="ax-T0"><td><span class="axes"><span class="ax g0">T0</span></span> ' +
   "<span class='mono' style='color:var(--muted-foreground)'>The anomaly test</span></td>" +
@@ -872,7 +882,7 @@ document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
 document.getElementById("eptable").innerHTML = Object.keys(EPDESC).sort().map(ep=>
   '<tr id="ep-'+esc(ep)+'"><td><span class="chip ep '+ep.replace("-","").toLowerCase()+'">'+esc(ep)+
   "</span></td><td>"+esc(EPDESC[ep])+
-  (EPREGION[ep] ? ' <span class="mono" style="color:var(--dim)">· '+esc(EPREGION[ep])+"</span>" : "")+
+  (EPREGION[ep] ? ' <span class="mono" style="color:var(--dim)">· '+symTokens(EPREGION[ep])+"</span>" : "")+
   "</td></tr>").join("");
 document.getElementById("lanetable").innerHTML =
   [...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)).map(l=>
