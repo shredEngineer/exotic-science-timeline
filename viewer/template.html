@@ -397,12 +397,13 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   </div>
 
   <div class="controls">
-    <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off">
-    <select id="fLane"><option value="">All phenomena</option></select>
-    <select id="fEp"><option value="">All evidence profiles</option></select>
-    <select id="fKind"><option value="">All entry types</option></select>
+    <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off"
+      aria-label="Search claim, person, or note">
+    <select id="fLane" aria-label="Filter by phenomenon class"><option value="">All phenomena</option></select>
+    <select id="fEp" aria-label="Filter by evidence profile"><option value="">All evidence profiles</option></select>
+    <select id="fKind" aria-label="Filter by entry type"><option value="">All entry types</option></select>
     <button class="btn" id="reset">Reset</button>
-    <span class="count" id="count"></span>
+    <span class="count" id="count" aria-live="polite"></span>
   </div>
 
   <table class="recordtable" id="tbl">
