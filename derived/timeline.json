@@ -2074,8 +2074,7 @@
    "e_signature": "E1:D3R2C0P1T3Q0",
    "epistemotype": "EP-1",
    "signatures": [
-    "S-SLF",
-    "S-RDE"
+    "S-SLF"
    ],
    "note": "Meter-and-lamp demonstrations; hidden-supply hypothesis repeatedly raised.",
    "refs": [],
@@ -7896,7 +7895,9 @@
    },
    "e_signature": "E1:D3R3C0P1T3Q1",
    "epistemotype": "EP-1",
-   "signatures": [],
+   "signatures": [
+    "S-SLF"
+   ],
    "compilation_confidence": "medium",
    "record_kind": "demonstration_claim",
    "note": "Conference demonstrations and self-circulated documentation in the 1990s-2000s free-energy scene; claimed kilowatt-scale output from small high-voltage resonant coil assemblies attributed to ambient/vacuum energy. A large builder community pursued reconstructions (the Kapanadze generator lineage is commonly described there as Smith-derived); power-measurement error under high-voltage resonance is the standard conventional account discussed; no independent controlled replication on record.",
