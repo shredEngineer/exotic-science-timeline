@@ -186,7 +186,13 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 #tl.dragging{cursor:grabbing}
 .tl .era{fill:hsl(214 40% 14% / .45)}
 .tl .eralabel{fill:var(--muted-foreground);font-size:11.5px;font-family:var(--font-body)}
-.tl .lanelabel{fill:var(--muted-foreground);font-size:11.5px;font-family:var(--font-mono)}
+/* lane labels are Registry-P classes (and the two tiers) — standard enums, so they
+   render as badges in the same language as the lane chips: pill, tooltip, jump */
+.tl .lanepill{fill:var(--card-subtle);stroke:hsl(189 50% 30%);stroke-width:1}
+.tl .lanelabel{fill:var(--secondary);font-size:11px;font-family:var(--font-body)}
+.tl g.lanejump{cursor:pointer}
+.tl g.lanejump:hover .lanepill{stroke:var(--primary)}
+.tl g.lanejump:hover .lanelabel{fill:var(--primary)}
 .tl .gridline{stroke:hsl(214 30% 18% / .8);stroke-width:1}
 .tl .arc{fill:none;stroke:hsl(21 100% 55% / .4);stroke-width:1.1}
 .tl .arc.rep{stroke:hsl(189 100% 50% / .5)}     /* a reproduction reads apart from a refutation */
@@ -955,7 +961,12 @@ function paint(){
     const label = bw<110 ? esc(e[2]) : esc(e[2])+" · "+e[0]+"–"+e[1];
     s+='<text class="eralabel" x="'+Math.max(L+4,a+6).toFixed(1)+'" y="'+(T-21)+'">'+label+"</text>";
   });
-  lanes.forEach(l=>{ s+='<text class="lanelabel" x="8" y="'+(yOf(l)+3)+'">'+esc(LANE[l]||l)+"</text>"; });
+  lanes.forEach(l=>{
+    const nm=LANE[l]||l;
+    s+='<g class="lanejump" data-jump="lane-'+esc(l)+'" data-tip="'+esc(nm+" — "+(LANEDESC[l]||""))+'">'+
+      '<rect class="lanepill" x="4" y="'+(yOf(l)-9)+'" width="'+(L-12)+'" height="18" rx="9"/>'+
+      '<text class="lanelabel" x="13" y="'+(yOf(l)+3.5)+'">'+esc(nm)+"</text></g>";
+  });
   svg.setAttribute("viewBox","0 0 "+W+" "+H);     // 1 unit == 1 pixel, never stretched
   svg.setAttribute("height",H);
   svg.innerHTML=s;
