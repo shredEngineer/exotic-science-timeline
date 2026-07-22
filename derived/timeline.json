@@ -1,5 +1,5 @@
 {
- "renders_corpus": "EQO/1 \u2014 corpus releases A + B + C + D",
+ "renders_corpus": "EQO/1 \u2014 corpus releases A + B + C + D + E",
  "events": [
   {
    "id": "ex:hutchison-corpus",
@@ -7814,6 +7814,97 @@
    "e_signature": "",
    "signatures": [],
    "years_raw": "1987-present"
+  },
+  {
+   "id": "ex:don-smith-resonance",
+   "label": "Smith resonance energy demonstrations",
+   "principals": "Donald L. Smith",
+   "years": "1990s-2000s",
+   "effect_types": [
+    "P-EMG-BIL-01",
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_ac",
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D3R3C0P1T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "Conference demonstrations and self-circulated documentation in the 1990s-2000s free-energy scene; claimed kilowatt-scale output from small high-voltage resonant coil assemblies attributed to ambient/vacuum energy. A large builder community pursued reconstructions (the Kapanadze generator lineage is commonly described there as Smith-derived); power-measurement error under high-voltage resonance is the standard conventional account discussed; no independent controlled replication on record.",
+   "refs": [],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 1990,
+   "t_end": 2000,
+   "t_precision": "year",
+   "ongoing": false,
+   "confidence": "medium",
+   "years_raw": "1990s-2000s"
+  },
+  {
+   "id": "ex:project-magnet-1950",
+   "label": "Project Magnet geomagnetic propulsion program",
+   "principals": "Wilbert B. Smith (Canadian Department of Transport)",
+   "years": "1950-1954",
+   "effect_types": [
+    "P-GRA-SIG-01"
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "macro",
+    "per": "transient"
+   },
+   "e_signature": "E1:D4R1C1P2T0Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-OFN"
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "observation",
+   "note": "Official Canadian Department of Transport programme (proposed by memorandum of 21 Nov 1950, approved 2 Dec 1950; Smith as senior radio engineer) investigating whether the Earth's magnetic field could be tapped for propulsion. From 1953 it ran an instrumented station at Shirleys Bay near Ottawa (magnetometer, gamma-ray counter, radio receiver, gravimeter). The programme's single candidate event is a substantial gravimeter deflection recorded 8 Aug 1954 at 15:01 under overcast sky with nothing observed visually; it remains unattributed on record. The programme was formally ended days later amid publicity; Smith continued privately at the site until his death in 1962. Files progressively declassified via Library and Archives Canada.",
+   "refs": [
+    "W. B. Smith, geo-magnetics memorandum to the Canadian Department of Transport (21 Nov 1950), declassified; Library and Archives Canada",
+    "Project Magnet files, Canadian Department of Transport (1950-1954), declassified; Library and Archives Canada"
+   ],
+   "lane": "GRA",
+   "lanes": [
+    "GRA"
+   ],
+   "t_start": 1950,
+   "t_end": 1954,
+   "t_precision": "year",
+   "ongoing": false,
+   "confidence": "high",
+   "years_raw": "1950-1954"
   }
  ],
  "arcs": [
@@ -7947,19 +8038,19 @@
   ]
  ],
  "stats": {
-  "events": 188,
+  "events": 190,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 167,
+  "observation_events": 169,
   "arcs": 18,
   "contradiction_arcs": 17,
   "median_adversarial_lag_years": 6,
   "densest_year": [
    1990,
-   17
+   18
   ],
   "self_runner_lineage_span": [
    1150,
@@ -7969,16 +8060,16 @@
    "I Mechanical era \u2014 wheels & descriptions": 14,
    "II First instrument era": 9,
    "III Field & radiation era": 35,
-   "IV Postwar laboratory era": 59,
-   "V Contested-laboratory era": 49,
+   "IV Postwar laboratory era": 60,
+   "V Contested-laboratory era": 50,
    "VI Video & network era": 22
   },
   "aggregates": {
-   "n": 167,
+   "n": 169,
    "by_lane": [
     [
      "EMG",
-     47
+     48
     ],
     [
      "MEC",
@@ -7986,7 +8077,7 @@
     ],
     [
      "GRA",
-     29
+     30
     ],
     [
      "OPT",
@@ -8020,7 +8111,7 @@
    "by_ep": [
     [
      "EP-1",
-     54
+     56
     ],
     [
      "EP-3",
@@ -8039,14 +8130,14 @@
      4
     ]
    ],
-   "open_anomaly": 18,
+   "open_anomaly": 19,
    "examined": 17,
    "never_replicated": 11,
    "peer_reviewed": 38,
    "secondhand": 37,
    "densest_decade": [
     1990,
-    27
+    28
    ]
   }
  }

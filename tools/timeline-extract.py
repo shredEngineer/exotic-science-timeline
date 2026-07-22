@@ -9,11 +9,14 @@ import json, re, statistics, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CORPUS = ROOT / "corpus"
+# Release files are discovered, not enumerated — an appended release that the
+# extractor silently ignores would publish a page claiming to render the whole
+# corpus while omitting it.
 OUT = ROOT / "derived" / "timeline.json"
-RENDERS = "EQO/1 — corpus releases A + B + C + D"
 
-FILES = [CORPUS / n for n in ("instances-a.json", "instances-b.json",
-                              "instances-c.json", "instances-d.json")]
+FILES = sorted(CORPUS.glob("instances-*.json"))
+RENDERS = "EQO/1 — corpus releases " + " + ".join(
+    f.stem.rsplit("-", 1)[-1].upper() for f in FILES)
 CENT = re.compile(r'(\d{1,2})(?:st|nd|rd|th)\s+century')
 YEAR = re.compile(r'(\d{4})')
 DEC  = re.compile(r'(\d{4})s')

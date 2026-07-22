@@ -1,0 +1,79 @@
+{
+ "eqo_corpus_release": "E",
+ "targets_eqo_version": "1.3.0",
+ "append_only_to": "corpus/instances-a.json + instances-b.json + instances-c.json + instances-d.json (untouched)",
+ "provenance_note": "Reader-request additions: two records the free-energy and gravity-program record was missing, compiled under the same rules as Releases B-D.",
+ "instances": [
+  {
+   "id": "ex:don-smith-resonance",
+   "label": "Smith resonance energy demonstrations",
+   "principals": "Donald L. Smith",
+   "years": "1990s-2000s",
+   "effect_types": [
+    "P-EMG-BIL-01",
+    "P-EMG-BIL-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_ac",
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D3R3C0P1T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "record_kind": "demonstration_claim",
+   "note": "Conference demonstrations and self-circulated documentation in the 1990s-2000s free-energy scene; claimed kilowatt-scale output from small high-voltage resonant coil assemblies attributed to ambient/vacuum energy. A large builder community pursued reconstructions (the Kapanadze generator lineage is commonly described there as Smith-derived); power-measurement error under high-voltage resonance is the standard conventional account discussed; no independent controlled replication on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:project-magnet-1950",
+   "label": "Project Magnet geomagnetic propulsion program",
+   "principals": "Wilbert B. Smith (Canadian Department of Transport)",
+   "years": "1950-1954",
+   "effect_types": [
+    "P-GRA-SIG-01"
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "macro",
+    "per": "transient"
+   },
+   "e_signature": "E1:D4R1C1P2T0Q1",
+   "epistemotype": "EP-1",
+   "signatures": [
+    "S-OFN"
+   ],
+   "compilation_confidence": "high",
+   "record_kind": "observation",
+   "note": "Official Canadian Department of Transport programme (proposed by memorandum of 21 Nov 1950, approved 2 Dec 1950; Smith as senior radio engineer) investigating whether the Earth's magnetic field could be tapped for propulsion. From 1953 it ran an instrumented station at Shirleys Bay near Ottawa (magnetometer, gamma-ray counter, radio receiver, gravimeter). The programme's single candidate event is a substantial gravimeter deflection recorded 8 Aug 1954 at 15:01 under overcast sky with nothing observed visually; it remains unattributed on record. The programme was formally ended days later amid publicity; Smith continued privately at the site until his death in 1962. Files progressively declassified via Library and Archives Canada.",
+   "refs": [
+    "W. B. Smith, geo-magnetics memorandum to the Canadian Department of Transport (21 Nov 1950), declassified; Library and Archives Canada",
+    "Project Magnet files, Canadian Department of Transport (1950-1954), declassified; Library and Archives Canada"
+   ]
+  }
+ ]
+}

@@ -216,6 +216,11 @@
    "source": "ex:shoulders-ev-clusters",
    "relation": "corpus",
    "text": "The material-damage subset of this corpus — bored channels, locally melted metal without bulk heating — has its closest documented relative in the charge-cluster bench corpus, where similar witness marks were produced repeatably at small scale and tied to a conventional cathode-spot mechanism under discussion."
+  },
+  "ex:kapanadze-videos": {
+   "source": "ex:don-smith-resonance",
+   "relation": "corpus",
+   "text": "The builder community that circulated these videos commonly describes the device as derived from Donald L. Smith's resonance energy designs; the Smith record collects that lineage's origin claims and their evidential standing."
   }
  }
 }
