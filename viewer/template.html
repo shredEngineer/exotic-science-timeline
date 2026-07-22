@@ -413,9 +413,9 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <div class="chartlegend" id="chartlegend"></div>
   </div>
 
-  <div class="dash" id="dash"></div>
-
   <div class="dash" id="dechist"></div>
+
+  <div class="dash" id="dash"></div>
 
   <div class="blockhead">
     <h3>The full record</h3>
@@ -720,7 +720,9 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   }));
 })();
 
-/* ---------- decade-composition histogram: stacked count per decade by phenomenon class ---------- */
+/* ---------- decade-composition histogram: stacked count per decade by phenomenon class ----------
+   Same zoom handles as the main chart: +/−/Reset buttons, scroll to zoom, drag to pan —
+   a window (w0, w1) over the year domain, repainted at 1:1 pixels.                              */
 (function(){
   const el=document.getElementById("dechist"), a=(DATA.stats||{}).aggregates;
   const byDec=a&&a.by_decade_lane; if(!el||!byDec) return;
@@ -733,8 +735,14 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   const yMax=Math.max(...decs.map(d=>order.reduce((s,l)=>s+(byDec[d][l]||0),0)));
   const svgId="dhsvg";
   el.innerHTML='<h3>Composition by decade</h3>'+
-    '<p class="sub">Stacked record count per decade by phenomenon class. A record carrying two classes counts in both — same convention as the class bars above.</p>'+
-    '<div class="chartbox"><svg id="'+svgId+'" role="img" aria-label="Stacked histogram of records per decade by phenomenon class"></svg>'+
+    '<p class="sub">One stacked bar per decade, coloured by phenomenon class. A record carrying two classes counts once in each.</p>'+
+    '<div class="chartbox">'+
+    '<div class="charttools">'+
+      '<button class="zbtn" id="dzin" title="Zoom in" aria-label="Zoom in">+</button>'+
+      '<button class="zbtn" id="dzout" title="Zoom out" aria-label="Zoom out">−</button>'+
+      '<button class="zbtn wide" id="dzreset">Reset</button>'+
+      '<span class="hint">Scroll to zoom · drag to pan</span></div>'+
+    '<svg id="'+svgId+'" role="img" aria-label="Stacked histogram of records per decade by phenomenon class"></svg>'+
     '<div class="chartlegend dhlegend" id="dhlegend"></div></div>';
   // legend: class names are Registry-P enums -> linked badges with their stack colour
   document.getElementById("dhlegend").innerHTML=
@@ -743,21 +751,29 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
       esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'"><span class="dotsw" style="background:'+LANEC[l]+'"></span>'+
       esc(LANE[l]||l)+"</a>").join("")+"</span>";
   const svg=document.getElementById(svgId);
+  const X0=1140, X1=2030, MINSPAN2=30;      // never narrower than three decades
+  let w0=X0, w1=X1, Wd=1180;
+  const plotWd=()=>Math.max(80,Wd-34-8);
   function paintHist(){
-    const W=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
-    const L=34,R=8,T=8,B=22,H=190,plotW=W-L-R,plotH=H-T-B;
-    const x0=1140,x1=2030,xs=y=>L+(y-x0)/(x1-x0)*plotW;
+    Wd=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
+    const L=34,R=8,T=8,B=22,H=190,plotW=Wd-L-R,plotH=H-T-B;
+    const span=w1-w0;
+    const xs=y=>L+(y-w0)/span*plotW;
     const ys=v=>T+plotH-(v/yMax)*plotH;
-    let s="";
+    let s='<defs><clipPath id="dhclip"><rect x="'+L+'" y="0" width="'+plotW+'" height="'+(H-B+4)+'"/></clipPath></defs>';
     for(let g=0;g<=yMax;g+=10){
-      s+='<line class="grid" x1="'+L+'" y1="'+ys(g)+'" x2="'+(W-R)+'" y2="'+ys(g)+'"/>'+
+      s+='<line class="grid" x1="'+L+'" y1="'+ys(g)+'" x2="'+(Wd-R)+'" y2="'+ys(g)+'"/>'+
          '<text class="axis" x="'+(L-6)+'" y="'+(ys(g)+3.5)+'" text-anchor="end">'+g+"</text>";
     }
-    for(let c=1200;c<=2000;c+=100){
-      s+='<text class="axis" x="'+xs(c)+'" y="'+(H-6)+'" text-anchor="middle">'+c+"</text>";
+    const step = span<=200?20 : span<=450?50 : 100;   // finer year ticks as the window narrows
+    for(let c=Math.ceil(w0/step)*step;c<=w1;c+=step){
+      if(c<w0) continue;
+      s+='<text class="axis" x="'+xs(c).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle">'+c+"</text>";
     }
-    const bw=Math.max(2,plotW*10/(x1-x0)-1);   // one decade wide, 1px gap, never thinner than 2px
+    const bw=Math.max(2,plotW*10/span-1);   // one decade wide, 1px gap, never thinner than 2px
+    s+='<g clip-path="url(#dhclip)">';
     decs.forEach(d=>{
+      if(d+10<w0-5||d>w1+5) return;         // cull bars outside the window
       const total=order.reduce((s2,l)=>s2+(byDec[d][l]||0),0);
       let acc=0;
       order.forEach(l=>{
@@ -769,10 +785,45 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
         acc+=v;
       });
     });
-    svg.setAttribute("viewBox","0 0 "+W+" "+H);
+    s+="</g>";
+    svg.setAttribute("viewBox","0 0 "+Wd+" "+H);
     svg.setAttribute("height",H);
     svg.innerHTML=s;
   }
+  function clampWin(){
+    let span=Math.min(X1-X0,Math.max(MINSPAN2,w1-w0));
+    let mid=(w0+w1)/2;
+    w0=mid-span/2; w1=mid+span/2;
+    if(w0<X0){w1+=X0-w0;w0=X0;} if(w1>X1){w0-=w1-X1;w1=X1;}
+    w0=Math.max(X0,w0); w1=Math.min(X1,w1);
+  }
+  function dzoomAt(clientX,factor){
+    const rect=svg.getBoundingClientRect();
+    const px=(clientX-rect.left)*(Wd/rect.width);
+    const anchor=Math.min(X1,Math.max(X0,w0+((px-34)/plotWd())*(w1-w0)));
+    const span=Math.min(X1-X0,Math.max(MINSPAN2,(w1-w0)*factor));
+    const frac=(anchor-w0)/(w1-w0);
+    w0=anchor-frac*span; w1=w0+span;
+    clampWin(); paintHist();
+  }
+  document.getElementById("dzin").onclick=()=>{const b=svg.getBoundingClientRect();dzoomAt(b.left+b.width/2,1/1.5);};
+  document.getElementById("dzout").onclick=()=>{const b=svg.getBoundingClientRect();dzoomAt(b.left+b.width/2,1.5);};
+  document.getElementById("dzreset").onclick=()=>{w0=X0;w1=X1;paintHist();};
+  svg.addEventListener("wheel",e=>{
+    e.preventDefault();
+    const unit = e.deltaMode===1 ? 16 : e.deltaMode===2 ? 100 : 1;
+    const d = Math.max(-240, Math.min(240, e.deltaY*unit));
+    dzoomAt(e.clientX, Math.exp(d*0.0022));
+  },{passive:false});
+  svg.style.touchAction="none"; svg.style.cursor="grab";
+  let drag2=null;
+  svg.addEventListener("pointerdown",e=>{drag2={px:e.clientX,w0:w0,w1:w1};
+    svg.setPointerCapture(e.pointerId);svg.style.cursor="grabbing";});
+  svg.addEventListener("pointermove",e=>{ if(!drag2) return;
+    const rect=svg.getBoundingClientRect();
+    const dy=((e.clientX-drag2.px)*(Wd/rect.width)/plotWd())*(drag2.w1-drag2.w0);
+    w0=drag2.w0-dy; w1=drag2.w1-dy; clampWin(); paintHist();});
+  ["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,()=>{drag2=null;svg.style.cursor="grab";}));
   paintHist();
   let rAF2=null;
   addEventListener("resize",()=>{cancelAnimationFrame(rAF2);rAF2=requestAnimationFrame(paintHist);});
