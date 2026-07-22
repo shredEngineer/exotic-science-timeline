@@ -52,7 +52,9 @@ for f in FILES:
             "t_start": st, "t_end": en, "t_precision": prec, "ongoing": ong,
             "epistemotype": r.get("epistemotype", "EP-0"),
             "record_kind": r.get("record_kind", "observation"),
-            "confidence": r.get("compilation_confidence", "high"),
+            # no default: release A predates the confidence field, and a
+            # fabricated "high" would overstate exactly what the field grades
+            "confidence": r.get("compilation_confidence"),
             "years_raw": r.get("years", ""),
         })
         events.append(ev_rec)
@@ -62,9 +64,11 @@ for f in FILES:
         st,en,prec,ong = parse_years(doc.get("years",""))
         if st is None: continue
         rec = dict(doc)
+        # doctrines are not observations: no epistemotype, no signature — the
+        # viewer says so instead of showing a fake "unquantized" grade
         rec.update({"lane":"DOC","lanes":["DOC"],"t_start":st,"t_end":en,
-            "t_precision":prec,"ongoing":ong,"epistemotype":"EP-0","record_kind":"doctrine",
-            "confidence":doc.get("compilation_confidence","high"),"e_signature":"",
+            "t_precision":prec,"ongoing":ong,"epistemotype":None,"record_kind":"doctrine",
+            "confidence":doc.get("compilation_confidence"),"e_signature":"",
             "signatures":[],"note":doc.get("summary",""),"years_raw":doc.get("years","")})
         events.append(rec)
     for nar in d.get("narratives", []):
@@ -72,8 +76,8 @@ for f in FILES:
         if st is None: continue
         rec = dict(nar)
         rec.update({"lane":"NAR","lanes":["NAR"],"t_start":st,"t_end":en,
-            "t_precision":prec,"ongoing":ong,"epistemotype":"EP-0","record_kind":"narrative",
-            "confidence":nar.get("compilation_confidence","high"),"e_signature":"",
+            "t_precision":prec,"ongoing":ong,"epistemotype":None,"record_kind":"narrative",
+            "confidence":nar.get("compilation_confidence"),"e_signature":"",
             "signatures":[],"note":"Kernel: "+nar.get("factual_kernel","")+" / Lore: "+nar.get("lore_layer",""),
             "principals":nar.get("principals",""),"years_raw":nar.get("emergence","")})
         events.append(rec)

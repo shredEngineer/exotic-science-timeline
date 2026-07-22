@@ -614,7 +614,7 @@
     "med": "cryo"
    },
    "e_signature": "E1:D1R0C0P1T2Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-1",
    "signatures": [],
    "note": "Announced gravity-modification research; no public results.",
    "refs": []
@@ -696,6 +696,10 @@
     {
      "ref": "M-RES",
      "role": "discussed"
+    },
+    {
+     "ref": "M-MCH",
+     "role": "claimed"
     }
    ],
    "context": {
@@ -705,10 +709,11 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R2C1P3T3Q1",
+   "e_signature": "E1:D3R2C1P3T4Q1",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-GYR"
+    "S-GYR",
+    "S-DEK"
    ],
    "note": "Perceived gyro 'weight loss'; later resolved within classical mechanics.",
    "refs": []
@@ -1302,7 +1307,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0RxC0P1TxQ0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-RDE"
    ],
@@ -2498,7 +2503,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P2T1Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [],
    "note": "Free-energy saucer venture (OTC-X1, 'Utron' accumulator); a 1959 public demonstration did not take place. Convicted in Oklahoma in 1961 of selling securities without registering them — a registration offense, not a finding of fraud — and fined USD 5,000; conviction affirmed on appeal.",
    "refs": [
@@ -2563,7 +2568,7 @@
     "med": "water_electrolyte"
    },
    "e_signature": "E1:D0RxC0P1TxQ0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-WFC"
    ],

@@ -41,7 +41,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P1T1Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF"
    ],
@@ -63,7 +63,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -86,7 +86,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -109,7 +109,7 @@
     "med": "water_electrolyte"
    },
    "e_signature": "E1:D0R0C0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -304,17 +304,18 @@
    "mechanisms": [
     {
      "ref": "M-MCH",
-     "role": "discussed"
+     "role": "claimed"
     }
    ],
    "context": {
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R1C3P4T3Q1",
+   "e_signature": "E1:D1R1C3P4T4Q1",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-SLF"
+    "S-SLF",
+    "S-DEK"
    ],
    "compilation_confidence": "medium",
    "record_kind": "demonstration_claim",
@@ -344,7 +345,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0RxC0P1T1Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF"
    ],

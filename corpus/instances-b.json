@@ -1,6 +1,6 @@
 {
  "eqo_corpus_release": "B",
- "targets_eqo_version": "1.1.0-draft",
+ "targets_eqo_version": "1.1.0",
  "append_only_to": "corpus/instances-a.json (87 records, untouched)",
  "provenance_note": "Compiled from the compiling model's training knowledge of publicly documented claims. E axes encode the world's documentation of each case; compilation_confidence encodes the compiler's recall reliability for names, eras, and details — these are deliberately distinct (Addendum A.1). Threshold for instances: name + principals + rough decade + phenomenology. refs only where citation confidence is high; no reconstructed patent numbers or citations. Obscure cases are included by design; candidates tier holds leads known only as recurring mentions. Verify before citing.",
  "registry_additions_ref": "ADDENDUM-A.md",
@@ -600,7 +600,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0R0C0P0T4Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-DEK"
    ],
@@ -769,6 +769,10 @@
     {
      "ref": "M-AET",
      "role": "claimed"
+    },
+    {
+     "ref": "M-REL",
+     "role": "claimed"
     }
    ],
    "context": {
@@ -779,10 +783,11 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R5C3P3T1Q3",
+   "e_signature": "E1:D7R5C3P3T4Q3",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-AET"
+    "S-AET",
+    "S-DEK"
    ],
    "compilation_confidence": "high",
    "note": "Real, foundational effect originally interpreted by its discoverer as aether evidence — interpretation migrated, phenomenon stayed; today the basis of ring-laser gyros.",
@@ -916,7 +921,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0RxC0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-OFN"
    ],
@@ -1169,7 +1174,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0RxC0P1TxQ0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-WFC"
    ],
@@ -1539,7 +1544,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P0T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"

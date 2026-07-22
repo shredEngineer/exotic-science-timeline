@@ -18,6 +18,7 @@ import json, pathlib, shutil, subprocess, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = ROOT / "derived" / "timeline.json"
 OVERLAY = ROOT / "overlay" / "overlay.json"
+VOCAB = ROOT / "standard" / "vocabulary.json"
 TEMPLATE = ROOT / "viewer" / "template.html"
 OUT = ROOT / "dist" / "index.html"
 
@@ -64,6 +65,11 @@ def main() -> int:
         return 3
 
     data["enrichment_attached"] = attached
+
+    # The page's labels, descriptions and definition anchors come from the
+    # pinned standard vocabulary — the viewer hardcodes none of them, so a
+    # vocabulary release updates the page by re-pinning, not by editing HTML.
+    data["vocab"] = json.loads(VOCAB.read_text())
 
     # The data can change at any time, so the page states which commit it was
     # built from and when — a version a reader can actually go and look at.

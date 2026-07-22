@@ -1,6 +1,6 @@
 {
  "eqo_corpus_release": "D",
- "targets_eqo_version": "1.3.0",
+ "targets_eqo_version": "1.2.0",
  "append_only_to": "corpus/instances-a.json + instances-b.json + instances-c.json (untouched)",
  "provenance_note": "Discharge/EVO cluster records added as evidential basis for the LHD companion volume. Same compilation rules as Releases B/C.",
  "instances": [

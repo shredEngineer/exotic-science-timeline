@@ -21,21 +21,23 @@ Nothing here asserts that any claimed effect is real, and nothing here asserts t
 | Path | What it is |
 |------|-----------|
 | `corpus/` | The record itself — 189 identifiers across four append-only releases, classified per [EQO](https://github.com/shredEngineer/eqo) |
+| `standard/` | The pinned copy of the standard's machine-readable vocabulary, with its `PIN` (version, source commit, checksum) |
 | `derived/timeline.json` | Normalized dating layer over the corpus: events, resolution arcs, eras, statistics |
 | `overlay/overlay.json` | Enrichment keyed by record identifier, written by the research process rather than by hand |
 | `viewer/` | The page template and its self-hosted assets |
-| `tools/` | `timeline-extract.py` regenerates the dating layer · `check-persons.py` is the publication gate · `build.py` assembles the page |
+| `tools/` | `timeline-extract.py` regenerates the dating layer · `check-persons.py` and `check-coordinates.py` are the publication gates · `build.py` assembles the page · `sync-standard.py` re-pins the vocabulary |
 
-The **classification standard** is separate and lives in [its own repository](https://github.com/shredEngineer/eqo). This one owns the data and the publication; that one owns the vocabulary and the rules.
+The **classification standard** is separate and lives in [its own repository](https://github.com/shredEngineer/eqo). This one owns the data and the publication; that one owns the vocabulary and the rules. The vocabulary crosses that boundary once, as a pinned artifact: `standard/vocabulary.json` is the standard's machine-readable export, vendored at a named version and checksum. The viewer's labels, tooltips and definition links, and the conformance gate's derivation rules, all read from that file — nothing parses the specification prose, and nothing fetches at build time. `tools/check-coordinates.py` holds every record to it: enum membership, the theory-embedding axis exactly as the mechanism edges derive it, the derived signatures, the epistemotype boundaries, and a citation for every record graded D5 or better.
 
 **The overlay is kept apart on purpose.** It attaches to records under an `enrichment` key and **never overwrites a corpus field** — the build refuses rather than letting an overlay silently win, and refuses again if it references a record the corpus does not contain. Without that separation a hand-edit and a generated write would fight over the same lines, and after the third merge nobody could say which statement came from whom.
 
 Build locally:
 
 ```bash
-python3 tools/timeline-extract.py   # corpus -> derived/timeline.json
-python3 tools/check-persons.py      # publication gate
-python3 tools/build.py              # -> dist/index.html
+python3 tools/check-persons.py       # publication gate: named persons
+python3 tools/check-coordinates.py   # publication gate: standard conformance
+python3 tools/timeline-extract.py    # corpus -> derived/timeline.json
+python3 tools/build.py               # -> dist/index.html
 ```
 
 The output is a single self-contained file: all data inlined, no runtime fetches, no external dependencies. It works offline and can be archived by saving one file.

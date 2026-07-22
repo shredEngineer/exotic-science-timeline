@@ -32,6 +32,14 @@ jobs:
       - name: No unsourced allegation against a named person
         run: python3 tools/check-persons.py
 
+      # Conformance gate: every record agrees with the pinned standard
+      # vocabulary — enum membership, derived axes, derived signatures,
+      # epistemotype boundaries, citation floor. Interprets the standard's
+      # own derivation_rules table; also verifies the vendored vocabulary
+      # matches standard/PIN.
+      - name: Corpus agrees with the pinned standard vocabulary
+        run: python3 tools/check-coordinates.py
+
       - name: Regenerate the dating layer
         run: |
           python3 tools/timeline-extract.py

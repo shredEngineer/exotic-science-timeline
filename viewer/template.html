@@ -503,45 +503,25 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 <script>
 const DATA = __DATA__;
 
-const LANE = {MEC:"Mechanical",THM:"Thermal",NUC:"Nuclear / material",EMG:"Electromagnetic",
-  GRA:"Gravitational",OPT:"Optical",ACU:"Acoustic",CHM:"Chemical",BIO:"Biological",
-  INS:"Instrument reading",DOC:"Doctrine",NAR:"Narrative",SON:"Other"};
-const KIND = {observation:"Observation",demonstration_claim:"Demonstration",
-  design_description:"Design description",analysis:"Analysis",doctrine:"Doctrine",narrative:"Narrative"};
-const AXNAME = {D:"Documentation",R:"Replication",C:"Controls",P:"Provenance",T:"Theory embedding",Q:"Quantification"};
-const AXMAX  = {D:7,R:5,C:5,P:4,T:4,Q:3};
-const AXDESC = {D:"How the observation is recorded — second-hand account through peer-reviewed paper",
-  R:"Whether anyone reproduced it — never attempted through independently documented",
-  C:"What was controlled for — none through a full energy balance",
-  P:"Who documented it — anonymous through adversarial examination on record",
-  T:"Whether an established mechanism explains it — none on record through established and claimed",
-  Q:"How it was measured — qualitative through quantitative with uncertainty"};
-const LANEDESC = {
-  MEC:"Levitation, thrust, spin-up, deformation, oscillation, fluid motion — and mechanical self-runners",
-  THM:"Heat balance, local heating, cooling without a documented sink, anomalous transport",
-  NUC:"Elemental and isotopic analysis, radiation, fusion products, microcraters and new phases",
-  EMG:"Field signatures, induction, electrical energy balance, discharge and plasma, correlations",
-  GRA:"Weight change, field shadows, gyroscope anomalies, inertia and free-fall deviations",
-  OPT:"Glow and aura, plasma balls, refraction and imaging anomalies, mist formation",
-  ACU:"Spontaneous tones, infra- and ultrasound, resonance transfer over distance",
-  CHM:"Reaction and combustion anomalies, electrochemical figures, phase and substance properties",
-  BIO:"Growth effects, physiological sensations, cellular findings, effects on microorganisms",
-  INS:"The instrument reading is the sole observable, or the instrument itself is affected",
-  DOC:"Theory-first bodies of claim, indexed as their own object type rather than as observations",
-  NAR:"Lore and conspiracy complexes, split into documented kernel and added layer",
-  SON:"Residual — anything the classes above do not cover"};
-const SPEC="https://github.com/shredEngineer/eqo/blob/main/SPECIFICATION.md";
-const REG = {                       // enum family -> canonical section of the standard
-  P: SPEC+"#part-ii--registry-p-phenomena",
-  M: SPEC+"#part-iii--registry-m-mechanisms",
-  K: SPEC+"#part-iv--registry-k-context-facets",
-  E: SPEC+"#part-v--registry-e-epistemic-axes",
-  S: SPEC+"#part-vi--registry-s-signatures-category-compositions",
-  KIND: "https://github.com/shredEngineer/eqo/blob/main/ADDENDUM-B.md#b2-new-record-field-record_kind",
-  ROLE: SPEC+"#part-iii--registry-m-mechanisms",
-  REL: SPEC+"#4-architecture",
-  EP: SPEC+"#q4-epistemotypes-named-reference-regions"
-};
+/* ---------- the standard's vocabulary, read from the pinned artifact ----------
+   Labels, summaries, axis semantics, epistemotype regions and definition anchors
+   all come from DATA.vocab (standard/vocabulary.json, pinned by standard/PIN).
+   The viewer hardcodes presentation only: colours, layout, display casing.     */
+const V = DATA.vocab;
+const LANE = Object.fromEntries(Object.entries(V.phenomena.classes).map(([k,c])=>[k,c.label]));
+LANE.DOC=V.tiers.doctrine.label; LANE.NAR=V.tiers.narrative.label;
+const LANEDESC = Object.fromEntries(Object.entries(V.phenomena.classes).map(([k,c])=>[k,c.summary]));
+LANEDESC.DOC=V.tiers.doctrine.summary; LANEDESC.NAR=V.tiers.narrative.summary;
+const KIND = Object.assign({}, V.record_kinds,
+  {doctrine:V.tiers.doctrine.label, narrative:V.tiers.narrative.label});
+const AXNAME = Object.fromEntries(Object.entries(V.axes).map(([k,a])=>[k,a.name]));
+const AXMAX  = Object.fromEntries(Object.entries(V.axes).map(([k,a])=>[k,a.max]));
+const AXDESC = Object.fromEntries(Object.entries(V.axes).map(([k,a])=>[k,a.description]));
+const AXGRADE = Object.fromEntries(Object.entries(V.axes).map(([k,a])=>[k,a.grades]));
+const STANDARD_BASE = "https://github.com/shredEngineer/eqo/blob/main/";
+const SPEC = STANDARD_BASE + "SPECIFICATION.md";
+// enum family -> canonical section of the standard, straight from the artifact
+const REG = Object.fromEntries(Object.entries(V.spec_anchors).map(([k,a])=>[k,STANDARD_BASE+a]));
 // every structured enum renders as a badge that leads to where it is defined
 const pill=(text,href,cls,title)=>'<a class="chip '+(cls||"enum")+'" href="'+href+
   '" target="_blank" rel="noopener noreferrer"'+(title?' data-tip="'+esc(title)+'"':"")+">"+esc(text)+"</a>";
@@ -551,11 +531,9 @@ const epChip=ep=>'<a class="chip ep '+(ep||"EP-0").replace("-","").toLowerCase()
 const laneChip=k=>pill(LANE[k]||k, REG.P, "lane", (LANE[k]||k)+" — "+(LANEDESC[k]||""));
 const ROLE = {claimed:"claimed",discussed:"discussed",excluded_per_source:"excluded by the source"};
 const RELT = {contradicts:"contradicts",replicates:"replicates",confirms_per_source:"confirmed by the source"};
-const KFACET = {inp:["K-INP","Input"],med:["K-MED","Medium"],vac:["K-VAC","Vacuum behaviour"],
-  scl:["K-SCL","Scale"],per:["K-PER","Persistence"],mod:["K-MOD","Documented modulators"]};
-const EPDESC = {"EP-1":"Solitary — one source, no controls","EP-2":"Demonstrative — public demo, no data",
-  "EP-3":"Lab-contested — measured and disputed","EP-4":"Historical-anecdotal",
-  "EP-5":"Orthodox-covered — explained by established physics","EP-0":"Unquantized — not yet assessed"};
+const KFACET = Object.fromEntries(Object.entries(V.context_facets).map(([k,f])=>[k,[f.registry_key,f.label]]));
+const EPDESC = Object.fromEntries(Object.entries(V.epistemotypes).map(([k,e])=>[k,e.description]));
+const EPREGION = Object.fromEntries(Object.entries(V.epistemotypes).map(([k,e])=>[k,e.region]));
 const EPC={"EP-1":"hsl(21 100% 60%)","EP-2":"hsl(280 70% 70%)","EP-3":"hsl(189 100% 58%)",  // dot colour per profile
   "EP-4":"hsl(45 90% 60%)","EP-5":"hsl(141 60% 56%)","EP-0":"hsl(0 0% 50%)"};
 
@@ -587,7 +565,9 @@ function dotCard(e){
   h+='<dt>Dated</dt><dd>'+esc(e.years_raw||e.years||e.t_start||"—")+'</dd>';
   if(e.principals) h+='<dt>Who</dt><dd>'+esc(e.principals)+'</dd>';
   h+='<dt>Class</dt><dd>'+esc(lanes)+'</dd>';
-  h+='<dt>Profile</dt><dd>'+epChip(e.epistemotype)+' — '+esc(epd)+'</dd>';
+  h+='<dt>Profile</dt><dd>'+(e.epistemotype
+    ? epChip(e.epistemotype)+' — '+esc(epd)
+    : esc((KIND[e.record_kind]||"Context record")+" — carries no evidence coordinate"))+'</dd>';
   if(mech) h+='<dt>Mechanisms</dt><dd>'+mech+' on record</dd>';
   h+='</dl>';
   if(e.e_signature) h+='<div class="sig">'+esc(e.e_signature)+'</div>';
@@ -648,10 +628,15 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 /* ---------- chart legend: what a dot's colour and an arc mean ---------- */
 (function(){
   const el=document.getElementById("chartlegend"); if(!el) return;
-  const eps=["EP-1","EP-2","EP-3","EP-4","EP-5","EP-0"];
+  // legend entries come from the data: the profiles that actually occur, plus a
+  // grey swatch for context records (doctrines/narratives), which carry no coordinate
+  const eps=[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort();
   // the EP codes are standard enums → each swatch is a link to the epistemotype definition
-  const dots=eps.map(k=>'<a class="sw" href="'+REG.EP+'" target="_blank" rel="noopener noreferrer" data-tip="'+esc(k+" — "+(EPDESC[k]||""))+
+  let dots=eps.map(k=>'<a class="sw" href="'+REG.EP+'" target="_blank" rel="noopener noreferrer" data-tip="'+esc(k+" — "+(EPDESC[k]||""))+
     '"><span class="dotsw" style="background:'+EPC[k]+'"></span>'+esc(k)+"</a>").join("");
+  if(ev.some(e=>!e.epistemotype))
+    dots+='<span class="sw" data-tip="Doctrines and narratives — context records that carry no evidence coordinate">'+
+      '<span class="dotsw" style="background:'+EPC["EP-0"]+'"></span>context</span>';
   el.innerHTML=
     '<span class="grp"><span style="color:var(--foreground)">Dot colour · evidence profile:</span>'+dots+"</span>"+
     '<span class="sep">|</span>'+
@@ -724,7 +709,9 @@ document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
   "not a verdict about reality.</td></tr>";
 document.getElementById("eptable").innerHTML = Object.keys(EPDESC).sort().map(ep=>
   '<tr id="ep-'+esc(ep)+'"><td><span class="chip ep '+ep.replace("-","").toLowerCase()+'">'+esc(ep)+
-  "</span></td><td>"+esc(EPDESC[ep])+"</td></tr>").join("");
+  "</span></td><td>"+esc(EPDESC[ep])+
+  (EPREGION[ep] ? ' <span class="mono" style="color:var(--dim)">· '+esc(EPREGION[ep])+"</span>" : "")+
+  "</td></tr>").join("");
 document.getElementById("lanetable").innerHTML =
   [...new Set(ev.map(e=>e.lane))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)).map(l=>
   '<tr id="lane-'+esc(l)+'"><td><span class="chip lane">'+esc(LANE[l]||l)+
@@ -740,7 +727,9 @@ document.getElementById("lanetable").innerHTML =
 function fill(sel,vals,fmt){const el=document.getElementById(sel);
   vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=fmt(v);el.appendChild(o);});}
 fill("fLane",[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)),v=>LANE[v]||v);
-fill("fEp",[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(),v=>v);
+// the profile filter names the region, not just the code: "EP-1 · Solitary"
+fill("fEp",[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(),
+  v=>v+(V.epistemotypes[v]?" · "+V.epistemotypes[v].label:""));
 fill("fKind",[...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort(),v=>KIND[v]||v);
 
 let sortKey="t_start", sortDir=-1, shown=[];
@@ -750,7 +739,9 @@ function axes(sig){
   const m=/^E1:D(.)R(.)C(.)P(.)T(.)Q(.)$/.exec(sig);
   if(!m) return '<span class="mono">'+esc(sig)+"</span>";
   return '<span class="axes">'+"DRCPTQ".split("").map((k,i)=>{
-    const v=m[i+1], t = v==="x" ? "not assessed" : v+" of "+AXMAX[k];
+    // the grade's own label comes from the standard's vocabulary
+    const v=m[i+1], t = v==="x" ? "not assessed"
+      : v+" of "+AXMAX[k]+((AXGRADE[k]||{})[v] ? ": "+AXGRADE[k][v] : "");
     return '<span class="ax '+axCls(k,v)+'" data-jump="ax-'+k+'" data-tip="'+esc(AXNAME[k]+" — "+t+". "+AXDESC[k])+
       '">'+k+v+"</span>";
   }).join("")+"</span>";
@@ -760,6 +751,12 @@ function rows(list){
   shown=list;
   document.getElementById("tb").innerHTML=list.map(e=>{
     const ep=(e.epistemotype||"EP-0").replace("-","").toLowerCase();
+    // a doctrine or narrative is not an observation — it carries no coordinate,
+    // and the honest cell says so instead of showing a fake "unquantized" grade
+    const prof = e.epistemotype
+      ? '<span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype)+
+        '" data-tip="'+esc(e.epistemotype+" — "+(EPDESC[e.epistemotype]||"not assessed"))+'">'+esc(e.epistemotype)+"</span>"
+      : '<span class="chip na" data-tip="Not an observation — doctrines and narratives carry no evidence coordinate">—</span>';
     return '<tr class="row" id="r-'+esc(e.id).replace(/[^a-zA-Z0-9-]/g,"_")+'" data-id="'+esc(e.id)+'">'+
       '<td class="tw"><span class="tri">▸</span></td>'+
       '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
@@ -768,8 +765,7 @@ function rows(list){
       '<td class="lane">'+(e.lanes||[e.lane]).map(l=>'<span class="chip lane" data-jump="lane-'+esc(l)+
         '" data-tip="'+esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'">'+esc(LANE[l]||l)+"</span>").join(" ")+"</td>"+
       '<td class="ev">'+axes(e.e_signature)+"</td>"+
-      '<td class="prof"><span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype||"EP-0")+
-        '" data-tip="'+esc((e.epistemotype||"")+" — "+(EPDESC[e.epistemotype]||"not assessed"))+'">'+esc(e.epistemotype||"—")+"</span></td></tr>";
+      '<td class="prof">'+prof+"</td></tr>";
   }).join("");
   document.getElementById("count").textContent = (list.length===ev.length)
     ? ev.length+" entries" : list.length+" of "+ev.length+" entries";
@@ -823,7 +819,7 @@ function expand(tr){
   const relHtml=rel.length?rel.map(a=>{const oid=a.source===d.id?a.target:a.source;
     const o=ev.find(x=>x.id===oid);
     return '<span class="enumrow">'+pill(RELT[a.type]||a.type,REG.REL,"role",
-      "Observation reference — defined in the specification")+esc(o?o.label:oid)+"</span>";
+      V.relation_types[a.type]||"Observation reference — defined in the specification")+esc(o?o.label:oid)+"</span>";
   }).join(""):"none recorded";
   const refs=(d.refs&&d.refs.length)?d.refs.map(esc).join("<br>"):"none cited";
   const row=document.createElement("tr");
@@ -834,11 +830,15 @@ function expand(tr){
   add("Dated as", esc(d.years_raw||d.t_start||""));
   add("Phenomena", (d.effect_types||[]).length
         ? '<span class="enumrow">'+d.effect_types.map(t=>pill(t,REG.P,"enum",
-            "Phenomenon leaf — defined in Registry P")).join("")+"</span>" : "");
+            V.phenomena.leaves[t] ? t+" — "+V.phenomena.leaves[t]
+                                  : "Phenomenon leaf — defined in Registry P")).join("")+"</span>" : "");
   add("Mechanisms on record", (d.mechanisms||[]).length
-        ? '<span class="enumrow">'+d.mechanisms.map(m=>
-            pill(m.ref,REG.M,"enum","Mechanism — defined in Registry M")+
-            pill(ROLE[m.role]||m.role,REG.ROLE,"role","Edge role — how the source relates this mechanism")).join("")+"</span>" : "");
+        ? '<span class="enumrow">'+d.mechanisms.map(m=>{
+            const mv=V.mechanisms[m.ref];
+            return pill(m.ref,REG.M,"enum",
+              mv ? m.ref+" — "+mv.label+" · "+mv.status : "Private extension mechanism (X- namespace)")+
+              pill(ROLE[m.role]||m.role,REG.ROLE,"role",V.edge_roles[m.role]||"Edge role");
+          }).join("")+"</span>" : "");
   add("Context", d.context
         ? Object.keys(d.context).map(k=>{
             const f=KFACET[k]||[k.toUpperCase(),k];
@@ -851,13 +851,16 @@ function expand(tr){
   add("Entry type", d.record_kind ? pill(KIND[d.record_kind]||d.record_kind, REG.KIND,"enum",
         "Record kind — defined in Addendum B") : "");
   add("Patent on file", d.patent_flag===true ? "yes" : (d.patent_flag===false ? "no" : ""));
-  add("Compiler confidence", (d.confidence?pill(d.confidence,
-        "https://github.com/shredEngineer/eqo/blob/main/ADDENDUM-A.md#a1-compilation-metadata-normative-for-corpus-releases",
-        "enum","Compiler recall reliability — Addendum A"):"")+" — reliability of the compiler's recall of names and dates, kept separate from the evidence grades");
+  add("Compiler confidence", d.confidence ? pill(d.confidence, REG.CONFIDENCE, "enum",
+        (V.compilation_confidence[d.confidence]||"Compiler recall reliability — Addendum A"))+
+        " — reliability of the compiler's recall of names and dates, kept separate from the evidence grades" : "");
   add("References", refs);
   add("Patterns", (d.signatures||[]).length
-        ? '<span class="enumrow">'+d.signatures.map(sg=>pill(sg,REG.S,"enum",
-            "Signature pattern — defined in Registry S")).join("")+"</span>" : "");
+        ? '<span class="enumrow">'+d.signatures.map(sg=>{
+            const sv=V.signatures[sg];
+            return pill(sg,REG.S,"enum",
+              sv ? sg+" — "+sv.label+": "+sv.definition : "Signature pattern — defined in Registry S");
+          }).join("")+"</span>" : "");
   add("Documented kernel", esc(d.factual_kernel||""));
   add("Added by the narrative", esc(d.lore_layer||""));
   add("Narrative provenance", esc(d.narrative_provenance||""));

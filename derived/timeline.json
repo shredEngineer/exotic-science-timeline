@@ -67,7 +67,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1979\u20132000s"
   },
   {
@@ -119,7 +119,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1929\u20131950s"
   },
   {
@@ -165,7 +165,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2000s"
   },
   {
@@ -215,7 +215,7 @@
    "t_precision": "year",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1946\u2013present (lore)"
   },
   {
@@ -266,7 +266,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2000"
   },
   {
@@ -316,7 +316,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1989"
   },
   {
@@ -365,7 +365,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1989"
   },
   {
@@ -407,7 +407,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1989"
   },
   {
@@ -455,7 +455,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s"
   },
   {
@@ -502,7 +502,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2002"
   },
   {
@@ -554,7 +554,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2002"
   },
   {
@@ -599,7 +599,7 @@
    "t_precision": "year",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2011\u2013"
   },
   {
@@ -649,7 +649,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2015\u20132019"
   },
   {
@@ -697,7 +697,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1992"
   },
   {
@@ -740,7 +740,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1997\u20132002"
   },
   {
@@ -783,7 +783,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2001"
   },
   {
@@ -804,7 +804,7 @@
     "med": "cryo"
    },
    "e_signature": "E1:D1R0C0P1T2Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-1",
    "signatures": [],
    "note": "Announced gravity-modification research; no public results.",
    "refs": [],
@@ -817,7 +817,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1999\u20132000s"
   },
   {
@@ -859,7 +859,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1989"
   },
   {
@@ -903,7 +903,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990"
   },
   {
@@ -919,6 +919,10 @@
     {
      "ref": "M-RES",
      "role": "discussed"
+    },
+    {
+     "ref": "M-MCH",
+     "role": "claimed"
     }
    ],
    "context": {
@@ -928,10 +932,11 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D3R2C1P3T3Q1",
+   "e_signature": "E1:D3R2C1P3T4Q1",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-GYR"
+    "S-GYR",
+    "S-DEK"
    ],
    "note": "Perceived gyro 'weight loss'; later resolved within classical mechanics.",
    "refs": [],
@@ -945,7 +950,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1974"
   },
   {
@@ -985,7 +990,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1977"
   },
   {
@@ -1031,7 +1036,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s"
   },
   {
@@ -1080,7 +1085,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1954, 1959"
   },
   {
@@ -1125,7 +1130,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1970"
   },
   {
@@ -1173,7 +1178,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1997 (publ. 2000)"
   },
   {
@@ -1219,7 +1224,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1950s\u20131980s"
   },
   {
@@ -1260,7 +1265,7 @@
    "t_precision": "year",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2003\u2013"
   },
   {
@@ -1307,7 +1312,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2016"
   },
   {
@@ -1361,7 +1366,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2018\u20132021"
   },
   {
@@ -1405,7 +1410,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2006"
   },
   {
@@ -1455,7 +1460,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s\u20132020s"
   },
   {
@@ -1495,7 +1500,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1959"
   },
   {
@@ -1536,7 +1541,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1712\u20131717"
   },
   {
@@ -1581,7 +1586,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1872\u20131898"
   },
   {
@@ -1626,7 +1631,7 @@
    "t_precision": "decade",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1960s\u2013present"
   },
   {
@@ -1667,7 +1672,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1920s\u20131930s"
   },
   {
@@ -1704,7 +1709,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1928"
   },
   {
@@ -1728,7 +1733,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0RxC0P1TxQ0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-RDE"
    ],
@@ -1746,7 +1751,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1901"
   },
   {
@@ -1783,7 +1788,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1898 (lore)"
   },
   {
@@ -1823,7 +1828,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2006\u20132016"
   },
   {
@@ -1869,7 +1874,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2002"
   },
   {
@@ -1913,7 +1918,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s\u2013early 1990s"
   },
   {
@@ -1957,7 +1962,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2001"
   },
   {
@@ -2002,7 +2007,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2014"
   },
   {
@@ -2050,7 +2055,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2000s\u20132010s"
   },
   {
@@ -2094,7 +2099,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s"
   },
   {
@@ -2140,7 +2145,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s\u20132010s"
   },
   {
@@ -2187,7 +2192,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s"
   },
   {
@@ -2227,7 +2232,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1920s\u20131940s"
   },
   {
@@ -2270,7 +2275,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1979"
   },
   {
@@ -2314,7 +2319,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2009"
   },
   {
@@ -2355,7 +2360,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s"
   },
   {
@@ -2398,7 +2403,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1970s"
   },
   {
@@ -2440,7 +2445,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1968"
   },
   {
@@ -2488,7 +2493,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s"
   },
   {
@@ -2529,7 +2534,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1970s\u20131980s"
   },
   {
@@ -2576,7 +2581,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1940s"
   },
   {
@@ -2618,7 +2623,7 @@
    "t_precision": "decade",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s\u2013"
   },
   {
@@ -2657,7 +2662,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1960s\u20131970s"
   },
   {
@@ -2707,7 +2712,7 @@
    "t_precision": "year",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1991\u2013"
   },
   {
@@ -2755,7 +2760,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2009\u20132011"
   },
   {
@@ -2799,7 +2804,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1988"
   },
   {
@@ -2845,7 +2850,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1988"
   },
   {
@@ -2888,7 +2893,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s\u20132000s"
   },
   {
@@ -2924,7 +2929,7 @@
    "t_precision": "decade",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s\u2013"
   },
   {
@@ -2964,7 +2969,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "2010s"
   },
   {
@@ -3008,7 +3013,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1960s\u20131970s"
   },
   {
@@ -3054,7 +3059,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1941"
   },
   {
@@ -3096,7 +3101,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1930s"
   },
   {
@@ -3134,7 +3139,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1970s"
   },
   {
@@ -3174,7 +3179,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s"
   },
   {
@@ -3212,7 +3217,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1923\u20131951"
   },
   {
@@ -3255,7 +3260,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1930s\u20131940s"
   },
   {
@@ -3297,7 +3302,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s\u20132000s"
   },
   {
@@ -3338,7 +3343,7 @@
    "t_precision": "year",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1996\u2013present"
   },
   {
@@ -3359,7 +3364,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P2T1Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [],
    "note": "Free-energy saucer venture (OTC-X1, 'Utron' accumulator); a 1959 public demonstration did not take place. Convicted in Oklahoma in 1961 of selling securities without registering them \u2014 a registration offense, not a finding of fraud \u2014 and fined USD 5,000; conviction affirmed on appeal.",
    "refs": [
@@ -3374,7 +3379,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1950s\u20131961"
   },
   {
@@ -3422,7 +3427,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1980s\u20131998"
   },
   {
@@ -3446,7 +3451,7 @@
     "med": "water_electrolyte"
    },
    "e_signature": "E1:D0RxC0P1TxQ0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-WFC"
    ],
@@ -3464,7 +3469,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1935"
   },
   {
@@ -3504,7 +3509,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1969\u20132008"
   },
   {
@@ -3545,7 +3550,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1970s\u20131990s"
   },
   {
@@ -3589,7 +3594,7 @@
    "t_precision": "decade",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s"
   },
   {
@@ -3635,7 +3640,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s\u20132000s"
   },
   {
@@ -3678,7 +3683,7 @@
    "t_precision": "decade",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s\u2013"
   },
   {
@@ -3717,7 +3722,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1970s\u20131980s"
   },
   {
@@ -3759,7 +3764,7 @@
    "t_precision": "year",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1930\u2013present"
   },
   {
@@ -3798,7 +3803,7 @@
    "t_precision": "decade",
    "ongoing": true,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1990s\u2013"
   },
   {
@@ -3841,7 +3846,7 @@
    "t_precision": "year",
    "ongoing": false,
    "record_kind": "observation",
-   "confidence": "high",
+   "confidence": null,
    "years_raw": "1874\u20131879"
   },
   {
@@ -4644,7 +4649,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0R0C0P0T4Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-DEK"
    ],
@@ -4868,6 +4873,10 @@
     {
      "ref": "M-AET",
      "role": "claimed"
+    },
+    {
+     "ref": "M-REL",
+     "role": "claimed"
     }
    ],
    "context": {
@@ -4878,10 +4887,11 @@
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D7R5C3P3T1Q3",
+   "e_signature": "E1:D7R5C3P3T4Q3",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-AET"
+    "S-AET",
+    "S-DEK"
    ],
    "compilation_confidence": "high",
    "note": "Real, foundational effect originally interpreted by its discoverer as aether evidence \u2014 interpretation migrated, phenomenon stayed; today the basis of ring-laser gyros.",
@@ -5070,7 +5080,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0RxC0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-OFN"
    ],
@@ -5415,7 +5425,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0RxC0P1TxQ0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-WFC"
    ],
@@ -5911,7 +5921,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P0T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -6504,7 +6514,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P1T1Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF"
    ],
@@ -6536,7 +6546,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -6569,7 +6579,7 @@
     "med": "air"
    },
    "e_signature": "E1:D0R0C0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -6602,7 +6612,7 @@
     "med": "water_electrolyte"
    },
    "e_signature": "E1:D0R0C0P1T0Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF",
     "S-OFN"
@@ -6868,17 +6878,18 @@
    "mechanisms": [
     {
      "ref": "M-MCH",
-     "role": "discussed"
+     "role": "claimed"
     }
    ],
    "context": {
     "med": "air",
     "scl": "lab"
    },
-   "e_signature": "E1:D1R1C3P4T3Q1",
+   "e_signature": "E1:D1R1C3P4T4Q1",
    "epistemotype": "EP-5",
    "signatures": [
-    "S-SLF"
+    "S-SLF",
+    "S-DEK"
    ],
    "compilation_confidence": "medium",
    "record_kind": "demonstration_claim",
@@ -6919,7 +6930,7 @@
     "scl": "lab"
    },
    "e_signature": "E1:D0RxC0P1T1Q0",
-   "epistemotype": "EP-0",
+   "epistemotype": "EP-4",
    "signatures": [
     "S-SLF"
    ],
@@ -7083,7 +7094,7 @@
    "t_end": 2026,
    "t_precision": "decade",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -7107,7 +7118,7 @@
    "t_end": 1980,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -7133,7 +7144,7 @@
    "t_end": 2026,
    "t_precision": "decade",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -7160,7 +7171,7 @@
    "t_end": 2000,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -7186,7 +7197,7 @@
    "t_end": 2026,
    "t_precision": "year",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -7210,7 +7221,7 @@
    "t_end": 1989,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "medium",
    "e_signature": "",
@@ -7234,7 +7245,7 @@
    "t_end": 2026,
    "t_precision": "decade",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "medium",
    "e_signature": "",
@@ -7260,7 +7271,7 @@
    "t_end": 2026,
    "t_precision": "decade",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "medium",
    "e_signature": "",
@@ -7284,7 +7295,7 @@
    "t_end": 1949,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -7310,7 +7321,7 @@
    "t_end": 2010,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "medium",
    "e_signature": "",
@@ -7334,7 +7345,7 @@
    "t_end": 1979,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7360,7 +7371,7 @@
    "t_end": 2001,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7388,7 +7399,7 @@
    "t_end": 1990,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "medium",
    "e_signature": "",
@@ -7417,7 +7428,7 @@
    "t_end": null,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7447,7 +7458,7 @@
    "t_end": 1929,
    "t_precision": "decade",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7475,7 +7486,7 @@
    "t_end": 1950,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7501,7 +7512,7 @@
    "t_end": 1999,
    "t_precision": "decade",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7529,7 +7540,7 @@
    "t_end": 1990,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7555,7 +7566,7 @@
    "t_end": null,
    "t_precision": "year",
    "ongoing": false,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7584,7 +7595,7 @@
    "t_end": 2026,
    "t_precision": "decade",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "narrative",
    "confidence": "high",
    "e_signature": "",
@@ -7797,7 +7808,7 @@
    "t_end": 2026,
    "t_precision": "year",
    "ongoing": true,
-   "epistemotype": "EP-0",
+   "epistemotype": null,
    "record_kind": "doctrine",
    "confidence": "high",
    "e_signature": "",
@@ -8009,7 +8020,7 @@
    "by_ep": [
     [
      "EP-1",
-     53
+     54
     ],
     [
      "EP-3",
@@ -8017,15 +8028,11 @@
     ],
     [
      "EP-4",
-     27
+     39
     ],
     [
      "EP-5",
      24
-    ],
-    [
-     "EP-0",
-     13
     ],
     [
      "EP-2",
