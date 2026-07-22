@@ -1,5 +1,5 @@
 {
- "renders_corpus": "EQO/1 \u2014 corpus releases A + B + C + D + E + F",
+ "renders_corpus": "EQO/1 \u2014 corpus releases A + B + C + D + E + F + G",
  "events": [
   {
    "id": "ex:hutchison-corpus",
@@ -155,6 +155,12 @@
    "note": "Widely replicated as EHD thrust; effect vanishes in vacuum.",
    "refs": [
     "F. X. Canning, C. Melcher, E. Winet, Asymmetrical Capacitors for Propulsion, NASA/CR-2004-213312 (NASA, 2004)"
+   ],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:brown-gravitator-1929"
+    }
    ],
    "lane": "MEC",
    "lanes": [
@@ -444,6 +450,12 @@
    "note": "Reported He-4 commensurate with excess heat in Pd-D cells. McKubre's SRI heat-helium work is a separate, later replication line, not this paper.",
    "refs": [
     "M. H. Miles, R. A. Hollins, B. F. Bush, J. J. Lagowski, R. E. Miles, \"Correlation of excess power and helium production during D2O and H2O electrolysis using palladium cathodes,\" J. Electroanal. Chem. 346, 99 (1993)"
+   ],
+   "relations": [
+    {
+     "type": "confirms_per_source",
+     "ref": "ex:fleischmann-pons-1989"
+    }
    ],
    "lane": "NUC",
    "lanes": [
@@ -1121,6 +1133,12 @@
    "refs": [
     "Phys. Rev. D 3, 823 (1971)"
    ],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:allais-pendulum-1954"
+    }
+   ],
    "lane": "GRA",
    "lanes": [
     "GRA"
@@ -1168,6 +1186,12 @@
    "note": "Small unexplained residuals during total eclipse; contested.",
    "refs": [
     "Phys. Rev. D 62, 041101 (2000)"
+   ],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:allais-pendulum-1954"
+    }
    ],
    "lane": "GRA",
    "lanes": [
@@ -1303,6 +1327,12 @@
    "refs": [
     "J. Propulsion & Power 33, 830 (2017)"
    ],
+   "relations": [
+    {
+     "type": "confirms_per_source",
+     "ref": "ex:emdrive-shawyer"
+    }
+   ],
    "lane": "MEC",
    "lanes": [
     "MEC"
@@ -1351,6 +1381,10 @@
     {
      "type": "contradicts",
      "ref": "ex:emdrive-eagleworks-2016"
+    },
+    {
+     "type": "contradicts",
+     "ref": "ex:emdrive-shawyer"
     }
    ],
    "note": "Thrust signals traced to thermal/interaction artifacts at higher precision.",
@@ -2310,6 +2344,12 @@
    ],
    "note": "Claimed Howard-Johnson replication; frame analysis raised a hidden-thread hypothesis.",
    "refs": [],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:howard-johnson-1979"
+    }
+   ],
    "lane": "EMG",
    "lanes": [
     "EMG"
@@ -7734,6 +7774,12 @@
    "refs": [
     "Phys. Rev. Lett. 112, 035001 (2014)"
    ],
+   "relations": [
+    {
+     "type": "confirms_per_source",
+     "ref": "ex:ball-lightning-natural"
+    }
+   ],
    "lane": "OPT",
    "lanes": [
     "OPT"
@@ -8457,13 +8503,215 @@
    "ongoing": false,
    "confidence": "high",
    "years_raw": "2000s"
+  },
+  {
+   "id": "ex:lk99-2023",
+   "label": "LK-99 room-temperature superconductivity claim",
+   "principals": "Sukbae Lee, Ji-Hoon Kim, Young-Wan Kwon et al. (Quantum Energy Research Centre, Seoul)",
+   "years": "2023",
+   "effect_types": [
+    "P-MEC-LEV-01",
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MSN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive",
+     "thermal"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D5R3C1P1T4Q2",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "Preprint claim of ambient-pressure superconductivity above 400 K in a copper-substituted lead-apatite, supported by resistivity drops and a partial-levitation video; posted 22 July 2023 and viral within days. The claimed mechanism is established superconductivity in a new material, which places the record in the orthodox-covered class. Independent laboratories reproduced the anomalies but not superconductivity; see the linked examination record.",
+   "refs": [
+    "S. Lee, J.-H. Kim, Y.-W. Kwon, The First Room-Temperature Ambient-Pressure Superconductor, arXiv:2307.12008 (2023)"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG",
+    "MEC"
+   ],
+   "t_start": 2023,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "2023"
+  },
+  {
+   "id": "ex:lk99-replications-2023",
+   "label": "LK-99 replication wave and impurity resolution",
+   "principals": "International replication groups (multiple laboratories)",
+   "years": "2023",
+   "effect_types": [
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-KON",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive",
+     "thermal"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R5C3P3T4Q3",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:lk99-2023"
+    }
+   ],
+   "note": "Within weeks, multiple independent groups synthesized the material, reproduced the reported resistivity drop and diamagnetic anomalies, and traced them to a first-order structural transition of a copper-sulfide impurity near the claimed transition temperature \u2014 sample contamination as the operative mechanism, with no zero resistance and no Meissner state. One of the fastest documented claim-to-examination cycles in the corpus.",
+   "refs": [
+    "P. Puphal et al. and parallel groups; consolidated replication study: Replication and study of anomalies in LK-99, arXiv:2311.03558 (2023)"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 2023,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "2023"
+  },
+  {
+   "id": "ex:dias-csh-2020",
+   "label": "Dias carbonaceous-sulfur-hydride superconductivity claim",
+   "principals": "Ranga Dias et al. (University of Rochester)",
+   "years": "2020-2022",
+   "effect_types": [
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MSN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R3C2P1T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "Peer-reviewed Nature claim (2020) of room-temperature superconductivity in a carbonaceous sulfur hydride under megabar pressure. Retracted 26 September 2022: per the retraction note, the editors acted after questions about a non-standard, user-defined background-subtraction procedure whose details were not specified in the paper; the authors maintained that the raw data support the claims. Independent groups did not reproduce the result.",
+   "refs": [
+    "E. Snider et al., Room-temperature superconductivity in a carbonaceous sulfur hydride, Nature 586, 373 (2020)",
+    "Retraction Note, Nature (26 Sep 2022), doi:10.1038/s41586-022-05294-9"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 2020,
+   "t_end": 2022,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "2020-2022"
+  },
+  {
+   "id": "ex:dias-luh-2023",
+   "label": "Dias nitrogen-doped lutetium-hydride superconductivity claim",
+   "principals": "Ranga Dias et al. (University of Rochester)",
+   "years": "2023",
+   "effect_types": [
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MSN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R3C2P1T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "Peer-reviewed Nature claim (March 2023) of near-ambient superconductivity in nitrogen-doped lutetium hydride at kilobar pressures. Retracted 7 November 2023 at the request of co-authors, who per the retraction note stated that the published paper does not accurately reflect the provenance of the investigated materials, the experimental measurements undertaken and the data-processing protocols applied; concerns about the electrical-resistance data were raised independently. No independent replication succeeded.",
+   "refs": [
+    "N. Dasenbrock-Gammon et al., Evidence of near-ambient superconductivity in a N-doped lutetium hydride, Nature 615, 244 (2023)",
+    "Retraction Note, Nature (7 Nov 2023), doi:10.1038/s41586-023-06774-2"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 2023,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "2023"
   }
  ],
  "arcs": [
   {
+   "source": "ex:lifter-community",
+   "target": "ex:brown-gravitator-1929",
+   "type": "replicates"
+  },
+  {
    "source": "ex:caltech-mit-null-1989",
    "target": "ex:fleischmann-pons-1989",
    "type": "contradicts"
+  },
+  {
+   "source": "ex:miles-mckubre-helium",
+   "target": "ex:fleischmann-pons-1989",
+   "type": "confirms_per_source"
   },
   {
    "source": "ex:google-lenr-2019",
@@ -8481,9 +8729,34 @@
    "type": "contradicts"
   },
   {
+   "source": "ex:saxl-allen-1970",
+   "target": "ex:allais-pendulum-1954",
+   "type": "replicates"
+  },
+  {
+   "source": "ex:eclipse-gravimetry-1997",
+   "target": "ex:allais-pendulum-1954",
+   "type": "replicates"
+  },
+  {
+   "source": "ex:emdrive-eagleworks-2016",
+   "target": "ex:emdrive-shawyer",
+   "type": "confirms_per_source"
+  },
+  {
    "source": "ex:emdrive-dresden-2021",
    "target": "ex:emdrive-eagleworks-2016",
    "type": "contradicts"
+  },
+  {
+   "source": "ex:emdrive-dresden-2021",
+   "target": "ex:emdrive-shawyer",
+   "type": "contradicts"
+  },
+  {
+   "source": "ex:mylow-2009",
+   "target": "ex:howard-johnson-1979",
+   "type": "replicates"
   },
   {
    "source": "ex:maddox-check-1988",
@@ -8549,6 +8822,16 @@
    "source": "ex:fulton-exposure-1813",
    "target": "ex:redheffer-1812",
    "type": "contradicts"
+  },
+  {
+   "source": "ex:cen-spectrum-2014",
+   "target": "ex:ball-lightning-natural",
+   "type": "confirms_per_source"
+  },
+  {
+   "source": "ex:lk99-replications-2023",
+   "target": "ex:lk99-2023",
+   "type": "contradicts"
   }
  ],
  "eras": [
@@ -8590,15 +8873,15 @@
   ]
  ],
  "stats": {
-  "events": 202,
+  "events": 206,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 181,
-  "arcs": 18,
-  "contradiction_arcs": 17,
+  "observation_events": 185,
+  "arcs": 27,
+  "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
   "densest_year": [
    1990,
@@ -8614,18 +8897,18 @@
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 65,
    "V Contested-laboratory era": 52,
-   "VI Video & network era": 26
+   "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 181,
+   "n": 185,
    "by_lane": [
     [
      "EMG",
-     53
+     57
     ],
     [
      "MEC",
-     43
+     44
     ],
     [
      "GRA",
@@ -8667,7 +8950,7 @@
     ],
     [
      "EP-3",
-     50
+     52
     ],
     [
      "EP-4",
@@ -8675,7 +8958,7 @@
     ],
     [
      "EP-5",
-     25
+     27
     ],
     [
      "EP-2",
@@ -8683,9 +8966,9 @@
     ]
    ],
    "open_anomaly": 19,
-   "examined": 17,
+   "examined": 23,
    "never_replicated": 12,
-   "peer_reviewed": 40,
+   "peer_reviewed": 43,
    "secondhand": 38,
    "densest_decade": [
     1990,

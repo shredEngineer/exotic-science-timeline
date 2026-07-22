@@ -112,6 +112,12 @@
    "note": "Slit-spectrograph capture during a storm showing soil-element lines (Si, Fe, Ca) — consistent with soil-vaporization accounts.",
    "refs": [
     "Phys. Rev. Lett. 112, 035001 (2014)"
+   ],
+   "relations": [
+    {
+     "type": "confirms_per_source",
+     "ref": "ex:ball-lightning-natural"
+    }
    ]
   },
   {

@@ -130,6 +130,12 @@
    "note": "Widely replicated as EHD thrust; effect vanishes in vacuum.",
    "refs": [
     "F. X. Canning, C. Melcher, E. Winet, Asymmetrical Capacitors for Propulsion, NASA/CR-2004-213312 (NASA, 2004)"
+   ],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:brown-gravitator-1929"
+    }
    ]
   },
   {
@@ -346,6 +352,12 @@
    "note": "Reported He-4 commensurate with excess heat in Pd-D cells. McKubre's SRI heat-helium work is a separate, later replication line, not this paper.",
    "refs": [
     "M. H. Miles, R. A. Hollins, B. F. Bush, J. J. Lagowski, R. E. Miles, \"Correlation of excess power and helium production during D2O and H2O electrolysis using palladium cathodes,\" J. Electroanal. Chem. 346, 99 (1993)"
+   ],
+   "relations": [
+    {
+     "type": "confirms_per_source",
+     "ref": "ex:fleischmann-pons-1989"
+    }
    ]
   },
   {
@@ -852,6 +864,12 @@
    "note": "Period change reported during solar eclipse.",
    "refs": [
     "Phys. Rev. D 3, 823 (1971)"
+   ],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:allais-pendulum-1954"
+    }
    ]
   },
   {
@@ -889,6 +907,12 @@
    "note": "Small unexplained residuals during total eclipse; contested.",
    "refs": [
     "Phys. Rev. D 62, 041101 (2000)"
+   ],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:allais-pendulum-1954"
+    }
    ]
   },
   {
@@ -988,6 +1012,12 @@
    "note": "~1.2 mN/kW reported on torsion balance in vacuum.",
    "refs": [
     "J. Propulsion & Power 33, 830 (2017)"
+   ],
+   "relations": [
+    {
+     "type": "confirms_per_source",
+     "ref": "ex:emdrive-shawyer"
+    }
    ]
   },
   {
@@ -1026,6 +1056,10 @@
     {
      "type": "contradicts",
      "ref": "ex:emdrive-eagleworks-2016"
+    },
+    {
+     "type": "contradicts",
+     "ref": "ex:emdrive-shawyer"
     }
    ],
    "note": "Thrust signals traced to thermal/interaction artifacts at higher precision.",
@@ -1737,7 +1771,13 @@
     "S-SLF"
    ],
    "note": "Claimed Howard-Johnson replication; frame analysis raised a hidden-thread hypothesis.",
-   "refs": []
+   "refs": [],
+   "relations": [
+    {
+     "type": "replicates",
+     "ref": "ex:howard-johnson-1979"
+    }
+   ]
   },
   {
    "id": "ex:steven-mark-tpu",

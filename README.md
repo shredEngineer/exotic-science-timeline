@@ -12,7 +12,7 @@ Published by [**Advanced Rediscovery**](https://advanced-rediscovery.com). Live 
 
 Each mark is a dated record. Its position is time, its lane is the class of effect claimed, its color is the region of the evidence lattice it occupies — a documentation profile, deliberately chosen to carry no valuation. The arcs are **resolution arcs**: they connect a claim to the examination that later tested it.
 
-Two things fall out of the record and are worth stating plainly. The median interval between a claim and its first documented adversarial examination is **six years**. And claims of devices that run without input **recur across the entire nine centuries** — from a twelfth-century mercury wheel to the present, in thirty-seven records with long silences between them — which is a statement about people rather than about physics.
+Two things fall out of the record and are worth stating plainly. The median interval between a claim and its first documented adversarial examination is **about six years**. And claims of devices that run without input **recur across the entire nine centuries** — from a twelfth-century mercury wheel to the present, in thirty-seven records with long silences between them — which is a statement about people rather than about physics.
 
 Nothing here asserts that any claimed effect is real, and nothing here asserts that any is fabricated. The record grades how well each claim is documented, on six ordered axes, and lets the reader see which claims share an evidential situation regardless of what they claimed.
 

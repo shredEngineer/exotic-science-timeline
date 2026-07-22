@@ -139,6 +139,8 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .chip.enum{font-family:var(--font-mono);font-size:.72rem;color:var(--muted-foreground)}
 .chip.role{font-size:.7rem;color:hsl(45 80% 62%);border-color:hsl(45 45% 32%)}
 .chip.enr{font-size:.72rem;color:hsl(160 55% 58%);border-color:hsl(160 40% 30%);cursor:help}
+.enrdot{color:hsl(160 55% 58%);font-size:.7rem;vertical-align:middle;cursor:help}
+.srclinks{display:flex;gap:1rem;flex-wrap:wrap}
 .enr-text{display:block;margin:.25rem 0 .15rem}
 .enr-src{font-size:.8rem;color:var(--muted-foreground)}
 .enr-src a{overflow-wrap:anywhere}
@@ -381,7 +383,11 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 
 <section id="record">
   <div class="sec-head"><h2>Exotic Science Timeline</h2>
-    <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline">Data and build ↗</a></div>
+    <span class="srclinks">
+      <a class="srclink" id="dljson" href="#" download="exotic-science-timeline-data.json">Download data (JSON) ↓</a>
+      <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline/issues/new?template=suggest-record.md">Suggest a record ↗</a>
+      <a class="srclink" href="https://github.com/shredEngineer/exotic-science-timeline">Data and build ↗</a>
+    </span></div>
 
   <div class="blockhead">
     <h3>__CENTURIES_CAP__ centuries at a glance</h3>
@@ -768,10 +774,13 @@ function rows(list){
       ? '<span class="chip ep '+ep+'" data-jump="ep-'+esc(e.epistemotype)+
         '" data-tip="'+esc(e.epistemotype+" — "+(EPDESC[e.epistemotype]||"not assessed"))+'">'+esc(e.epistemotype)+"</span>"
       : '<span class="chip na" data-tip="Not an observation — doctrines and narratives carry no evidence coordinate">—</span>';
+    const enr = e.enrichment
+      ? ' <span class="enrdot" data-tip="This record carries added context — a verified public source with a note. Open the row to read it.">◆</span>'
+      : "";
     return '<tr class="row" id="r-'+esc(e.id).replace(/[^a-zA-Z0-9-]/g,"_")+'" data-id="'+esc(e.id)+'">'+
       '<td class="tw"><span class="tri">▸</span></td>'+
       '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
-      '<td class="claim">'+esc(e.label)+"</td>"+
+      '<td class="claim">'+esc(e.label)+enr+"</td>"+
       '<td class="who">'+esc(e.principals||"—")+"</td>"+
       '<td class="lane">'+(e.lanes||[e.lane]).map(l=>'<span class="chip lane" data-jump="lane-'+esc(l)+
         '" data-tip="'+esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'">'+esc(LANE[l]||l)+"</span>").join(" ")+"</td>"+
@@ -790,16 +799,19 @@ function apply(){
     if(fl&&!(e.lanes||[e.lane]).includes(fl)) return false;
     if(fe&&e.epistemotype!==fe) return false;
     if(fk&&e.record_kind!==fk) return false;
-    if(q){const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")).toLowerCase();
+    if(q){const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")+
+        " "+(e.enrichment?(e.enrichment.text+" "+e.enrichment.source):"")).toLowerCase();
       if(hay.indexOf(q)===-1) return false;}
     return true;
   });
   // Filter state lives in the URL (shareable/bookmarkable), written without a
   // reload; absent params keep the address clean.
   try{
+    const cur=new URLSearchParams(location.search);
     const usp=new URLSearchParams();
     if(q) usp.set("q",document.getElementById("q").value.trim());
     if(fl) usp.set("ph",fl); if(fe) usp.set("ep",fe); if(fk) usp.set("kind",fk);
+    if(cur.get("r")) usp.set("r",cur.get("r"));
     const qs=usp.toString();
     history.replaceState(null,"",qs?("?"+qs):location.pathname);
   }catch(_){/* non-http contexts */}
@@ -837,6 +849,35 @@ document.getElementById("reset").addEventListener("click",()=>{
   apply();
 });
 
+// ?r=<id> deep link: expand and scroll to the record once rows exist.
+(function(){
+  try{
+    const rid=new URLSearchParams(location.search).get("r");
+    if(!rid) return;
+    setTimeout(function(){
+      const tr=document.querySelector('#tb tr.row[data-id="'+rid.replace(/"/g,'\\"')+'"]');
+      if(tr){ expand(tr); tr.scrollIntoView({behavior:"smooth",block:"center"}); }
+    },0);
+  }catch(_){/* non-http contexts */}
+})();
+
+// Download the embedded dataset as a file — the page IS the data, so the
+// export is generated client-side and never fetches anything.
+(function(){
+  const a=document.getElementById("dljson"); if(!a) return;
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    const out={renders_corpus:DATA.renders_corpus, exported_from:"timeline.advanced-rediscovery.com",
+      license:"CC BY 4.0", events:DATA.events, arcs:DATA.arcs, eras:DATA.eras, stats:DATA.stats};
+    const blob=new Blob([JSON.stringify(out,null,1)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);
+    const tmp=document.createElement("a");
+    tmp.href=url; tmp.download="exotic-science-timeline-data.json";
+    document.body.appendChild(tmp); tmp.click(); tmp.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),4000);
+  });
+})();
+
 /* Enrichment: written by the publisher's research process into overlay/overlay.json,
    attached at build time. The relation is rendered as a plain-word chip whose tooltip
    defines it — no coded token reaches the reader. */
@@ -857,13 +898,24 @@ function enrichmentHtml(en){
   }
   return chip+'<span class="enr-text">'+esc(en.text||"")+'</span><span class="enr-src">Source: '+src+'</span>';
 }
+// The expanded record rides in the URL too (?r=<id>) so a single record is
+// shareable; written without reload, removed on collapse.
+function setRecParam(id){
+  try{
+    const u=new URLSearchParams(location.search);
+    if(id) u.set("r",id); else u.delete("r");
+    const qs=u.toString();
+    history.replaceState(null,"",qs?("?"+qs):location.pathname);
+  }catch(_){/* non-http contexts */}
+}
 function expand(tr){
   const nxt=tr.nextElementSibling;
-  if(nxt&&nxt.classList.contains("detail")){nxt.remove();tr.classList.remove("open");return;}
+  if(nxt&&nxt.classList.contains("detail")){nxt.remove();tr.classList.remove("open");setRecParam(null);return;}
   document.querySelectorAll("tr.detail").forEach(d=>d.remove());
   document.querySelectorAll("tr.row.open").forEach(o=>o.classList.remove("open"));
   const d=ev.find(x=>x.id===tr.dataset.id); if(!d) return;
   tr.classList.add("open");
+  setRecParam(d.id);
   const rel=(DATA.arcs||[]).filter(a=>a.source===d.id||a.target===d.id);
   const relHtml=rel.length?rel.map(a=>{const oid=a.source===d.id?a.target:a.source;
     const o=ev.find(x=>x.id===oid);

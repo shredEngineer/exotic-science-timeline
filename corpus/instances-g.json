@@ -1,0 +1,155 @@
+{
+ "eqo_corpus_release": "G",
+ "targets_eqo_version": "1.3.0",
+ "append_only_to": "corpus/instances-a.json … instances-f.json (untouched)",
+ "provenance_note": "Contemporary-episode additions: the two most prominent 2020s room-temperature-superconductivity claim/examination chains, compiled from the published record (papers, replications, retraction notices). Notes state exactly what the cited documents state.",
+ "instances": [
+  {
+   "id": "ex:lk99-2023",
+   "label": "LK-99 room-temperature superconductivity claim",
+   "principals": "Sukbae Lee, Ji-Hoon Kim, Young-Wan Kwon et al. (Quantum Energy Research Centre, Seoul)",
+   "years": "2023",
+   "effect_types": [
+    "P-MEC-LEV-01",
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MSN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive",
+     "thermal"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D5R3C1P1T4Q2",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "Preprint claim of ambient-pressure superconductivity above 400 K in a copper-substituted lead-apatite, supported by resistivity drops and a partial-levitation video; posted 22 July 2023 and viral within days. The claimed mechanism is established superconductivity in a new material, which places the record in the orthodox-covered class. Independent laboratories reproduced the anomalies but not superconductivity; see the linked examination record.",
+   "refs": [
+    "S. Lee, J.-H. Kim, Y.-W. Kwon, The First Room-Temperature Ambient-Pressure Superconductor, arXiv:2307.12008 (2023)"
+   ]
+  },
+  {
+   "id": "ex:lk99-replications-2023",
+   "label": "LK-99 replication wave and impurity resolution",
+   "principals": "International replication groups (multiple laboratories)",
+   "years": "2023",
+   "effect_types": [
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ART-KON",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive",
+     "thermal"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R5C3P3T4Q3",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "relations": [
+    {
+     "type": "contradicts",
+     "ref": "ex:lk99-2023"
+    }
+   ],
+   "note": "Within weeks, multiple independent groups synthesized the material, reproduced the reported resistivity drop and diamagnetic anomalies, and traced them to a first-order structural transition of a copper-sulfide impurity near the claimed transition temperature — sample contamination as the operative mechanism, with no zero resistance and no Meissner state. One of the fastest documented claim-to-examination cycles in the corpus.",
+   "refs": [
+    "P. Puphal et al. and parallel groups; consolidated replication study: Replication and study of anomalies in LK-99, arXiv:2311.03558 (2023)"
+   ]
+  },
+  {
+   "id": "ex:dias-csh-2020",
+   "label": "Dias carbonaceous-sulfur-hydride superconductivity claim",
+   "principals": "Ranga Dias et al. (University of Rochester)",
+   "years": "2020-2022",
+   "effect_types": [
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MSN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R3C2P1T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "Peer-reviewed Nature claim (2020) of room-temperature superconductivity in a carbonaceous sulfur hydride under megabar pressure. Retracted 26 September 2022: per the retraction note, the editors acted after questions about a non-standard, user-defined background-subtraction procedure whose details were not specified in the paper; the authors maintained that the raw data support the claims. Independent groups did not reproduce the result.",
+   "refs": [
+    "E. Snider et al., Room-temperature superconductivity in a carbonaceous sulfur hydride, Nature 586, 373 (2020)",
+    "Retraction Note, Nature (26 Sep 2022), doi:10.1038/s41586-022-05294-9"
+   ]
+  },
+  {
+   "id": "ex:dias-luh-2023",
+   "label": "Dias nitrogen-doped lutetium-hydride superconductivity claim",
+   "principals": "Ranga Dias et al. (University of Rochester)",
+   "years": "2023",
+   "effect_types": [
+    "P-EMG-IND-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MSN",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R3C2P1T4Q3",
+   "epistemotype": "EP-3",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "Peer-reviewed Nature claim (March 2023) of near-ambient superconductivity in nitrogen-doped lutetium hydride at kilobar pressures. Retracted 7 November 2023 at the request of co-authors, who per the retraction note stated that the published paper does not accurately reflect the provenance of the investigated materials, the experimental measurements undertaken and the data-processing protocols applied; concerns about the electrical-resistance data were raised independently. No independent replication succeeded.",
+   "refs": [
+    "N. Dasenbrock-Gammon et al., Evidence of near-ambient superconductivity in a N-doped lutetium hydride, Nature 615, 244 (2023)",
+    "Retraction Note, Nature (7 Nov 2023), doi:10.1038/s41586-023-06774-2"
+   ]
+  }
+ ]
+}

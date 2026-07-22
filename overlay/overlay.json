@@ -251,6 +251,26 @@
    "source": "https://patents.google.com/patent/US20060145019A1",
    "relation": "patent",
    "text": "The best-known document of the cluster is published application US 2006/0145019 A1 ('Triangular spacecraft'). All entries in the corpus are applications — published design documents that were never granted and never accompanied by measurements."
+  },
+  "ex:lk99-2023": {
+   "source": "https://arxiv.org/abs/2307.12008",
+   "relation": "literature",
+   "text": "The claim's primary document is arXiv:2307.12008 (22 July 2023). Its evidential weight sat in a resistivity drop, magnetic anomalies and a partial-levitation video; every one of those observables was later reproduced by independent groups and attributed to a copper-sulfide impurity transition rather than superconductivity."
+  },
+  "ex:lk99-replications-2023": {
+   "source": "https://arxiv.org/abs/2311.03558",
+   "relation": "literature",
+   "text": "The consolidated replication study (arXiv:2311.03558) reproduced the reported anomalies and located them in the first-order structural transition of the Cu2S impurity near 385 K. The episode ran claim-to-resolution in roughly three weeks — a useful calibration point for how fast adversarial examination can work when a claim is cheap to synthesize."
+  },
+  "ex:dias-csh-2020": {
+   "source": "https://doi.org/10.1038/s41586-022-05294-9",
+   "relation": "literature",
+   "text": "The retraction note (Nature, 26 September 2022) is the decisive document: it records that the magnetic-susceptibility plots relied on a non-standard, user-defined background subtraction whose details the paper did not specify, and that its validity was called into question — while the authors maintained the raw data support the claims."
+  },
+  "ex:dias-luh-2023": {
+   "source": "https://doi.org/10.1038/s41586-023-06774-2",
+   "relation": "literature",
+   "text": "The retraction note (Nature, 7 November 2023) records the co-authors' own stated view that the paper does not accurately reflect the provenance of the investigated materials, the experimental measurements undertaken and the data-processing protocols applied. A paper unmade by its own author list is rare; the note is the primary document of that event."
   }
  }
 }
