@@ -1,8 +1,8 @@
 {
-  "eqo_version": "1.3.0",
+  "eqo_version": "1.4.0",
   "canonical_edition": "en",
-  "artifact": "EQO/1 machine-readable vocabulary export — the registries and enumerations of the standard in one structured file. Consumers (viewers, validators, build pipelines) read this artifact; parsing the specification prose is not a supported interface. Normative basis: ADDENDUM-C.md; content mirrors SPECIFICATION.md and the addenda.",
-  "sources": ["SPECIFICATION.md", "ADDENDUM-A.md", "ADDENDUM-B.md", "ADDENDUM-C.md"],
+  "artifact": "EQO/1 machine-readable vocabulary export — the registries and enumerations of the standard in one structured file. Consumers (viewers, validators, build pipelines) read this artifact; parsing the specification prose is not a supported interface. Normative basis: SPECIFICATION.md §8.6; content mirrors the specification.",
+  "sources": ["SPECIFICATION.md"],
   "spec_anchors": {
     "P": "SPECIFICATION.md#part-ii--registry-p-phenomena",
     "M": "SPECIFICATION.md#part-iii--registry-m-mechanisms",
@@ -12,9 +12,10 @@
     "EP": "SPECIFICATION.md#q4-epistemotypes-named-reference-regions",
     "REL": "SPECIFICATION.md#4-architecture",
     "ROLE": "SPECIFICATION.md#part-iii--registry-m-mechanisms",
-    "KIND": "ADDENDUM-B.md#b2-new-record-field-record_kind",
-    "CONFIDENCE": "ADDENDUM-A.md#a1-compilation-metadata-normative-for-corpus-releases",
-    "TIERS": "ADDENDUM-B.md#b1-why-two-new-tiers"
+    "KIND": "SPECIFICATION.md#83-record-kinds",
+    "CONFIDENCE": "SPECIFICATION.md#82-compilation-metadata-and-the-candidates-tier",
+    "TIERS": "SPECIFICATION.md#85-doctrine-and-narrative-tiers",
+    "RET": "SPECIFICATION.md#84-retractions"
   },
   "phenomena": {
     "classes": {

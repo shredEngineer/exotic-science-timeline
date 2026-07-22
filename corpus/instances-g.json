@@ -114,6 +114,12 @@
    "refs": [
     "E. Snider et al., Room-temperature superconductivity in a carbonaceous sulfur hydride, Nature 586, 373 (2020)",
     "Retraction Note, Nature (26 Sep 2022), doi:10.1038/s41586-022-05294-9"
+   ],
+   "retractions": [
+    {
+     "date": "2022-09-26",
+     "ref": "Retraction Note, Nature (26 Sep 2022), doi:10.1038/s41586-022-05294-9"
+    }
    ]
   },
   {
@@ -149,6 +155,12 @@
    "refs": [
     "N. Dasenbrock-Gammon et al., Evidence of near-ambient superconductivity in a N-doped lutetium hydride, Nature 615, 244 (2023)",
     "Retraction Note, Nature (7 Nov 2023), doi:10.1038/s41586-023-06774-2"
+   ],
+   "retractions": [
+    {
+     "date": "2023-11-07",
+     "ref": "Retraction Note, Nature (7 Nov 2023), doi:10.1038/s41586-023-06774-2"
+    }
    ]
   }
  ]

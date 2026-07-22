@@ -139,6 +139,7 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .chip.enum{font-family:var(--font-mono);font-size:.72rem;color:var(--muted-foreground)}
 .chip.role{font-size:.7rem;color:hsl(45 80% 62%);border-color:hsl(45 45% 32%)}
 .chip.enr{font-size:.72rem;color:hsl(160 55% 58%);border-color:hsl(160 40% 30%);cursor:help}
+.chip.retr{font-size:.7rem;color:hsl(0 80% 68%);border-color:hsl(0 45% 34%)}
 .enrdot{color:hsl(160 55% 58%);font-size:.7rem;vertical-align:middle;cursor:help}
 .srclinks{display:flex;gap:1rem;flex-wrap:wrap}
 .enr-text{display:block;margin:.25rem 0 .15rem}
@@ -586,6 +587,7 @@ function dotCard(e){
     ? epChip(e.epistemotype)+' — '+esc(epd)
     : esc((KIND[e.record_kind]||"Context record")+" — carries no evidence coordinate"))+'</dd>';
   if(mech) h+='<dt>Mechanisms</dt><dd>'+mech+' on record</dd>';
+  if(e.retractions&&e.retractions.length) h+='<dt>Retracted</dt><dd>'+esc(e.retractions[0].date)+'</dd>';
   h+='</dl>';
   if(e.e_signature) h+='<div class="sig">'+esc(e.e_signature)+'</div>';
   h+='<div class="tk" style="margin-top:.4rem;text-transform:none;letter-spacing:0">Click the mark to open the full record ↓</div>';
@@ -777,10 +779,15 @@ function rows(list){
     const enr = e.enrichment
       ? ' <span class="enrdot" data-tip="This record carries added context — a verified public source with a note. Open the row to read it.">◆</span>'
       : "";
+    // a retraction is record data (SPECIFICATION §8.4) — the chip links to where the field is defined
+    const ret = (e.retractions&&e.retractions.length)
+      ? ' <a class="chip retr" href="'+REG.RET+'" target="_blank" rel="noopener noreferrer" data-tip="'+
+        esc("Retracted by the publication channel on "+e.retractions[0].date+". The claim record stays — the retraction is data; open the row for the notice.")+'">retracted</a>'
+      : "";
     return '<tr class="row" id="r-'+esc(e.id).replace(/[^a-zA-Z0-9-]/g,"_")+'" data-id="'+esc(e.id)+'">'+
       '<td class="tw"><span class="tri">▸</span></td>'+
       '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
-      '<td class="claim">'+esc(e.label)+enr+"</td>"+
+      '<td class="claim">'+esc(e.label)+ret+enr+"</td>"+
       '<td class="who">'+esc(e.principals||"—")+"</td>"+
       '<td class="lane">'+(e.lanes||[e.lane]).map(l=>'<span class="chip lane" data-jump="lane-'+esc(l)+
         '" data-tip="'+esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'">'+esc(LANE[l]||l)+"</span>").join(" ")+"</td>"+
@@ -800,7 +807,8 @@ function apply(){
     if(fe&&e.epistemotype!==fe) return false;
     if(fk&&e.record_kind!==fk) return false;
     if(q){const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")+
-        " "+(e.enrichment?(e.enrichment.text+" "+e.enrichment.source):"")).toLowerCase();
+        " "+(e.enrichment?(e.enrichment.text+" "+e.enrichment.source):"")+
+        (e.retractions&&e.retractions.length?" retracted "+e.retractions.map(rt=>rt.ref).join(" "):"")).toLowerCase();
       if(hay.indexOf(q)===-1) return false;}
     return true;
   });
@@ -950,12 +958,17 @@ function expand(tr){
               "</span>";
           }).join("") : "");
   add("Entry type", d.record_kind ? pill(KIND[d.record_kind]||d.record_kind, REG.KIND,"enum",
-        "Record kind — defined in Addendum B") : "");
+        "Record kind — defined in the specification") : "");
   add("Patent on file", d.patent_flag===true ? "yes" : (d.patent_flag===false ? "no" : ""));
   add("Compiler confidence", d.confidence ? pill(d.confidence, REG.CONFIDENCE, "enum",
-        (V.compilation_confidence[d.confidence]||"Compiler recall reliability — Addendum A"))+
+        (V.compilation_confidence[d.confidence]||"Compiler recall reliability — defined in the specification"))+
         " — reliability of the compiler's recall of names and dates, kept separate from the evidence grades" : "");
   add("References", refs);
+  add("Retracted", (d.retractions||[]).length
+        ? d.retractions.map(rt=>'<span class="enumrow">'+pill("retracted "+rt.date,REG.RET,"retr",
+            "Retraction issued by the publication channel — the notice is data (SPECIFICATION Part VIII); its stated grounds are quoted in this record")+
+            esc(rt.ref)+"</span>").join("")
+        : "");
   add("Patterns", (d.signatures||[]).length
         ? '<span class="enumrow">'+d.signatures.map(sg=>{
             const sv=V.signatures[sg];
@@ -973,7 +986,8 @@ function expand(tr){
   const SHOWN=new Set(["note","years_raw","years","effect_types","mechanisms","context","record_kind",
     "patent_flag","confidence","compilation_confidence","refs","signatures","factual_kernel","lore_layer",
     "narrative_provenance","summary","id","label","principals","enrichment","lane","lanes","t_start",
-    "t_end","t_precision","ongoing","epistemotype","e_signature","relations","linked_instances","emergence"]);
+    "t_end","t_precision","ongoing","epistemotype","e_signature","relations","linked_instances","emergence",
+    "retractions"]);
   Object.keys(d).filter(k=>!SHOWN.has(k)).forEach(k=>add(esc(k), esc(String(d[k]))));
   row.innerHTML='<td colspan="7"><dl>'+rows.join("")+"</dl></td>";
   tr.after(row);
@@ -993,6 +1007,8 @@ document.addEventListener("click",e=>{
     const target=document.querySelector('#tb tr.row[data-id="'+(rj.dataset.rec||"").replace(/"/g,'\\"')+'"]');
     if(target){ target.scrollIntoView({behavior:"smooth",block:"center"}); expand(target); }
     return; }
+  // an outbound link inside a row (e.g. the retraction chip) opens its target; it never toggles the row
+  if(e.target.closest("#tb a")) return;
   const tr=e.target.closest("#tb tr.row"); if(tr) expand(tr);
 });
 

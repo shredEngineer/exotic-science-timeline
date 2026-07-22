@@ -111,6 +111,11 @@ def main() -> int:
                 bad.append(f"{rid}: unknown relation type {rel.get('type')}")
             if rel.get("ref") not in all_ids:
                 bad.append(f"{rid}: relation to unknown record {rel.get('ref')}")
+        for ret in r.get("retractions", []) or []:
+            if not re.match(r"^[0-9]{4}-[0-9]{2}-[0-9]{2}$", ret.get("date", "")):
+                bad.append(f"{rid}: retraction date is not ISO 8601: {ret.get('date')!r}")
+            if not ret.get("ref", "").strip():
+                bad.append(f"{rid}: retraction entry without a citation of the notice")
         if r.get("record_kind", "observation") not in kinds:
             bad.append(f"{rid}: unknown record_kind {r.get('record_kind')}")
         if "compilation_confidence" in r and r["compilation_confidence"] not in conf:
