@@ -256,9 +256,9 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 #dhsvg .axis{fill:var(--muted-foreground);font-size:11px;font-family:var(--font-body)}
 #dhsvg .grid{stroke:hsl(214 30% 18% / .8);stroke-width:1}
 .dhlegend .dotsw{border-radius:2px}
-/* grade ladders in the axes table */
-.ladder{display:flex;flex-wrap:wrap;gap:.2rem 1.1rem;margin-top:.5rem}
-.gradeln{display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap;
+/* grade ladders in the axes table — one grade per line */
+.ladder{display:flex;flex-direction:column;gap:.24rem;margin-top:.55rem}
+.gradeln{display:inline-flex;align-items:center;gap:.45rem;
   color:var(--muted-foreground);font-size:.82rem}
 #sigread .axes{vertical-align:middle}
 
@@ -844,18 +844,16 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
 /* ---------- reference tables use the record's own badges ---------- */
 // the syntax primer: a live example coordinate (hover any badge), then the reading rules
 document.getElementById("sigread").innerHTML =
-  'Every observation carries one compact <strong>evidence coordinate</strong>, for example '+
-  '<span class="mono" style="color:var(--secondary)">E1:</span>'+axes("E1:D7R3C2P1T4Q3")+
-  ' — read left to right: the <span class="mono">E1</span> prefix names the version of the six-axis set, '+
-  'then follow six letter-digit pairs in the fixed order D·R·C·P·T·Q. The <strong>letter</strong> names the axis '+
-  '(Documentation, Replication, Controls, Provenance, Theory embedding, Quantification); the <strong>digit</strong> is the '+
-  'grade on that axis\'s own ladder — each axis has its own maximum (D0–D7, R0–R5, C0–C5, P0–P4, T0–T4, Q0–Q3), and a '+
-  'higher grade always means <em>better documented</em>, never "more true". An <span class="mono">x</span> in any slot '+
-  'means the axis was not assessed — missing data, not a zero. Hover any badge for its meaning; every grade of every '+
-  'ladder is spelled out below.';
+  'Every record carries one compact <strong>evidence coordinate</strong>, e.g. '+
+  '<span class="mono" style="color:var(--secondary)">E1:</span>'+axes("E1:D7R3C2P1T4Q3")+'. '+
+  '<span class="mono">E1</span> names the version of the axis set. Then come six pairs, always in the order '+
+  'D·R·C·P·T·Q: the <strong>letter</strong> is the axis, the <strong>digit</strong> is the grade on that axis\'s ladder. '+
+  'Higher means <em>better documented</em> — never "more true". An <span class="mono">x</span> means the axis was not '+
+  'assessed: missing data, not a zero.';
 document.getElementById("axtable").innerHTML = "DRCPTQ".split("").map(k=>{
-  // row id lets a badge in the record jump straight to its explanation
-  const demo='<span class="axes"><span class="ax '+axCls(k,String(AXMAX[k]))+'">'+k+AXMAX[k]+"</span></span>";
+  // row id lets a badge in the record jump straight to its explanation;
+  // the axis chip carries the bare letter — D7 is a coordinate value, the axis is D
+  const demo='<span class="axes"><span class="ax">'+k+"</span></span>";
   const ladder=Object.keys(AXGRADE[k]).sort((a,b)=>+a-+b).map(v=>
     '<span class="gradeln"><span class="axes"><span class="ax '+axCls(k,v)+'">'+k+v+"</span></span>"+
     esc(AXGRADE[k][v])+"</span>").join("");
