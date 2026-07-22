@@ -14,6 +14,7 @@ import json, pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CORPUS = ROOT / "corpus"
+OVERLAY = ROOT / "overlay" / "overlay.json"
 
 ALLEGATION = re.compile(
     r'\b(fraud|fraudulent|convicted|conviction|criminal|indicted|swindl\w*|'
@@ -47,8 +48,29 @@ def main() -> int:
             continue
         findings.append((e["id"], principals, hits, text.strip()[:150]))
 
+    # The enrichment overlay publishes alongside the corpus and is checked to the
+    # same standard: an allegation-shaped statement about a named principal must
+    # carry a readable source or discharge itself in the text.
+    by_id = {r["id"]: r for _, r in records}
+    if OVERLAY.exists():
+        overlay = json.loads(OVERLAY.read_text()).get("entries", {})
+        for rid, entry in overlay.items():
+            text = str(entry.get("text", ""))
+            hits = sorted(set(m.lower() for m in ALLEGATION.findall(text)))
+            if not hits:
+                continue
+            base = by_id.get(rid, {})
+            principals = (base.get("principals") or "").strip()
+            if NO_PERSON.match(principals):
+                continue
+            if str(entry.get("source", "")).startswith("https://"):
+                continue  # sourced — a reader can check the claim
+            if EXCULPATORY.search(text) or ATTRIBUTED.search(text):
+                continue
+            findings.append((f"overlay:{rid}", principals, hits, text.strip()[:150]))
+
     if not findings:
-        print(f"check-persons: clean over {len(records)} records")
+        print(f"check-persons: clean over {len(records)} records + overlay")
         return 0
 
     print(f"check-persons: {len(findings)} finding(s)\n", file=sys.stderr)

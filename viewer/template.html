@@ -138,6 +138,10 @@ a.chip{text-decoration:none}
 a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
 .chip.enum{font-family:var(--font-mono);font-size:.72rem;color:var(--muted-foreground)}
 .chip.role{font-size:.7rem;color:hsl(45 80% 62%);border-color:hsl(45 45% 32%)}
+.chip.enr{font-size:.72rem;color:hsl(160 55% 58%);border-color:hsl(160 40% 30%);cursor:help}
+.enr-text{display:block;margin:.25rem 0 .15rem}
+.enr-src{font-size:.8rem;color:var(--muted-foreground)}
+.enr-src a{overflow-wrap:anywhere}
 .chip.ctx{font-size:.72rem;color:hsl(189 70% 62%);border-color:hsl(189 40% 28%)}
 .chip.key{font-family:var(--font-mono);font-size:.7rem;color:var(--muted-foreground);
   background:transparent;border-style:dashed}
@@ -815,6 +819,26 @@ document.getElementById("reset").addEventListener("click",()=>{
   apply();
 });
 
+/* Enrichment: written by the publisher's research process into overlay/overlay.json,
+   attached at build time. The relation is rendered as a plain-word chip whose tooltip
+   defines it — no coded token reaches the reader. */
+const RELDEF={
+  patent:["public patent","The source is a granted patent on a public registry; the note states what the grant does and does not certify."],
+  literature:["published literature","The source is a peer-reviewed paper or public preprint bearing on this record."],
+  analysis:["published analysis","The source is a published research analysis of the mechanism class this record involves."],
+  corpus:["related record","The context points to another record in this corpus; the note states the connection."]};
+function enrichmentHtml(en){
+  const rd=RELDEF[en.relation]||[String(en.relation||"context"),"Enrichment link class — defined in overlay/README.md of the repository"];
+  const chip='<span class="chip enr" title="'+esc(rd[1])+'">'+esc(rd[0])+'</span>';
+  let src;
+  if(/^https?:\/\//.test(en.source||"")){
+    let host=en.source; try{host=new URL(en.source).hostname;}catch(_){/* leave full url */}
+    src='<a href="'+esc(en.source)+'" target="_blank" rel="noopener">'+esc(host)+'</a>';
+  }else{
+    src='<a href="#" data-rec="'+esc(en.source||"")+'"><code>'+esc(en.source||"")+'</code></a>';
+  }
+  return chip+'<span class="enr-text">'+esc(en.text||"")+'</span><span class="enr-src">Source: '+src+'</span>';
+}
 function expand(tr){
   const nxt=tr.nextElementSibling;
   if(nxt&&nxt.classList.contains("detail")){nxt.remove();tr.classList.remove("open");return;}
@@ -874,7 +898,7 @@ function expand(tr){
   add("Summary", esc(d.summary||""));
   add("Linked records", relHtml);
   add("Identifier", "<code>"+esc(d.id)+"</code>");
-  if(d.enrichment) add("Added context", esc(JSON.stringify(d.enrichment)));
+  if(d.enrichment) add("Added context", enrichmentHtml(d.enrichment));
   // anything the corpus grows later still shows up, rather than being dropped
   const SHOWN=new Set(["note","years_raw","years","effect_types","mechanisms","context","record_kind",
     "patent_flag","confidence","compilation_confidence","refs","signatures","factual_kernel","lore_layer",
@@ -894,6 +918,11 @@ function explain(target){
 document.addEventListener("click",e=>{
   const b=e.target.closest("[data-jump]");
   if(b){ e.stopPropagation(); explain(b.dataset.jump); return; }
+  const rj=e.target.closest("[data-rec]");
+  if(rj){ e.preventDefault(); e.stopPropagation();
+    const target=document.querySelector('#tb tr.row[data-id="'+(rj.dataset.rec||"").replace(/"/g,'\\"')+'"]');
+    if(target){ target.scrollIntoView({behavior:"smooth",block:"center"}); expand(target); }
+    return; }
   const tr=e.target.closest("#tb tr.row"); if(tr) expand(tr);
 });
 

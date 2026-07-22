@@ -1,5 +1,221 @@
 {
-  "overlay_version": 0,
-  "generated": null,
-  "entries": {}
+ "overlay_version": 1,
+ "generated": "2026-07-22",
+ "entries": {
+  "ex:tesla-us685957-1901": {
+   "source": "https://patents.google.com/patent/US685957A",
+   "relation": "patent",
+   "text": "The granted patent claims an apparatus that charges a capacitor from 'radiant energy' — Tesla's term for sunlight and other ray sources striking an elevated insulated plate — and discharges it through a controller. The claims cover electrostatic collection from natural sources, not extraction of vacuum energy."
+  },
+  "ex:bearden-meg-2002": {
+   "source": "https://patents.google.com/patent/US6362718B1",
+   "relation": "patent",
+   "text": "United States patent 6,362,718 (2002) covers the device's construction: a permanent magnet, a nanocrystalline flux-path core and switched input coils. A granted patent certifies novelty of the claimed construction; it involves no test of over-unity performance."
+  },
+  "ex:howard-johnson-1979": {
+   "source": "https://patents.google.com/patent/US4151431A",
+   "relation": "patent",
+   "text": "United States patent 4,151,431 ('Permanent magnet motor', 1979) was granted for the magnet-gate geometry. Patent examination covers novelty and description, not energy balance; no independent measurement of net work output is on record."
+  },
+  "ex:correa-pagd": {
+   "source": "https://patents.google.com/patent/US5416391A",
+   "relation": "patent",
+   "text": "United States patent 5,416,391 (1995) describes the pulsed abnormal glow discharge regime the reactors used: a discharge region where current falls as voltage rises. The negative-resistance regime is established discharge physics; the energy-gain claim rests on the inventors' own calorimetry."
+  },
+  "ex:garrett-1935": {
+   "source": "https://patents.google.com/patent/US2006676A",
+   "relation": "patent",
+   "text": "United States patent 2,006,676 (1935) shows the construction: an electrolytic cell generating hydrogen and oxygen fed to the engine's intake. The arrangement moves energy from the battery through electrolysis to combustion; the patent documents the plumbing, not a net gain."
+  },
+  "ex:cook-battery-1871": {
+   "source": "https://patents.google.com/patent/US119825A",
+   "relation": "patent",
+   "text": "United States patent 119,825 ('Improvement in induction-coils', 1871) is the primary artifact of this record. The specification describes two coils feeding each other; no working self-running unit was ever examined on record."
+  },
+  "ex:shoulders-ev-clusters": {
+   "source": "https://patents.google.com/patent/US5018180A",
+   "relation": "patent",
+   "text": "United States patent 5,018,180 ('Energy conversion using high charge density', 1991) is the central document of the bench corpus: it specifies cathode geometry, pulse conditions and witness-plate observations for the micron-scale charge clusters Shoulders called EVs."
+  },
+  "ex:gray-ema-motor": {
+   "source": "https://patents.google.com/patent/US4595975A",
+   "relation": "patent",
+   "text": "United States patent 4,595,975 ('Efficient power supply suitable for inductive loads', 1986) documents the capacitor-discharge circuit behind the motor demonstrations. The patent certifies the circuit topology; the 'cold electricity' interpretation and the efficiency claims were never independently measured."
+  },
+  "ex:wallace-kinemassic-1971": {
+   "source": "https://patents.google.com/patent/US3626605A",
+   "relation": "patent",
+   "text": "United States patent 3,626,605 ('Method and apparatus for generating a secondary gravitational force field', 1971) is one of the few granted patents claiming a laboratory gravitational effect, from spin-aligned rotating masses. No independent replication of the claimed field is on record."
+  },
+  "ex:puharich-water-1983": {
+   "source": "https://patents.google.com/patent/US4394230A",
+   "relation": "patent",
+   "text": "United States patent 4,394,230 ('Method and apparatus for splitting water molecules', 1983) documents the resonant electrolysis circuit. The patent's own theory section asserts efficiencies beyond thermodynamic limits; the grant certifies the circuit description, not the energy claim."
+  },
+  "ex:meyer-wfc-1996": {
+   "source": "https://patents.google.com/patent/US4936961A",
+   "relation": "patent",
+   "text": "United States patent 4,936,961 ('Method for the production of a fuel gas', 1990) is the core water-fuel-cell patent: a capacitive cell driven by voltage pulses through a resonant charging choke. The claimed sub-Faradaic gas yield was not sustained in the court-ordered examination the base record cites."
+  },
+  "ex:hooper-motional-field": {
+   "source": "https://patents.google.com/patent/US3610971A",
+   "relation": "patent",
+   "text": "United States patent 3,610,971 ('All-electric motional electric field generator', 1971) documents the equal-and-opposite-current coil arrangement. Hooper's claim that the motional field of conduction electrons penetrates shielding unlike electrostatic fields is stated in the patent itself; the record's standing rests on the few reported bench tests."
+  },
+  "ex:podkletnov-1992": {
+   "source": "https://arxiv.org/abs/hep-th/9505094",
+   "relation": "literature",
+   "text": "Giovanni Modanese's theoretical analysis (arXiv:hep-th/9505094) is the main published attempt to model the reported shielding within quantum gravity; it concluded the effect would require anomalously strong gravitational vacuum polarization. It analyzes the claim, it does not confirm the measurement."
+  },
+  "ex:pioneer-resolution-2012": {
+   "source": "https://arxiv.org/abs/1204.2507",
+   "relation": "literature",
+   "text": "Turyshev and collaborators' thermal-recoil analysis (arXiv:1204.2507, published in Physical Review Letters) accounted for the full anomalous acceleration using anisotropic heat radiation from the spacecraft's power and instrument compartments, with no new physics required."
+  },
+  "ex:opera-resolution-2012": {
+   "source": "https://arxiv.org/abs/1109.4897",
+   "relation": "literature",
+   "text": "The collaboration's revised measurement report (arXiv:1109.4897, final version) documents both instrumental faults — a loose optical-fiber connector and a clock oscillator out of tolerance — and the corrected flight time, consistent with light speed."
+  },
+  "ex:mpemba-1969": {
+   "source": "https://doi.org/10.1038/srep37665",
+   "relation": "literature",
+   "text": "Burridge and Linden (Scientific Reports 6:37665, 2016) reviewed the measurement history and could not reproduce a robust effect once thermometer placement was controlled; they argue much of the literature measured cooling-curve artifacts. Whether the effect exists under controlled protocols remains contested."
+  },
+  "ex:maddox-check-1988": {
+   "source": "https://doi.org/10.1038/334287a0",
+   "relation": "literature",
+   "text": "The investigation report ('High-dilution experiments a delusion', Nature 334:287, 1988) documents the on-site protocol: under blinded sample coding the laboratory's effect disappeared. It is the primary document of this examination."
+  },
+  "ex:polywater-resolution": {
+   "source": "https://doi.org/10.1038/244430a0",
+   "relation": "literature",
+   "text": "Derjaguin and Churaev's closing paper (Nature 244:430, 1973) reports that rigorously cleaned samples showed no anomalous properties, ending the episode from within the group that had championed it."
+  },
+  "ex:hayasaka-takeuchi-1989": {
+   "source": "https://doi.org/10.1103/PhysRevLett.63.2701",
+   "relation": "literature",
+   "text": "The original report is Physical Review Letters 63:2701 (1989): right-rotating gyroscopes appeared to lose weight in proportion to rotor speed. Independent replications at higher sensitivity, one of them linked from this timeline, found no effect."
+  },
+  "ex:faller-null-1990": {
+   "source": "https://doi.org/10.1103/PhysRevLett.64.825",
+   "relation": "literature",
+   "text": "Faller and collaborators' null result (Physical Review Letters 64:825, 1990) bounded any rotation-dependent weight change well below the claimed signal, using a balance sensitive enough to have seen it."
+  },
+  "ex:saxl-allen-1970": {
+   "source": "https://doi.org/10.1103/PhysRevD.3.823",
+   "relation": "literature",
+   "text": "The measurement was published in Physical Review D 3:823 (1971): a charged torsion pendulum's period lengthened during the March 1970 solar eclipse. The paper is both the record's strength and its limit — one instrument, one event, no independent repetition."
+  },
+  "ex:emdrive-eagleworks-2016": {
+   "source": "https://doi.org/10.2514/1.B36120",
+   "relation": "literature",
+   "text": "The Journal of Propulsion and Power paper (2017) reports 1.2 mN/kW in vacuum and names thermal drift as the leading error candidate. The Dresden replications this timeline links later reproduced signals of this size from thermal and magnetic artifacts."
+  },
+  "ex:google-lenr-2019": {
+   "source": "https://doi.org/10.1038/s41586-019-1256-6",
+   "relation": "literature",
+   "text": "The program summary (Nature 569:45, 2019) reports no excess heat under the tested conditions across three approaches, while arguing that the unexplored parameter space justifies continued measurement. It is a rare example of an adversarially funded re-examination with fully published methods."
+  },
+  "ex:rossi-ecat-2011": {
+   "source": "https://arxiv.org/abs/1305.3913",
+   "relation": "literature",
+   "text": "The closest thing to an independent test on record is the 2013 Levi et al. report (arXiv:1305.3913), whose authors were granted supervised but not full control of the device; its power-balance methodology drew detailed published criticism. No fully independent replication exists."
+  },
+  "ex:michelson-morley-1887": {
+   "source": "https://doi.org/10.2475/ajs.s3-34.203.333",
+   "relation": "literature",
+   "text": "The original paper (American Journal of Science s3-34:333, 1887) reports a fringe-shift bound roughly forty times smaller than the expected aether-wind signal. It is the reference point every later drift claim in this lineage is measured against."
+  },
+  "ex:shankland-1955": {
+   "source": "https://doi.org/10.1103/RevModPhys.27.167",
+   "relation": "literature",
+   "text": "The reanalysis (Reviews of Modern Physics 27:167, 1955) traced Miller's periodic signals to temperature gradients across the interferometer hut, using Miller's own data sheets. It is the canonical worked example of an anomaly dissolving under systematic-error analysis."
+  },
+  "ex:tajmar-esa-2006": {
+   "source": "https://arxiv.org/abs/gr-qc/0603033",
+   "relation": "literature",
+   "text": "The original report is arXiv:gr-qc/0603033: accelerometer signals near spinning superconducting rings, framed as a gravitomagnetic moment far above general-relativistic expectation. The group's own later measurements with improved isolation did not sustain the effect."
+  },
+  "ex:wood-nrays-1904": {
+   "source": "https://doi.org/10.1038/070530a0",
+   "relation": "literature",
+   "text": "Wood's one-page account (Nature 70:530, 1904) describes removing the essential prism unnoticed while the laboratory continued to report N-ray readings. It remains the standard reference for observer-expectation effects in instrument reading."
+  },
+  "ex:mills-hydrino": {
+   "source": "https://doi.org/10.1088/1367-2630/7/1/127",
+   "relation": "literature",
+   "text": "Rathke's analysis (New Journal of Physics 7:127, 2005) is the main peer-reviewed examination of the theory: it argues the claimed below-ground hydrogen states rest on a mathematical error in the modified quantum mechanics. Replies and counter-replies exist; no independent spectroscopic confirmation is on record."
+  },
+  "ex:taleyarkhan-2002": {
+   "source": "https://doi.org/10.1126/science.1067589",
+   "relation": "literature",
+   "text": "The original claim is Science 295:1868 (2002): neutron and tritium signatures coincident with acoustic cavitation in deuterated acetone. The paper is where the evidential chain starts; the contested replication record that followed is what settled the claim's standing."
+  },
+  "ex:spawar-cr39": {
+   "source": "https://doi.org/10.1007/s00114-008-0449-x",
+   "relation": "literature",
+   "text": "The triple-track report (Naturwissenschaften 96:135, 2009) is the strongest single artifact: CR-39 detectors showing patterns the authors attribute to energetic neutrons. The dispute the base record notes centers on whether chemical and mechanical damage can mimic the tracks."
+  },
+  "ex:montagnier-2011": {
+   "source": "https://arxiv.org/abs/1012.5166",
+   "relation": "literature",
+   "text": "The claim's primary document is arXiv:1012.5166: electromagnetic signals from filtered, highly diluted DNA solutions, plus a claimed remote transfer of sequence information. No independent laboratory has reproduced the protocol under blinded conditions."
+  },
+  "ex:cen-spectrum-2014": {
+   "source": "https://doi.org/10.1103/PhysRevLett.112.035001",
+   "relation": "literature",
+   "text": "The accidental spectrum (Physical Review Letters 112:035001, 2014) is the record's substance: field spectrographs caught a natural ball-lightning event whose emission lines matched soil elements, supporting a vaporized-silicon pathway for at least this instance."
+  },
+  "ex:fischbach-fifth-force-1986": {
+   "source": "https://doi.org/10.1103/PhysRevLett.56.3",
+   "relation": "literature",
+   "text": "The reanalysis (Physical Review Letters 56:3, 1986) reported a composition-dependent pattern in Eötvös's torsion data and proposed a fifth force at laboratory range. A decade of dedicated experiments, closed by the torsion-balance program this timeline links, found no such force."
+  },
+  "ex:nasa-lattice-2020": {
+   "source": "https://doi.org/10.1103/PhysRevC.101.044609",
+   "relation": "literature",
+   "text": "The published measurement (Physical Review C 101:044609, 2020) reports deuteron-deuteron fusion products in bremsstrahlung-irradiated deuterated metals, framed as electron-screened lattice confinement. It is conventional nuclear physics under unusual conditions, peer-reviewed and replicable by method — not an over-unity claim."
+  },
+  "ex:jones-neutrons-1989": {
+   "source": "https://doi.org/10.1038/338737a0",
+   "relation": "literature",
+   "text": "The Nature paper (338:737, 1989) claimed a neutron rate barely above background — physically distinct from the excess-heat announcement it is often conflated with. Later work by the same community treated the result as unconfirmed."
+  },
+  "ex:fleischmann-pons-1989": {
+   "source": "https://doi.org/10.1016/0022-0728(89)80006-3",
+   "relation": "literature",
+   "text": "The primary document is the Journal of Electroanalytical Chemistry paper (261:301, 1989), submitted in haste and corrected in errata; its calorimetric claim, not the press conference, is what the replication record actually tested."
+  },
+  "ex:caltech-mit-null-1989": {
+   "source": "https://doi.org/10.1038/340525a0",
+   "relation": "literature",
+   "text": "Lewis and collaborators' recheck (Nature 340:525, 1989) is one of the key null documents: calorimetry and nuclear-product searches on palladium-deuterium cells found nothing above background at the claimed levels."
+  },
+  "ex:iwamura-2002": {
+   "source": "https://doi.org/10.1143/JJAP.41.4642",
+   "relation": "literature",
+   "text": "The permeation-transmutation report (Japanese Journal of Applied Physics 41:4642, 2002) documents element-specific surface signatures after deuterium permeation through layered palladium. Partial third-party repetitions have reported both supporting and null outcomes."
+  },
+  "doc:bearden-scalar-em": {
+   "source": "https://doi.org/10.3390/sym12122110",
+   "relation": "literature",
+   "text": "For the scalar-wave question the doctrine turns on, the peer-reviewed treatment is Reed and Hively (Symmetry 12:2110, 2020): a gauge-free extended electrodynamics in which scalar and longitudinal modes exist with stated, falsifiable properties. It gives the discourse a testable formulation, which the doctrine's own texts do not."
+  },
+  "ex:meyl-scalar-kits": {
+   "source": "https://advanced-rediscovery.com/research/deleted-degrees-of-freedom",
+   "relation": "analysis",
+   "text": "Whether Maxwell's framework leaves room for scalar or longitudinal radiation depends on which potential-level degrees of freedom survive gauge fixing. That question — what the standard formulation removed and what would change if it had not — is analyzed in 'The Deleted Degrees of Freedom' (Advanced Rediscovery, 2026)."
+  },
+  "ex:sweet-vta-1980s": {
+   "source": "doc:bearden-scalar-em",
+   "relation": "corpus",
+   "text": "The device's theoretical framing came from the scalar-electromagnetics school: Bearden co-authored the VTA's 'phase conjugate' account and made the device a centerpiece of that doctrine. The doctrine record collects that framework and its evidential standing."
+  },
+  "ex:hutchison-corpus": {
+   "source": "ex:shoulders-ev-clusters",
+   "relation": "corpus",
+   "text": "The material-damage subset of this corpus — bored channels, locally melted metal without bulk heating — has its closest documented relative in the charge-cluster bench corpus, where similar witness marks were produced repeatably at small scale and tied to a conventional cathode-spot mechanism under discussion."
+  }
+ }
 }

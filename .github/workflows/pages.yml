@@ -40,6 +40,13 @@ jobs:
       - name: Corpus agrees with the pinned standard vocabulary
         run: python3 tools/check-coordinates.py
 
+      # Overlay gate: the enrichment carries only public provenance — every
+      # source verified live (record id in this corpus, DOI handle, or an
+      # allowlisted public archive page), plus the token screen. Blocking:
+      # the publishing surface never inherits this guarantee from upstream.
+      - name: Enrichment overlay carries only public provenance
+        run: python3 tools/check-overlay.py
+
       - name: Regenerate the dating layer
         run: |
           python3 tools/timeline-extract.py
