@@ -221,6 +221,36 @@
    "source": "ex:don-smith-resonance",
    "relation": "corpus",
    "text": "The builder community that circulated these videos commonly describes the device as derived from Donald L. Smith's resonance energy designs; the Smith record collects that lineage's origin claims and their evidential standing."
+  },
+  "ex:pais-navy-patents": {
+   "source": "https://patents.google.com/patent/US10144532B2",
+   "relation": "patent",
+   "text": "United States patent 10,144,532 B2 ('Craft using an inertial mass reduction device', granted 2018, assigned to the US Navy) is the central document; it has since lapsed. The grant certifies the filing, not the physics — the Navy's own 2016-2019 test programme, released under FOIA, concluded the claimed effect could not be demonstrated."
+  },
+  "ex:moddel-casimir-2021": {
+   "source": "https://doi.org/10.1103/PhysRevResearch.3.L022007",
+   "relation": "literature",
+   "text": "The peer-reviewed core is Physical Review Research 3, L022007 (2021): conductance of metal-insulator-metal devices changes when one side carries a Casimir cavity, which the authors attribute to suppressed vacuum optical modes. The interpretation, not the measurement, is where the dispute lives — the second law is the stake."
+  },
+  "ex:silvertooth-1986": {
+   "source": "https://doi.org/10.1038/322590b0",
+   "relation": "literature",
+   "text": "The Nature correspondence (322:590, 1986) is the claim's formal anchor: a standing-wave interferometer reading interpreted as ~378 km/s absolute motion toward Leo — numerically close to the CMB dipole measured later. Critics locate the signal in the detection scheme rather than the aether; no accepted replication followed."
+  },
+  "ex:alzofon-1994": {
+   "source": "https://doi.org/10.2514/6.1981-1608",
+   "relation": "literature",
+   "text": "The primary document is AIAA-81-1608 (17th Joint Propulsion Conference, 1981), a 34-page Boeing-affiliated design paper proposing gravity control by microwave-driven dynamic nuclear orientation. It is a formally presented proposal; the sole claimed bench test survives only in posthumous secondary accounts."
+  },
+  "ex:barbosa-leal-captor-2013": {
+   "source": "https://patents.google.com/patent/WO2013104041A1",
+   "relation": "patent",
+   "text": "International application WO 2013/104041 A1 ('Electromagnetic device for capturing free space electrons to generate electricity') documents the claimed coil-and-ground arrangement. An application publishes the design; it certifies neither grant nor performance, and documented reconstruction attempts did not reproduce the claims."
+  },
+  "ex:stclair-applications-2000s": {
+   "source": "https://patents.google.com/patent/US20060145019A1",
+   "relation": "patent",
+   "text": "The best-known document of the cluster is published application US 2006/0145019 A1 ('Triangular spacecraft'). All entries in the corpus are applications — published design documents that were never granted and never accompanied by measurements."
   }
  }
 }

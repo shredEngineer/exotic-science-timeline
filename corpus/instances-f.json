@@ -1,0 +1,431 @@
+{
+ "eqo_corpus_release": "F",
+ "targets_eqo_version": "1.3.0",
+ "append_only_to": "corpus/instances-a.json … instances-e.json (untouched)",
+ "provenance_note": "KG-coverage sweep additions: twelve records the corpus's own knowledge graph flagged as documented-claim gaps. Same compilation rules as Releases B-E; ex:silvertooth-1986 graduates the Release-B candidates entry.",
+ "instances": [
+  {
+   "id": "ex:pais-navy-patents",
+   "label": "Pais Navy patents and NAWCAD tests",
+   "principals": "Salvatore Cezar Pais (US Navy NAWCAD)",
+   "years": "2016-2021",
+   "effect_types": [
+    "P-GRA-INR-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EGR",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_ac",
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D5R2C3P4T1Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "patent_flag": true,
+   "note": "Granted US patents (inertial-mass-reduction craft, high-frequency gravitational-wave generator, room-temperature-superconductor claims) assigned to the US Navy; the underlying 'Pais effect' was tested inside NAWCAD 2016-2019 at ~$500k and the programme concluded the effect could not be demonstrated. FOIA releases document the internal review, the test programme and the invention disclosures. The inertial-mass-reduction patent has since lapsed (fee-related).",
+   "refs": [
+    "US Patent 10,144,532 B2, Craft using an inertial mass reduction device (granted 2018, assigned to the US Navy; later expired)",
+    "NAVAIR FOIA release 2021-003244 (PAX 205 invention disclosure and Pais-effect test correspondence, 2016-2019)"
+   ]
+  },
+  {
+   "id": "ex:moddel-casimir-2021",
+   "label": "Moddel Casimir-cavity injector devices",
+   "principals": "Garret Moddel et al. (University of Colorado Boulder)",
+   "years": "2018-2021",
+   "effect_types": [
+    "P-EMG-BIL-05"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-CAS",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-CAL",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R2C2P1T3Q3",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "patent_flag": true,
+   "note": "Peer-reviewed reports of steady electrical output from metal-insulator-metal devices joined to Casimir cavities, interpreted by the authors as injection imbalance from suppressed vacuum optical modes; thousands of device trials with artifact-exclusion runs reported. Disputed on second-law grounds; no independent-laboratory replication on record. Related patent US 7,379,286.",
+   "refs": [
+    "G. Moddel, A. Weerakkody, D. Doroski, D. Bartusiak, Casimir-cavity-induced conductance changes, Phys. Rev. Research 3, L022007 (2021)",
+    "G. Moddel et al., Optical-cavity-induced current, Symmetry 13, 517 (2021)"
+   ]
+  },
+  {
+   "id": "ex:figuera-generator-1902",
+   "label": "Figuera motionless induction generator",
+   "principals": "Clemente Figuera (Canary Islands)",
+   "years": "1902-1914",
+   "effect_types": [
+    "P-EMG-BIL-01",
+    "P-EMG-IND-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-IND",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "lf_ac"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D2R2C0P1T4Q1",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "medium",
+   "record_kind": "design_description",
+   "patent_flag": true,
+   "note": "Spanish patents (1902, 1908, 1914) for a motionless transformer-like generator claimed to deliver kilowatt-scale output from stationary induction coils with a resistive commutator; contemporary press reported operating claims of ~20 kW. The claimed mechanism is ordinary induction, which is what places the record in the orthodox-covered class; no apparatus or measurement survives on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:barbosa-leal-captor-2013",
+   "label": "Barbosa-Leal earth-electron captor generators",
+   "principals": "Nilson Barbosa, Cleriston de Morais Leal (Evolucoes Energia)",
+   "years": "2013-2016",
+   "effect_types": [
+    "P-EMG-BIL-04",
+    "P-EMG-BIL-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-AUF",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-PWR",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "lf_ac"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D3R3C0P1T3Q1",
+   "epistemotype": "EP-2",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "patent_flag": true,
+   "note": "Brazilian demonstrations of 'earth-electron captor' generators with claimed self-looped outputs to tens of kilowatts from small input; international patent applications (WO 2013104041, WO 2013104042, WO 2013185199) describe the coil-and-ground arrangements. Builder-community reconstruction attempts are documented and did not reproduce the claims; hidden-supply and power-measurement accounts are the discussed conventional explanations.",
+   "refs": []
+  },
+  {
+   "id": "ex:turtur-rotor-2008",
+   "label": "Turtur electrostatic vacuum-energy rotor",
+   "principals": "Claus W. Turtur (Ostfalia University of Applied Sciences)",
+   "years": "2008-2011",
+   "effect_types": [
+    "P-MEC-SON-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ZPE",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-EHD",
+     "role": "discussed"
+    },
+    {
+     "ref": "M-ART-STA",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc"
+    ],
+    "med": "air",
+    "vac": "partial_only",
+    "scl": "lab",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D4R2C1P1T3Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "note": "University-hosted bench experiments: a light rotor turning continuously near charged electrodes at nanowatt scale, interpreted by the experimenter as conversion of vacuum-energy; self-published measurement reports with honest small-scale numbers. Ion-wind (electrohydrodynamic) and electrostatic-artifact accounts are the discussed conventional explanations; partial vacuum runs reduced but did not settle the dispute; no independent replication on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:silvertooth-1986",
+   "label": "Silvertooth standing-wave aether-drift measurement",
+   "principals": "E. W. Silvertooth",
+   "years": "1986-1987",
+   "effect_types": [
+    "P-OPT-MED-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-AET",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "optical"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent"
+   },
+   "e_signature": "E1:D7R2C1P1T1Q2",
+   "epistemotype": "EP-3",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "note": "Claimed detection of absolute motion via standing-wave wavelength asymmetry, reporting ~378 km/s toward Leo — numerically close to the later-measured CMB dipole velocity. Published as a Nature correspondence plus a fuller account; a supportive commentary (Aspden) followed. Critics attribute the signal to detector/standing-wave misinterpretation; no accepted independent replication on record. Graduates the Release-B candidates entry.",
+   "refs": [
+    "E. W. Silvertooth, Special relativity, Nature 322, 590 (1986)",
+    "E. W. Silvertooth, Experimental detection of the ether, Speculations Sci. Technol. 10, 3 (1987)"
+   ]
+  },
+  {
+   "id": "ex:hodowanec-rhysmonics",
+   "label": "Hodowanec capacitor gravity-signal detectors",
+   "principals": "Gregory Hodowanec",
+   "years": "1980s-1990s",
+   "effect_types": [
+    "P-GRA-SIG-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-AET",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D4R2C0P1T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "note": "Hobby-electronics-published claims that simple electrolytic-capacitor circuits register 'gravity signals' with astronomical correlations, framed in the author's rhysmonic cosmology; circuit articles and logs appeared in the electronics press. Microphonics and vibration pickup are the discussed conventional accounts; no controlled replication on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:fogal-transistor-1990s",
+   "label": "Fogal charge-barrier transistor claims",
+   "principals": "William Fogal",
+   "years": "1990s-2000s",
+   "effect_types": [
+    "P-EMG-KOR-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-SCW",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "lf_ac"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "micro",
+    "per": "x"
+   },
+   "e_signature": "E1:D2R2C0P1T1Q0",
+   "epistemotype": "EP-2",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "note": "Claims that a modified bipolar transistor ('charge-barrier' device) transmits information via longitudinal/scalar channels, including through shielding, with demonstrations described in the free-energy scene; no data sets, schematically incomplete disclosures, and no independent verification on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:parr-pyramid",
+   "label": "Parr rotating-pyramid force experiments",
+   "principals": "Joe Parr",
+   "years": "1980s-2000s",
+   "effect_types": [
+    "P-GRA-GEW-05"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-AET",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-ART-VIB",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "mechanical",
+     "magnetostatic"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D3R2C1P2T3Q1",
+   "epistemotype": "EP-1",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "note": "Long-running amateur experiments centrifuging small pyramids past magnets, with claimed intermittent 'energy bubble' episodes of anomalous force and radio-frequency opacity, including correlations with astronomical alignments; documented through conference presentations and third-party write-ups. Vibration and slip-ring artifacts are the discussed conventional accounts; no independent controlled replication on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:dollard-lmd",
+   "label": "Dollard longitudinal magneto-dielectric demonstrations",
+   "principals": "Eric Dollard",
+   "years": "1980s-2000s",
+   "effect_types": [
+    "P-EMG-FLD-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-SCW",
+     "role": "claimed"
+    },
+    {
+     "ref": "M-AET",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D3R2C0P1T1Q1",
+   "epistemotype": "EP-2",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "note": "Video-documented lecture demonstrations of claimed longitudinal magneto-dielectric transmission (single-wire and analog-computing setups in the Tesla tradition), asserting propagation modes outside transverse electromagnetics; near-field coupling is the standard conventional reading; no controlled independent replication on record.",
+   "refs": []
+  },
+  {
+   "id": "ex:alzofon-1994",
+   "label": "Alzofon dynamic-nuclear-orientation gravity-control proposal",
+   "principals": "Frederick E. Alzofon (Boeing Aerospace)",
+   "years": "1981-1994",
+   "effect_types": [
+    "P-GRA-GEW-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EGR",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "rf",
+     "magnetostatic"
+    ],
+    "med": "solid",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient"
+   },
+   "e_signature": "E1:D0R1C0P1T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "compilation_confidence": "medium",
+   "record_kind": "design_description",
+   "note": "A formally presented propulsion-conference design (AIAA 17th Joint Propulsion Conference, 1981) proposing weight reduction by microwave-driven dynamic nuclear orientation 'cooling' the virtual-particle environment of a test mass; a single supporting bench test is claimed in posthumous secondary accounts (1994, family-published), with no surviving primary data on record.",
+   "refs": [
+    "F. E. Alzofon, Anti-gravity with present technology - implementation and theoretical foundation, AIAA-81-1608, 17th Joint Propulsion Conference (1981)"
+   ]
+  },
+  {
+   "id": "ex:stclair-applications-2000s",
+   "label": "St. Clair propulsion patent-application corpus",
+   "principals": "John Quincy St. Clair",
+   "years": "2000s",
+   "effect_types": [
+    "P-GRA-SON-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-EGR",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_dc",
+     "rf"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "x"
+   },
+   "e_signature": "E1:D2R0C0P1T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "record_kind": "design_description",
+   "patent_flag": false,
+   "note": "A cluster of published US patent applications (2000s, San Juan) claiming spacecraft propulsion via rotating electrostatic fields, 'hyperspace' transitions and related constructions — including the widely circulated triangular-spacecraft application US 2006/0145019 A1. None granted, none demonstrated, no measurements on record; the corpus is notable as formally published design documents rather than experiments.",
+   "refs": []
+  }
+ ]
+}
