@@ -248,6 +248,13 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .reading p{margin:.3rem 0 0;font-size:.85rem;color:var(--muted-foreground);line-height:1.45}
 .tl .dot{stroke:hsl(216 60% 9.8%);stroke-width:.8;cursor:pointer}
 .tl .dot:hover{stroke:var(--foreground);stroke-width:2}
+/* decade-composition histogram */
+#dhsvg{display:block;width:100%;height:auto}
+#dhsvg .seg{stroke:hsl(216 60% 9.8%);stroke-width:.5;cursor:help}
+#dhsvg .seg:hover{stroke:var(--foreground);stroke-width:1.2}
+#dhsvg .axis{fill:var(--muted-foreground);font-size:11px;font-family:var(--font-body)}
+#dhsvg .grid{stroke:hsl(214 30% 18% / .8);stroke-width:1}
+.dhlegend .dotsw{border-radius:2px}
 
 /* ---------- controls ---------- */
 .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-bottom:.9rem}
@@ -407,6 +414,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   </div>
 
   <div class="dash" id="dash"></div>
+
+  <div class="dash" id="dechist"></div>
 
   <div class="blockhead">
     <h3>The full record</h3>
@@ -709,6 +718,64 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
     const f=document.getElementById("fLane"); if(f){ f.value=x.dataset.lane; apply(); }
     document.getElementById("record").scrollIntoView({behavior:"smooth"});
   }));
+})();
+
+/* ---------- decade-composition histogram: stacked count per decade by phenomenon class ---------- */
+(function(){
+  const el=document.getElementById("dechist"), a=(DATA.stats||{}).aggregates;
+  const byDec=a&&a.by_decade_lane; if(!el||!byDec) return;
+  // one colour per phenomenon class; stack order = overall frequency (largest at the bottom)
+  const LANEC={EMG:"hsl(189 100% 55%)",MEC:"hsl(21 90% 60%)",GRA:"hsl(280 70% 68%)",THM:"hsl(0 75% 62%)",
+    NUC:"hsl(45 90% 60%)",OPT:"hsl(141 60% 55%)",CHM:"hsl(320 70% 65%)",BIO:"hsl(90 55% 55%)",
+    ACU:"hsl(250 65% 70%)",INS:"hsl(0 0% 65%)",SON:"hsl(30 20% 50%)"};
+  const order=a.by_lane.map(x=>x[0]).filter(l=>LANEC[l]);           // frequency order from the data
+  const decs=Object.keys(byDec).map(Number).sort((x,y)=>x-y);
+  const yMax=Math.max(...decs.map(d=>order.reduce((s,l)=>s+(byDec[d][l]||0),0)));
+  const svgId="dhsvg";
+  el.innerHTML='<h3>Composition by decade</h3>'+
+    '<p class="sub">Stacked record count per decade by phenomenon class. A record carrying two classes counts in both — same convention as the class bars above.</p>'+
+    '<div class="chartbox"><svg id="'+svgId+'" role="img" aria-label="Stacked histogram of records per decade by phenomenon class"></svg>'+
+    '<div class="chartlegend dhlegend" id="dhlegend"></div></div>';
+  // legend: class names are Registry-P enums -> linked badges with their stack colour
+  document.getElementById("dhlegend").innerHTML=
+    '<span class="grp"><span style="color:var(--foreground)">Stack colour · phenomenon class:</span>'+
+    order.map(l=>'<a class="sw" href="'+REG.P+'" target="_blank" rel="noopener noreferrer" data-tip="'+
+      esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'"><span class="dotsw" style="background:'+LANEC[l]+'"></span>'+
+      esc(LANE[l]||l)+"</a>").join("")+"</span>";
+  const svg=document.getElementById(svgId);
+  function paintHist(){
+    const W=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
+    const L=34,R=8,T=8,B=22,H=190,plotW=W-L-R,plotH=H-T-B;
+    const x0=1140,x1=2030,xs=y=>L+(y-x0)/(x1-x0)*plotW;
+    const ys=v=>T+plotH-(v/yMax)*plotH;
+    let s="";
+    for(let g=0;g<=yMax;g+=10){
+      s+='<line class="grid" x1="'+L+'" y1="'+ys(g)+'" x2="'+(W-R)+'" y2="'+ys(g)+'"/>'+
+         '<text class="axis" x="'+(L-6)+'" y="'+(ys(g)+3.5)+'" text-anchor="end">'+g+"</text>";
+    }
+    for(let c=1200;c<=2000;c+=100){
+      s+='<text class="axis" x="'+xs(c)+'" y="'+(H-6)+'" text-anchor="middle">'+c+"</text>";
+    }
+    const bw=Math.max(2,plotW*10/(x1-x0)-1);   // one decade wide, 1px gap, never thinner than 2px
+    decs.forEach(d=>{
+      const total=order.reduce((s2,l)=>s2+(byDec[d][l]||0),0);
+      let acc=0;
+      order.forEach(l=>{
+        const v=byDec[d][l]||0; if(!v) return;
+        const y1v=ys(acc), y2v=ys(acc+v);
+        s+='<rect class="seg" x="'+(xs(d)+0.5).toFixed(1)+'" y="'+y2v.toFixed(1)+'" width="'+bw.toFixed(1)+
+          '" height="'+(y1v-y2v).toFixed(1)+'" fill="'+LANEC[l]+'" data-tip="'+
+          esc(d+"s — "+(LANE[l]||l)+": "+v+" of "+total+" class-count"+(total===1?"":"s")+" this decade")+'"></rect>';
+        acc+=v;
+      });
+    });
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);
+    svg.setAttribute("height",H);
+    svg.innerHTML=s;
+  }
+  paintHist();
+  let rAF2=null;
+  addEventListener("resize",()=>{cancelAnimationFrame(rAF2);rAF2=requestAnimationFrame(paintHist);});
 })();
 
 /* ---------- reference tables use the record's own badges ---------- */

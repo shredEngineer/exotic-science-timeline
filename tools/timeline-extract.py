@@ -128,6 +128,16 @@ _never_repl = sum(1 for e in _obs if _grade(e.get("e_signature"), "R") == 0)
 _peer = sum(1 for e in _obs if _grade(e.get("e_signature"), "D") == 7)
 _secondhand = sum(1 for e in _obs if _grade(e.get("e_signature"), "D") in (0, 1))
 _dec = Counter((e["t_start"] // 10 * 10) for e in _obs if e.get("t_start") is not None)
+# decade x phenomenon-class composition for the stacked histogram; multi-lane
+# records count in every class they carry, same convention as by_lane above
+_dec_lane = {}
+for e in _obs:
+    if e.get("t_start") is None:
+        continue
+    d10 = e["t_start"] // 10 * 10
+    row = _dec_lane.setdefault(d10, {})
+    for l in (e.get("lanes") or [e["lane"]]):
+        row[l] = row.get(l, 0) + 1
 stats["aggregates"] = {
     "n": _No,
     "by_lane": _by_lane.most_common(),
@@ -138,6 +148,7 @@ stats["aggregates"] = {
     "peer_reviewed": _peer,
     "secondhand": _secondhand,
     "densest_decade": _dec.most_common(1)[0] if _dec else None,
+    "by_decade_lane": {str(k): _dec_lane[k] for k in sorted(_dec_lane)},
 }
 out = {"renders_corpus":RENDERS,"events":events,"arcs":arcs,"eras":eras,"stats":stats}
 OUT.parent.mkdir(exist_ok=True)
