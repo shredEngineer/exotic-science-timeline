@@ -1,6 +1,6 @@
 {
  "overlay_version": 1,
- "generated": "2026-07-22",
+ "generated": "2026-07-25",
  "entries": {
   "ex:tesla-us685957-1901": {
    "source": "https://patents.google.com/patent/US685957A",
@@ -471,6 +471,61 @@
    "source": "https://arxiv.org/abs/physics/0211001",
    "relation": "analysis",
    "text": "The Army Research Laboratory study (Bahder and Fazi) analyzes the force on asymmetric capacitors and finds ion-drift electrohydrodynamics sufficient — consistent with the vacuum null this record carries."
+  },
+  "ex:searl-seg": {
+   "source": "https://doi.org/10.1134/1.1337268",
+   "relation": "literature",
+   "text": "Roschin and Godin published an instrumented study of a rotating rare-earth-magnet converter of this type in Technical Physics Letters (2000), reporting a local weight change of the rotating assembly, concentric zones of altered magnetic field extending several metres, and temperature depressions near the device. It remains the only measurement-grade account in the literature; the authors state that no direct force measurement was performed, the weight change being inferred from displacement of the spring-mounted platform while a heavy rotor was running."
+  },
+  "ex:emdrive-dresden-2021": {
+   "source": "https://doi.org/10.1016/j.actaastro.2019.05.020",
+   "relation": "literature",
+   "text": "The Technische Universitaet Dresden group built a nanonewton-resolution torsion balance and reported that thrust signals of this class reproduce as false positives. The dominant error terms they identify are thermal expansion of the mounting hardware and coupling of the Earth's magnetic field into unshielded feed cables — not the sensitivity of the balance, whose noise floor was well below the claimed effect. The result illustrates a general pattern in this corpus: the decisive factor was artifact control rather than detector grade."
+  },
+  "ex:gatchina-plasmoids": {
+   "source": "https://doi.org/10.1134/1.1529952",
+   "relation": "literature",
+   "text": "Egorov and Stepanov documented the production of free-floating luminous plasmoids by discharging a capacitor bank through a wet electrode at atmospheric pressure, with lifetimes of order a second and reproducible generation conditions. Published in a peer-reviewed journal with stated apparatus parameters, it is among the better-replicated bench claims in the discharge family and is routinely cited as a laboratory analogue of ball lightning rather than as an anomaly."
+  },
+  "ex:allais-pendulum-1954": {
+   "source": "https://doi.org/10.1103/PhysRevD.63.062002",
+   "relation": "analysis",
+   "text": "Unnikrishnan and colleagues re-analysed gravimeter data from the 1997 total solar eclipse and concluded that the reported anomaly does not support gravitational shielding. Their argument is instrumental: an effect of the claimed size would have produced signatures in other channels that are absent, and the reported excursion is consistent with known instrumental and environmental behaviour. The paper is the careful-null counterpart to the positive-sign reports in this family."
+  },
+  "ex:eotwash-resolution": {
+   "source": "https://arxiv.org/abs/1207.2442",
+   "relation": "literature",
+   "text": "The Eoet-Wash torsion-balance programme reports that differential accelerations of beryllium-aluminium and beryllium-titanium test-body pairs agree at the part-in-10^13 level. The bound is what makes composition-dependent gravity claims quantitatively testable rather than merely disputable: any proposed composition dependence must fit beneath it."
+  },
+  "ex:hodowanec-rhysmonics": {
+   "source": "https://doi.org/10.1016/j.microrel.2018.02.012",
+   "relation": "analysis",
+   "text": "Detectors of this design use an aluminium electrolytic capacitor as the sensing element. Published degradation studies show that such capacitors drift systematically with age and bias: leakage current rises and equivalent series resistance increases over operating life. A sensor whose measurand is the leakage of its own dielectric therefore has a slow, monotonic instrumental trend built into it, which is relevant when a reported signal amplitude grows steadily across years of operation."
+  },
+  "ex:mizuno-lenr": {
+   "source": "https://doi.org/10.1143/JJAP.39.6055",
+   "relation": "literature",
+   "text": "Mizuno's peer-reviewed account of plasma electrolysis in the Japanese Journal of Applied Physics (2000) reports heat output exceeding electrical input at a metal cathode. It is the citable primary form of this claim: most reports in this line appear in conference proceedings or a specialist journal outside the indexed literature, which is itself part of the record's evidential profile."
+  },
+  "ex:arata-2008": {
+   "source": "https://doi.org/10.2183/pjab.78.57",
+   "relation": "literature",
+   "text": "Arata and Zhang's Proceedings of the Japan Academy paper sets out the underlying material claim: nanometre-scale metal clusters absorb deuterium far beyond the host metal's number density. The energetic claim rests on that loading claim, so the two are separable — the absorption measurement can be checked independently of any nuclear interpretation."
+  },
+  "ex:patterson-cell": {
+   "source": "https://doi.org/10.1038/s41586-019-1256-6",
+   "relation": "analysis",
+   "text": "A multi-year, multi-institution and well-funded re-investigation published in Nature (2019) examined metal-hydride loading and calorimetry across several experimental lines of this type and found no evidence of the claimed effect. The authors present a mapped region of unexplored parameter space as the programme's byproduct. It is one of the few instances in this corpus where a claim class received sustained, adequately resourced examination rather than either dismissal or advocacy."
+  },
+  "ex:kanarev-electrolysis": {
+   "source": "https://doi.org/10.1021/jz100027t",
+   "relation": "literature",
+   "text": "A demonstrated mechanical route to water splitting exists and is instructive as a comparison: ultrasonic excitation of piezoelectric zinc-oxide microfibres dispersed in water produces hydrogen and oxygen directly, quantified by gas chromatography, with a stated conversion efficiency and negative controls including cancelled-piezo material. The contrast is methodological — the effect is modest, bounded, and reported with the controls that make it checkable."
+  },
+  "ex:moray-receiver": {
+   "source": "https://doi.org/10.1063/1.4824473",
+   "relation": "literature",
+   "text": "Harvesting ambient radio-frequency power is real and measured: a metamaterial surface with integrated rectifying diodes converts incident free-space microwave power to direct current at a reported 36.8 per cent rectification efficiency. Published measurements of this kind establish the scale of what can be collected from an ambient field, which is the quantity against which historical radiant-energy receiver claims can be compared."
   }
  }
 }
