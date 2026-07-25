@@ -111,7 +111,8 @@ header.site.scrolled .hbrand span{font-size:.75rem}
 section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .sec-head{display:flex;align-items:baseline;gap:.9rem;flex-wrap:wrap;margin-bottom:.45rem}
 .sec-head h2{font-size:clamp(1.35rem,2.6vw,1.8rem)}
-.sec-head .srclink{margin-left:auto;font-size:.85rem;color:var(--muted-foreground)}
+.sec-head .srclinks{margin-left:auto}
+.sec-head .srclink{font-size:.85rem;color:var(--muted-foreground)}
 .sec-head .srclink:hover{color:var(--secondary)}
 .sec-intro{color:var(--muted-foreground);max-width:78ch;margin:.4rem 0 1.4rem}
 
@@ -142,6 +143,7 @@ a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:no
 .chip.retr{font-size:.7rem;color:hsl(0 80% 68%);border-color:hsl(0 45% 34%)}
 .enrdot{color:hsl(160 55% 58%);font-size:.7rem;vertical-align:middle;cursor:help}
 .srclinks{display:flex;gap:1rem;flex-wrap:wrap}
+@media(max-width:640px){.sec-head .srclinks{margin-left:0;flex-direction:column;gap:.35rem;width:100%}}
 .enr-text{display:block;margin:.25rem 0 .15rem}
 .enr-src{font-size:.8rem;color:var(--muted-foreground)}
 .enr-src a{overflow-wrap:anywhere}
@@ -320,11 +322,19 @@ td.who{color:var(--muted-foreground)}
    the fixed layout entirely and let the remaining columns size themselves. */
 @media(max-width:900px){
   .recordtable{table-layout:auto}
-  .recordtable col{width:auto}
+  /* !important is load-bearing: the <col> elements carry inline width styles,
+     which outrank a stylesheet rule. Without it this block silently did nothing
+     and the fixed desktop widths kept starving the Claim column. */
+  .recordtable col{width:auto !important}
   .recordtable td.who,.recordtable th.who,
   .recordtable td.lane,.recordtable th.lane{display:none}
 }
 @media(max-width:640px){
+  /* the detail list stacks: at this width a label column ate a third of the row
+     and the value wrapped every few words */
+  .detail dl{grid-template-columns:1fr;gap:.1rem .0}
+  .detail dt{margin-top:.5rem}
+  .detail dd{margin-bottom:.15rem}
   /* evidence axes and profile live in the expanded detail at this width */
   .recordtable td.ev,.recordtable th.ev{display:none}
   .recordtable td{padding:.5rem .4rem}
