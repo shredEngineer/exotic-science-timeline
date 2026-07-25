@@ -480,7 +480,7 @@
   "ex:emdrive-dresden-2021": {
    "source": "https://doi.org/10.1016/j.actaastro.2019.05.020",
    "relation": "literature",
-   "text": "The Technische Universitaet Dresden group built a nanonewton-resolution torsion balance and reported that thrust signals of this class reproduce as false positives. The dominant error terms they identify are thermal expansion of the mounting hardware and coupling of the Earth's magnetic field into unshielded feed cables — not the sensitivity of the balance, whose noise floor was well below the claimed effect. The result illustrates a general pattern in this corpus: the decisive factor was artifact control rather than detector grade."
+   "text": "The Technische Universitaet Dresden group built a nanonewton-resolution torsion balance and reported that thrust signals of this class reproduce as false positives. The dominant error terms they identify are thermal expansion of the mounting hardware and coupling of the Earth's magnetic field into unshielded feed cables — not the sensitivity of the balance, whose noise floor was well below the claimed effect. What settled the question was therefore artifact control, not detector sensitivity."
   },
   "ex:gatchina-plasmoids": {
    "source": "https://doi.org/10.1134/1.1529952",
@@ -520,7 +520,7 @@
   "ex:kanarev-electrolysis": {
    "source": "https://doi.org/10.1021/jz100027t",
    "relation": "literature",
-   "text": "A demonstrated mechanical route to water splitting exists and is instructive as a comparison: ultrasonic excitation of piezoelectric zinc-oxide microfibres dispersed in water produces hydrogen and oxygen directly, quantified by gas chromatography, with a stated conversion efficiency and negative controls including cancelled-piezo material. The contrast is methodological — the effect is modest, bounded, and reported with the controls that make it checkable."
+   "text": "A demonstrated mechanical route to water splitting exists and is instructive as a comparison: ultrasonic excitation of piezoelectric zinc-oxide microfibres dispersed in water produces hydrogen and oxygen directly, quantified by gas chromatography, with a stated conversion efficiency and negative controls including cancelled-piezo material. The contrast is methodological: the reported effect is small and bounded, and it arrives with the negative controls that let someone else check it."
   },
   "ex:moray-receiver": {
    "source": "https://doi.org/10.1063/1.4824473",
