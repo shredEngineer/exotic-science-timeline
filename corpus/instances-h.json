@@ -1,6 +1,6 @@
 {
  "eqo_corpus_release": "H",
- "targets_eqo_version": "1.5.0",
+ "targets_eqo_version": "1.6.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched)",
  "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor.",
  "instances": [

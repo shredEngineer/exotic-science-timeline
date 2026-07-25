@@ -1,5 +1,5 @@
 {
- "eqo_version": "1.5.0",
+ "eqo_version": "1.6.0",
  "canonical_edition": "en",
  "artifact": "EQO/1 machine-readable vocabulary export — the registries and enumerations of the standard in one structured file. Consumers (viewers, validators, build pipelines) read this artifact; parsing the specification prose is not a supported interface. Normative basis: SPECIFICATION.md §8.6; content mirrors the specification.",
  "sources": [
@@ -286,6 +286,11 @@
   },
   "M-ART-CAL": {
    "label": "Calorimetry / sensor placement",
+   "status": "established",
+   "artifact_class": true
+  },
+  "M-ART-TOL": {
+   "label": "Instrument tolerance / uncalibrated transducer",
    "status": "established",
    "artifact_class": true
   },
