@@ -515,7 +515,7 @@
   "ex:patterson-cell": {
    "source": "https://doi.org/10.1038/s41586-019-1256-6",
    "relation": "analysis",
-   "text": "A multi-year, multi-institution and well-funded re-investigation published in Nature (2019) examined metal-hydride loading and calorimetry across several experimental lines of this type and found no evidence of the claimed effect. The authors present a mapped region of unexplored parameter space as the programme's byproduct. It is one of the few instances in this corpus where a claim class received sustained, adequately resourced examination rather than either dismissal or advocacy."
+   "text": "This device belongs to the metal-hydride electrolytic claim class rather than standing alone, and that class did eventually receive sustained examination: a multi-year, multi-institution and well-funded programme published in Nature (2019) tested metal-hydride loading and calorimetry across three approaches and found no excess heat under the conditions it examined, while arguing that unexplored parameter space justifies further measurement. The programme did not test this particular cell — what it establishes is the evidential standard the class can be held to once someone is willing to fund it."
   },
   "ex:kanarev-electrolysis": {
    "source": "https://doi.org/10.1021/jz100027t",
