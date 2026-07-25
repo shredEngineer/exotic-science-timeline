@@ -1,5 +1,5 @@
 {
- "renders_corpus": "EQO/1 \u2014 corpus releases A + B + C + D + E + F + G",
+ "renders_corpus": "EQO/1 \u2014 corpus releases A + B + C + D + E + F + G + H",
  "events": [
   {
    "id": "ex:hutchison-corpus",
@@ -8708,6 +8708,149 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "2023"
+  },
+  {
+   "id": "ex:avramenko-single-wire-1993",
+   "label": "Avramenko single-wire electrical transmission",
+   "principals": "Stanislav Avramenko, Konstantin Avramenko (assignee: Uniline Limited)",
+   "years": "1993\u20132000",
+   "effect_types": [
+    "P-EMG-FLD-02"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-SCW",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "hv_ac"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "note": "United States patent 6,104,107 (filed 10 May 1993, granted 15 August 2000) claims transforming electrical energy into oscillating free charges \u2014 the specification's own words are 'a displacement current or longitudinal wave' \u2014 and transmitting it to a load over a single conductor rather than a closed two-wire circuit, with either a diode circuit or coupled inductors at the receiving end. The document contains a construction and a method; it reports no measurement series and no energy balance. Reading against the orthodox literature: a wave does propagate on one unshielded conductor, it does possess a genuine longitudinal electric-field component, and its return path is genuinely displacement current \u2014 this is the transverse-magnetic surface wave described by Sommerfeld and Zenneck (1907), solved by Stratton (1941, pp. 527\u2013529) and engineered by Goubau (J. Appl. Phys. 21:1119, 1950; US 2,685,068, 1954). The patent's operative language is therefore descriptively accurate and anticipated by roughly five decades. The mechanism edge is recorded as claimed-heterodox because the standard's mechanism registry carries no entry for classical electromagnetic surface-wave propagation; that gap is flagged rather than papered over, and the orthodox account is given here in the note and the references.",
+   "refs": [
+    "US Patent 6,104,107, Method and Apparatus for Single Line Electrical Transmission (S. Avramenko, K. Avramenko; assignee Uniline Limited), filed 1993-05-10, granted 2000-08-15",
+    "G. Goubau, Surface Waves and Their Application to Transmission Lines, J. Appl. Phys. 21:1119 (1950); US Patent 2,685,068 (1954)",
+    "J. A. Stratton, Electromagnetic Theory, McGraw-Hill (1941), pp. 527\u2013529"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 1993,
+   "t_end": 2000,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1993\u20132000"
+  },
+  {
+   "id": "ex:gray-us3890548-1975",
+   "label": "Gray pulsed capacitor-discharge electric engine",
+   "principals": "Edwin V. Gray",
+   "years": "1973\u20131975",
+   "effect_types": [
+    "P-EMG-ENT-01"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-RDT",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "transient",
+     "hv_dc"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "transient",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T1Q0",
+   "epistemotype": "EP-4",
+   "signatures": [],
+   "compilation_confidence": "high",
+   "note": "United States patent 3,890,548, Pulsed Capacitor Discharge Electric Engine (filed 2 November 1973, granted 17 June 1975). The claims cover an engine in which fixed and movable electromagnets are energised by discharging a charged capacitor through them across spark gaps, producing magnetic repulsion, with charging circuits recharging the capacitors after each discharge so that rotation is maintained by successive discharges. The document is a construction claim: patent examination establishes novelty and adequacy of description, not energy balance, and the specification reports no input-output power measurement. The energetic claims attached to this device in the later literature rest on separate demonstrations that are not part of this document.",
+   "refs": [
+    "US Patent 3,890,548, Pulsed Capacitor Discharge Electric Engine (E. V. Gray), filed 1973-11-02, granted 1975-06-17"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 1973,
+   "t_end": 1975,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1973\u20131975"
+  },
+  {
+   "id": "ex:stubblefield-us600457-1898",
+   "label": "Stubblefield earth-battery patent",
+   "principals": "Nathan B. Stubblefield",
+   "years": "1896\u20131898",
+   "effect_types": [
+    "P-EMG-BIL-04"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-ELY",
+     "role": "claimed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "electrochemical"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T4Q0",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 600,457, Electrical Battery (filed 24 October 1896, granted 8 March 1898). The claims describe copper and iron wires insulated from each other and wound compactly in separate insulated layers around a soft-iron core, with water as the electrolyte, and a further configuration incorporating a solenoid or secondary coil so the device also acts as a self-generating induction coil and electromagnet. Read as written, this is a galvanic cell of dissimilar metals in an aqueous electrolyte with an induction coil \u2014 ordinary electrochemistry, which is why the record carries an established mechanism edge. The reading of this device as drawing energy from the earth belongs to the later folklore around its inventor and not to the document filed here; the record is included partly to make that distinction visible in the corpus.",
+   "refs": [
+    "US Patent 600,457, Electrical Battery (N. B. Stubblefield), filed 1896-10-24, granted 1898-03-08"
+   ],
+   "lane": "EMG",
+   "lanes": [
+    "EMG"
+   ],
+   "t_start": 1896,
+   "t_end": 1898,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1896\u20131898"
   }
  ],
  "arcs": [
@@ -8886,13 +9029,13 @@
   ]
  ],
  "stats": {
-  "events": 206,
+  "events": 209,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 185,
+  "observation_events": 188,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -8906,18 +9049,18 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 14,
-   "II First instrument era": 9,
+   "II First instrument era": 10,
    "III Field & radiation era": 36,
-   "IV Postwar laboratory era": 65,
-   "V Contested-laboratory era": 52,
+   "IV Postwar laboratory era": 66,
+   "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 185,
+   "n": 188,
    "by_lane": [
     [
      "EMG",
-     57
+     60
     ],
     [
      "MEC",
@@ -8967,11 +9110,11 @@
     ],
     [
      "EP-4",
-     41
+     43
     ],
     [
      "EP-5",
-     27
+     28
     ],
     [
      "EP-2",
@@ -8980,12 +9123,12 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 12,
+   "never_replicated": 15,
    "peer_reviewed": 43,
-   "secondhand": 38,
+   "secondhand": 41,
    "densest_decade": [
     1990,
-    29
+    30
    ],
    "by_decade_lane": {
     "1150": {
@@ -9045,7 +9188,8 @@
      "OPT": 1
     },
     "1890": {
-     "ACU": 1
+     "ACU": 1,
+     "EMG": 1
     },
     "1900": {
      "EMG": 2,
@@ -9103,7 +9247,7 @@
     },
     "1970": {
      "BIO": 2,
-     "EMG": 4,
+     "EMG": 5,
      "INS": 2,
      "MEC": 2,
      "OPT": 3,
@@ -9127,7 +9271,7 @@
      "THM": 6,
      "GRA": 7,
      "MEC": 4,
-     "EMG": 10,
+     "EMG": 11,
      "CHM": 4,
      "OPT": 3,
      "BIO": 1,

@@ -526,6 +526,21 @@
    "source": "https://doi.org/10.1063/1.4824473",
    "relation": "literature",
    "text": "Harvesting ambient radio-frequency power is real and measured: a metamaterial surface with integrated rectifying diodes converts incident free-space microwave power to direct current at a reported 36.8 per cent rectification efficiency. Published measurements of this kind establish the scale of what can be collected from an ambient field, which is the quantity against which historical radiant-energy receiver claims can be compared."
+  },
+  "ex:avramenko-single-wire-1993": {
+   "source": "https://patents.google.com/patent/US6104107A",
+   "relation": "patent",
+   "text": "The granted specification is worth reading against the orthodox literature rather than around it. Its claims describe transmitting energy over a single conductor via what it calls a displacement current or longitudinal wave — and each element is real: a wave does propagate on one unshielded conductor, it carries a genuine longitudinal electric-field component, and its return path genuinely is displacement current. That is the transverse-magnetic surface wave, described in 1907, solved in 1941, engineered into a transmission line in 1950. The patent is accurate and anticipated by five decades."
+  },
+  "ex:gray-us3890548-1975": {
+   "source": "https://patents.google.com/patent/US3890548A",
+   "relation": "patent",
+   "text": "United States patent 3,890,548 (1975) covers the construction: capacitors discharged through fixed and movable electromagnets across spark gaps to produce magnetic repulsion, with recharging between discharges to maintain rotation. Patent examination establishes novelty and adequacy of description; it involves no measurement of input against output, and the specification contains none. The energetic claims associated with this device rest on separate demonstrations that are not part of the granted document."
+  },
+  "ex:stubblefield-us600457-1898": {
+   "source": "https://patents.google.com/patent/US600457A",
+   "relation": "patent",
+   "text": "Read as filed, the patent describes copper and iron wires wound in separate insulated layers around a soft-iron core with water as the electrolyte, plus a secondary coil making the device a self-generating induction coil — that is, a galvanic cell of dissimilar metals in an aqueous electrolyte. The later reading of this apparatus as drawing energy from the earth is not in the document. The gap between the two is a useful worked example of how a claim class acquires substance it never had on paper."
   }
  }
 }
