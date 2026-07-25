@@ -1,6 +1,6 @@
 {
  "eqo_corpus_release": "H",
- "targets_eqo_version": "1.4.0",
+ "targets_eqo_version": "1.5.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched)",
  "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor.",
  "instances": [
@@ -14,7 +14,7 @@
    ],
    "mechanisms": [
     {
-     "ref": "M-SCW",
+     "ref": "M-SRF",
      "role": "claimed"
     }
    ],
@@ -30,11 +30,13 @@
      "none_documented"
     ]
    },
-   "e_signature": "E1:D1R0C0P1T1Q0",
-   "epistemotype": "EP-4",
-   "signatures": [],
+   "e_signature": "E1:D1R0C0P1T4Q0",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-DEK"
+   ],
    "compilation_confidence": "high",
-   "note": "United States patent 6,104,107 (filed 10 May 1993, granted 15 August 2000) claims transforming electrical energy into oscillating free charges — the specification's own words are 'a displacement current or longitudinal wave' — and transmitting it to a load over a single conductor rather than a closed two-wire circuit, with either a diode circuit or coupled inductors at the receiving end. The document contains a construction and a method; it reports no measurement series and no energy balance. Reading against the orthodox literature: a wave does propagate on one unshielded conductor, it does possess a genuine longitudinal electric-field component, and its return path is genuinely displacement current — this is the transverse-magnetic surface wave described by Sommerfeld and Zenneck (1907), solved by Stratton (1941, pp. 527–529) and engineered by Goubau (J. Appl. Phys. 21:1119, 1950; US 2,685,068, 1954). The patent's operative language is therefore descriptively accurate and anticipated by roughly five decades. The mechanism edge is recorded as claimed-heterodox because the standard's mechanism registry carries no entry for classical electromagnetic surface-wave propagation; that gap is flagged rather than papered over, and the orthodox account is given here in the note and the references.",
+   "note": "United States patent 6,104,107 (filed 10 May 1993, granted 15 August 2000) claims transforming electrical energy into oscillating free charges — the specification's own words are 'a displacement current or longitudinal wave' — and transmitting it to a load over a single conductor rather than a closed two-wire circuit, with either a diode circuit or coupled inductors at the receiving end. The document contains a construction and a method; it reports no measurement series and no energy balance. Reading against the orthodox literature: a wave does propagate on one unshielded conductor, it does possess a genuine longitudinal electric-field component, and its return path is genuinely displacement current — this is the transverse-magnetic surface wave described by Sommerfeld and Zenneck (1907), solved by Stratton (1941, pp. 527–529) and engineered by Goubau (J. Appl. Phys. 21:1119, 1950; US 2,685,068, 1954). The patent's operative language is therefore descriptively accurate and anticipated by roughly five decades. The record therefore carries an established mechanism edge (M-SRF, guided surface-wave propagation), registered in the standard at 1.5.0 precisely because this class of claim previously had no orthodox node to attach to and was being graded off heterodox edges that understated it.",
    "refs": [
     "US Patent 6,104,107, Method and Apparatus for Single Line Electrical Transmission (S. Avramenko, K. Avramenko; assignee Uniline Limited), filed 1993-05-10, granted 2000-08-15",
     "G. Goubau, Surface Waves and Their Application to Transmission Lines, J. Appl. Phys. 21:1119 (1950); US Patent 2,685,068 (1954)",
