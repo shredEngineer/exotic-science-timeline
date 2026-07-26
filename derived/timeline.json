@@ -8853,6 +8853,303 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1896\u20131898"
+  },
+  {
+   "id": "ex:congreve-capillary-sponge-1827",
+   "label": "Congreve capillary sponge-belt motive power",
+   "principals": "Sir William Congreve, 2nd Baronet",
+   "years": "1827",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British patent No. 5461 (1827), 'A New Motive Power', granted to Sir William Congreve of Cecil Street, London, Baronet. The construction is an inclined plane over pulleys carrying an endless band of sponge, with a second endless band of jointed weights running over it, the whole standing in still water. On the ascending side the sponge enters the bath uncompressed and takes up water by capillary attraction; on the descending side the weights squeeze it out. The claimed result is a permanent weight asymmetry that turns the band continuously. The device is refuted by ordinary statics rather than by any new principle: capillary rise cannot deliver net work over a closed cycle, because the same attraction that lifts the water also retains it, and releasing it costs exactly what raising it gained. Congreve was a serious inventor of the period -- military rockets, a time fuze, a hydropneumatic canal lock (1813), a colour-printing process (1821) -- which is why the record is worth carrying: it is a competent engineer's perpetual-motion claim, published under his own name and examined in the contemporary literature. Catalogued in Dircks, Perpetuum Mobile (1861), pp. 314-329, and the subject of a separate contemporary publication, 'Sir William Congreve on Perpetual Motion'.",
+   "refs": [
+    "British Patent No. 5461 (1827), A New Motive Power (Sir William Congreve, 2nd Bt., of Cecil Street, London)",
+    "Sir William Congreve on Perpetual Motion (contemporary publication; Google Books _IxgAAAAcAAJ)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), pp. 314-329"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1827,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1827"
+  },
+  {
+   "id": "ex:sleigh-hydropneumatic-1845",
+   "label": "Sleigh hydro-pneumatic motive-power engines",
+   "principals": "William Willcocks Sleigh, M.D.",
+   "years": "1845\u20131860",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D3R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "A persistent claimant rather than a single device, which is why the record spans fifteen years. British Patent No. 10,711 (1845), 'A hydro-pneumatic apparatus for producing motive power', to William Willcocks Sleigh of Chiswick, Middlesex, Doctor of Medicine and Surgeon, working by applying hydrostatic pressure in a chamber in such a manner as to reduce the effect of that same pressure -- illustrated in Dircks (1861) p. 446. British Patent No. 809 (1853), 'The counteracting re-acting motive power engine', to the same man, then of London, Physician and Surgeon: a water machine with pump and rotary chambers. In 1860, from 49 Middleton Square, London, he described 'The neutralific motive-power engine' in four drawings on two large sheets, without a patent number in the catalogue. The three share one structure -- a fluid arrangement whose own reaction is claimed to cancel the pressure that drives it -- and are refuted by the same statics each time: a closed fluid circuit cannot return less work than it takes to drive it. \u26a0 ATTRIBUTION WARNING, verified rather than assumed: British Patent No. 174 (1854) belongs to ADDERLEY Willcocks Sleigh -- Knight of the Order of the Tower and Sword, Captain in the Royal Services of Portugal and Spain, late R.N. -- a different man and evidently a relative. The two are NOT merged here.",
+   "refs": [
+    "British Patent No. 10,711 (1845), A hydro-pneumatic apparatus for producing motive power (W. W. Sleigh, M.D., Chiswick)",
+    "British Patent No. 809 (1853), The counteracting re-acting motive power engine (W. W. Sleigh, London)",
+    "H. Dircks, Perpetuum Mobile (1861), p. 446 and Ch. XI",
+    "H. Dircks, A History of the Search for Self-Motive Power from the 13th to the 19th Century (London, 1870)"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1845,
+   "t_end": 1860,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1845\u20131860"
+  },
+  {
+   "id": "ex:furman-weighted-drum-1884",
+   "label": "Furman weighted-drum self-runner",
+   "principals": "George H. Furman, Rochester, Ohio",
+   "years": "1884",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 301,979 (1884). Concentric inner and outer drums carrying pockets that transfer weights from one to the other, the resulting imbalance claimed to drive continuous rotation of the shaft. An overbalanced-wheel construction in drum form: the weights that fall on the descending side must be lifted again on the ascending side, and the transfer mechanism cannot supply that lift for free. The patent is a construction claim -- examination establishes novelty and adequacy of description, never energy balance -- and reports no measurement.",
+   "refs": [
+    "US Patent 301,979 (G. H. Furman, Rochester, Ohio), 1884",
+    "P. Verance, Perpetual Motion (1916)"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1884,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1884"
+  },
+  {
+   "id": "ex:schirrmeister-sliding-weight-1886",
+   "label": "Schirrmeister sliding-weight arm engine",
+   "principals": "Charles Schirrmeister, Brooklyn, Kings County, New York",
+   "years": "1886",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 345,077 (1886). Radial hollow arms on an axis carrying sliding weights, actuated by springs through an eccentric, the arrangement claimed to 'increase mechanical power'. The spring-and-eccentric addition is the characteristic move of the class: it makes the cycle harder to follow by eye without changing the fact that the eccentric must be driven. Construction claim only; no measurement reported.",
+   "refs": [
+    "US Patent 345,077 (C. Schirrmeister, Brooklyn, N.Y.), 1886",
+    "P. Verance, Perpetual Motion (1916)"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1886,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1886"
+  },
+  {
+   "id": "ex:enbom-anderson-self-pump-1882",
+   "label": "Enbom and Anderson self-feeding pump",
+   "principals": "Andro Enbom and John A. Anderson, Augusta, Kansas",
+   "years": "1882",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 259,514 (1882). A pump whose lifted water falls onto a wheel that is coupled back to the pump, claimed to 'lessen the labor required' to operate it. Notable for its own modest wording -- it claims a reduction in required work rather than a self-runner outright -- which places it at the boundary of the class rather than squarely inside it. The falling water can return at most the work spent lifting it, less losses.",
+   "refs": [
+    "US Patent 259,514 (A. Enbom and J. A. Anderson, Augusta, Kansas), 1882",
+    "P. Verance, Perpetual Motion (1916)"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1882,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1882"
+  },
+  {
+   "id": "ex:haywood-rotary-wheel-1790",
+   "label": "Haywood cranked rotary wheel",
+   "principals": "John Haywood, Long Acre, Middlesex, draftsman and mechanic",
+   "years": "1790",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D0R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British patent (1790) to John Haywood of Long Acre, Middlesex, draftsman and mechanic: a rotary wheel with a cranked centre, rollers running in circular grooves, and springs arranged to prevent reverse movement. The ratchet-like anti-reverse element is the tell -- it prevents the wheel from unwinding but supplies nothing to wind it. The catalogue entry gives no patent number, so the number is carried as unknown rather than guessed.",
+   "refs": [
+    "British patent (1790), John Haywood of Long Acre, Middlesex -- number not stated in the catalogue",
+    "P. Verance, Perpetual Motion (1916)"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1790,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1790"
   }
  ],
  "arcs": [
@@ -9031,13 +9328,13 @@
   ]
  ],
  "stats": {
-  "events": 209,
+  "events": 215,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 188,
+  "observation_events": 194,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -9050,15 +9347,15 @@
    2026
   ],
   "per_era": {
-   "I Mechanical era \u2014 wheels & descriptions": 14,
-   "II First instrument era": 10,
+   "I Mechanical era \u2014 wheels & descriptions": 15,
+   "II First instrument era": 15,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 188,
+   "n": 194,
    "by_lane": [
     [
      "EMG",
@@ -9066,7 +9363,7 @@
     ],
     [
      "MEC",
-     44
+     50
     ],
     [
      "GRA",
@@ -9112,7 +9409,7 @@
     ],
     [
      "EP-4",
-     42
+     48
     ],
     [
      "EP-5",
@@ -9125,9 +9422,9 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 15,
+   "never_replicated": 21,
    "peer_reviewed": 43,
-   "secondhand": 41,
+   "secondhand": 45,
    "densest_decade": [
     1990,
     30
@@ -9174,12 +9471,19 @@
     "1780": {
      "BIO": 1
     },
+    "1790": {
+     "MEC": 1
+    },
     "1810": {
      "MEC": 2
     },
+    "1820": {
+     "MEC": 1
+    },
     "1840": {
      "BIO": 1,
-     "OPT": 1
+     "OPT": 1,
+     "MEC": 1
     },
     "1870": {
      "ACU": 1,
@@ -9187,7 +9491,8 @@
      "EMG": 2
     },
     "1880": {
-     "OPT": 1
+     "OPT": 1,
+     "MEC": 3
     },
     "1890": {
      "ACU": 1,
