@@ -10362,6 +10362,56 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1859"
+  },
+  {
+   "id": "ex:adderley-sleigh-self-sustaining-1854",
+   "label": "A. W. Sleigh self-acting self-sustaining motive power",
+   "principals": "Adderley Willcocks Sleigh",
+   "years": "1854",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 174 of 1854, dated 24 January 1854, to Adderley Willcocks Sleigh, for 'Creating a continual self-acting, self-sustaining new motive-power, applicable to every purpose requiring speed, motion, and power, together or separately' \u2014 a title that concedes the whole claim in its first four words, where most of the catalogue hides behind 'improvements in obtaining motive power'. He styles himself Knight of the Most Noble and Ancient Order of the Tower and Sword of Portugal and Captain in the Royal Services of Portugal and Spain, late R.N. The specification claims, first, the application 'of the identification of lesser quantities of matter in fluids or liquids to greater' of the same or different temperatures, and second, 'the principle of the specific gravity and momentum' of a body in a medium or in a vacuum, together with four further means in the same register. Dircks quotes it at length and calls it jargon, noting that the patentee finally concedes his only object is to prove that certain natural powers can be applied to an engine \u2014 which is to say the document declares an intention where a specification is required to disclose a mechanism. Two folio pages, extraordinarily executed. THIS RECORD COMPLETES A DISTINCTION THE CORPUS ALREADY CARRIED AS A WARNING. The entry for William Willcocks Sleigh, M.D., of Chiswick flags that No. 174 of 1854 belongs to a DIFFERENT man and refuses the merge; that refusal now has its own record standing behind it rather than only a caution. The two are separate and evidently related, and nothing here establishes the relation. The Patent Office filed this claim under AIR AND GAS ENGINES.",
+   "refs": [
+    "British Patent No. 174 (24 January 1854), Creating a continual self-acting, self-sustaining new motive-power, applicable to every purpose requiring speed, motion, and power, together or separately (Adderley Willcocks Sleigh)",
+    "Subject-Matter Index of Patents Applied for and Patents Granted for the Year 1854 (Commissioners of Patents, Woodcroft) \u2014 number, date, patentee and subject-matter all four confirmed in the Air and Gas Engines section",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1854,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1854"
   }
  ],
  "arcs": [
@@ -10540,13 +10590,13 @@
   ]
  ],
  "stats": {
-  "events": 239,
+  "events": 240,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 218,
+  "observation_events": 219,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -10560,18 +10610,18 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 15,
-   "II First instrument era": 39,
+   "II First instrument era": 40,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 218,
+   "n": 219,
    "by_lane": [
     [
      "MEC",
-     74
+     75
     ],
     [
      "EMG",
@@ -10613,7 +10663,7 @@
    "by_ep": [
     [
      "EP-4",
-     72
+     73
     ],
     [
      "EP-1",
@@ -10634,7 +10684,7 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 45,
+   "never_replicated": 46,
    "peer_reviewed": 43,
    "secondhand": 60,
    "densest_decade": [
@@ -10704,7 +10754,7 @@
      "MEC": 1
     },
     "1850": {
-     "MEC": 16
+     "MEC": 17
     },
     "1870": {
      "ACU": 1,
