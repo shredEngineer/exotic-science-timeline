@@ -10412,6 +10412,106 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1854"
+  },
+  {
+   "id": "ex:starbuck-static-pressure-engine-1858",
+   "label": "Starbuck static-pressure engine",
+   "principals": "Moses Starbuck",
+   "years": "1858",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2708 of 1858, dated 29 November 1858, to MOSES STARBUCK of New York \u2014 an American filing entering the British register, and the surname is the register's: the catalogue's scan renders it unreadably and no reading recovers it. Provisional specification only, and very brief; Dircks publishes the whole of it. The patentee states that his invention 'consists in the application of a static pressure to produce a continuous movement, which movement is effected IN CONSONANCE WITH THE SETTLED LAWS OF MECHANICAL PHILOSOPHY, by means of arrangements of devices heretofore undeveloped', and that by these devices he is enabled to convert a static pressure into a continuous movement 'from which the static pressure (minus the friction of the engine) can be continually taken off'. Two things are worth naming. The claim invokes the settled laws of mechanics in the same sentence in which it contradicts them: a static pressure is by definition one that does no net work around a closed path, and 'minus the friction' concedes a loss while asserting the balance survives it. And 'devices heretofore undeveloped' is the entire disclosure \u2014 the document names a result and withholds the mechanism, which is what provisional protection permitted and what makes the class so cheap to enter.",
+   "refs": [
+    "British Patent No. 2708 (29 November 1858, provisional specification), A static pressure engine (Moses Starbuck, New York)",
+    "Subject-Matter Index of Patents Applied for and Patents Granted for the Year 1858 (Commissioners of Patents, Woodcroft) \u2014 number, date, patentee and subject-matter confirmed in four aligned columns of the Motive-power section",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1858,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1858"
+  },
+  {
+   "id": "ex:richard-falling-weight-drum-1858",
+   "label": "Richard tied falling-weight drum",
+   "principals": "Pierre Richard",
+   "years": "1858",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 1870 of 1858, dated 16 August 1858, to Pierre Richard, of Rue Saint-Jean, Paris, engineer, for apparatus for obtaining motive power. The invention consists in communicating a rotary motion to a fly-wheel or drum by means of a set of falling weights tied together. It is the plainest statement of the overbalancing wheel in the whole catalogue, and the brevity is the point: where Gilmour builds a seven-stage lever train and Middleship a valved chamber system, the same impossibility is here reduced to weights on a string. Tying the weights together is precisely what guarantees the failure \u2014 a closed loop of connected masses has its centre of gravity return to the same height every revolution, so the descending side lifts the ascending side and nothing is left over. The record is carried because a class is best characterised by its simplest member as well as its most elaborate.",
+   "refs": [
+    "British Patent No. 1870 (16 August 1858), Apparatus for obtaining motive-power (Pierre Richard, Rue Saint-Jean, Paris, engineer)",
+    "Subject-Matter Index of Patents Applied for and Patents Granted for the Year 1858 (Commissioners of Patents, Woodcroft) \u2014 number, date, patentee and subject-matter confirmed in four aligned columns of the Motive-power section",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1858,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1858"
   }
  ],
  "arcs": [
@@ -10590,13 +10690,13 @@
   ]
  ],
  "stats": {
-  "events": 240,
+  "events": 242,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 219,
+  "observation_events": 221,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -10610,18 +10710,18 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 15,
-   "II First instrument era": 40,
+   "II First instrument era": 42,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 219,
+   "n": 221,
    "by_lane": [
     [
      "MEC",
-     75
+     77
     ],
     [
      "EMG",
@@ -10663,7 +10763,7 @@
    "by_ep": [
     [
      "EP-4",
-     73
+     75
     ],
     [
      "EP-1",
@@ -10684,9 +10784,9 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 46,
+   "never_replicated": 48,
    "peer_reviewed": 43,
-   "secondhand": 60,
+   "secondhand": 62,
    "densest_decade": [
     1990,
     30
@@ -10754,7 +10854,7 @@
      "MEC": 1
     },
     "1850": {
-     "MEC": 17
+     "MEC": 19
     },
     "1870": {
      "ACU": 1,
