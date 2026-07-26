@@ -2,7 +2,7 @@
  "eqo_corpus_release": "H",
  "targets_eqo_version": "1.6.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched)",
- "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor.",
+ "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located.",
  "instances": [
   {
    "id": "ex:avramenko-single-wire-1993",
@@ -137,6 +137,21 @@
    "candidate": "Lawton / Boyce water-cell replications",
    "years": "2000s",
    "why_not_yet": "Named as a replication lineage in a secondary review. Replication-attempt records would give the associated water-cell record its replication-axis arc, which is exactly why they are worth chasing — but no primary document has been located."
+  },
+  {
+   "candidate": "Papin vs the anonymous French author — Philosophical Transactions perpetual-motion exchange",
+   "years": "1685–1687",
+   "why_not_yet": "Located 2026-07-26 via Dircks, Perpetuum Mobile (1861) Ch. IV. Denis Papin (M.D., F.R.S.) published a mechanical analysis of an anonymous French author's bellows-and-mercury perpetual-motion engine in the Philosophical Transactions (No. 174; an earlier paper of December 1685), with the dispute also running through the Journal des Savans and the Nouvelles de la Republique des Lettres. This is a claim record WITH a documented examination and resolution -- the arc type the census finds at zero in the closed-circuit classes -- and Papin's method is a derivation about the mechanism, not a verdict about the claimant. Not yet an instance because the only reading so far is a poor OCR of an 1861 secondary compilation; identity must be verified against the Philosophical Transactions originals, which are publicly available."
+  },
+  {
+   "candidate": "Dircks catalogue — 17th/18th-century perpetual-motion patents",
+   "years": "1600s–1700s",
+   "why_not_yet": "Dircks (1861) Ch. III collects patents of the 17th and 18th centuries; Ch. XI collects those of the 19th. Both are dated, named, primary-citable record classes and are the densest unmined instance source located in this sweep. Held as 18 chapter PDFs with text layers. Not yet instances because each needs identity verification against the patent record itself, not against the 1861 compilation."
+  },
+  {
+   "candidate": "Dircks catalogue — early scientific-journal papers",
+   "years": "1600s–1800s",
+   "why_not_yet": "Dircks (1861) Ch. VI collects papers from early scientific and other journals, Ch. VIII the popular journals. Same status as the patent chapters: located, dated, unmined, and requiring the original journal rather than the compilation."
   }
  ]
 }
