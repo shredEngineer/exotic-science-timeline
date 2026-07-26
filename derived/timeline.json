@@ -10212,6 +10212,156 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1857"
+  },
+  {
+   "id": "ex:delouey-malavas-gravitation-machinery-1855",
+   "label": "Delouey-Malavas 'gravitation machinery'",
+   "principals": "Jacques Roux Delouey-Malavas",
+   "years": "1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 288 of 1855 to Jacques Roux Delouey-Malavas, gentleman, of Montbrison in the Empire of France, for 'Improved machinery for obtaining and applying motive-power'. Letters Patent sealed. The patentee calls it 'gravitation machinery' and rests it on a premise that is not wrong, only useless: the power is said to depend on 'the difference which exists with the same weight, according to whether it is brought nearer to or further from its point of gravitation'. Weight does vary with distance from the centre of the Earth. Over the metre or so a bench machine spans, the variation is a few parts in ten million, and it is symmetric \u2014 whatever is gained lowering a mass is paid raising it. The construction is a set of circular plates fixed accurately on a long horizontal shaft, with long levers between them, their centres of motion at one end and their opposite ends running in guides, the patentee concluding that once the main shaft has been turned once, 'the weight of the levers, by bearing on the discs, will keep it continuously in motion'. A large drawing and four and a half printed folio pages. \u26a0 NUMBER CORRECTED AGAINST THE COMPILATION, and in the opposite direction to the usual: the catalogue prints No. 238, the register carries this grant at No. 288, immediately after No. 287 to James Howard of Bedford for improvements in ploughs. The sequential context settles it \u2014 a 3 read for an 8 in a scan that also duplicates the following number.",
+   "refs": [
+    "British Patent No. 288 (1855), Improved machinery for obtaining and applying motive-power (Jacques Roux Delouey-Malavas, Montbrison, France)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1855,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1855"
+  },
+  {
+   "id": "ex:benton-eccentric-lever-barrel-1855",
+   "label": "Benton eccentric-plane elongating levers",
+   "principals": "Robert Benton",
+   "years": "1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2304 of 1855 to Robert Benton, of Birmingham, engineer, surveyor and land agent, for 'Improvements in obtaining motive-power by leverage'. **Letters Patent sealed; no specification filed** \u2014 the register's own note, and worth carrying, because a sealed patent with no specification means the claim was paid for and never described. The object is to keep a barrel or wheel in continuous motion by the successive application of any even number of levers acting independently of each other in eccentric rather than circular orbits: each lever, on coming in contact with an eccentric plane, is for the time elongated and rendered a long lever with a short shank, and having passed the plane is 'neutralized' on the rising side by being fixed so as to form one side of a cube figure, square or octagonal, and carried round in that attitude until its pivot returns to its starting point. The word doing the work is 'neutralized'. Folding a lever in on the rising side does not neutralize the weight it carries, it only shortens the arm \u2014 the mass still has to be lifted, and the elongation on the falling side is paid for exactly. THE COMPILER'S CLOSING REMARK IS THE REASON TO KEEP THE RECORD HUMAN: Dircks notes that Benton had reached an advanced age by this date, and that his experience and earnest belief in the truthfulness of his scheme 'might well plead an ample apology for the wilder non-perpetuities of mere tyros in mechanical science' \u2014 a nineteenth-century critic distinguishing between a lifetime's sincere error and a novice's carelessness, in a catalogue otherwise written to mock.",
+   "refs": [
+    "British Patent No. 2304 (1855), Improvements in obtaining motive-power by leverage \u2014 Letters Patent sealed, no specification filed (Robert Benton, Birmingham)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1855,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1855"
+  },
+  {
+   "id": "ex:gennbrich-sliding-weight-crane-1859",
+   "label": "Gennbrich sliding-weight crane drive",
+   "principals": "Prince Gustave Gennbrich",
+   "years": "1859",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2815 of 1859 to Prince Gustave Gennbrich, of Poland, filed at the British and Foreign Office for Patents, No. 1b Welbeck Street, Cavendish Square, Middlesex, for 'A new system of motive power applicable for working cranes and wheels'. Letters Patent sealed. Unusually for the catalogue this is an application rather than a universal engine: a motive power for a crane, to raise goods 'instead of multiplied hand or steam power'. The principle is a heavy weight sliding on an iron rod attached to the axle of a wheel, with a chain fastened to the rod so that the sliding turns the wheel; the patentee states that 'by the heavy weight sliding to and fro the iron rod acts as balance and creates a power'. Sliding a mass outward along a rod and back to its start returns it to the same height and the same radius, so the cycle closes on zero however the chain is dressed; the figure list runs to thirteen numbered parts without ever reaching the step that would pay for the outward slide. \u26a0 TWO IDENTIFIERS RECOVERED FROM CONTEXT RATHER THAN READ, and flagged because neither source is clean. The number: this scan prints '2816' for both this grant and the following one to Thomas Stather, with No. 2814 (Breckon and Dixon, coke ovens) immediately before, so the sequence places this at 2815 \u2014 which is what the catalogue prints, and the two agreeing is the reason it is carried. The name and nationality are the register's: the catalogue's scan renders the surname unreadably and its place of origin as something closer to 'Ireland', where the register has 'of Poland'. The register is preferred as the primary, but the surname should be treated as provisional until a clean scan confirms it.",
+   "refs": [
+    "British Patent No. 2815 (1859), A new system of motive power applicable for working cranes and wheels (Prince Gustave Gennbrich, of Poland; filed at the British and Foreign Office for Patents, Welbeck Street)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1859 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1859,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1859"
   }
  ],
  "arcs": [
@@ -10390,13 +10540,13 @@
   ]
  ],
  "stats": {
-  "events": 236,
+  "events": 239,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 215,
+  "observation_events": 218,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -10410,18 +10560,18 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 15,
-   "II First instrument era": 36,
+   "II First instrument era": 39,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 215,
+   "n": 218,
    "by_lane": [
     [
      "MEC",
-     71
+     74
     ],
     [
      "EMG",
@@ -10463,7 +10613,7 @@
    "by_ep": [
     [
      "EP-4",
-     69
+     72
     ],
     [
      "EP-1",
@@ -10484,9 +10634,9 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 42,
+   "never_replicated": 45,
    "peer_reviewed": 43,
-   "secondhand": 59,
+   "secondhand": 60,
    "densest_decade": [
     1990,
     30
@@ -10554,7 +10704,7 @@
      "MEC": 1
     },
     "1850": {
-     "MEC": 13
+     "MEC": 16
     },
     "1870": {
      "ACU": 1,

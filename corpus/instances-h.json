@@ -2,7 +2,7 @@
  "eqo_corpus_release": "H",
  "targets_eqo_version": "1.6.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched BY THIS RELEASE; instances-a.json was separately amended 2026-07-26 for ex:eclipse-gravimetry-1997 under its own provenance note's correction clause — that amendment is not part of release H)",
- "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation. | 2026-07-26: four further records from Verance, Perpetual Motion (1916), a second public-domain catalogue independent of Dircks. Each names an inventor AND a patent number; the Haywood entry carries no number in its catalogue and is graded D0 accordingly rather than having one invented for it. | 2026-07-26: sixteen instances harvested from the Dircks Ch. XI patent catalogue, each verified against the official patent register rather than transcribed from the compilation -- the Woodcroft chronological index of patentees for the pre-October-1852 old-series numbering, and the Commissioners of Patents annual volumes for 1852-53 and 1855. The compilation supplied the pointer; the register supplied the citation, and corrected it twice (Copland's 1823 patent is No. 4749, not 4149; the 1852 communicator is Alfred Vincent Newton, mechanical draughtsman, not 'L. V. Newton, Patent Agent'). Where the register marks a filing 'provisional protection only' or 'a communication', the note says so, because neither is a granted patent to a named inventor and the distinction changes what the record can be read to assert. | 2026-07-26, second pass: three further instances from the 1857 register volume (Predavalle, Gilmour, Middleship). The catalogue's numbers failed again in this pass -- its 1857 No. 1108 for Charles Barlow is a grant to Richard Ford Sturges for metallic pens -- so that entry and the rest of the unverified remainder stay under candidates.",
+ "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation. | 2026-07-26: four further records from Verance, Perpetual Motion (1916), a second public-domain catalogue independent of Dircks. Each names an inventor AND a patent number; the Haywood entry carries no number in its catalogue and is graded D0 accordingly rather than having one invented for it. | 2026-07-26: sixteen instances harvested from the Dircks Ch. XI patent catalogue, each verified against the official patent register rather than transcribed from the compilation -- the Woodcroft chronological index of patentees for the pre-October-1852 old-series numbering, and the Commissioners of Patents annual volumes for 1852-53 and 1855. The compilation supplied the pointer; the register supplied the citation, and corrected it twice (Copland's 1823 patent is No. 4749, not 4149; the 1852 communicator is Alfred Vincent Newton, mechanical draughtsman, not 'L. V. Newton, Patent Agent'). Where the register marks a filing 'provisional protection only' or 'a communication', the note says so, because neither is a granted patent to a named inventor and the distinction changes what the record can be read to assert. | 2026-07-26, second pass: three further instances from the 1857 register volume (Predavalle, Gilmour, Middleship). The catalogue's numbers failed again in this pass -- its 1857 No. 1108 for Charles Barlow is a grant to Richard Ford Sturges for metallic pens -- so that entry and the rest of the unverified remainder stay under candidates. | 2026-07-26, third pass: three further instances (Delouey-Malavas, Benton, Gennbrich) recovered by matching PLACE NAMES and TITLE FRAGMENTS against the 1855 and 1859 register volumes after numeric lookup failed in both. Proper nouns and long titles survive a scan that destroys three-digit numbers; the method is now the default for this vein. One number moved in the compiler's favour and one against: Delouey-Malavas is No. 288 where the catalogue prints 238, settled by the surrounding sequence; Gennbrich's 2815 is confirmed by sequence where the scan prints 2816 twice.",
  "instances": [
   {
    "id": "ex:avramenko-single-wire-1993",
@@ -1168,6 +1168,123 @@
    "refs": [
     "British Patent No. 1108 (1857), A mechanical apparatus for regenerating the impulsive force of any motive-power — a communication from Joseph Commandeur of Lyons (Charles Barlow, Office for Patents, 89 Chancery Lane)",
     "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
+  },
+  {
+   "id": "ex:delouey-malavas-gravitation-machinery-1855",
+   "label": "Delouey-Malavas 'gravitation machinery'",
+   "principals": "Jacques Roux Delouey-Malavas",
+   "years": "1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 288 of 1855 to Jacques Roux Delouey-Malavas, gentleman, of Montbrison in the Empire of France, for 'Improved machinery for obtaining and applying motive-power'. Letters Patent sealed. The patentee calls it 'gravitation machinery' and rests it on a premise that is not wrong, only useless: the power is said to depend on 'the difference which exists with the same weight, according to whether it is brought nearer to or further from its point of gravitation'. Weight does vary with distance from the centre of the Earth. Over the metre or so a bench machine spans, the variation is a few parts in ten million, and it is symmetric — whatever is gained lowering a mass is paid raising it. The construction is a set of circular plates fixed accurately on a long horizontal shaft, with long levers between them, their centres of motion at one end and their opposite ends running in guides, the patentee concluding that once the main shaft has been turned once, 'the weight of the levers, by bearing on the discs, will keep it continuously in motion'. A large drawing and four and a half printed folio pages. ⚠ NUMBER CORRECTED AGAINST THE COMPILATION, and in the opposite direction to the usual: the catalogue prints No. 238, the register carries this grant at No. 288, immediately after No. 287 to James Howard of Bedford for improvements in ploughs. The sequential context settles it — a 3 read for an 8 in a scan that also duplicates the following number.",
+   "refs": [
+    "British Patent No. 288 (1855), Improved machinery for obtaining and applying motive-power (Jacques Roux Delouey-Malavas, Montbrison, France)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
+  },
+  {
+   "id": "ex:benton-eccentric-lever-barrel-1855",
+   "label": "Benton eccentric-plane elongating levers",
+   "principals": "Robert Benton",
+   "years": "1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2304 of 1855 to Robert Benton, of Birmingham, engineer, surveyor and land agent, for 'Improvements in obtaining motive-power by leverage'. **Letters Patent sealed; no specification filed** — the register's own note, and worth carrying, because a sealed patent with no specification means the claim was paid for and never described. The object is to keep a barrel or wheel in continuous motion by the successive application of any even number of levers acting independently of each other in eccentric rather than circular orbits: each lever, on coming in contact with an eccentric plane, is for the time elongated and rendered a long lever with a short shank, and having passed the plane is 'neutralized' on the rising side by being fixed so as to form one side of a cube figure, square or octagonal, and carried round in that attitude until its pivot returns to its starting point. The word doing the work is 'neutralized'. Folding a lever in on the rising side does not neutralize the weight it carries, it only shortens the arm — the mass still has to be lifted, and the elongation on the falling side is paid for exactly. THE COMPILER'S CLOSING REMARK IS THE REASON TO KEEP THE RECORD HUMAN: Dircks notes that Benton had reached an advanced age by this date, and that his experience and earnest belief in the truthfulness of his scheme 'might well plead an ample apology for the wilder non-perpetuities of mere tyros in mechanical science' — a nineteenth-century critic distinguishing between a lifetime's sincere error and a novice's carelessness, in a catalogue otherwise written to mock.",
+   "refs": [
+    "British Patent No. 2304 (1855), Improvements in obtaining motive-power by leverage — Letters Patent sealed, no specification filed (Robert Benton, Birmingham)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
+  },
+  {
+   "id": "ex:gennbrich-sliding-weight-crane-1859",
+   "label": "Gennbrich sliding-weight crane drive",
+   "principals": "Prince Gustave Gennbrich",
+   "years": "1859",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2815 of 1859 to Prince Gustave Gennbrich, of Poland, filed at the British and Foreign Office for Patents, No. 1b Welbeck Street, Cavendish Square, Middlesex, for 'A new system of motive power applicable for working cranes and wheels'. Letters Patent sealed. Unusually for the catalogue this is an application rather than a universal engine: a motive power for a crane, to raise goods 'instead of multiplied hand or steam power'. The principle is a heavy weight sliding on an iron rod attached to the axle of a wheel, with a chain fastened to the rod so that the sliding turns the wheel; the patentee states that 'by the heavy weight sliding to and fro the iron rod acts as balance and creates a power'. Sliding a mass outward along a rod and back to its start returns it to the same height and the same radius, so the cycle closes on zero however the chain is dressed; the figure list runs to thirteen numbered parts without ever reaching the step that would pay for the outward slide. ⚠ TWO IDENTIFIERS RECOVERED FROM CONTEXT RATHER THAN READ, and flagged because neither source is clean. The number: this scan prints '2816' for both this grant and the following one to Thomas Stather, with No. 2814 (Breckon and Dixon, coke ovens) immediately before, so the sequence places this at 2815 — which is what the catalogue prints, and the two agreeing is the reason it is carried. The name and nationality are the register's: the catalogue's scan renders the surname unreadably and its place of origin as something closer to 'Ireland', where the register has 'of Poland'. The register is preferred as the primary, but the surname should be treated as provisional until a clean scan confirms it.",
+   "refs": [
+    "British Patent No. 2815 (1859), A new system of motive power applicable for working cranes and wheels (Prince Gustave Gennbrich, of Poland; filed at the British and Foreign Office for Patents, Welbeck Street)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1859 (Commissioners of Patents, Woodcroft)",
     "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
    ]
   }
