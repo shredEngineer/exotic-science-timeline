@@ -1092,6 +1092,45 @@
     "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
     "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
    ]
+  },
+  {
+   "id": "ex:rigby-pump-fed-waterwheel-1859",
+   "label": "Rigby pump-fed water-wheel and hydraulic rams",
+   "principals": "Hugh Rigby",
+   "years": "1859",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 754 of 1859 to Hugh Rigby, of Salford, Lancashire, engineer, for 'Improvements in machinery or apparatus for obtaining motive power, applicable to hoists and all other purposes to which motive power can be applied'. Letters Patent sealed. The patentee's own account, quoted in Dircks: an upper reservoir lets water fall through a regulating valve onto the buckets of a water-wheel or turbine and into a lower reservoir; the wheel drives a series of hydraulic pumps which force water into one or more hydraulic rams, each carrying a larger pump-bucket working in a barrel whose bottom sits in the lower reservoir, and the effect of the larger bucket is to raise the spent water back to the upper reservoir, 'which is thus continually supplied'. The whole of it is a closed circuit asked to refill itself, and the ram is the place where the claim hides: a hydraulic ram is a real machine and does raise a small part of a flow to a greater height, but it does so by SPENDING the rest of the flow, never by returning all of it higher than it started. Three printed folio pages and four large sheets of drawings, which is why the documentation grade is not the minimum. ⚠ THIS RECORD EXISTS BECAUSE THE COMPILATION'S NUMBER AND NAME WERE BOTH WRONG. Dircks prints the patentee as an unreadable scan and the number as 'No. f5a'; that is No. 754, and the man is Hugh Rigby, not any of the readings the damaged small-caps suggest. He was located by matching the patent TITLE — which Dircks quotes verbatim and which is long enough to survive bad OCR — against the 1859 register volume, after a numeric lookup in that volume failed entirely.",
+   "refs": [
+    "British Patent No. 754 (1859), Improvements in machinery or apparatus for obtaining motive power, applicable to hoists and all other purposes to which motive power can be applied (Hugh Rigby, Salford, Lancashire, engineer)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1859 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
   }
  ],
  "candidates": [
@@ -1123,7 +1162,7 @@
   {
    "candidate": "Dircks catalogue — the unharvested remainder of the 19th-century patent rows",
    "years": "1854–1869 (Ch. XI), plus Ch. III and Ch. VI",
-   "why_not_yet": "PARTLY HARVESTED, so this entry now records what is LEFT rather than the whole block. Ch. XI carries 54 dated entries in a regular YEAR.-NAME [No.] form; nineteen of them became instances on 2026-07-26 once their numbers were checked against the official register, and the rest stay here. The obstacle is no longer the compilation's bad OCR of small-caps names — that is solved, because the register supplies the name once the number is known. It is the register volumes themselves: the Woodcroft chronological index of patentees covers the old-series numbering to 1 Oct 1852, and the Commissioners' annual volumes for 1852–53, 1855 and 1857 were obtained and used, but the volumes for 1854, 1856, 1858, 1860 and 1866 were not located, and the volume indexed as 1859 was obtained and proved unusable — none of the three 1859 numbers sought could be found in it, and neither could the patentees by name, so it is either misindexed or too badly scanned to search. Rows still waiting on those volumes include Predavalle (1859, 1860), Adderley Willcocks Sleigh (1854), Charles Barlow for Joseph Commandeur of Lyons (1857 — number known to be wrong), Peter Pickering of Danzig (1858), Moses Haym Picciotto (1859), Alfred Lecocq (1860) and Antoine Jean Baptiste Lespinasse of Toulouse (1866). Ch. III (17th/18th-century patents) and Ch. VI (early journal papers, 79k characters) need their own extraction patterns and have not been attempted. THE STANDING RULE FOR THIS VEIN, earned rather than assumed: a catalogue number is a candidate, never a citation. Of roughly twenty-five numbers checked against the register, three were wrong — the 1823 Copland patent is No. 4749 and not the printed 4149, the 1857 No. 1108 given for Charles Barlow is a grant to Richard Ford Sturges for metallic pens, and the No. 1934 given for John Coles is a grant to Charles Hyndman Mitchell for steam engines. Nothing from this remainder enters as an instance until its number and its patentee are read off a register volume."
+   "why_not_yet": "PARTLY HARVESTED, so this entry now records what is LEFT rather than the whole block. Ch. XI carries 54 dated entries in a regular YEAR.-NAME [No.] form; nineteen of them became instances on 2026-07-26 once their numbers were checked against the official register, and the rest stay here. The obstacle is no longer the compilation's bad OCR of small-caps names — that is solved, because the register supplies the name once the number is known. It is the register volumes themselves: the Woodcroft chronological index of patentees covers the old-series numbering to 1 Oct 1852, and the Commissioners' annual volumes for 1852–53, 1855 and 1857 were obtained and used, but the volumes for 1854, 1856, 1858, 1860 and 1866 were not located, and the volume indexed as 1859 is correctly indexed and correctly structured but its NUMERIC OCR is destroyed (it prints '5.' for 3 and 'e.' for 6), so lookup by number fails there and lookup by mangled surname fails with it. **The way through, found 2026-07-26: match the patent TITLE.** Dircks quotes each title verbatim, titles run twenty words where a number runs three digits, and that redundancy survives a scan that eats everything else — it produced Hugh Rigby (No. 754, Salford) from a catalogue entry printing 'No. f5a' and a surname no reading would have recovered. Apply the same route to the remaining 1859 rows before writing that volume off. Rows still waiting on those volumes include Predavalle (1859, 1860), Adderley Willcocks Sleigh (1854), Charles Barlow for Joseph Commandeur of Lyons (1857 — number known to be wrong), Peter Pickering of Danzig (1858), Moses Haym Picciotto (1859), Alfred Lecocq (1860) and Antoine Jean Baptiste Lespinasse of Toulouse (1866). Ch. III (17th/18th-century patents) and Ch. VI (early journal papers, 79k characters) need their own extraction patterns and have not been attempted. THE STANDING RULE FOR THIS VEIN, earned rather than assumed: a catalogue number is a candidate, never a citation. Of roughly twenty-five numbers checked against the register, three were wrong — the 1823 Copland patent is No. 4749 and not the printed 4149, the 1857 No. 1108 given for Charles Barlow is a grant to Richard Ford Sturges for metallic pens, and the No. 1934 given for John Coles is a grant to Charles Hyndman Mitchell for steam engines. Nothing from this remainder enters as an instance until its number and its patentee are read off a register volume."
   },
   {
    "candidate": "Dircks catalogue — early scientific-journal papers",
