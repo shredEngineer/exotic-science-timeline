@@ -9150,6 +9150,811 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1790"
+  },
+  {
+   "id": "ex:pleasants-self-mover-1809",
+   "label": "Pleasants centrifugal self-mover",
+   "principals": "William Pleasants the elder",
+   "years": "1809",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 3226 (1809) to William Pleasants the elder, of Abbey Street, Dublin, Bachelor of Arts, for his invented 'self mover, or machine which can keep itself in motion' -- the register's wording, and one of the few patent titles of the period that states the perpetual-motion claim outright rather than hiding it behind 'improvements in obtaining power'. The construction raises water through inclined pipes by the centrifugal force imparted by whirling the partly-filled vessel the pipes are set into, and the whirling is produced by that same water, in its descent, turning a wheel on the axle. The circuit is therefore closed on itself: the descent that drives the rotation is the only thing raising the water the descent consumes, so the machine is asked to pay for its own lift out of the lift's own proceeds. Dircks quotes the specification and dismisses it in one line -- 'This is the old story' -- which is itself evidence of how routine the type had already become by 1809. The register entry confirms the patentee as 'the elder', a distinction the compilation omits.",
+   "refs": [
+    "British Patent No. 3226 (1809), A self mover, or machine which can keep itself in motion (William Pleasants the elder, Abbey Street, Dublin)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1809,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1809"
+  },
+  {
+   "id": "ex:winter-cascade-wheels-1814",
+   "label": "Winter cascading water-wheel series",
+   "principals": "Henry Julius Winter",
+   "years": "1814",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 3861 (12th December 1814) to Henry Julius Winter, of Dover Street, Kent, confectioner -- the trade is the register's, and worth recording: the motive-power patents of the period were not the preserve of engineers. The invention places water-wheels in series so that the tail water of the first is carried immediately onto the head of the second, the tail of the second onto the third, 'and I do in this manner proceed by conveying the very same water from wheel to wheel, however numerous the set may be'. The patentee then infers 'that the sum total of the rotatory force in all the said wheels will be more than sufficient to raise' the water back to the top. The error is a clean one and worth stating precisely, because it recurs across the whole catalogue: the work available is fixed by the total fall, not by the number of wheels the fall is divided among. Adding wheels partitions the same head into smaller drops; it does not multiply the energy. Register title: 'method of giving effect to various operating processes'.",
+   "refs": [
+    "British Patent No. 3861 (1814), A method of giving effect to various operating processes (Henry Julius Winter, Dover Street, Kent, confectioner)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1814,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1814"
+  },
+  {
+   "id": "ex:copland-power-combinations-1819",
+   "label": "Copland 'combinations of apparatus for gaining power' (five patents)",
+   "principals": "Robert Copland",
+   "years": "1819-1830",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D3R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "A serial patentee rather than a single device, and the clearest case in the catalogue of a claim sustained across a career. The register carries five grants to Robert Copland, each titled as an improvement upon his own previous ones: No. 4364 (1819), of Liverpool, merchant, for a 'new or improved method or methods of gaining power by new or improved combinations of apparatus, applicable to various purposes'; No. 4749 (16th January 1823), then of Wilmington Square, Clerkenwell, Middlesex, gentleman; No. 5452, of Wilmington Square, gentleman, granted for an unusual fifteen months; No. 7057, of Brunswick Crescent, Camberwell, Surrey, esquire; and No. 7216 (1830), of Courlands, Wandsworth Road, Surrey, esquire. Read in sequence the addresses and styles are their own document -- Liverpool merchant to Wandsworth esquire in eleven years -- though the register does not say the patents paid for the move, and nothing here should be read as saying it did. The machine, as quoted from the 1819 and 1823 specifications, derives power from atmospheric pressure acting with a column of water descending on one side of an enclosed vertical wheel, the water returning to the reservoir 'from which the pressure of the atmosphere raises it to be again delivered on the top'; the 1823 double machine adds paired air-tight cylinders, numbered cocks and valves, pistons and free-moving weights. It fails on the point it is built around: the atmospheric pressure that is said to raise the water into the reservoir is the same pressure that must be worked against to discharge it, and the two cancel exactly over the cycle. CORRECTION, on the register's authority: the compilation gives the 1823 patent as No. 4149. No. 4149 is a grant to John Hawks of Gateshead for a method of making iron rails. Copland's 1823 grant is No. 4749, and the compilation's figure is a misreading.",
+   "refs": [
+    "British Patent No. 4364 (1819), gaining power by new or improved combinations of apparatus (Robert Copland, Liverpool, merchant)",
+    "British Patent No. 4749 (16 Jan 1823), Combinations of apparatus for gaining power (Robert Copland, Wilmington Square, Clerkenwell)",
+    "British Patent No. 5452, improvements upon a Patent already obtained by him for combinations of apparatus for gaining power (Robert Copland)",
+    "British Patent No. 7057, improvements upon Patents already obtained by him (Robert Copland, Brunswick Crescent, Camberwell)",
+    "British Patent No. 7216 (1830), improvements upon Patents already obtained by him (Robert Copland, Courlands, Wandsworth Road)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1819,
+   "t_end": 1830,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1819-1830"
+  },
+  {
+   "id": "ex:linton-extending-lever-wheel-1821",
+   "label": "Linton self-extending lever wheel",
+   "principals": "George Linton",
+   "years": "1821",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 4632 (1821) to George Linton, of Gloster Street, Queen Square, Middlesex, mechanist, for 'A new method of propelling machinery without the aid of steam, water, wind, air, or fire' -- a title that defines the invention by everything it refuses, and leaves gravity as the only agent not excluded. The machine is a vertical wheel turning on easy gudgeons whose periphery carries levers 'so constructed that by the mere revolution of the wheel they extend themselves to their greatest length' at the upper part, so as to obtain their greatest acting power on the descending side, and fold again on the rising side. This is the overbalancing wheel, the single most-patented perpetual-motion form in the catalogue. It fails because extending a lever outward on the descending side costs exactly the work its longer moment arm returns: the weights must be carried back in against the same field that paid for their descent, and the two are equal by construction. The compilation's transcription of the title omits 'water', which the register carries.",
+   "refs": [
+    "British Patent No. 4632 (1821), A new method of propelling machinery without the aid of steam, water, wind, air, or fire (George Linton, Gloster Street, Queen Square, Middlesex, mechanist)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1821,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1821"
+  },
+  {
+   "id": "ex:jordan-submerged-buoyancy-1825",
+   "label": "Jordan submerged-buoyancy lever engine",
+   "principals": "Edward Jordan",
+   "years": "1825",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 5191 (18th June 1825) to Edward Jordan, of the city of Norwich, engineer, for his discovered 'New mode of obtaining power applicable to machinery of different descriptions'. The specification -- seven printed folio pages and two large drawings, which is a substantial filing for the type -- claims power from 'sinking or forcing down to any convenient depth under water, buoyant vessels, by or with a lever', the submerged vessels then being directed so that they are alternately placed in a position to act upon parts forming in effect a lengthened portion of the lever that depressed them. The refutation is the buoyancy budget and needs no new principle: forcing a buoyant vessel down costs precisely the work its ascent returns, and the lengthened lever redistributes that work without creating any. Dircks calls it 'a singularly impracticable invention' while noting the care of the filing -- the combination is characteristic of the whole class, where drafting effort and physical impossibility are uncorrelated.",
+   "refs": [
+    "British Patent No. 5191 (1825), A new mode of obtaining power applicable to machinery of different descriptions (Edward Jordan, Norwich, engineer)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1825,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1825"
+  },
+  {
+   "id": "ex:hainsselin-motive-power-1832",
+   "label": "'Hainsselin's Motive Power' bucket-chain engine",
+   "principals": "Pierre Nicolas Hainsselin",
+   "years": "1832",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 6290 (1832) to Pierre Nicolas Hainsselin, of Duke Street, Saint James's, Middlesex, architect and engineer, for 'A machine or motive power for giving motion to machinery of different descriptions, to be called Hainsselin's Motive Power' -- the eponym is in the granted title itself, and the register carries it. The machine is an endless series of hinged reservoirs or buckets forming a chain over a large drum, with a cogged wheel, pinion, eccentric, fly wheel and balance beams carrying circle segments. The claim rests entirely on one clause of the patentee's own declaration: the descending buckets are filled with water 'which water is raised to a suitable elevation for the purpose, PRINCIPALLY BY THE ACTION OF THE MACHINE ITSELF'. That qualifier is the whole invention and the whole error -- a bucket chain cannot lift the water whose descent is its only source of work, and 'principally' concedes that the patentee knew a shortfall had to be covered without saying what covers it.",
+   "refs": [
+    "British Patent No. 6290 (1832), A machine or motive power for giving motion to machinery of different descriptions, to be called Hainsselin's Motive Power (Pierre Nicolas Hainsselin, Duke Street, St James's)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1832,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1832"
+  },
+  {
+   "id": "ex:predaval-buoyancy-vacuum-1833",
+   "label": "Predaval buoyancy-and-weight-in-vacuo engine",
+   "principals": "Barthelemy Richard, Comte de Predaval",
+   "years": "1833",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 6510 (1833) to Barthelemy Richard Comte de Predaval, of Leicester Place, Leicester Square, Middlesex, engineer, for 'An engine for producing motive power, applicable to various purposes'. The apparatus is elaborate -- an outer circular case on a stand, a water- and air-tight cylinder turning on an axis in a stuffing box, an inner drum, pistons or friction plates filling the space between drum and case on all four sides, an air cock, a mercurial gauge, springs, leather packing and metal plates. Dircks records the operating claim in the patentee's terms: the engine acts 'by joint power derived from the buoyancy of a body in fluids, and the weight of a body in vacuo'. Those are not two independent sources to be joined; they are the same weight measured against two different surroundings, and their difference is what an ordinary hydrostatic balance reads. THE RECORD IS CARRIED CHIEFLY FOR WHAT HAPPENED NEXT: Dircks notes that this patent 'was made the subject of a joint-stock company', which moves it out of the class of paper claims and into the class that raised money. The compilation does not name the company or state the sum, and neither is asserted here.",
+   "refs": [
+    "British Patent No. 6510 (1833), An engine for producing motive power, applicable to various purposes (Barthelemy Richard Comte de Predaval, Leicester Place)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI, and Ch. X (joint-stock company note)"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1833,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1833"
+  },
+  {
+   "id": "ex:brazill-atmospheric-rotary-1839",
+   "label": "Brazill constant-pressure atmospheric engine",
+   "principals": "Jacob Brazill",
+   "years": "1839",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 8312 (1839) to Jacob Brazill, governor of Trinity Ground, Deptford, Kent, for 'Improvements in obtaining motive power'. The declaration is short and unusually explicit about its own mechanism: the invention consists in an arrangement of mechanism 'wherein the atmospheric air is employed as the impelling agent, being brought to bear in such a manner as, by exerting a constant urging pressure, to produce a continuous rotary motion'. The phrase 'constant urging pressure' is exactly what defeats it. A static pressure that is the same everywhere around the cycle integrates to zero net work over a closed path; an atmospheric engine can only do work against a maintained pressure DIFFERENCE, and maintaining that difference is the cost the specification never pays. The patentee's office -- governor of the Trinity Ground at Deptford, a Trinity House establishment -- places him among respectable public appointees rather than speculative outsiders.",
+   "refs": [
+    "British Patent No. 8312 (1839), Improvements in obtaining motive power (Jacob Brazill, governor of Trinity Ground, Deptford)",
+    "Chronological Index of Patentees and Applicants for Patents of Invention (Great Seal Patent Office, Woodcroft), old-series numbering to 1 Oct 1852",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1839,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1839"
+  },
+  {
+   "id": "ex:greaves-beam-hopper-machine-1852",
+   "label": "Greaves beam-and-bucket motive machine",
+   "principals": "Thomas Greaves",
+   "years": "1852-1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 283 of 1852 to Thomas Greaves, of Manchester, Lancashire, veterinary surgeon, for 'Improvements in the method or means of obtaining and employing motive-power'; the register records Letters Patent sealed, so this went beyond provisional protection to a granted patent. Dircks describes a beam about six feet long fixed upon a frame, with two connecting rods at one end -- one attached to a crank, the other to a roll over a hopper -- followed by a flat chain, a large pulley and buckets. The patentee's claim is quoted as the machine dispensing 'entirely and altogether with either steam power or manual labour', to which the compiler's whole rebuttal is 'Believe it who' -- the sentence breaks off, and the abruptness is the point: by 1852 the type no longer earned an argument. The catalogue further reports that in October 1855 Greaves commenced but did not complete a further patent for improvements on the above, proposing a single shaft through the beam and two large bevel wheels. THAT SECOND APPLICATION IS REPORTED, NOT VERIFIED: no corresponding entry was located in the 1855 register volume consulted, and an incomplete application may not appear there at all.",
+   "refs": [
+    "British Patent No. 283 (1852), Improvements in the method or means of obtaining and employing motive-power (Thomas Greaves, Manchester, veterinary surgeon)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1852,
+   "t_end": 1855,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1852-1855"
+  },
+  {
+   "id": "ex:faulkner-counterbalanced-levers-1852",
+   "label": "Faulkner counterbalanced weighted-lever beam",
+   "principals": "Lot Faulkner",
+   "years": "1852",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 410 of 1852 to Lot Faulkner, of Cheadle, Cheshire, machinist, for 'Certain improvements in the method of obtaining motive-power'. PROVISIONAL PROTECTION ONLY, per the register -- the invention was published by the filing and then abandoned to the public, which Dircks notes with evident satisfaction. The arrangement is a beam vibrating on a fixed centre, the machinery to be driven hung at one end and at the other two levers mounted on studs, 'so connected by spur gearing that they shall revolve in opposite directions and always counterbalance each other', with weights placed on those levers. The patentee concludes that because the power required to set the weighted levers in motion 'is so small in comparison with the force exerted at the other end of the vibrating beam, it will be evident that a great increasing motive power is obtained'. It is not evident and it is not obtained: two levers geared to counterbalance each other exert no net torque, which is the definition of counterbalanced, and the small force needed to move them is small precisely because they deliver nothing.",
+   "refs": [
+    "British Patent No. 410 (1852, provisional protection only), Certain improvements in the method of obtaining motive-power (Lot Faulkner, Cheadle, Cheshire, machinist)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1852,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1852"
+  },
+  {
+   "id": "ex:luedeke-pendulum-springs-1852",
+   "label": "Luedeke self-sustaining pendulum",
+   "principals": "Ernst Luedeke",
+   "years": "1852",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 706 of 1852 to Ernst Luedeke, of Bedford Street, Strand, Middlesex, CLOCKMAKER, for 'Improvements in obtaining and applying motive-power'. Provisional protection only. The trade is the register's contribution -- the compilation gives the name and address but not the occupation, and it matters here more than usual: a clockmaker is a man who works daily with escapements, that is, with the problem of feeding a pendulum exactly enough energy to replace what it loses. The declaration is one sentence: 'I intend, by the use of a pendulum, double wheel, and springs, to produce vibration, kept up by the concurrent action of the pendulum'. Stated plainly, the pendulum is to be sustained by its own action. This assumes what a real escapement supplies from a weight or a mainspring, and the whole of horology is the record of that supply being necessary.",
+   "refs": [
+    "British Patent No. 706 (1852, provisional protection only), Improvements in obtaining and applying motive-power (Ernst Luedeke, Bedford Street, Strand, clockmaker)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1852,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1852"
+  },
+  {
+   "id": "ex:wood-pressed-wheel-weights-1852",
+   "label": "Wood confined-fluid wheel with rising weights",
+   "principals": "Thomas Wood",
+   "years": "1852",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 887 of 1852 to Thomas Wood, of the Glue Works, Hunslet, in the parish of Leeds, Yorkshire, millwright, for 'Improvements in the mode of obtaining motive-power'. Letters Patent sealed, and Dircks notes that 'a good drawing of this notable machine accompanies the specification'. The invention obtains motive power 'by means of a wheel, the periphery of which water, or any other fluid confined within a box or case, presses on', the rotary motion being communicated to a larger wheel; combined with this water chamber and wheel the patentee employs weights 'made alternately to rise and fall, and by means of levers and suitable gearing to act upon the wheel'. Two independent impossibilities are stacked: confined fluid pressing on a wheel periphery exerts no net torque, since the pressure acts normal to the surface through the axis, and the weights that alternately rise and fall must be raised by the same machine they are meant to drive.",
+   "refs": [
+    "British Patent No. 887 (1852), Improvements in the mode of obtaining motive-power (Thomas Wood, Glue Works, Hunslet, Leeds, millwright)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1852,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1852"
+  },
+  {
+   "id": "ex:newton-communicated-lever-wheels-1852",
+   "label": "Newton communicated weight-and-lever engine",
+   "principals": "Alfred Vincent Newton (communicator; originating inventor unnamed in the register)",
+   "years": "1852",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 1163 of 1852, taken out by Alfred Vincent Newton, of the Office for Patents, 66 Chancery Lane, Middlesex, mechanical draughtsman, for 'Improvements in obtaining and applying motive-power'. Letters Patent sealed. The register marks it 'A communication' -- the London term of art for a patent filed on behalf of an inventor abroad -- so THE PRINCIPAL NAMED HERE IS THE COMMUNICATOR, NOT THE INVENTOR, and the originating inventor is not named in the index consulted. The invention consists in employing the pressure of a weight or of a lever to act upon one or more wheels, rollers or pulleys, and thereby to cause them by their rotation to actuate the machinery. CORRECTION, on the register's authority: the compilation gives the patentee as 'L. V. Newton, Patent Agent'. The register gives Alfred Vincent Newton, mechanical draughtsman, of the Office for Patents -- the same house that appears repeatedly through the 1852-53 volume as a conduit for continental filings.",
+   "refs": [
+    "British Patent No. 1163 (1852), Improvements in obtaining and applying motive-power -- a communication (Alfred Vincent Newton, Office for Patents, 66 Chancery Lane)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1852,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1852"
+  },
+  {
+   "id": "ex:bellford-communicated-pump-engine-1853",
+   "label": "Bellford communicated self-feeding pump engine",
+   "principals": "Auguste Edouard Loradoux Bellford (communicator; originating inventor unnamed in the register)",
+   "years": "1853",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 118 of 1853, dated 17th January 1853, taken out by Auguste Edouard Loradoux Bellford, of the United Patent Offices, 16 Castle Street, Holborn, Middlesex, for 'An improved machine for obtaining motive-power'. A communication; provisional protection only. As with Newton's No. 1163 the previous year, the named principal is the patent agent and the originating inventor is not named in the register -- Dircks records only that the plan was 'communicated by a foreigner'. The machine is composed of pumps of small diameter and a water reservoir into which air is pumped, causing the water to escape by a tube into a smaller cylinder, with the claim that 'once in movement, the machine will feed itself, and will not require any auxiliary motive power'. TAKEN TOGETHER WITH THE NEWTON ENTRY THIS IS THE RECORD'S REAL CONTENT: by the early 1850s the London patent-agency houses were a standing channel through which continental perpetual-motion claims entered the British register under an agent's name, which is why the register's authorship cannot be read as inventorship for this class of filing.",
+   "refs": [
+    "British Patent No. 118 (17 Jan 1853, provisional protection only), An improved machine for obtaining motive-power -- a communication (A. E. L. Bellford, United Patent Offices, 16 Castle Street, Holborn)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1853,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1853"
+  },
+  {
+   "id": "ex:huddart-bucket-chain-1855",
+   "label": "Huddart self-feeding bucket-chain water-wheel",
+   "principals": "George Augustus Huddart",
+   "years": "1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 942 of 1855 to George Augustus Huddart, of Brynkir, Caernarvon, esquire, for 'Improved machinery for obtaining and applying motive-power'. Provisional protection only. The machine is a water-wheel with buckets together with a chain of buckets, the chain raising water to an elevated cistern while being itself rotated by the discharge of the water it has raised. Dircks disposes of it in a single sentence -- 'Why disturb such novelties from their original dust?' -- and the closed circuit is indeed the plainest form in the catalogue. THE PATENTEE IS THE INTERESTING PART. The 1852-53 register shows Huddart filing across an unrelated spread of subjects from the same address: tools for cutting or abrading metallic surfaces (No. 885), improvements in facilitating combustion in steam-boiler furnaces (No. 888), an improved manufacture of artificial flies (No. 889), artificial leather (No. 83 of 1853) and steam generators (No. 84 of 1853). He is a prolific gentleman-patentee whose motive-power filing is one subject among many, not a perpetual-motion obsessive -- a distinction this catalogue does not otherwise let one draw. Dircks additionally lists an 1860 patent, No. 263, to George Augustus Huddart and Joseph D'Erskine Huddart, both of Brynkir, for cylinders with weighted pistons immersed in water so as to vary their buoyancy; THAT ENTRY IS REPORTED, NOT VERIFIED -- the 1860 register volume was not available to this pass -- and it is therefore not carried in the citations below.",
+   "refs": [
+    "British Patent No. 942 (1855, provisional protection only), Improved machinery for obtaining and applying motive-power (George Augustus Huddart, Brynkir, Caernarvon)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents)",
+    "Chronological and Descriptive Index of Patents Applied for and Patents Granted, 1 Oct 1852 - 31 Dec 1853 (Commissioners of Patents) (Huddart's other filings, Nos. 885, 888, 889, and Nos. 83-84 of 1853)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1855,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1855"
+  },
+  {
+   "id": "ex:weber-inclined-half-cylinder-1855",
+   "label": "Weber weighted inclined half-cylinder",
+   "principals": "Henry Weber",
+   "years": "1855",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2373 of 1855 to Henry Weber, mechanician, of Zurich in the Swiss Confederation, for 'Certain improvements in apparatus for motive-power'. Provisional protection only. The apparatus is a half cylinder, able to rotate on a centre, placed in an inclined position and supported on drums or friction rollers so that it travels in circular guides; a weight is attached to its upper part so as to press by means of a lever on its upper edge, and 'the weight pressing on the half cylinder imparts to it a continued revolving motion in the guide circles'. This is the overbalancing wheel again, in a rolling rather than a spoked form: the weight that presses the cylinder forward through one part of its travel must be carried back up through the rest, and on an inclined closed guide path the two are equal. The name is recorded here on the register's authority alone -- the compilation's scan renders the surname unreadably, and it is precisely the class of detail that must not be transcribed from a damaged secondary.",
+   "refs": [
+    "British Patent No. 2373 (1855, provisional protection only), Certain improvements in apparatus for motive-power (Henry Weber, mechanician, Zurich)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1855,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1855"
   }
  ],
  "arcs": [
@@ -9328,13 +10133,13 @@
   ]
  ],
  "stats": {
-  "events": 215,
+  "events": 231,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 194,
+  "observation_events": 210,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -9348,22 +10153,22 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 15,
-   "II First instrument era": 15,
+   "II First instrument era": 31,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 194,
+   "n": 210,
    "by_lane": [
+    [
+     "MEC",
+     66
+    ],
     [
      "EMG",
      60
-    ],
-    [
-     "MEC",
-     50
     ],
     [
      "GRA",
@@ -9400,16 +10205,16 @@
    ],
    "by_ep": [
     [
+     "EP-4",
+     64
+    ],
+    [
      "EP-1",
      58
     ],
     [
      "EP-3",
      52
-    ],
-    [
-     "EP-4",
-     48
     ],
     [
      "EP-5",
@@ -9422,9 +10227,9 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 21,
+   "never_replicated": 37,
    "peer_reviewed": 43,
-   "secondhand": 45,
+   "secondhand": 56,
    "densest_decade": [
     1990,
     30
@@ -9474,16 +10279,25 @@
     "1790": {
      "MEC": 1
     },
+    "1800": {
+     "MEC": 1
+    },
     "1810": {
-     "MEC": 2
+     "MEC": 4
     },
     "1820": {
-     "MEC": 1
+     "MEC": 3
+    },
+    "1830": {
+     "MEC": 3
     },
     "1840": {
      "BIO": 1,
      "OPT": 1,
      "MEC": 1
+    },
+    "1850": {
+     "MEC": 8
     },
     "1870": {
      "ACU": 1,
