@@ -1167,6 +1167,10 @@
     {
      "ref": "M-ART-THK",
      "role": "discussed"
+    },
+    {
+     "ref": "M-ART-TOL",
+     "role": "claimed"
     }
    ],
    "context": {
@@ -1178,14 +1182,17 @@
      "astronomical"
     ]
    },
-   "e_signature": "E1:D7R3C3P3T3Q3",
-   "epistemotype": "EP-3",
+   "e_signature": "E1:D7R3C3P3T4Q3",
+   "epistemotype": "EP-5",
    "signatures": [
-    "S-AST"
+    "S-AST",
+    "S-DEK"
    ],
-   "note": "Small unexplained residuals during total eclipse; contested.",
+   "note": "Small gravity residuals reported around the 9 March 1997 Mohe total eclipse, measured on a LaCoste-Romberg gravimeter. The reported shape is itself the diagnostic: the decreases of roughly 6-7 uGal fall at FIRST and LAST CONTACT rather than at totality, which is the wrong place for any genuine shielding effect and the right place for something tracking the ambient change that the eclipse drives. AMENDED 2026-07-26 to carry the instrumental explanation that the record previously left unnamed. Unnikrishnan, Mohapatra and Gillies (Phys. Rev. D 63, 062002, 2001) analysed the same data and offered an environmental and instrumental origin as THE explanation, concluding the anomaly does not support gravitational shielding. The specific mechanism is transducer tolerance rather than ambient warmth acting on the mass: gravimeters of this class lose verticality as temperature changes, the resulting shift in the instrument's own response is known from the MANUFACTURER'S CALIBRATION DATA, and tilt is not routinely monitored during a measurement run -- an uncalibrated transducer drifting slowly, reproducibly, and in step with the driving variable, which is the shape a real effect also has. CONTESTED, and the record does not pretend otherwise: Yang and Wang (Astrophys. Space Sci. 282, 245, 2002) reply that room temperature varied by under 1 C and pressure by under 1 hPa, which in their reading excludes an environmental origin. The T4 coordinate and the EP-5 epistemotype record that an established mechanism IS CLAIMED for the observation, which is true of Unnikrishnan's paper; they do not assert that the community has settled it. This is the corpus's first instance of M-ART-TOL, registered at standard 1.6.0 and until now carried by no record.",
    "refs": [
-    "Phys. Rev. D 62, 041101 (2000)"
+    "Phys. Rev. D 62, 041101 (2000) \u2014 the original Wang/Yang measurement report",
+    "C. S. Unnikrishnan, A. K. Mohapatra & G. T. Gillies, 'Anomalous gravity data during the 1997 total solar eclipse do not support the hypothesis of gravitational shielding', Phys. Rev. D 63, 062002 (2001), DOI 10.1103/PhysRevD.63.062002",
+    "X.-S. Yang & Q.-S. Wang, 'Gravity Anomaly During the Mohe Total Solar Eclipse and New Constraint on Gravitational Shielding Parameter', Astrophys. Space Sci. 282, 245-253 (2002), DOI 10.1023/A:1021119023985"
    ],
    "relations": [
     {
@@ -10364,11 +10371,11 @@
     ],
     [
      "EP-3",
-     52
+     51
     ],
     [
      "EP-5",
-     29
+     30
     ],
     [
      "EP-2",
