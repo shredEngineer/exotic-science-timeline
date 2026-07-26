@@ -2,7 +2,7 @@
  "eqo_corpus_release": "H",
  "targets_eqo_version": "1.6.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched)",
- "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation.",
+ "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation. | 2026-07-26: four further records from Verance, Perpetual Motion (1916), a second public-domain catalogue independent of Dircks. Each names an inventor AND a patent number; the Haywood entry carries no number in its catalogue and is graded D0 accordingly rather than having one invented for it.",
  "instances": [
   {
    "id": "ex:avramenko-single-wire-1993",
@@ -193,6 +193,158 @@
     "British Patent No. 809 (1853), The counteracting re-acting motive power engine (W. W. Sleigh, London)",
     "H. Dircks, Perpetuum Mobile (1861), p. 446 and Ch. XI",
     "H. Dircks, A History of the Search for Self-Motive Power from the 13th to the 19th Century (London, 1870)"
+   ]
+  },
+  {
+   "id": "ex:furman-weighted-drum-1884",
+   "label": "Furman weighted-drum self-runner",
+   "principals": "George H. Furman, Rochester, Ohio",
+   "years": "1884",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 301,979 (1884). Concentric inner and outer drums carrying pockets that transfer weights from one to the other, the resulting imbalance claimed to drive continuous rotation of the shaft. An overbalanced-wheel construction in drum form: the weights that fall on the descending side must be lifted again on the ascending side, and the transfer mechanism cannot supply that lift for free. The patent is a construction claim -- examination establishes novelty and adequacy of description, never energy balance -- and reports no measurement.",
+   "refs": [
+    "US Patent 301,979 (G. H. Furman, Rochester, Ohio), 1884",
+    "P. Verance, Perpetual Motion (1916)"
+   ]
+  },
+  {
+   "id": "ex:schirrmeister-sliding-weight-1886",
+   "label": "Schirrmeister sliding-weight arm engine",
+   "principals": "Charles Schirrmeister, Brooklyn, Kings County, New York",
+   "years": "1886",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 345,077 (1886). Radial hollow arms on an axis carrying sliding weights, actuated by springs through an eccentric, the arrangement claimed to 'increase mechanical power'. The spring-and-eccentric addition is the characteristic move of the class: it makes the cycle harder to follow by eye without changing the fact that the eccentric must be driven. Construction claim only; no measurement reported.",
+   "refs": [
+    "US Patent 345,077 (C. Schirrmeister, Brooklyn, N.Y.), 1886",
+    "P. Verance, Perpetual Motion (1916)"
+   ]
+  },
+  {
+   "id": "ex:enbom-anderson-self-pump-1882",
+   "label": "Enbom and Anderson self-feeding pump",
+   "principals": "Andro Enbom and John A. Anderson, Augusta, Kansas",
+   "years": "1882",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "United States patent 259,514 (1882). A pump whose lifted water falls onto a wheel that is coupled back to the pump, claimed to 'lessen the labor required' to operate it. Notable for its own modest wording -- it claims a reduction in required work rather than a self-runner outright -- which places it at the boundary of the class rather than squarely inside it. The falling water can return at most the work spent lifting it, less losses.",
+   "refs": [
+    "US Patent 259,514 (A. Enbom and J. A. Anderson, Augusta, Kansas), 1882",
+    "P. Verance, Perpetual Motion (1916)"
+   ]
+  },
+  {
+   "id": "ex:haywood-rotary-wheel-1790",
+   "label": "Haywood cranked rotary wheel",
+   "principals": "John Haywood, Long Acre, Middlesex, draftsman and mechanic",
+   "years": "1790",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D0R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British patent (1790) to John Haywood of Long Acre, Middlesex, draftsman and mechanic: a rotary wheel with a cranked centre, rollers running in circular grooves, and springs arranged to prevent reverse movement. The ratchet-like anti-reverse element is the tell -- it prevents the wheel from unwinding but supplies nothing to wind it. The catalogue entry gives no patent number, so the number is carried as unknown rather than guessed.",
+   "refs": [
+    "British patent (1790), John Haywood of Long Acre, Middlesex -- number not stated in the catalogue",
+    "P. Verance, Perpetual Motion (1916)"
    ]
   }
  ],
