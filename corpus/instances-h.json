@@ -2,7 +2,7 @@
  "eqo_corpus_release": "H",
  "targets_eqo_version": "1.6.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched)",
- "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located.",
+ "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation.",
  "instances": [
   {
    "id": "ex:avramenko-single-wire-1993",
@@ -114,6 +114,46 @@
    "note": "United States patent 600,457, Electrical Battery (filed 24 October 1896, granted 8 March 1898). The claims describe copper and iron wires insulated from each other and wound compactly in separate insulated layers around a soft-iron core, with water as the electrolyte, and a further configuration incorporating a solenoid or secondary coil so the device also acts as a self-generating induction coil and electromagnet. Read as written, this is a galvanic cell of dissimilar metals in an aqueous electrolyte with an induction coil — ordinary electrochemistry, which is why the record carries an established mechanism edge. The reading of this device as drawing energy from the earth belongs to the later folklore around its inventor and not to the document filed here; the record is included partly to make that distinction visible in the corpus.",
    "refs": [
     "US Patent 600,457, Electrical Battery (N. B. Stubblefield), filed 1896-10-24, granted 1898-03-08"
+   ]
+  },
+  {
+   "id": "ex:congreve-capillary-sponge-1827",
+   "label": "Congreve capillary sponge-belt motive power",
+   "principals": "Sir William Congreve, 2nd Baronet",
+   "years": "1827",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T4Q0",
+   "epistemotype": "EP-5",
+   "signatures": [
+    "S-SLF",
+    "S-DEK"
+   ],
+   "compilation_confidence": "high",
+   "note": "British patent No. 5461 (1827), 'A New Motive Power', granted to Sir William Congreve of Cecil Street, London, Baronet. The construction is an inclined plane over pulleys carrying an endless band of sponge, with a second endless band of jointed weights running over it, the whole standing in still water. On the ascending side the sponge enters the bath uncompressed and takes up water by capillary attraction; on the descending side the weights squeeze it out. The claimed result is a permanent weight asymmetry that turns the band continuously. The device is refuted by ordinary statics rather than by any new principle: capillary rise cannot deliver net work over a closed cycle, because the same attraction that lifts the water also retains it, and releasing it costs exactly what raising it gained. Congreve was a serious inventor of the period -- military rockets, a time fuze, a hydropneumatic canal lock (1813), a colour-printing process (1821) -- which is why the record is worth carrying: it is a competent engineer's perpetual-motion claim, published under his own name and examined in the contemporary literature. Catalogued in Dircks, Perpetuum Mobile (1861), pp. 314-329, and the subject of a separate contemporary publication, 'Sir William Congreve on Perpetual Motion'.",
+   "refs": [
+    "British Patent No. 5461 (1827), A New Motive Power (Sir William Congreve, 2nd Bt., of Cecil Street, London)",
+    "Sir William Congreve on Perpetual Motion (contemporary publication; Google Books _IxgAAAAcAAJ)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), pp. 314-329"
    ]
   }
  ],
