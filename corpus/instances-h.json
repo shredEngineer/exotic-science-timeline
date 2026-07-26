@@ -142,11 +142,10 @@
      "none_documented"
     ]
    },
-   "e_signature": "E1:D2R0C0P1T4Q0",
-   "epistemotype": "EP-5",
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
    "signatures": [
-    "S-SLF",
-    "S-DEK"
+    "S-SLF"
    ],
    "compilation_confidence": "high",
    "note": "British patent No. 5461 (1827), 'A New Motive Power', granted to Sir William Congreve of Cecil Street, London, Baronet. The construction is an inclined plane over pulleys carrying an endless band of sponge, with a second endless band of jointed weights running over it, the whole standing in still water. On the ascending side the sponge enters the bath uncompressed and takes up water by capillary attraction; on the descending side the weights squeeze it out. The claimed result is a permanent weight asymmetry that turns the band continuously. The device is refuted by ordinary statics rather than by any new principle: capillary rise cannot deliver net work over a closed cycle, because the same attraction that lifts the water also retains it, and releasing it costs exactly what raising it gained. Congreve was a serious inventor of the period -- military rockets, a time fuze, a hydropneumatic canal lock (1813), a colour-printing process (1821) -- which is why the record is worth carrying: it is a competent engineer's perpetual-motion claim, published under his own name and examined in the contemporary literature. Catalogued in Dircks, Perpetuum Mobile (1861), pp. 314-329, and the subject of a separate contemporary publication, 'Sir William Congreve on Perpetual Motion'.",
