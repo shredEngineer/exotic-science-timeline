@@ -1,0 +1,48 @@
+{
+  "eqo_corpus_release": "J",
+  "targets_eqo_version": "1.6.0",
+  "append_only_to": "corpus/instances-a.json … instances-i.json (untouched)",
+  "provenance_note": "Coverage-gap fill from the 2026-07-26 content session: the Akimov torsion generator — a household name of the claim class — was absent from the corpus, found missing by accident rather than by sweep. Program history cross-verified across independent web sources (rexresearch device archive; trinitas.ru debate collection, fetched and read; secondary program histories) before entry; the note states what the sources state, attributes every verdict to its speaker, and keeps interpretive readings out of the corpus. The funding figure is attributed to Akimov's own account, not asserted as audited fact. A recall-driven canon sweep ('who else is missing?') is mandated vault-side as the systematic follow-up.",
+  "instances": [
+    {
+      "id": "ex:akimov-torsion-generator",
+      "label": "Akimov torsion generator (Soviet torsion-field program)",
+      "principals": "Anatoly E. Akimov (Center for Non-Traditional Technologies, then ISTC VENT); Gennady I. Shipov (theory)",
+      "years": "1986–1992",
+      "effect_types": [
+        "P-EMG-KOR-01",
+        "P-EMG-FLD-04",
+        "P-NUC-MAT-01",
+        "P-BIO-WRK-01"
+      ],
+      "mechanisms": [
+        {
+          "ref": "M-TOR",
+          "role": "claimed"
+        }
+      ],
+      "context": {
+        "inp": [
+          "lf_ac",
+          "magnetostatic"
+        ],
+        "med": "air",
+        "vac": "x",
+        "scl": "lab",
+        "per": "decaying",
+        "mod": [
+          "none_documented"
+        ]
+      },
+      "e_signature": "E1:D2R2C1P1T1Q1",
+      "epistemotype": "EP-3",
+      "signatures": [],
+      "compilation_confidence": "medium",
+      "note": "The generator described in the Soviet patent literature and program documents is a copper coil wound as a conical spiral with a permanent magnet on its axis, driven by 12 V DC with an audio-frequency signal modulated on top, and carrying two switches, one for power and one for polarity; the patent was filed in 1990 and published in 1992. The program attributed a concrete claim sheet to the device class: signal transmission through metal shielding without attenuation, strengthening of steel at milliwatt-level drive, shifts in seed germination, a 'spin memory' by which exposed media retain an altered spin structure for some period after switch-off, and reversal of effects when the polarity switch is reversed. The institutional arc is documented: a closed-mode program from the mid-1980s funded through the Ministry of Defense, the Military-Industrial Commission and the KGB (1987 funding application listing weapons detection, covert communication and psychophysical influence), an open-mode phase 1989-1991 under Akimov's Center for Non-Traditional Technologies and then ISTC VENT, with roughly half a billion rubles of funding by Akimov's own account. In 1991 an Academy of Sciences investigation found the money spent without scientific review and the program was shut down; Evgeny Alexandrov dismissed torsion communication as a bluff, V. A. Kuznetsov published 'Torsion Fields — A Myth' (Fizicheskaya Mysl Rossii 3/2002), and Shipov replied in the same issue. No controlled examination of the device-level claims themselves is documented on either side of that dispute, and no independent replication under stated controls is on record — the adversarial examination that exists operated at the program-and-funding level, which is why the C axis sits at 1 despite a genuinely filled dispute record.",
+      "refs": [
+        "rexresearch.com/akimovtorsion/akimovtorsion.html (device description and patent archive)",
+        "G. I. Shipov, A. E. Akimov, V. Ya. Tarasenko, Torsion fields as a new class of fundamental fields for information transmission technology, Fizicheskaya Mysl Rossii 5 (2001); V. A. Kuznetsov, Torsion Fields — A Myth, Fizicheskaya Mysl Rossii 3 (2002), with Shipov's reply in the same issue (collection: trinitas.ru/rus/doc/0231/010a/02310000.htm)"
+      ]
+    }
+  ]
+}
