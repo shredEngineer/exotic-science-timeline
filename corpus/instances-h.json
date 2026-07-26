@@ -2,7 +2,7 @@
  "eqo_corpus_release": "H",
  "targets_eqo_version": "1.6.0",
  "append_only_to": "corpus/instances-a.json … instances-g.json (untouched)",
- "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation. | 2026-07-26: four further records from Verance, Perpetual Motion (1916), a second public-domain catalogue independent of Dircks. Each names an inventor AND a patent number; the Haywood entry carries no number in its catalogue and is graded D0 accordingly rather than having one invented for it. | 2026-07-26: sixteen instances harvested from the Dircks Ch. XI patent catalogue, each verified against the official patent register rather than transcribed from the compilation -- the Woodcroft chronological index of patentees for the pre-October-1852 old-series numbering, and the Commissioners of Patents annual volumes for 1852-53 and 1855. The compilation supplied the pointer; the register supplied the citation, and corrected it twice (Copland's 1823 patent is No. 4749, not 4149; the 1852 communicator is Alfred Vincent Newton, mechanical draughtsman, not 'L. V. Newton, Patent Agent'). Where the register marks a filing 'provisional protection only' or 'a communication', the note says so, because neither is a granted patent to a named inventor and the distinction changes what the record can be read to assert.",
+ "provenance_note": "Patent-anchored additions from the 2026-07-22 archival reconnaissance. Only candidates whose primary document was fetched and identity-verified against the granted specification are included as instances — title, inventor(s), assignee, filing and grant dates read off the document itself, not inferred from a secondary listing. Notes state what the cited patent states; where the surrounding folklore differs from the document, the note says so. Four further scouted candidates are listed under `candidates` because their only surviving documentation is web-archive captures, which do not meet the citation floor. | 2026-07-26: three further candidate CLASSES added from the source/detector sweep. They come from Dircks, Perpetuum Mobile (1861), a 19th-century critical compilation whose chapters catalogue Philosophical Transactions papers, 17th-19th-century patents and early journal papers. The compilation is held locally as 18 chapter PDFs with text layers, but its OCR is poor and a secondary compilation is not a primary in any case -- every row it yields must be verified against the original before it becomes an instance. This is the densest unmined instance source the sweep located. | 2026-07-26: first instance harvested from the Dircks catalogue. Located in the compilation, then VERIFIED independently against the public patent and biographical record before entry -- the compilation supplied the pointer, not the citation. | 2026-07-26: four further records from Verance, Perpetual Motion (1916), a second public-domain catalogue independent of Dircks. Each names an inventor AND a patent number; the Haywood entry carries no number in its catalogue and is graded D0 accordingly rather than having one invented for it. | 2026-07-26: sixteen instances harvested from the Dircks Ch. XI patent catalogue, each verified against the official patent register rather than transcribed from the compilation -- the Woodcroft chronological index of patentees for the pre-October-1852 old-series numbering, and the Commissioners of Patents annual volumes for 1852-53 and 1855. The compilation supplied the pointer; the register supplied the citation, and corrected it twice (Copland's 1823 patent is No. 4749, not 4149; the 1852 communicator is Alfred Vincent Newton, mechanical draughtsman, not 'L. V. Newton, Patent Agent'). Where the register marks a filing 'provisional protection only' or 'a communication', the note says so, because neither is a granted patent to a named inventor and the distinction changes what the record can be read to assert. | 2026-07-26, second pass: three further instances from the 1857 register volume (Predavalle, Gilmour, Middleship). The catalogue's numbers failed again in this pass -- its 1857 No. 1108 for Charles Barlow is a grant to Richard Ford Sturges for metallic pens -- so that entry and the rest of the unverified remainder stay under candidates.",
  "instances": [
   {
    "id": "ex:avramenko-single-wire-1993",
@@ -973,6 +973,123 @@
    "refs": [
     "British Patent No. 2373 (1855, provisional protection only), Certain improvements in apparatus for motive-power (Henry Weber, mechanician, Zurich)",
     "Chronological Index of Patents Applied for and Patents Granted for the Year 1855 (Commissioners of Patents)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
+  },
+  {
+   "id": "ex:predavalle-capillary-column-1857",
+   "label": "Predavalle capillary-and-column motive power",
+   "principals": "Bartholomew Predavalle",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 958 of 1857 to Bartholomew Predavalle, of 106 Great Russell Street, Bedford Square, Middlesex, civil engineer, for 'A new motive-power'. Provisional protection only. The invention consists in the action, alternately intercepted and restored, of the vertical pressure of liquids on a base, together with the ascent of liquids by capillary attraction: twice the water needed to raise a piston is held in a broad shallow vessel communicating with the cylinder, a reservoir above is connected to the vessel's cover by a filled pipe, and glass capillary tubes are fixed in the cover -- vertical for about an inch, then horizontal for about half an inch, then vertical to the top, a geometry the patentee calls indispensable. THE RECORD'S VALUE IS THE CROSS-LINK. Congreve's British Patent No. 5461 of 1827 raises water by capillary attraction into a sponge belt; Predavalle's raises it through capillary tubes thirty years later; both fail on the identical point, which is that the attraction lifting the water is the same attraction retaining it, so releasing it costs exactly what raising it gained, and no bend in a glass tube changes that. The persistence of one refuted mechanism across three decades of independent filings is a fact about the class, not about either inventor. Dircks further lists No. 2851 of 1859 and No. 1458 of 1860 to the same man, both from Bloomsbury, working from the vertical pressure of a fluid column on a balance beam; THOSE TWO ARE REPORTED, NOT VERIFIED -- the 1859 and 1860 register volumes were not obtainable in this pass. OPEN QUESTION, DELIBERATELY NOT RESOLVED HERE: the 1833 record for Barthelemy Richard Comte de Predaval, engineer, of Leicester Place, may or may not be the same man under the anglicised form of the same name twenty-four years later. Nothing in either register entry settles it, and the two are NOT merged.",
+   "refs": [
+    "British Patent No. 958 (1857, provisional protection only), A new motive-power (Bartholomew Predavalle, 106 Great Russell Street, Bedford Square, civil engineer)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
+  },
+  {
+   "id": "ex:gilmour-compound-lever-train-1857",
+   "label": "Gilmour compound weighted-lever train",
+   "principals": "William Gilmour",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2125 of 1857 to William Gilmour, of Dalbeth, in the county of Lanark, North Britain, GARDENER, for 'Improvements in obtaining motive-power'. Provisional protection only. The trade comes from the register, which also places Dalbeth in Lanark; the compilation gives neither. The apparatus is a pair of long parallel horizontal levers of the first order, each on a fulcrum near one end with a weight of predetermined size hung at the longer end. The descent of that weight elevates the opposite shorter arm, which is connected to a short crank on a small horizontal shaft carrying a longer crank at its other end; that longer crank is jointed by a link to the longer arm of a second lever of half the length of the main one, whose shorter arm is linked to an equal-armed lever, whose opposite end is connected by a rod to a crank on a long transverse shaft carrying three further cranks, and so on. The error is the one the whole lever family shares and the length of the train is what disguises it: a lever trades force for distance and conserves work exactly. Chaining seven of them multiplies neither the work nor the shortfall -- it only moves the point where the bookkeeping would have to be done, and the specification never does it.",
+   "refs": [
+    "British Patent No. 2125 (1857, provisional protection only), Improvements in obtaining motive-power (William Gilmour, Dalbeth, Lanark, gardener)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
+  },
+  {
+   "id": "ex:middleship-collapsible-chamber-wheel-1857",
+   "label": "Middleship collapsible-chamber overbalancing wheel",
+   "principals": "William Middleship",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 3199 of 1857 to William Middleship, of Grove Terrace, South Grove, Mile End, Middlesex, OFFICER OF HER MAJESTY'S CUSTOMS, for 'Improved machinery or apparatus for obtaining motive power'. Provisional protection only. The office is the register's; the compilation's scan of it is unreadable. The machine is a wheel on a spindle kept rotating by maintaining a weight of water always on one side, or, if the wheel is immersed, by inflating air chambers on one side only so that their ascending force turns it. The chambers set around the periphery must be collapsible, so as to receive the air or water alternately and allow it to be expelled when required; the patentee prefers to make them wedge-shaped. THE WORD 'COLLAPSIBLE' IS WHERE THE ACCOUNTING HIDES, and naming that is the reason to carry the record: filling a chamber on the rising side against the surrounding head costs precisely the buoyant work its ascent returns, and expelling it at the top costs the rest. The specification describes the valving and the chamber geometry in detail and the filling work nowhere -- which is the characteristic shape of the class, where mechanical description substitutes for an energy balance.",
+   "refs": [
+    "British Patent No. 3199 (1857, provisional protection only), Improved machinery or apparatus for obtaining motive power (William Middleship, Mile End, Officer of H.M. Customs)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
     "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
    ]
   }

@@ -9955,6 +9955,156 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1855"
+  },
+  {
+   "id": "ex:predavalle-capillary-column-1857",
+   "label": "Predavalle capillary-and-column motive power",
+   "principals": "Bartholomew Predavalle",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 958 of 1857 to Bartholomew Predavalle, of 106 Great Russell Street, Bedford Square, Middlesex, civil engineer, for 'A new motive-power'. Provisional protection only. The invention consists in the action, alternately intercepted and restored, of the vertical pressure of liquids on a base, together with the ascent of liquids by capillary attraction: twice the water needed to raise a piston is held in a broad shallow vessel communicating with the cylinder, a reservoir above is connected to the vessel's cover by a filled pipe, and glass capillary tubes are fixed in the cover -- vertical for about an inch, then horizontal for about half an inch, then vertical to the top, a geometry the patentee calls indispensable. THE RECORD'S VALUE IS THE CROSS-LINK. Congreve's British Patent No. 5461 of 1827 raises water by capillary attraction into a sponge belt; Predavalle's raises it through capillary tubes thirty years later; both fail on the identical point, which is that the attraction lifting the water is the same attraction retaining it, so releasing it costs exactly what raising it gained, and no bend in a glass tube changes that. The persistence of one refuted mechanism across three decades of independent filings is a fact about the class, not about either inventor. Dircks further lists No. 2851 of 1859 and No. 1458 of 1860 to the same man, both from Bloomsbury, working from the vertical pressure of a fluid column on a balance beam; THOSE TWO ARE REPORTED, NOT VERIFIED -- the 1859 and 1860 register volumes were not obtainable in this pass. OPEN QUESTION, DELIBERATELY NOT RESOLVED HERE: the 1833 record for Barthelemy Richard Comte de Predaval, engineer, of Leicester Place, may or may not be the same man under the anglicised form of the same name twenty-four years later. Nothing in either register entry settles it, and the two are NOT merged.",
+   "refs": [
+    "British Patent No. 958 (1857, provisional protection only), A new motive-power (Bartholomew Predavalle, 106 Great Russell Street, Bedford Square, civil engineer)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1857,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1857"
+  },
+  {
+   "id": "ex:gilmour-compound-lever-train-1857",
+   "label": "Gilmour compound weighted-lever train",
+   "principals": "William Gilmour",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 2125 of 1857 to William Gilmour, of Dalbeth, in the county of Lanark, North Britain, GARDENER, for 'Improvements in obtaining motive-power'. Provisional protection only. The trade comes from the register, which also places Dalbeth in Lanark; the compilation gives neither. The apparatus is a pair of long parallel horizontal levers of the first order, each on a fulcrum near one end with a weight of predetermined size hung at the longer end. The descent of that weight elevates the opposite shorter arm, which is connected to a short crank on a small horizontal shaft carrying a longer crank at its other end; that longer crank is jointed by a link to the longer arm of a second lever of half the length of the main one, whose shorter arm is linked to an equal-armed lever, whose opposite end is connected by a rod to a crank on a long transverse shaft carrying three further cranks, and so on. The error is the one the whole lever family shares and the length of the train is what disguises it: a lever trades force for distance and conserves work exactly. Chaining seven of them multiplies neither the work nor the shortfall -- it only moves the point where the bookkeeping would have to be done, and the specification never does it.",
+   "refs": [
+    "British Patent No. 2125 (1857, provisional protection only), Improvements in obtaining motive-power (William Gilmour, Dalbeth, Lanark, gardener)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1857,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1857"
+  },
+  {
+   "id": "ex:middleship-collapsible-chamber-wheel-1857",
+   "label": "Middleship collapsible-chamber overbalancing wheel",
+   "principals": "William Middleship",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "water_electrolyte",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D1R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 3199 of 1857 to William Middleship, of Grove Terrace, South Grove, Mile End, Middlesex, OFFICER OF HER MAJESTY'S CUSTOMS, for 'Improved machinery or apparatus for obtaining motive power'. Provisional protection only. The office is the register's; the compilation's scan of it is unreadable. The machine is a wheel on a spindle kept rotating by maintaining a weight of water always on one side, or, if the wheel is immersed, by inflating air chambers on one side only so that their ascending force turns it. The chambers set around the periphery must be collapsible, so as to receive the air or water alternately and allow it to be expelled when required; the patentee prefers to make them wedge-shaped. THE WORD 'COLLAPSIBLE' IS WHERE THE ACCOUNTING HIDES, and naming that is the reason to carry the record: filling a chamber on the rising side against the surrounding head costs precisely the buoyant work its ascent returns, and expelling it at the top costs the rest. The specification describes the valving and the chamber geometry in detail and the filling work nowhere -- which is the characteristic shape of the class, where mechanical description substitutes for an energy balance.",
+   "refs": [
+    "British Patent No. 3199 (1857, provisional protection only), Improved machinery or apparatus for obtaining motive power (William Middleship, Mile End, Officer of H.M. Customs)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1857,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1857"
   }
  ],
  "arcs": [
@@ -10133,13 +10283,13 @@
   ]
  ],
  "stats": {
-  "events": 231,
+  "events": 234,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 210,
+  "observation_events": 213,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -10153,18 +10303,18 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 15,
-   "II First instrument era": 31,
+   "II First instrument era": 34,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 210,
+   "n": 213,
    "by_lane": [
     [
      "MEC",
-     66
+     69
     ],
     [
      "EMG",
@@ -10206,7 +10356,7 @@
    "by_ep": [
     [
      "EP-4",
-     64
+     67
     ],
     [
      "EP-1",
@@ -10227,9 +10377,9 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 37,
+   "never_replicated": 40,
    "peer_reviewed": 43,
-   "secondhand": 56,
+   "secondhand": 59,
    "densest_decade": [
     1990,
     30
@@ -10297,7 +10447,7 @@
      "MEC": 1
     },
     "1850": {
-     "MEC": 8
+     "MEC": 11
     },
     "1870": {
      "ACU": 1,
