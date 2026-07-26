@@ -1131,6 +1131,45 @@
     "Chronological Index of Patents Applied for and Patents Granted for the Year 1859 (Commissioners of Patents, Woodcroft)",
     "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
    ]
+  },
+  {
+   "id": "ex:commandeur-helical-ball-spirals-1857",
+   "label": "Commandeur helical ball-and-spiral regenerator",
+   "principals": "Joseph Commandeur (communicated by Charles Barlow)",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 1108 of 1857, taken out by Charles Barlow of the Office for Patents, 89 Chancery Lane, London, for 'A mechanical apparatus for regenerating the impulsive force of any motive-power' — a communication from JOSEPH COMMANDEUR, of Lyons, France, gentleman, who is named in the register and is therefore carried here as the principal, with Barlow as the communicating agent. The machine is two cylinders of different diameters, A and B, wound with helical spirals in reverse senses and set on inclined shafts. Heavy iron balls run down the spirals of A, whose gravitation is the claimed motive power, into a lower horizontal trough C which delivers them into the lower spire of B; B is declared the resistance, and its only office is to carry the balls up again to the top so that A may drop them once more. The patentee states the resulting motion as oscillating and rotatory on account of the inclined shafts. Setting out the return path so explicitly is what makes the record useful: the specification names the lifting stage, describes its mechanism, and simply never prices it, when raising the balls through B costs exactly what dropping them through A returns. THIRD OF THREE COMMUNICATED FILINGS in this set — with Newton's No. 1163 of 1852 and Bellford's No. 118 of 1853 — and together they are the record's real content: through the 1850s the London patent-agency houses were a standing channel by which continental self-motion claims entered the British register under an agent's name. Here the register names the originating inventor, where in the other two it does not.",
+   "refs": [
+    "British Patent No. 1108 (1857), A mechanical apparatus for regenerating the impulsive force of any motive-power — a communication from Joseph Commandeur of Lyons (Charles Barlow, Office for Patents, 89 Chancery Lane)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ]
   }
  ],
  "candidates": [
@@ -1162,7 +1201,7 @@
   {
    "candidate": "Dircks catalogue — the unharvested remainder of the 19th-century patent rows",
    "years": "1854–1869 (Ch. XI), plus Ch. III and Ch. VI",
-   "why_not_yet": "PARTLY HARVESTED, so this entry now records what is LEFT rather than the whole block. Ch. XI carries 54 dated entries in a regular YEAR.-NAME [No.] form; nineteen of them became instances on 2026-07-26 once their numbers were checked against the official register, and the rest stay here. The obstacle is no longer the compilation's bad OCR of small-caps names — that is solved, because the register supplies the name once the number is known. It is the register volumes themselves: the Woodcroft chronological index of patentees covers the old-series numbering to 1 Oct 1852, and the Commissioners' annual volumes for 1852–53, 1855 and 1857 were obtained and used, but the volumes for 1854, 1856, 1858, 1860 and 1866 were not located, and the volume indexed as 1859 is correctly indexed and correctly structured but its NUMERIC OCR is destroyed (it prints '5.' for 3 and 'e.' for 6), so lookup by number fails there and lookup by mangled surname fails with it. **The way through, found 2026-07-26: match the patent TITLE.** Dircks quotes each title verbatim, titles run twenty words where a number runs three digits, and that redundancy survives a scan that eats everything else — it produced Hugh Rigby (No. 754, Salford) from a catalogue entry printing 'No. f5a' and a surname no reading would have recovered. Apply the same route to the remaining 1859 rows before writing that volume off. Rows still waiting on those volumes include Predavalle (1859, 1860), Adderley Willcocks Sleigh (1854), Charles Barlow for Joseph Commandeur of Lyons (1857 — number known to be wrong), Peter Pickering of Danzig (1858), Moses Haym Picciotto (1859), Alfred Lecocq (1860) and Antoine Jean Baptiste Lespinasse of Toulouse (1866). Ch. III (17th/18th-century patents) and Ch. VI (early journal papers, 79k characters) need their own extraction patterns and have not been attempted. THE STANDING RULE FOR THIS VEIN, earned rather than assumed: a catalogue number is a candidate, never a citation. Of roughly twenty-five numbers checked against the register, three were wrong — the 1823 Copland patent is No. 4749 and not the printed 4149, the 1857 No. 1108 given for Charles Barlow is a grant to Richard Ford Sturges for metallic pens, and the No. 1934 given for John Coles is a grant to Charles Hyndman Mitchell for steam engines. Nothing from this remainder enters as an instance until its number and its patentee are read off a register volume."
+   "why_not_yet": "PARTLY HARVESTED, so this entry now records what is LEFT rather than the whole block. Ch. XI carries 54 dated entries in a regular YEAR.-NAME [No.] form; nineteen of them became instances on 2026-07-26 once their numbers were checked against the official register, and the rest stay here. The obstacle is no longer the compilation's bad OCR of small-caps names — that is solved, because the register supplies the name once the number is known. It is the register volumes themselves: the Woodcroft chronological index of patentees covers the old-series numbering to 1 Oct 1852, and the Commissioners' annual volumes for 1852–53, 1855 and 1857 were obtained and used, but the volumes for 1854, 1856, 1858, 1860 and 1866 were not located, and the volume indexed as 1859 is correctly indexed and correctly structured but its NUMERIC OCR is destroyed (it prints '5.' for 3 and 'e.' for 6), so lookup by number fails there and lookup by mangled surname fails with it. **The way through, found 2026-07-26: match the patent TITLE.** Dircks quotes each title verbatim, titles run twenty words where a number runs three digits, and that redundancy survives a scan that eats everything else — it produced Hugh Rigby (No. 754, Salford) from a catalogue entry printing 'No. f5a' and a surname no reading would have recovered. Apply the same route to the remaining 1859 rows before writing that volume off. Rows still waiting on those volumes include Predavalle (1859, 1860), Adderley Willcocks Sleigh (1854), Charles Barlow for Joseph Commandeur of Lyons (1857 — number known to be wrong), Peter Pickering of Danzig (1858), Moses Haym Picciotto (1859), Alfred Lecocq (1860) and Antoine Jean Baptiste Lespinasse of Toulouse (1866). Ch. III (17th/18th-century patents) and Ch. VI (early journal papers, 79k characters) need their own extraction patterns and have not been attempted. THE STANDING RULE FOR THIS VEIN, and a CORRECTION to an earlier version of this entry that overstated it: a catalogue number is a candidate, never a citation — but the compilation is far more reliable than first reported. Of roughly twenty-five numbers checked, **exactly one is a genuine catalogue error**: the 1823 Copland patent is No. 4749, not the printed 4149, which belongs to John Hawks for making iron rails (4149 occurs once in the whole pre-1852 register and it is Hawks). Two further numbers were reported wrong here and were NOT — the fault was in the checking. No. 1108 of 1857 IS Charles Barlow's communication from Joseph Commandeur, exactly as printed; an earlier numeric search matched a different position in the volume and the first hit was taken as the verdict without reading its neighbours. The No. 1934 attributed to John Coles was looked up in the 1868 volume when the catalogue entry sits among 1858 rows, so the year, not the number, was the error. **The real and much commoner failure is the SCAN, not the compiler:** Dircks prints No. 754 correctly and the scan renders it 'No. f5a', which no reading recovers — that row was landed only by matching the patent title. Distinguish the two, because they call for different remedies: a wrong printed number needs a search by surname, a destroyed one needs a search by title."
   },
   {
    "candidate": "Dircks catalogue — early scientific-journal papers",

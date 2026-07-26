@@ -10162,6 +10162,56 @@
    "record_kind": "observation",
    "confidence": "high",
    "years_raw": "1859"
+  },
+  {
+   "id": "ex:commandeur-helical-ball-spirals-1857",
+   "label": "Commandeur helical ball-and-spiral regenerator",
+   "principals": "Joseph Commandeur (communicated by Charles Barlow)",
+   "years": "1857",
+   "effect_types": [
+    "P-MEC-KIN-10"
+   ],
+   "mechanisms": [
+    {
+     "ref": "M-MCH",
+     "role": "discussed"
+    }
+   ],
+   "context": {
+    "inp": [
+     "passive"
+    ],
+    "med": "air",
+    "vac": "x",
+    "scl": "lab",
+    "per": "persistent",
+    "mod": [
+     "none_documented"
+    ]
+   },
+   "e_signature": "E1:D2R0C0P1T3Q0",
+   "epistemotype": "EP-4",
+   "signatures": [
+    "S-SLF"
+   ],
+   "compilation_confidence": "high",
+   "note": "British Patent No. 1108 of 1857, taken out by Charles Barlow of the Office for Patents, 89 Chancery Lane, London, for 'A mechanical apparatus for regenerating the impulsive force of any motive-power' \u2014 a communication from JOSEPH COMMANDEUR, of Lyons, France, gentleman, who is named in the register and is therefore carried here as the principal, with Barlow as the communicating agent. The machine is two cylinders of different diameters, A and B, wound with helical spirals in reverse senses and set on inclined shafts. Heavy iron balls run down the spirals of A, whose gravitation is the claimed motive power, into a lower horizontal trough C which delivers them into the lower spire of B; B is declared the resistance, and its only office is to carry the balls up again to the top so that A may drop them once more. The patentee states the resulting motion as oscillating and rotatory on account of the inclined shafts. Setting out the return path so explicitly is what makes the record useful: the specification names the lifting stage, describes its mechanism, and simply never prices it, when raising the balls through B costs exactly what dropping them through A returns. THIRD OF THREE COMMUNICATED FILINGS in this set \u2014 with Newton's No. 1163 of 1852 and Bellford's No. 118 of 1853 \u2014 and together they are the record's real content: through the 1850s the London patent-agency houses were a standing channel by which continental self-motion claims entered the British register under an agent's name. Here the register names the originating inventor, where in the other two it does not.",
+   "refs": [
+    "British Patent No. 1108 (1857), A mechanical apparatus for regenerating the impulsive force of any motive-power \u2014 a communication from Joseph Commandeur of Lyons (Charles Barlow, Office for Patents, 89 Chancery Lane)",
+    "Chronological Index of Patents Applied for and Patents Granted for the Year 1857 (Commissioners of Patents, Woodcroft)",
+    "H. Dircks, Perpetuum Mobile: Search for Self-Motive Power During the 17th, 18th and 19th Centuries (1861), Ch. XI"
+   ],
+   "lane": "MEC",
+   "lanes": [
+    "MEC"
+   ],
+   "t_start": 1857,
+   "t_end": null,
+   "t_precision": "year",
+   "ongoing": false,
+   "record_kind": "observation",
+   "confidence": "high",
+   "years_raw": "1857"
   }
  ],
  "arcs": [
@@ -10340,13 +10390,13 @@
   ]
  ],
  "stats": {
-  "events": 235,
+  "events": 236,
   "data_span": [
    1150,
    2026
   ],
   "context_events": 21,
-  "observation_events": 214,
+  "observation_events": 215,
   "arcs": 27,
   "contradiction_arcs": 19,
   "median_adversarial_lag_years": 6,
@@ -10360,18 +10410,18 @@
   ],
   "per_era": {
    "I Mechanical era \u2014 wheels & descriptions": 15,
-   "II First instrument era": 35,
+   "II First instrument era": 36,
    "III Field & radiation era": 36,
    "IV Postwar laboratory era": 66,
    "V Contested-laboratory era": 53,
    "VI Video & network era": 30
   },
   "aggregates": {
-   "n": 214,
+   "n": 215,
    "by_lane": [
     [
      "MEC",
-     70
+     71
     ],
     [
      "EMG",
@@ -10413,7 +10463,7 @@
    "by_ep": [
     [
      "EP-4",
-     68
+     69
     ],
     [
      "EP-1",
@@ -10434,7 +10484,7 @@
    ],
    "open_anomaly": 19,
    "examined": 23,
-   "never_replicated": 41,
+   "never_replicated": 42,
    "peer_reviewed": 43,
    "secondhand": 59,
    "densest_decade": [
@@ -10504,7 +10554,7 @@
      "MEC": 1
     },
     "1850": {
-     "MEC": 12
+     "MEC": 13
     },
     "1870": {
      "ACU": 1,
