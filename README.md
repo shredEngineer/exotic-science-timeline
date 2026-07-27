@@ -20,7 +20,7 @@ Nothing here asserts that any claimed effect is real, and nothing here asserts t
 
 | Path | What it is |
 |------|-----------|
-| `corpus/` | The record itself — 189 identifiers across four append-only releases, classified per [EQO](https://github.com/shredEngineer/eqo) |
+| `corpus/` | The record itself — append-only releases, classified per [EQO](https://github.com/shredEngineer/eqo); the page derives its counts from the data, so the data is the census |
 | `standard/` | The pinned copy of the standard's machine-readable vocabulary, with its `PIN` (version, source commit, checksum) |
 | `derived/timeline.json` | Normalized dating layer over the corpus: events, resolution arcs, eras, statistics |
 | `overlay/overlay.json` | Enrichment keyed by record identifier, written by the research process rather than by hand |

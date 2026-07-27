@@ -36,9 +36,22 @@ def parse_years(s):
     if ongoing: end = 2026
     return (start, end if end!=start or ongoing else None, prec, ongoing)
 
-events, arcs = [], []
+events, arcs, candidates = [], [], []
 for f in FILES:
     d = json.load(open(f))
+    # The candidates tier: leads without records yet. Two releases carry them
+    # under different key sets (B: known_as/recall/verify/domain · H:
+    # candidate/years/why_not_yet). Normalized HERE, at read time — the corpus
+    # releases are append-only and are never edited to align keys.
+    for c in d.get("candidates", []):
+        candidates.append({
+            "name": c.get("known_as") or c.get("candidate") or "",
+            "years": c.get("years", ""),
+            "domain": c.get("domain", ""),
+            "recall": c.get("recall", ""),
+            "verify": c.get("verify", ""),
+            "why_not_yet": c.get("why_not_yet", ""),
+        })
     for r in d.get("instances", []):
         if r["id"] == "ex:bhaskara-note": continue  # pointer record
         st, en, prec, ong = parse_years(r.get("years",""))
@@ -150,7 +163,10 @@ stats["aggregates"] = {
     "densest_decade": _dec.most_common(1)[0] if _dec else None,
     "by_decade_lane": {str(k): _dec_lane[k] for k in sorted(_dec_lane)},
 }
-out = {"renders_corpus":RENDERS,"events":events,"arcs":arcs,"eras":eras,"stats":stats}
+# Candidates ride as their own array — they carry no coordinate and no date
+# layer, so they must not enter events or any statistic.
+out = {"renders_corpus":RENDERS,"events":events,"arcs":arcs,"eras":eras,"stats":stats,
+       "candidates":candidates}
 OUT.parent.mkdir(exist_ok=True)
 json.dump(out, open(OUT,"w"), indent=1)
 print(json.dumps(stats, indent=1))

@@ -11084,5 +11084,223 @@
     }
    }
   }
- }
+ },
+ "candidates": [
+  {
+   "name": "Silvertooth experiment",
+   "years": "",
+   "domain": "aether",
+   "recall": "E.W. Silvertooth, 1986, claimed standing-wave detection of absolute motion",
+   "verify": "publication venue (Nature correspondence vs. Speculations Sci. Technol.) and apparatus details",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Galaev Kharkov aether-drift",
+   "years": "",
+   "domain": "aether",
+   "recall": "Yu. Galaev, 2000s, radio-band and optical drift-measurement claims, Kharkov",
+   "verify": "publications and claimed velocity values",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Dulnev ITMO measurements",
+   "years": "",
+   "domain": "soviet",
+   "recall": "Gennady Dulnev, St. Petersburg ITMO, instrumented 'psi/torsion' heat-flux measurements, 1990s-2000s",
+   "verify": "which reports exist beyond institutional lore",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Toyota replication of Iwamura",
+   "years": "",
+   "domain": "japan-lenr",
+   "recall": "Toyota Central R&D group reported partial replication of permeation transmutation ~2013 (Hioki et al., JJAP?)",
+   "verify": "citation and scope of agreement",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Ohmasa gas",
+   "years": "",
+   "domain": "japan",
+   "recall": "Ryushin Ohmasa, vibration-stirred electrolysis gas with anomalous-property claims, Japan 2000s",
+   "verify": "claims vs. conventional oxyhydrogen behavior",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Takahashi Osaka LENR line",
+   "years": "",
+   "domain": "japan-lenr",
+   "recall": "Akito Takahashi, multi-body fusion models plus group experiments, 1990s-2010s",
+   "verify": "which experimental records stand independent of theory papers",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Korschelt aether-radiation apparatus",
+   "years": "",
+   "domain": "german-pre1945",
+   "recall": "Oskar Korschelt, Leipzig ~1890s, patented therapeutic 'aether ray' device; radionics ancestor",
+   "verify": "patent record and device description",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Piggott electrostatic levitation",
+   "years": "",
+   "domain": "antigravity",
+   "recall": "G.S. Piggott, ~1904, silver balls suspended near charged sphere, cited in electrogravitics lore",
+   "verify": "primary report and setup",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Ighina devices",
+   "years": "",
+   "domain": "env-adjacent",
+   "recall": "Pier Luigi Ighina, Italy, 'magnetic atom', rain/cloud apparatus, Elios machine; colorful primary interviews exist",
+   "verify": "which discrete observations are documented vs. narrated",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Nieper conference circuit",
+   "years": "",
+   "domain": "german-postwar",
+   "recall": "Hans Nieper, Hannover, 1980s 'gravity field energy' conferences promoting converters (Kromrey, others)",
+   "verify": "which devices were actually bench-shown",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Trombly-Kahn closed-path homopolar",
+   "years": "",
+   "domain": "electromagnetic",
+   "recall": "Adam Trombly, 1980s, homopolar generator with over-unity claims and suppression lore",
+   "verify": "patent application record and any measurements",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Don Smith devices",
+   "years": "",
+   "domain": "electromagnetic",
+   "recall": "Donald L. Smith, resonant HV coil devices, videotaped talks 1990s-2000s",
+   "verify": "any instrumented demonstration beyond lectures",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Ecklin SAG",
+   "years": "",
+   "domain": "electromagnetic",
+   "recall": "John Ecklin, stationary-armature generator concept, 1970s-80s newsletters",
+   "verify": "device records vs. concept papers",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Kromrey converter",
+   "years": "",
+   "domain": "electromagnetic",
+   "recall": "Raymond Kromrey, 1960s(?), G-field generator claims",
+   "verify": "patents and era",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Hyde electrostatic generator",
+   "years": "",
+   "domain": "electromagnetic",
+   "recall": "William Hyde, high-efficiency electrostatic machine claims, patent often cited ~1990",
+   "verify": "patent number and content before citing",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Horvath hydrogen car",
+   "years": "",
+   "domain": "water-fuel",
+   "recall": "Stephen Horvath, Australia, 1970s-80s, hydrogen-from-water car claims with patents",
+   "verify": "patent record and demonstrations",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Genesis World Energy",
+   "years": "",
+   "domain": "water-fuel",
+   "recall": "2002-03 'Edison device' water-energy investment scheme; later fraud prosecution",
+   "verify": "principal names and case record \u2014 deliberately not asserted from memory",
+   "why_not_yet": ""
+  },
+  {
+   "name": "John Crane Rife successors",
+   "years": "",
+   "domain": "radionics",
+   "recall": "Rife-derived frequency devices, 1950s-60s, prosecution ~1961",
+   "verify": "case details and device lineage",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Bovis biometer",
+   "years": "",
+   "domain": "radionics",
+   "recall": "Andre Bovis, 1930s France, dowsing-scale 'Bovis units' instrumentation",
+   "verify": "primary writings",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Cook and Thornson inertial drives",
+   "years": "",
+   "domain": "antigravity",
+   "recall": "Robert Cook (CIP) and 'Thornson drive' as recurring reactionless-drive mentions, 1970s-80s",
+   "verify": "which bench records exist",
+   "why_not_yet": ""
+  },
+  {
+   "name": "Stiffler 'Spatial Energy Coherence' (SEC)",
+   "years": "2000s",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "Substantial builder documentation exists, but its only surviving public form is web-archive captures of a personal site; no patent and no indexed publication were located. Below the citation floor for an instance."
+  },
+  {
+   "name": "JLN Labs 'Time Energy Pump' (J.-L. Naudin)",
+   "years": "1997",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "A design description rather than a built device by the author's own account; documentation survives only as web-archive captures. Would enter as record_kind design_description once a citable form exists."
+  },
+  {
+   "name": "Genesis Project 'negative inductor'",
+   "years": "1999",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "Anonymous public-domain theory text plus a claimed build; surviving documentation is a web-archive capture of a defunct hosting service. The anonymity itself is admissible on the provenance axis; the documentation is not yet citable."
+  },
+  {
+   "name": "Lawton / Boyce water-cell replications",
+   "years": "2000s",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "Named as a replication lineage in a secondary review. Replication-attempt records would give the associated water-cell record its replication-axis arc, which is exactly why they are worth chasing \u2014 but no primary document has been located."
+  },
+  {
+   "name": "Papin vs the anonymous French author \u2014 Philosophical Transactions perpetual-motion exchange",
+   "years": "1685\u20131687",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "Located 2026-07-26 via Dircks, Perpetuum Mobile (1861) Ch. IV. Denis Papin (M.D., F.R.S.) published a mechanical analysis of an anonymous French author's bellows-and-mercury perpetual-motion engine in the Philosophical Transactions (No. 174; an earlier paper of December 1685), with the dispute also running through the Journal des Savans and the Nouvelles de la Republique des Lettres. This is a claim record WITH a documented examination and resolution -- the arc type the census finds at zero in the closed-circuit classes -- and Papin's method is a derivation about the mechanism, not a verdict about the claimant. Not yet an instance because the only reading so far is a poor OCR of an 1861 secondary compilation; identity must be verified against the Philosophical Transactions originals, which are publicly available."
+  },
+  {
+   "name": "Dircks catalogue \u2014 the unharvested remainder of the 19th-century patent rows",
+   "years": "1854\u20131869 (Ch. XI), plus Ch. III and Ch. VI",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "PARTLY HARVESTED, so this entry now records what is LEFT rather than the whole block. Ch. XI carries 54 dated entries in a regular YEAR.-NAME [No.] form; nineteen of them became instances on 2026-07-26 once their numbers were checked against the official register, and the rest stay here. The obstacle is no longer the compilation's bad OCR of small-caps names \u2014 that is solved, because the register supplies the name once the number is known. It is the register volumes themselves: the Woodcroft chronological index of patentees covers the old-series numbering to 1 Oct 1852, and the Commissioners' annual volumes for 1852\u201353, 1855 and 1857 were obtained and used, but the volumes for 1854, 1856, 1858, 1860 and 1866 were not located, and the volume indexed as 1859 is correctly indexed and correctly structured but its NUMERIC OCR is destroyed (it prints '5.' for 3 and 'e.' for 6), so lookup by number fails there and lookup by mangled surname fails with it. **The way through, found 2026-07-26: match the patent TITLE.** Dircks quotes each title verbatim, titles run twenty words where a number runs three digits, and that redundancy survives a scan that eats everything else \u2014 it produced Hugh Rigby (No. 754, Salford) from a catalogue entry printing 'No. f5a' and a surname no reading would have recovered. Apply the same route to the remaining 1859 rows before writing that volume off. Rows still waiting on those volumes include Predavalle (1859, 1860), Adderley Willcocks Sleigh (1854), Charles Barlow for Joseph Commandeur of Lyons (1857 \u2014 number known to be wrong), Peter Pickering of Danzig (1858), Moses Haym Picciotto (1859), Alfred Lecocq (1860) and Antoine Jean Baptiste Lespinasse of Toulouse (1866). Ch. III (17th/18th-century patents) and Ch. VI (early journal papers, 79k characters) need their own extraction patterns and have not been attempted. THE STANDING RULE FOR THIS VEIN, and a CORRECTION to an earlier version of this entry that overstated it: a catalogue number is a candidate, never a citation \u2014 but the compilation is far more reliable than first reported. Of roughly twenty-five numbers checked, **exactly one is a genuine catalogue error**: the 1823 Copland patent is No. 4749, not the printed 4149, which belongs to John Hawks for making iron rails (4149 occurs once in the whole pre-1852 register and it is Hawks). Two further numbers were reported wrong here and were NOT \u2014 the fault was in the checking. No. 1108 of 1857 IS Charles Barlow's communication from Joseph Commandeur, exactly as printed; an earlier numeric search matched a different position in the volume and the first hit was taken as the verdict without reading its neighbours. The No. 1934 attributed to John Coles was looked up in the 1868 volume when the catalogue entry sits among 1858 rows, so the year, not the number, was the error. **The real and much commoner failure is the SCAN, not the compiler:** Dircks prints No. 754 correctly and the scan renders it 'No. f5a', which no reading recovers \u2014 that row was landed only by matching the patent title. Distinguish the two, because they call for different remedies: a wrong printed number needs a search by surname, a destroyed one needs a search by title. | 2026-07-26: the SUBJECT-MATTER index series reaches 1854 and 1858, and both were mined through it. One 1858 row is held back as genuinely ambiguous rather than guessed: the catalogue gives Marc Antoine Francois Mennons at No. 566 for 'certain improvements in machinery for the production of motive power', and the subject index's Motive-power section aligns 'Production of motive-power' to No. 666 on 19 March 1858 under that same name \u2014 5 and 6 being exactly the confusion a damaged scan produces in either direction. Mennons also holds No. 806 of the same year for voltaic batteries 'for producing motive-power', so he is a repeat filer and the wrong row could be picked convincingly. It needs a third source, not a preference. | 2026-07-26, the search space is now CLOSED on archive.org and the result is worth recording so it is not repeated: every identifier in both index series there has been downloaded and mapped BY CONTENT, because the metadata years are unreliable \u2014 chronological 1852-53, 1855, 1857, 1859, 1867, 1868 and subject-matter 1853, 1854, 1858, 1861, 1863, 1864, 1865, 1866, 1869, 1870, 1871-73. **1856 and 1860 are absent from both series there** and must come from HathiTrust or Google Books. The 1866 subject volume WAS obtained and its motive-power section is intact (76 rows), yet neither of the two catalogue entries dated 1866 appears in it under number, surname, place or device wording \u2014 and No. 2234 does not occur anywhere in the volume. The likely reason is that they are not 1866 rows at all: both sit in the catalogue's sequence among 1856 entries, and a leading 5 misread as 6 would put them in precisely the year that cannot be obtained. Treat 'Lespinasse of Toulouse' and 'David Jones of Ragland' as 1856 candidates first when that volume is found."
+  },
+  {
+   "name": "Dircks catalogue \u2014 early scientific-journal papers",
+   "years": "1600s\u20131800s",
+   "domain": "",
+   "recall": "",
+   "verify": "",
+   "why_not_yet": "Dircks (1861) Ch. VI collects papers from early scientific and other journals, Ch. VIII the popular journals. Same status as the patent chapters: located, dated, unmined, and requiring the original journal rather than the compilation."
+  }
+ ]
 }

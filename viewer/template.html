@@ -21,6 +21,7 @@
 ]}
 </script>
 <script defer src="https://analytics.advanced-rediscovery.com/insights.js" data-website-id="8d289734-ead8-4550-841d-08f26204767d"></script>
+<noscript><style>.stats,#record,#method{display:none}</style></noscript>
 <style>
 @font-face{font-family:"Exo 2";src:url("assets/fonts/Exo2-SemiBold.woff2")format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Exo 2";src:url("assets/fonts/Exo2-Bold.woff2")format("woff2");font-weight:700;font-display:swap}
@@ -102,7 +103,7 @@ header.site.scrolled .hbrand span{font-size:.75rem}
 
 .jump{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
 .jump a{display:inline-flex;align-items:center;border-radius:999px;background:var(--primary);
-  color:hsl(0 0% 100%);padding:.55rem 1.15rem;font-size:.78rem;font-weight:600;
+  color:hsl(216 60% 9.8%);padding:.55rem 1.15rem;font-size:.78rem;font-weight:600;
   text-transform:uppercase;letter-spacing:.16em;box-shadow:0 8px 20px hsl(216 60% 4% / .45);
   transition:all .3s}
 .jump a:hover{background:hsl(21 100% 50%);transform:translateY(-2px);
@@ -140,9 +141,11 @@ section{padding:clamp(2rem,5vw,3.25rem) 0;border-top:1px solid var(--border)}
 .axes{display:inline-flex;gap:2px;font-family:var(--font-mono);font-size:.72rem}
 .ax{min-width:1.5rem;text-align:center;border-radius:3px;padding:.1rem .12rem;
   background:var(--card-subtle);border:1px solid var(--border);cursor:help}
-.ax.g0{color:hsl(0 0% 45%)} .ax.g1{color:hsl(21 80% 58%)}
+/* g0 and gx are the two states whose distinction the page argues for —
+   lifted to AA contrast (≥4.5:1 on the card background); gx keeps the italic */
+.ax.g0{color:hsl(0 0% 66%)} .ax.g1{color:hsl(21 80% 58%)}
 .ax.g2{color:hsl(45 85% 60%)} .ax.g3{color:hsl(141 55% 58%)}
-.ax.gx{color:hsl(0 0% 38%);font-style:italic}
+.ax.gx{color:hsl(0 0% 62%);font-style:italic}
 [data-jump]{cursor:pointer}
 a.chip{text-decoration:none}
 a.chip:hover{border-color:var(--primary);color:var(--primary);text-decoration:none}
@@ -380,8 +383,55 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   font-size:.75rem;color:var(--dim)}
 .flegal a{color:var(--dim);transition:color .2s}
 .flegal a:hover{color:#00D9FF;text-decoration:none}
-.pin{font-family:var(--font-mono);font-size:.72rem;color:hsl(0 0% 38%);
+.pin{font-family:var(--font-mono);font-size:.72rem;color:hsl(0 0% 62%);
   text-align:center;margin-top:1.75rem}
+
+/* ---------- filter chip bars + active-filter strip ---------- */
+.filterwrap{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.7rem}
+.filterbar{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
+.filterbar .fl{color:var(--muted-foreground);font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.06em;min-width:6.8rem}
+.filterbar a.chip{cursor:pointer;text-decoration:none}
+.filterbar .chip[aria-pressed="true"]{background:hsl(189 100% 50% / .18);
+  border-color:var(--secondary);color:var(--secondary)}
+.filterbar .chip.facet[aria-pressed="true"]{background:hsl(21 100% 55% / .16);
+  border-color:var(--primary);color:var(--primary)}
+.filterbar .chip.off{opacity:.35;pointer-events:none}
+.filterbar .n{opacity:.7;margin-left:.3rem;font-variant-numeric:tabular-nums;font-size:.9em}
+.chip.mode{cursor:pointer;color:var(--muted-foreground)}
+.chip.mode[aria-pressed="true"]{color:var(--primary);border-color:var(--primary)}
+.chip.facet{color:hsl(45 80% 62%);border-color:hsl(45 45% 32%)}
+.chip.era{color:var(--muted-foreground)}
+.activebar{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;margin:0 0 .9rem;
+  font-size:.82rem;color:var(--muted-foreground)}
+.activebar:empty{display:none}
+.activebar .chip{cursor:pointer}
+.activebar .chip .x{margin-left:.35rem;opacity:.7}
+tr.empty td{padding:1.1rem .9rem;color:var(--muted-foreground)}
+button.tri{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0}
+.reading b.flink{cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}
+#fToggle{display:none}
+@media(max-width:640px){
+  #fToggle{display:inline-flex}
+  .filterwrap{display:none}
+  .filterwrap.open{display:flex}
+  .filterbar .fl{min-width:100%}
+}
+/* leads: the candidates tier — names the compilation knows, below the record floor */
+#leads{margin-top:1.4rem;border:1px solid var(--border);border-radius:var(--radius);
+  background:var(--card);padding:.9rem 1.1rem}
+#leads summary{cursor:pointer;font-family:var(--font-heading);font-weight:600;color:var(--primary)}
+#leads article{border-top:1px solid hsl(214 30% 18% / .55);padding:.6rem 0;margin-top:.6rem}
+#leads h4{margin:0 0 .2rem;font-size:.95rem}
+#leads p{margin:.15rem 0;font-size:.85rem;color:var(--muted-foreground)}
+/* the decade histogram's ghost outline: the unfiltered total behind a filtered stack */
+#dhsvg .ghost{fill:none;stroke:hsl(214 30% 30%);stroke-width:1}
+/* static prerender index — the app removes it at boot; no-script readers keep it */
+#prerender{border-top:1px solid var(--border);padding:2rem 0}
+#prerender article{margin:1.1rem 0;border-bottom:1px solid hsl(214 30% 18% / .5);padding-bottom:.9rem}
+#prerender h3{font-size:1rem;margin-bottom:.3rem}
+#prerender p,#prerender li{font-size:.88rem;color:var(--muted-foreground)}
+#prerender ul{margin:.3rem 0 .2rem 1.2rem;padding:0}
 </style>
 </head>
 <body id="top">
@@ -449,14 +499,20 @@ footer.site .inner{max-width:72rem;margin:0 auto}
   </div>
 
   <div class="controls">
-    <input type="search" id="q" placeholder="Search claim, person, or note…" autocomplete="off"
-      aria-label="Search claim, person, or note">
-    <select id="fLane" aria-label="Filter by phenomenon class"><option value="">All phenomena</option></select>
-    <select id="fEp" aria-label="Filter by evidence profile"><option value="">All evidence profiles</option></select>
-    <select id="fKind" aria-label="Filter by entry type"><option value="">All entry types</option></select>
+    <input type="search" id="q" placeholder="Search claim, person, citation, mechanism…" autocomplete="off"
+      aria-label="Search claim, person, citation, or mechanism">
+    <button class="btn" id="fToggle" aria-expanded="true" aria-controls="filterwrap">Filters ▾</button>
     <button class="btn" id="reset">Reset</button>
     <span class="count" id="count" aria-live="polite"></span>
   </div>
+  <div class="filterwrap open" id="filterwrap">
+    <div class="filterbar" id="fPh" role="group" aria-label="Filter by phenomenon class"></div>
+    <div class="filterbar" id="fEp" role="group" aria-label="Filter by evidence profile"></div>
+    <div class="filterbar" id="fKind" role="group" aria-label="Filter by entry type"></div>
+    <div class="filterbar" id="fFacet" role="group" aria-label="Structural filters"></div>
+    <div class="filterbar" id="fEra" role="group" aria-label="Era shortcuts and time coupling"></div>
+  </div>
+  <div class="activebar" id="activebar" aria-live="polite"></div>
 
   <table class="recordtable" id="tbl">
     <colgroup>
@@ -469,12 +525,20 @@ footer.site .inner{max-width:72rem;margin:0 auto}
       <th class="sortable" data-k="t_start" aria-sort="descending">Year<span class="arrow">▼</span></th>
       <th class="sortable" data-k="label">Claim<span class="arrow">▼</span></th>
       <th class="sortable who" data-k="principals">Who<span class="arrow">▼</span></th>
-      <th class="sortable lane" data-k="lane">Phenomenon<span class="arrow">▼</span></th>
-      <th class="ev">Evidence</th>
+      <th class="sortable lane" data-k="_lanestr">Phenomenon<span class="arrow">▼</span></th>
+      <th class="sortable ev" data-k="_evsum">Evidence<span class="arrow">▼</span></th>
       <th class="sortable prof" data-k="epistemotype">Profile<span class="arrow">▼</span></th>
     </tr></thead>
     <tbody id="tb"></tbody>
   </table>
+
+  <details id="leads">
+    <summary>Leads without records yet — <span id="leadN"></span></summary>
+    <p class="sub" style="margin:.5rem 0 .2rem">Named candidates the compilation knows of, still below the
+      record floor — sources not yet verified, or only web-archive captures surviving. Know a primary source?
+      <a href="https://github.com/shredEngineer/exotic-science-timeline/issues/new?template=suggest-record.md">Suggest it ↗</a></p>
+    <div id="leadlist"></div>
+  </details>
 </section>
 
 <section id="method">
@@ -521,6 +585,8 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 
 </div>
 
+__PRERENDER__
+
 <footer class="site"><div class="inner">
   <div class="fhead">
     <p class="name">Advanced Rediscovery</p>
@@ -553,6 +619,7 @@ footer.site .inner{max-width:72rem;margin:0 auto}
     <span>·</span>
     <span>Cookieless, self-hosted analytics — no cookies, no personal data</span>
   </div>
+  <p class="pin" id="pin"></p>
 </div></footer>
 
 <script>
@@ -597,6 +664,91 @@ const esc = s => String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">"
 const axCls=(k,v)=>{ if(v==="x") return "gx"; const r=+v/AXMAX[k];
   return r>=.7?"g3":r>=.4?"g2":r>0?"g1":"g0"; };
 
+// The app supersedes the static crawler index the build emitted.
+(function(){const p=document.getElementById("prerender"); if(p) p.remove();})();
+
+/* ---------- filter state, search index, structural facets ----------
+   One state object instead of widget values; every filter surface (chips,
+   dashboard bars, chart pills, legend swatches) toggles the same sets.     */
+const F={ph:new Set(),ep:new Set(),kind:new Set(),facets:new Set(),phMode:"any",q:"",timeWin:false};
+let FORCE_ID=null;          // one record allowed through the filter after a chart jump
+let HIT=null;               // Set of matching ids after apply(); null = no filter active
+let REPAINT_HIST=null;      // set by the histogram module
+let SET_HIST_WIN=null;      // ditto — declared HERE because the histogram IIFE runs before the filter block
+let WINDOW_YEARS=null;      // [y0,y1] of the visible chart window, set by paint()
+const ARC_TARGETS=new Set((DATA.arcs||[]).map(a=>a.target));
+const gradeOf=(sig,ax)=>{const m=(sig||"").match(new RegExp(ax+"(\\d|x)"));return m?m[1]:null;};
+// Structural facets: every predicate mirrors the extractor's aggregate definitions,
+// so a clickable dashboard number and its facet always agree.
+const FACETS={
+  t0:{name:"Open anomaly · T0",jump:"ax-T0",
+    tip:"Theory-embedding grade 0 — no documented edge to an established mechanism. The standard's operational anomaly test.",
+    pred:e=>gradeOf(e.e_signature,"T")==="0"},
+  examined:{name:"Examined",jump:null,
+    tip:"The record is the target of a documented later examination (a re-test or contradiction on record).",
+    pred:e=>ARC_TARGETS.has(e.id)},
+  d7:{name:"Peer-reviewed · D7",jump:"ax-D",
+    tip:"Documentation grade 7 — the observation reached peer-reviewed publication.",
+    pred:e=>gradeOf(e.e_signature,"D")==="7"},
+  secondhand:{name:"Second-hand · D≤1",jump:"ax-D",
+    tip:"Documentation grade 0 or 1 — the record rests on a single or second-hand account.",
+    pred:e=>{const g=gradeOf(e.e_signature,"D");return g==="0"||g==="1";}},
+  neverrepl:{name:"Never replicated · R0",jump:"ax-R",
+    tip:"Replication grade 0 — no reproduction attempt is documented.",
+    pred:e=>gradeOf(e.e_signature,"R")==="0"},
+  r4:{name:"Replicated · R≥4",jump:"ax-R",
+    tip:"Replication grade 4 or higher on the ladder.",
+    pred:e=>{const g=gradeOf(e.e_signature,"R");return g!==null&&g!=="x"&&+g>=4;}},
+  retracted:{name:"Retracted",jump:null,
+    tip:"The publication channel issued a retraction; the notice is data and the record stays.",
+    pred:e=>(e.retractions||[]).length>0},
+  enriched:{name:"Added context ◆",jump:null,
+    tip:"The record carries added context — a verified public source with a note.",
+    pred:e=>!!e.enrichment},
+  patent:{name:"Patent on file",jump:null,
+    tip:"A patent document exists for the claim (a grant certifies filing, never function).",
+    pred:e=>e.patent_flag===true}
+};
+// Search index: one lowercase haystack per record, built once. Covers what a
+// reader actually searches by — citations, mechanism codes and labels, effect
+// types, signatures, doctrine/narrative bodies, ids — not just the claim line.
+ev.forEach(e=>{
+  e._hay=[e.label,e.principals,e.note,e.years_raw,e.summary,e.factual_kernel,e.lore_layer,e.id,
+    (e.refs||[]).join(" "),
+    (e.effect_types||[]).map(t=>t+" "+(V.phenomena.leaves[t]||"")).join(" "),
+    (e.mechanisms||[]).map(m=>m.ref+" "+((V.mechanisms[m.ref]||{}).label||"")).join(" "),
+    (e.signatures||[]).map(s=>s+" "+((V.signatures[s]||{}).label||"")).join(" "),
+    e.context?Object.values(e.context).map(v=>[].concat(v).join(" ")).join(" "):"",
+    e.enrichment?(e.enrichment.text+" "+e.enrichment.source):"",
+    (e.retractions||[]).map(rt=>"retracted "+rt.ref).join(" ")
+  ].filter(Boolean).join(" ").toLowerCase();
+  // derived sort keys: evidence = sum of assessed grades (x does not count);
+  // phenomenon = all class labels, so multi-lane rows sort explicably
+  e._evsum=(e.e_signature?"DRCPTQ".split("").reduce((s,k)=>{
+    const g=gradeOf(e.e_signature,k); return s+((g&&g!=="x")?+g:0);},0):-1);
+  e._lanestr=(e.lanes||[e.lane]).map(l=>LANE[l]||l).sort().join(" · ");
+});
+function matches(e){
+  if(FORCE_ID&&e.id===FORCE_ID) return true;
+  if(F.ph.size){
+    const ls=e.lanes||[e.lane];
+    const hit=F.phMode==="all" ? [...F.ph].every(l=>ls.includes(l)) : ls.some(l=>F.ph.has(l));
+    if(!hit) return false;
+  }
+  if(F.ep.size&&!F.ep.has(e.epistemotype)) return false;
+  if(F.kind.size&&!F.kind.has(e.record_kind)) return false;
+  for(const f of F.facets){ if(!FACETS[f].pred(e)) return false; }
+  if(F.timeWin&&WINDOW_YEARS){
+    if(e.t_start==null) return false;
+    if(e.t_start<WINDOW_YEARS[0]||e.t_start>WINDOW_YEARS[1]) return false;
+  }
+  if(F.q){
+    const toks=F.q.toLowerCase().split(/\s+/).filter(Boolean);
+    for(const t of toks){ if(e._hay.indexOf(t)===-1) return false; }
+  }
+  return true;
+}
+
 /* ---------- one tooltip engine: chart dots (rich) + any [data-tip] (text) ---------- */
 const tipEl=(()=>{const d=document.createElement("div");d.id="tip";document.body.appendChild(d);return d;})();
 function tipShow(html,x,y){
@@ -640,6 +792,14 @@ document.addEventListener("mousemove",ev=>{
   if(tipEl.classList.contains("on")&&ev.target.closest("[data-tip]"))
     tipShow(tipEl.innerHTML,ev.clientX,ev.clientY);
 },{passive:true});
+// keyboard access to the same definitions: focus shows the tooltip, Escape hides it
+document.addEventListener("focusin",ev=>{
+  const t=ev.target.closest?ev.target.closest("[data-tip]"):null; if(!t) return;
+  const r=t.getBoundingClientRect();
+  tipShow('<div>'+esc(t.getAttribute("data-tip"))+'</div>',r.left+r.width/2,r.bottom);
+});
+document.addEventListener("focusout",ev=>{ if(ev.target.closest&&ev.target.closest("[data-tip]")) tipHide(); });
+document.addEventListener("keydown",ev=>{ if(ev.key==="Escape") tipHide(); });
 
 /* header shrink, matching the main site */
 const hdr=document.getElementById("hdr");
@@ -687,8 +847,10 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   // legend entries come from the data: the profiles that actually occur, plus a
   // grey swatch for context records (doctrines/narratives), which carry no coordinate
   const eps=[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort();
-  // the EP codes are standard enums → each swatch is a link to the epistemotype definition
-  let dots=eps.map(k=>'<a class="sw" href="'+REG.EP+'" target="_blank" rel="noopener noreferrer" data-tip="'+esc(k+" — "+(EPDESC[k]||""))+
+  // the EP codes are standard enums → each swatch links to the epistemotype
+  // definition (middle-click); a plain click toggles the profile in the filter
+  let dots=eps.map(k=>'<a class="sw" href="'+REG.EP+'" target="_blank" rel="noopener noreferrer" data-eptoggle="'+esc(k)+
+    '" data-tip="'+esc(k+" — "+(EPDESC[k]||"")+" · click to filter the table")+
     '"><span class="dotsw" style="background:'+EPC[k]+'"></span>'+esc(k)+"</a>").join("");
   if(ev.some(e=>!e.epistemotype))
     dots+='<span class="sw" data-tip="Doctrines and narratives — context records that carry no evidence coordinate">'+
@@ -717,35 +879,46 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   }).join("");
   const topEp=a.by_ep[0];       // [code, count] — by_ep is sorted most-common-first, so [0] IS the commonest
   const dd=a.densest_decade;
+  // [value, prose, facet] — a non-null facet makes the number a live filter,
+  // so the sentence and the click always say the same thing
   const readings=[
     ["b:"+top[1], laneChip(top[0])+" and "+laneChip(top2[0])+
       " effects dominate the record — "+top[1]+" and "+top2[1]+" of "+N+". "+
-      laneChip(last[0])+" claims are rarest, at "+last[1]+"."],
+      laneChip(last[0])+" claims are rarest, at "+last[1]+".", null],
     ["b:"+a.open_anomaly, a.open_anomaly+" records are open anomalies — no documented edge to an "+
-      "established mechanism. In this standard that absent edge, not a label, is what makes an observation anomalous."],
+      "established mechanism. In this standard that absent edge, not a label, is what makes an observation anomalous.", "t0"],
     ["b:"+a.examined, "Examination is the exception: "+a.examined+" claims carry a documented re-test on record"+
       ((DATA.stats||{}).median_adversarial_lag_years!=null
-        ? ", and where one exists it followed the claim by a median of "+DATA.stats.median_adversarial_lag_years+" years." : ".")],
+        ? ", and where one exists it followed the claim by a median of "+DATA.stats.median_adversarial_lag_years+" years." : "."), "examined"],
     ["b:"+a.peer_reviewed, "Documentation splits: "+a.peer_reviewed+" records reach peer-reviewed publication, "+
-      "while "+a.secondhand+" rest on a single or second-hand account. The grade records that gap rather than hiding it."],
+      "while "+a.secondhand+" rest on a single or second-hand account. The grade records that gap rather than hiding it.", "d7"],
     ["b:"+(dd?dd[0]+"s":"—"), (dd?"The "+dd[0]+"s hold the most records of any decade — "+dd[1]+". ":"")+
-      "Density rises toward the present, as cheaper instruments and faster publishing leave more of a trail — not necessarily as more happened."],
+      "Density rises toward the present, as cheaper instruments and faster publishing leave more of a trail — not necessarily as more happened.", null],
     ["b:"+topEp[1], "The commonest evidence profile is "+epChip(topEp[0])+": "+EPDESC[topEp[0]]+". "+
-      "That is a statement about how the record is documented, not about what is established."],
+      "That is a statement about how the record is documented, not about what is established.", null],
   ];
   el.innerHTML=
     '<h3>Composition by effects</h3>'+
-    '<p class="sub">Which effects fill the record, how well they are evidenced, and how rarely they are ever checked.</p>'+
+    '<p class="sub">Which effects fill the record, how well they are evidenced, and how rarely they are ever checked. Class bars and underlined numbers filter the table.</p>'+
     '<div class="classbars">'+bars+"</div>"+
     // b and p are author-authored HTML (may carry a linked enum badge) — never user data, so not escaped
-    '<div class="readings">'+readings.map(([b,p])=>
-      '<div class="reading"><b>'+b.slice(2)+"</b><p>"+p+"</p></div>").join("")+"</div>";
-  // a class bar filters the table to that phenomenon (the href is its Registry-P definition, for hover/middle-click)
+    '<div class="readings">'+readings.map(([b,p,fac])=>
+      '<div class="reading"><b'+(fac?' class="flink" data-facet="'+fac+'" tabindex="0" role="button" data-tip="'+
+        esc("Filter the table: "+FACETS[fac].name)+'"':'')+'>'+b.slice(2)+"</b><p>"+p+"</p></div>").join("")+"</div>";
+  // a class bar TOGGLES that phenomenon in the filter (chip-click = filter, everywhere);
+  // the href stays its Registry-P definition for hover/middle-click
   el.querySelectorAll("a.cn[data-lane]").forEach(x=>x.addEventListener("click",e=>{
     e.preventDefault();
-    const f=document.getElementById("fLane"); if(f){ f.value=x.dataset.lane; apply(); }
+    togglePh(x.dataset.lane);
     document.getElementById("record").scrollIntoView({behavior:"smooth"});
   }));
+  // an underlined dashboard number applies exactly its facet
+  el.querySelectorAll("b.flink").forEach(x=>{
+    const go=()=>{ toggleFacet(x.dataset.facet);
+      document.getElementById("record").scrollIntoView({behavior:"smooth"}); };
+    x.addEventListener("click",go);
+    x.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();go();} });
+  });
 })();
 
 /* ---------- decade-composition histogram: stacked count per decade by phenomenon class ----------
@@ -775,8 +948,9 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
   // legend: class names are Registry-P enums -> linked badges with their stack colour
   document.getElementById("dhlegend").innerHTML=
     '<span class="grp"><span style="color:var(--foreground)">Stack colour · phenomenon class:</span>'+
-    order.map(l=>'<a class="sw" href="'+REG.P+'" target="_blank" rel="noopener noreferrer" data-tip="'+
-      esc((LANE[l]||l)+" — "+(LANEDESC[l]||""))+'"><span class="dotsw" style="background:'+LANEC[l]+'"></span>'+
+    order.map(l=>'<a class="sw" href="'+REG.P+'" target="_blank" rel="noopener noreferrer" data-phtoggle="'+esc(l)+
+      '" data-tip="'+esc((LANE[l]||l)+" — "+(LANEDESC[l]||"")+" · click to filter the table")+
+      '"><span class="dotsw" style="background:'+LANEC[l]+'"></span>'+
       esc(LANE[l]||l)+"</a>").join("")+"</span>";
   const svg=document.getElementById(svgId);
   const X0=1140, X1=2030, MINSPAN2=30;      // never narrower than three decades
@@ -802,17 +976,38 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
       s+='<text class="axis" x="'+xs(c).toFixed(1)+'" y="'+(H-6)+'" text-anchor="middle">'+c+"</text>";
     }
     const bw=Math.max(2,plotW*10/span-1);   // one decade wide, 1px gap, never thinner than 2px
+    // With a filter active the stacks show the FILTERED composition, recomputed
+    // client-side with the extractor's convention (multi-class records count
+    // once per class); the unfiltered total stays behind as a ghost outline.
+    let src=byDec;
+    if(HIT){
+      src={};
+      ev.forEach(e=>{
+        if(!HIT.has(e.id)) return;
+        if(e.record_kind==="doctrine"||e.record_kind==="narrative") return;
+        if(e.t_start==null) return;
+        const d=Math.floor(e.t_start/10)*10, row=src[d]=src[d]||{};
+        (e.lanes||[e.lane]).forEach(l=>{row[l]=(row[l]||0)+1;});
+      });
+    }
     s+='<g clip-path="url(#dhclip)">';
     decs.forEach(d=>{
       if(d+10<w0-5||d>w1+5) return;         // cull bars outside the window
-      const total=order.reduce((s2,l)=>s2+(byDec[d][l]||0),0);
+      const fullTotal=order.reduce((s2,l)=>s2+(byDec[d][l]||0),0);
+      if(HIT&&fullTotal){
+        s+='<rect class="ghost" x="'+(xs(d)+0.5).toFixed(1)+'" y="'+ys(fullTotal).toFixed(1)+'" width="'+bw.toFixed(1)+
+          '" height="'+(ys(0)-ys(fullTotal)).toFixed(1)+'"></rect>';
+      }
+      const row=src[d]||{};
+      const total=order.reduce((s2,l)=>s2+(row[l]||0),0);
       let acc=0;
       order.forEach(l=>{
-        const v=byDec[d][l]||0; if(!v) return;
+        const v=row[l]||0; if(!v) return;
         const y1v=ys(acc), y2v=ys(acc+v);
         s+='<rect class="seg" x="'+(xs(d)+0.5).toFixed(1)+'" y="'+y2v.toFixed(1)+'" width="'+bw.toFixed(1)+
           '" height="'+(y1v-y2v).toFixed(1)+'" fill="'+LANEC[l]+'" data-tip="'+
-          esc(d+"s — "+(LANE[l]||l)+": "+v+" of "+total+" class-count"+(total===1?"":"s")+" this decade")+'"></rect>';
+          esc(d+"s — "+(LANE[l]||l)+": "+v+" of "+total+" class-count"+(total===1?"":"s")+" this decade"+
+              (HIT?" (filtered; outline = all records)":""))+'"></rect>';
         acc+=v;
       });
     });
@@ -855,6 +1050,9 @@ syncHdr(); setTimeout(syncHdr,350);   // again once the shrink transition settle
     const dy=((e.clientX-drag2.px)*(Wd/rect.width)/plotWd())*(drag2.w1-drag2.w0);
     w0=drag2.w0-dy; w1=drag2.w1-dy; clampWin(); paintHist();});
   ["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,()=>{drag2=null;svg.style.cursor="grab";}));
+  // hooks for the shared filter state: apply() repaints, era chips set the window
+  REPAINT_HIST=paintHist;
+  SET_HIST_WIN=(a,b)=>{w0=Math.max(X0,a);w1=Math.min(X1,b);clampWin();paintHist();};
   paintHist();
   let rAF2=null;
   addEventListener("resize",()=>{cancelAnimationFrame(rAF2);rAF2=requestAnimationFrame(paintHist);});
@@ -914,16 +1112,173 @@ document.getElementById("lanetable").innerHTML =
     if(a){a.href=map[id];a.target="_blank";a.rel="noopener noreferrer";}});
 })();
 
-/* ---------- filters ---------- */
-function fill(sel,vals,fmt){const el=document.getElementById(sel);
-  vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=fmt(v);el.appendChild(o);});}
-fill("fLane",[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b)),v=>LANE[v]||v);
-// the profile filter names the region, not just the code: "EP-1 · Solitary"
-fill("fEp",[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort(),
-  v=>v+(V.epistemotypes[v]?" · "+V.epistemotypes[v].label:""));
-fill("fKind",[...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort(),v=>KIND[v]||v);
-
+/* ---------- filters: chip bars, one shared toggle language ----------
+   Every chip is an anchor whose href is the value's DEFINITION (rendering
+   gate: a registry value always links to where it is defined; middle-click
+   opens it) while a plain click TOGGLES the value in the filter state.     */
 let sortKey="t_start", sortDir=-1, shown=[];
+
+const CHIPS={};
+function mkChip(html,href,cls){ const a=document.createElement("a");
+  a.className="chip "+cls; a.href=href; a.target="_blank"; a.rel="noopener noreferrer";
+  a.setAttribute("role","button"); a.setAttribute("aria-pressed","false");
+  a.innerHTML=html; return a; }
+function buildBars(){
+  const phVals=[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
+  const epVals=[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort();
+  const kindVals=[...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort();
+  const bar=(id,label)=>{const el=document.getElementById(id);el.innerHTML='<span class="fl">'+label+'</span>';return el;};
+  const phEl=bar("fPh","Phenomenon"); CHIPS.ph={};
+  phVals.forEach(k=>{
+    const c=mkChip(esc(LANE[k]||k)+'<span class="n"></span>',REG.P,"lane");
+    c.setAttribute("data-tip",(LANE[k]||k)+" — "+(LANEDESC[k]||""));
+    c.addEventListener("click",e=>{e.preventDefault();togglePh(k);});
+    CHIPS.ph[k]=c; phEl.appendChild(c);
+  });
+  const mode=mkChip("match all",SPEC,"mode"); mode.id="phMode";
+  mode.setAttribute("data-tip","Off: a record matches if it carries ANY selected class. On: it must carry ALL of them — the comparison question for multi-class records.");
+  mode.addEventListener("click",e=>{e.preventDefault();F.phMode=F.phMode==="any"?"all":"any";FORCE_ID=null;apply(true);});
+  phEl.appendChild(mode);
+  const epEl=bar("fEp","Profile"); CHIPS.ep={};
+  epVals.forEach(k=>{
+    const c=mkChip(esc(k)+'<span class="n"></span>',REG.EP,"ep "+k.replace("-","").toLowerCase());
+    c.setAttribute("data-tip",k+" — "+(EPDESC[k]||""));
+    c.addEventListener("click",e=>{e.preventDefault();toggleSet(F.ep,k);});
+    CHIPS.ep[k]=c; epEl.appendChild(c);
+  });
+  const kEl=bar("fKind","Entry type"); CHIPS.kind={};
+  kindVals.forEach(k=>{
+    const c=mkChip(esc(KIND[k]||k)+'<span class="n"></span>',REG.KIND,"enum");
+    c.setAttribute("data-tip","Record kind — defined in the specification");
+    c.addEventListener("click",e=>{e.preventDefault();toggleSet(F.kind,k);});
+    CHIPS.kind[k]=c; kEl.appendChild(c);
+  });
+  const fEl=bar("fFacet","Structure"); CHIPS.facets={};
+  Object.keys(FACETS).forEach(k=>{
+    const f=FACETS[k];
+    const c=mkChip(symTokens(f.name)+'<span class="n"></span>', f.jump?("#"+f.jump):SPEC, "facet");
+    if(f.jump){c.removeAttribute("target");c.removeAttribute("rel");}
+    c.setAttribute("data-tip",f.tip);
+    c.addEventListener("click",e=>{e.preventDefault();toggleFacet(k);});
+    CHIPS.facets[k]=c; fEl.appendChild(c);
+  });
+  const eEl=bar("fEra","Time");
+  (DATA.eras||[]).forEach((er,i)=>{
+    const c=mkChip(esc(er[2])+" · "+er[0]+"–"+er[1],"#record","era");
+    c.removeAttribute("target"); c.removeAttribute("rel");
+    c.setAttribute("data-tip",er[3]+" — set both charts to this era");
+    c.addEventListener("click",e=>{e.preventDefault();setEra(i);});
+    eEl.appendChild(c);
+  });
+  const tw=mkChip("list follows the chart window","#record","mode"); tw.id="timeWin";
+  tw.removeAttribute("target"); tw.removeAttribute("rel");
+  tw.setAttribute("data-tip","Restrict the table to records whose start year lies inside the currently visible chart window, zoom and pan included.");
+  tw.addEventListener("click",e=>{e.preventDefault();F.timeWin=!F.timeWin;FORCE_ID=null;apply(true);});
+  eEl.appendChild(tw);
+}
+function toggleSet(set,k){ if(set.has(k)) set.delete(k); else set.add(k); FORCE_ID=null; apply(true); }
+function togglePh(k){ toggleSet(F.ph,k); }
+function toggleFacet(k){ toggleSet(F.facets,k); }
+function setEra(i){
+  const n=(DATA.eras||[]).length; if(!n) return;
+  u0=i/n; u1=(i+1)/n; paint();
+  const er=DATA.eras[i];
+  if(SET_HIST_WIN) SET_HIST_WIN(er[0],er[1]);
+  if(F.timeWin) apply(false);
+}
+// Facet counters: what selecting this chip WOULD yield, computed with the
+// chip's own dimension removed (classic facet semantics). Chips at 0 dim out.
+function updateChips(){
+  const saved=F.ph; F.ph=new Set();
+  const basePh=ev.filter(matches); F.ph=saved;
+  Object.keys(CHIPS.ph||{}).forEach(k=>{
+    const c=CHIPS.ph[k], n=basePh.filter(e=>(e.lanes||[e.lane]).includes(k)).length;
+    c.querySelector(".n").textContent=n;
+    c.setAttribute("aria-pressed",F.ph.has(k)?"true":"false");
+    c.classList.toggle("off",n===0&&!F.ph.has(k));
+  });
+  const savedEp=F.ep; F.ep=new Set();
+  const baseEp=ev.filter(matches); F.ep=savedEp;
+  Object.keys(CHIPS.ep||{}).forEach(k=>{
+    const c=CHIPS.ep[k], n=baseEp.filter(e=>e.epistemotype===k).length;
+    c.querySelector(".n").textContent=n;
+    c.setAttribute("aria-pressed",F.ep.has(k)?"true":"false");
+    c.classList.toggle("off",n===0&&!F.ep.has(k));
+  });
+  const savedK=F.kind; F.kind=new Set();
+  const baseK=ev.filter(matches); F.kind=savedK;
+  Object.keys(CHIPS.kind||{}).forEach(k=>{
+    const c=CHIPS.kind[k], n=baseK.filter(e=>e.record_kind===k).length;
+    c.querySelector(".n").textContent=n;
+    c.setAttribute("aria-pressed",F.kind.has(k)?"true":"false");
+    c.classList.toggle("off",n===0&&!F.kind.has(k));
+  });
+  Object.keys(CHIPS.facets||{}).forEach(k=>{
+    const had=F.facets.has(k); F.facets.delete(k);
+    const n=ev.filter(e=>matches(e)&&FACETS[k].pred(e)).length;
+    if(had) F.facets.add(k);
+    const c=CHIPS.facets[k];
+    c.querySelector(".n").textContent=n;
+    c.setAttribute("aria-pressed",had?"true":"false");
+    c.classList.toggle("off",n===0&&!had);
+  });
+  const m=document.getElementById("phMode"); if(m) m.setAttribute("aria-pressed",F.phMode==="all"?"true":"false");
+  const tw=document.getElementById("timeWin"); if(tw) tw.setAttribute("aria-pressed",F.timeWin?"true":"false");
+}
+// The active-filter strip: every active facet as a removable chip — the state
+// stays visible even where the table hides its phenomenon column.
+function renderActive(){
+  const el=document.getElementById("activebar");
+  const ch=(dim,key,label,cls)=>'<a class="chip '+(cls||"enum")+'" role="button" href="#record" data-rm="'+dim+':'+esc(key)+'">'+label+'<span class="x">×</span></a>';
+  let h="";
+  F.ph.forEach(l=>h+=ch("ph",l,esc(LANE[l]||l),"lane"));
+  if(F.ph.size>1) h+='<span>('+(F.phMode==="all"?"all of":"any of")+')</span>';
+  F.ep.forEach(k=>h+=ch("ep",k,esc(k),"ep "+k.replace("-","").toLowerCase()));
+  F.kind.forEach(k=>h+=ch("kind",k,esc(KIND[k]||k)));
+  F.facets.forEach(k=>h+=ch("facet",k,symTokens(FACETS[k].name),"facet"));
+  if(F.timeWin&&WINDOW_YEARS) h+=ch("tw","1","window "+Math.round(WINDOW_YEARS[0])+"–"+Math.round(WINDOW_YEARS[1]),"era");
+  if(F.q) h+=ch("q","1","search: “"+esc(F.q)+"”");
+  if(FORCE_ID){const r=ev.find(e=>e.id===FORCE_ID);
+    h+='<span>1 record shown outside the filter — '+esc(r?r.label:FORCE_ID)+'</span>'+ch("force","1","hide it","retr");}
+  if(h) h+='<a class="chip" role="button" href="#record" data-rm="all:1">Clear all<span class="x">×</span></a>';
+  el.innerHTML=h;
+  el.querySelectorAll("[data-rm]").forEach(a=>a.addEventListener("click",e=>{
+    e.preventDefault();
+    const i=a.dataset.rm.indexOf(":"), dim=a.dataset.rm.slice(0,i), key=a.dataset.rm.slice(i+1);
+    if(dim==="ph")F.ph.delete(key); else if(dim==="ep")F.ep.delete(key);
+    else if(dim==="kind")F.kind.delete(key); else if(dim==="facet")F.facets.delete(key);
+    else if(dim==="tw")F.timeWin=false;
+    else if(dim==="q"){F.q="";document.getElementById("q").value="";}
+    else if(dim==="force")FORCE_ID=null;
+    else if(dim==="all"){resetAll(false);}
+    apply(true);
+  }));
+}
+function activeDesc(){
+  const p=[];
+  if(F.ph.size) p.push([...F.ph].map(l=>LANE[l]||l).join(F.phMode==="all"?" + ":" / "));
+  if(F.ep.size) p.push([...F.ep].join(", "));
+  if(F.kind.size) p.push([...F.kind].map(k=>KIND[k]||k).join(", "));
+  if(F.facets.size) p.push([...F.facets].map(k=>FACETS[k].name).join(", "));
+  if(F.timeWin&&WINDOW_YEARS) p.push("window "+Math.round(WINDOW_YEARS[0])+"–"+Math.round(WINDOW_YEARS[1]));
+  if(F.q) p.push("“"+F.q+"”");
+  return p.join(" · ");
+}
+// Leads: the candidates tier — normalized by the extractor, rendered read-only.
+function renderLeads(){
+  const el=document.getElementById("leads"); if(!el) return;
+  const c=DATA.candidates||[];
+  if(!c.length){el.remove();return;}
+  document.getElementById("leadN").textContent=c.length;
+  document.getElementById("leadlist").innerHTML=c.map(x=>{
+    let ps="";
+    if(x.recall) ps+='<p>'+esc(x.recall)+'</p>';
+    if(x.verify) ps+='<p><strong>To verify:</strong> '+esc(x.verify)+'</p>';
+    if(x.why_not_yet) ps+='<p><strong>Why no record yet:</strong> '+esc(x.why_not_yet)+'</p>';
+    const dom=x.domain?(LANE[x.domain]?" "+laneChip(x.domain):' <span class="chip enum">'+esc(x.domain)+'</span>'):"";
+    return '<article><h4>'+esc(x.name)+(x.years?' <span class="mono" style="color:var(--muted-foreground)">('+esc(x.years)+')</span>':'')+dom+'</h4>'+ps+'</article>';
+  }).join("");
+}
 
 function axes(sig){
   if(!sig) return '<span class="chip ep0">—</span>';
@@ -938,8 +1293,19 @@ function axes(sig){
   }).join("")+"</span>";
 }
 
+/* rows() rebuilds the whole tbody per keystroke — fine at a few hundred
+   records; past a few thousand this needs debounce + incremental rendering
+   (documented limit, not a present defect). */
 function rows(list){
   shown=list;
+  if(!list.length){
+    document.getElementById("tb").innerHTML=
+      '<tr class="empty"><td colspan="7">No records match '+esc(activeDesc()||"the active filters")+
+      '. <button class="btn" id="resetEmpty">Reset filters</button></td></tr>';
+    const b=document.getElementById("resetEmpty"); if(b) b.addEventListener("click",()=>resetAll());
+    document.getElementById("count").textContent="0 of "+ev.length+" entries";
+    return;
+  }
   document.getElementById("tb").innerHTML=list.map(e=>{
     const ep=(e.epistemotype||"EP-0").replace("-","").toLowerCase();
     // a doctrine or narrative is not an observation — it carries no coordinate,
@@ -956,8 +1322,10 @@ function rows(list){
       ? ' <a class="chip retr" href="'+REG.RET+'" target="_blank" rel="noopener noreferrer" data-tip="'+
         esc("Retracted by the publication channel on "+e.retractions[0].date+". The claim record stays — the retraction is data; open the row for the notice.")+'">retracted</a>'
       : "";
-    return '<tr class="row" id="r-'+esc(e.id).replace(/[^a-zA-Z0-9-]/g,"_")+'" data-id="'+esc(e.id)+'">'+
-      '<td class="tw"><span class="tri">▸</span></td>'+
+    const sid=esc(e.id).replace(/[^a-zA-Z0-9-]/g,"_");
+    return '<tr class="row" id="r-'+sid+'" data-id="'+esc(e.id)+'">'+
+      '<td class="tw"><button class="tri" aria-expanded="false" aria-controls="d-'+sid+
+        '" aria-label="Open the full record">▸</button></td>'+
       '<td class="yr">'+esc(e.t_start ?? "—")+"</td>"+
       '<td class="claim">'+esc(e.label)+ret+enr+"</td>"+
       '<td class="who">'+esc(e.principals||"—")+"</td>"+
@@ -970,64 +1338,92 @@ function rows(list){
     ? ev.length+" entries" : list.length+" of "+ev.length+" entries";
 }
 
-function apply(){
-  const q=document.getElementById("q").value.trim().toLowerCase();
-  const fl=document.getElementById("fLane").value,fe=document.getElementById("fEp").value,
-        fk=document.getElementById("fKind").value;
-  const list=ev.filter(e=>{
-    if(fl&&!(e.lanes||[e.lane]).includes(fl)) return false;
-    if(fe&&e.epistemotype!==fe) return false;
-    if(fk&&e.record_kind!==fk) return false;
-    if(q){const hay=(e.label+" "+(e.principals||"")+" "+(e.note||"")+" "+(e.years_raw||"")+
-        " "+(e.enrichment?(e.enrichment.text+" "+e.enrichment.source):"")+
-        (e.retractions&&e.retractions.length?" retracted "+e.retractions.map(rt=>rt.ref).join(" "):"")).toLowerCase();
-      if(hay.indexOf(q)===-1) return false;}
-    return true;
-  });
-  // Filter state lives in the URL (shareable/bookmarkable), written without a
-  // reload; absent params keep the address clean.
+/* apply(): predicate → list → URL → table → active strip → chip counters →
+   both charts. Discrete filter changes push a history entry (Back undoes the
+   step); typing replaces (debounced). */
+function apply(push){
+  F.q=document.getElementById("q").value.trim();
+  const list=ev.filter(matches);
+  const anyFilter=F.ph.size||F.ep.size||F.kind.size||F.facets.size||F.q||F.timeWin;
+  HIT=anyFilter?new Set(list.map(e=>e.id)):null;
+  if(!anyFilter) FORCE_ID=null;
+  // Filter state lives in the URL (shareable/bookmarkable); the expanded-record
+  // param r leaves the URL when its record is filtered out of view.
   try{
-    const cur=new URLSearchParams(location.search);
     const usp=new URLSearchParams();
-    if(q) usp.set("q",document.getElementById("q").value.trim());
-    if(fl) usp.set("ph",fl); if(fe) usp.set("ep",fe); if(fk) usp.set("kind",fk);
-    if(cur.get("r")) usp.set("r",cur.get("r"));
-    const qs=usp.toString();
-    history.replaceState(null,"",qs?("?"+qs):location.pathname);
+    if(F.q) usp.set("q",F.q);
+    if(F.ph.size) usp.set("ph",[...F.ph].join(","));
+    if(F.phMode==="all"&&F.ph.size>1) usp.set("mode","all");
+    if(F.ep.size) usp.set("ep",[...F.ep].join(","));
+    if(F.kind.size) usp.set("kind",[...F.kind].join(","));
+    if(F.facets.size) usp.set("f",[...F.facets].join(","));
+    const rid=new URLSearchParams(location.search).get("r");
+    if(rid&&(!HIT||HIT.has(rid))) usp.set("r",rid);
+    const qs=usp.toString(), url=qs?("?"+qs):location.pathname;
+    if(push) history.pushState(null,"",url); else history.replaceState(null,"",url);
   }catch(_){/* non-http contexts */}
-  list.sort((a,b)=> sortKey==="t_start"
-    ? ((a.t_start??0)-(b.t_start??0))*sortDir
+  list.sort((a,b)=> (sortKey==="t_start"||sortKey==="_evsum")
+    ? ((a[sortKey]??0)-(b[sortKey]??0))*sortDir
     : String(a[sortKey]??"").localeCompare(String(b[sortKey]??""))*sortDir);
   rows(list);
+  renderActive();
+  updateChips();
+  if(typeof paint==="function") paint();
+  if(REPAINT_HIST) REPAINT_HIST();
 }
 
 document.querySelectorAll("th.sortable").forEach(th=>{
-  th.addEventListener("click",()=>{
+  th.setAttribute("tabindex","0"); th.setAttribute("role","button");
+  const act=()=>{
     const k=th.dataset.k;
-    if(k===sortKey) sortDir=-sortDir; else {sortKey=k; sortDir = k==="t_start"?-1:1;}
+    if(k===sortKey) sortDir=-sortDir; else {sortKey=k; sortDir = (k==="t_start"||k==="_evsum")?-1:1;}
     document.querySelectorAll("th.sortable").forEach(o=>{o.removeAttribute("aria-sort");
       const a=o.querySelector(".arrow"); if(a) a.textContent="▼";});
     th.setAttribute("aria-sort",sortDir===1?"ascending":"descending");
     th.querySelector(".arrow").textContent=sortDir===1?"▲":"▼";
-    apply();
-  });
+    apply(false);
+  };
+  th.addEventListener("click",act);
+  th.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();act();} });
 });
-// Restore filter state from the URL before the first render (options exist by now).
-(function(){
+// Read filter state from the URL into F. Old single-value links (?ph=MEC) parse
+// unchanged — a comma list of one.
+function readURL(){
   try{
     const u=new URLSearchParams(location.search);
-    const qv=u.get("q"); if(qv) document.getElementById("q").value=qv;
-    const map={ph:"fLane",ep:"fEp",kind:"fKind"};
-    for(const k in map){ const v=u.get(k); if(v) document.getElementById(map[k]).value=v; }
+    F.q=u.get("q")||""; document.getElementById("q").value=F.q;
+    F.ph=new Set((u.get("ph")||"").split(",").filter(Boolean));
+    F.phMode=u.get("mode")==="all"?"all":"any";
+    F.ep=new Set((u.get("ep")||"").split(",").filter(Boolean));
+    F.kind=new Set((u.get("kind")||"").split(",").filter(Boolean));
+    F.facets=new Set((u.get("f")||"").split(",").filter(Boolean).filter(k=>FACETS[k]));
   }catch(_){/* non-http contexts */}
-})();
-["q","fLane","fEp","fKind"].forEach(id=>
-  document.getElementById(id).addEventListener(id==="q"?"input":"change",apply));
-document.getElementById("reset").addEventListener("click",()=>{
-  document.getElementById("q").value="";
-  ["fLane","fEp","fKind"].forEach(i=>document.getElementById(i).value="");
-  apply();
+}
+addEventListener("popstate",()=>{ readURL(); apply(false); });
+let qT=null;
+document.getElementById("q").addEventListener("input",()=>{
+  clearTimeout(qT); qT=setTimeout(()=>{FORCE_ID=null;apply(false);},250);
 });
+function resetAll(doApply){
+  F.ph.clear();F.ep.clear();F.kind.clear();F.facets.clear();
+  F.phMode="any";F.q="";F.timeWin=false;FORCE_ID=null;
+  document.getElementById("q").value="";
+  if(doApply!==false) apply(true);
+}
+document.getElementById("reset").addEventListener("click",()=>resetAll());
+(function(){
+  const t=document.getElementById("fToggle"), w=document.getElementById("filterwrap");
+  if(!t||!w) return;
+  // phones start with the bars collapsed; the disclosure button is the way in
+  if(matchMedia("(max-width:640px)").matches){
+    w.classList.remove("open"); t.setAttribute("aria-expanded","false"); t.textContent="Filters ▸";
+  }
+  t.addEventListener("click",()=>{
+    const open=w.classList.toggle("open");
+    t.setAttribute("aria-expanded",open?"true":"false");
+    t.textContent=open?"Filters ▾":"Filters ▸";
+  });
+})();
 
 // ?r=<id> deep link: expand and scroll to the record once rows exist.
 (function(){
@@ -1089,12 +1485,16 @@ function setRecParam(id){
   }catch(_){/* non-http contexts */}
 }
 function expand(tr){
+  const btn=tr.querySelector("button.tri");
   const nxt=tr.nextElementSibling;
-  if(nxt&&nxt.classList.contains("detail")){nxt.remove();tr.classList.remove("open");setRecParam(null);return;}
+  if(nxt&&nxt.classList.contains("detail")){nxt.remove();tr.classList.remove("open");
+    if(btn) btn.setAttribute("aria-expanded","false"); setRecParam(null);return;}
   document.querySelectorAll("tr.detail").forEach(d=>d.remove());
-  document.querySelectorAll("tr.row.open").forEach(o=>o.classList.remove("open"));
+  document.querySelectorAll("tr.row.open").forEach(o=>{o.classList.remove("open");
+    const ob=o.querySelector("button.tri"); if(ob) ob.setAttribute("aria-expanded","false");});
   const d=ev.find(x=>x.id===tr.dataset.id); if(!d) return;
   tr.classList.add("open");
+  if(btn) btn.setAttribute("aria-expanded","true");
   setRecParam(d.id);
   const rel=(DATA.arcs||[]).filter(a=>a.source===d.id||a.target===d.id);
   const relHtml=rel.length?rel.map(a=>{const oid=a.source===d.id?a.target:a.source;
@@ -1161,6 +1561,7 @@ function expand(tr){
     "t_end","t_precision","ongoing","epistemotype","e_signature","relations","linked_instances","emergence",
     "retractions"]);
   Object.keys(d).filter(k=>!SHOWN.has(k)).forEach(k=>add(esc(k), esc(String(d[k]))));
+  row.id="d-"+tr.id.slice(2);
   row.innerHTML='<td colspan="7"><dl>'+rows.join("")+"</dl></td>";
   tr.after(row);
 }
@@ -1179,12 +1580,18 @@ document.addEventListener("click",e=>{
     const target=document.querySelector('#tb tr.row[data-id="'+(rj.dataset.rec||"").replace(/"/g,'\\"')+'"]');
     if(target){ target.scrollIntoView({behavior:"smooth",block:"center"}); expand(target); }
     return; }
+  // a lane pill or legend swatch toggles its value in the filter (chip-click =
+  // filter, everywhere); ctrl/cmd-click still opens the definition href
+  if(!e.ctrlKey&&!e.metaKey){
+    const pt=e.target.closest("[data-phtoggle]");
+    if(pt){ e.preventDefault(); togglePh(pt.getAttribute("data-phtoggle")); return; }
+    const et=e.target.closest("[data-eptoggle]");
+    if(et){ e.preventDefault(); toggleSet(F.ep,et.getAttribute("data-eptoggle")); return; }
+  }
   // an outbound link inside a row (e.g. the retraction chip) opens its target; it never toggles the row
   if(e.target.closest("#tb a")) return;
   const tr=e.target.closest("#tb tr.row"); if(tr) expand(tr);
 });
-
-apply();
 
 /* ---------- chart ----------
    The coordinate system is pixels, always 1:1 with the rendered size, so nothing
@@ -1207,6 +1614,17 @@ function uOf(y){
     if(y>=a&&y<b) return (i+(y-a)/(b-a))/n;}
   return (eras.length&&y<eras[0][0]) ? 0 : 1;
 }
+// the inverse: position on the era axis -> calendar year (for the window coupling)
+function yearOfU(u){
+  const n=eras.length||1;
+  const i=Math.max(0,Math.min(n-1,Math.floor(u*n))), frac=u*n-i;
+  const a=eras[i][0], b=eras[i][1];
+  return a+frac*(b-a);
+}
+// filter changes driven by zoom/pan are debounced — the charts stay live per
+// frame, the table follows once the window settles
+let winT=null;
+function scheduleWinApply(){ if(!F.timeWin) return; clearTimeout(winT); winT=setTimeout(()=>apply(false),150); }
 const plotW=()=>Math.max(80,W-L-R);
 const pxOf=u=>L+((u-u0)/(u1-u0))*plotW();
 const uAtPx=px=>u0+((px-L)/plotW())*(u1-u0);
@@ -1214,6 +1632,7 @@ const yOf=l=>T+lanes.indexOf(l)*rowH+rowH/2;
 
 function paint(){
   W=Math.max(360,Math.round(svg.getBoundingClientRect().width)||1180);
+  WINDOW_YEARS=[yearOfU(u0),yearOfU(u1)];
   const span=u1-u0, zoom=1/span;
   const r=Math.min(9,4.2+Math.log2(zoom)*0.95);     // readable at every zoom
   const vis=u=>u>=u0-0.002&&u<=u1+0.002;
@@ -1226,18 +1645,24 @@ function paint(){
     if(i%2===0) s+='<rect class="era" x="'+a.toFixed(1)+'" y="'+(T-15)+'" width="'+(b-a).toFixed(1)+'" height="'+(H-T-4)+'"/>';
   });
   lanes.forEach(l=>{ s+='<line class="gridline" x1="'+L+'" y1="'+yOf(l)+'" x2="'+(W-R)+'" y2="'+yOf(l)+'"/>'; });
+  // Filtered-out marks dim instead of disappearing: the full distribution stays
+  // readable as background, which is what a comparison needs.
   (DATA.arcs||[]).forEach(a=>{
     const A=ev.find(e=>e.id===a.source),B=ev.find(e=>e.id===a.target);
     if(!A||!B||A.t_start==null||B.t_start==null) return;
     const ua=uOf(A.t_start), ub=uOf(B.t_start);
     if(!vis(ua)&&!vis(ub)) return;
+    const dim=HIT&&(!HIT.has(A.id)||!HIT.has(B.id));
     const x1=pxOf(ua),x2=pxOf(ub),y1=yOf(A.lane),y2=yOf(B.lane);
-    s+='<path class="arc'+(a.type==="contradicts"?"":" rep")+'" d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-15)+" "+x2.toFixed(1)+","+y2+'"/>';
+    s+='<path class="arc'+(a.type==="contradicts"?"":" rep")+'"'+(dim?' style="opacity:.14"':'')+
+      ' d="M'+x1.toFixed(1)+","+y1+" Q"+((x1+x2)/2).toFixed(1)+","+(Math.min(y1,y2)-15)+" "+x2.toFixed(1)+","+y2+'"/>';
   });
   ev.forEach(e=>{ if(e.t_start==null) return;
     const u=uOf(e.t_start); if(!vis(u)) return;
+    const dim=HIT&&!HIT.has(e.id);
     s+='<circle class="dot" data-id="'+esc(e.id)+'" cx="'+pxOf(u).toFixed(1)+'" cy="'+yOf(e.lane)+
-      '" r="'+r.toFixed(2)+'" fill="'+(EPC[e.epistemotype]||EPC["EP-0"])+'"></circle>';
+      '" r="'+r.toFixed(2)+'" fill="'+(EPC[e.epistemotype]||EPC["EP-0"])+'"'+
+      (dim?' style="opacity:.12;pointer-events:none"':'')+'></circle>';
   });
   s+="</g>";
   eras.forEach((e,i)=>{
@@ -1250,9 +1675,12 @@ function paint(){
   });
   lanes.forEach(l=>{
     const nm=LANE[l]||l;
-    s+='<g class="lanejump" data-jump="lane-'+esc(l)+'" data-tip="'+esc(nm+" — "+(LANEDESC[l]||""))+'">'+
-      '<rect class="lanepill" x="4" y="'+(yOf(l)-9)+'" width="'+(L-12)+'" height="18" rx="9"/>'+
-      '<text class="lanelabel" x="13" y="'+(yOf(l)+3.5)+'">'+esc(nm)+"</text></g>";
+    const on=F.ph.has(l);
+    s+='<g class="lanejump" data-phtoggle="'+esc(l)+'" data-tip="'+esc(nm+" — "+(LANEDESC[l]||"")+
+      " · click to filter the table; definition in the reference table below")+'">'+
+      '<rect class="lanepill" x="4" y="'+(yOf(l)-9)+'" width="'+(L-12)+'" height="18" rx="9"'+
+      (on?' style="stroke:var(--primary)"':'')+'/>'+
+      '<text class="lanelabel" x="13" y="'+(yOf(l)+3.5)+'"'+(on?' style="fill:var(--primary)"':'')+'>'+esc(nm)+"</text></g>";
   });
   svg.setAttribute("viewBox","0 0 "+W+" "+H);     // 1 unit == 1 pixel, never stretched
   svg.setAttribute("height",H);
@@ -1272,7 +1700,7 @@ function zoomAt(clientX,factor){
   const span=Math.min(1,Math.max(MINSPAN,(u1-u0)*factor));
   const frac=(anchor-u0)/(u1-u0);
   u0=anchor-frac*span; u1=u0+span;
-  clampWindow(); paint();
+  clampWindow(); paint(); scheduleWinApply();
 }
 svg.addEventListener("mouseover",e=>{
   const t=e.target.closest?e.target.closest(".dot"):null; if(!t) return;
@@ -1293,14 +1721,14 @@ svg.addEventListener("wheel",e=>{
 },{passive:false});
 document.getElementById("zin").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1/1.5);};
 document.getElementById("zout").onclick=()=>{const b=svg.getBoundingClientRect();zoomAt(b.left+b.width/2,1.5);};
-document.getElementById("zreset").onclick=()=>{u0=0;u1=1;paint();};
+document.getElementById("zreset").onclick=()=>{u0=0;u1=1;paint();scheduleWinApply();};
 let drag=null;
 svg.addEventListener("pointerdown",e=>{drag={px:e.clientX,u0:u0,u1:u1};
   svg.setPointerCapture(e.pointerId);svg.classList.add("dragging");});
 svg.addEventListener("pointermove",e=>{ if(!drag) return;
   const rect=svg.getBoundingClientRect();
   const du=((e.clientX-drag.px)*(W/rect.width)/plotW())*(drag.u1-drag.u0);
-  u0=drag.u0-du; u1=drag.u1-du; clampWindow(); paint();});
+  u0=drag.u0-du; u1=drag.u1-du; clampWindow(); paint(); scheduleWinApply();});
 ["pointerup","pointercancel"].forEach(t=>svg.addEventListener(t,e=>{
   if(drag&&Math.abs(e.clientX-drag.px)<4){
     const el=document.elementFromPoint(e.clientX,e.clientY);
@@ -1309,10 +1737,11 @@ svg.addEventListener("pointermove",e=>{ if(!drag) return;
   drag=null; svg.classList.remove("dragging");}));
 
 function jumpTo(id){
-  if(!shown.some(e=>e.id===id)){ // clear filters so the entry is reachable
-    document.getElementById("q").value="";
-    ["fLane","fEp","fKind"].forEach(i=>document.getElementById(i).value="");
-    apply();
+  if(!shown.some(e=>e.id===id)){
+    // let the one record through instead of destroying the reader's filter work;
+    // the active-filter strip names it and offers to hide it again
+    FORCE_ID=id;
+    apply(false);
   }
   const tr=document.getElementById("r-"+id.replace(/[^a-zA-Z0-9-]/g,"_"));
   if(!tr) return;
@@ -1321,7 +1750,11 @@ function jumpTo(id){
   tr.classList.remove("flash"); void tr.offsetWidth; tr.classList.add("flash");
 }
 
-paint();
+// boot: bars from the data, state from the URL, one apply paints everything
+buildBars();
+renderLeads();
+readURL();
+apply(false);
 let rAF=null;
 addEventListener("resize",()=>{cancelAnimationFrame(rAF);rAF=requestAnimationFrame(paint);});
 </script>

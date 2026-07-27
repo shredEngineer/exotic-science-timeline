@@ -25,6 +25,59 @@ OUT = ROOT / "dist" / "index.html"
 RESERVED = {"enrichment"}
 
 
+def prerender(data):
+    """Static, crawler-readable index of every record, emitted into the page.
+
+    The viewer removes it at boot; a reader without JavaScript (and any crawler
+    that does not execute scripts) gets the full substance as semantic HTML —
+    the same content the interactive table renders, nothing more. Standard
+    registry values render as linked badges here too (the rendering gate does
+    not stop at the interactive surface).
+    """
+    import html as _h
+    import re as _re
+    e_ = _h.escape
+    vocab = data["vocab"]
+    base = "https://github.com/shredEngineer/eqo/blob/main/"
+    reg = {k: base + a for k, a in vocab["spec_anchors"].items()}
+    lane_lab = {k: c["label"] for k, c in vocab["phenomena"]["classes"].items()}
+    lane_lab["DOC"] = vocab["tiers"]["doctrine"]["label"]
+    lane_lab["NAR"] = vocab["tiers"]["narrative"]["label"]
+
+    def sid(s):
+        return _re.sub(r"[^a-zA-Z0-9-]", "_", s)
+
+    arts = []
+    for e in sorted(data["events"], key=lambda x: (x.get("t_start") or 0, x.get("id", ""))):
+        lanes = " · ".join(
+            '<a class="chip lane" href="%s">%s</a>' % (reg["P"], e_(lane_lab.get(l, l)))
+            for l in (e.get("lanes") or [e.get("lane")]))
+        bits = ['<p>%s</p>' % e_(e.get("note", "")) if e.get("note") else ""]
+        meta = ["Class: " + lanes]
+        if e.get("epistemotype"):
+            meta.append('Profile: <a class="chip ep" href="%s">%s</a>' % (reg["EP"], e_(e["epistemotype"])))
+        if e.get("e_signature"):
+            meta.append('Evidence coordinate: <a class="mono" href="%s">%s</a>' % (reg["E"], e_(e["e_signature"])))
+        bits.append("<p>" + " · ".join(meta) + "</p>")
+        refs = e.get("refs") or []
+        if refs:
+            items = "".join(
+                "<li>%s</li>" % ('<a href="%s" rel="nofollow noopener">%s</a>' % (e_(r), e_(r))
+                                 if str(r).startswith("http") else e_(str(r)))
+                for r in refs)
+            bits.append("<ul>%s</ul>" % items)
+        who = (" — " + e_(e["principals"])) if e.get("principals") else ""
+        arts.append(
+            '<article id="rec-%s"><h3>%s — %s%s</h3>%s</article>'
+            % (sid(e["id"]), e_(str(e.get("years_raw") or e.get("t_start") or "")),
+               e_(e.get("label", "")), who, "".join(bits)))
+    return ('<section id="prerender"><div class="wrap">'
+            '<h2>The full record — static index</h2>'
+            '<p>Every record in this corpus, as plain readable text. With JavaScript enabled, '
+            'the interactive timeline above replaces this index.</p>'
+            + "".join(arts) + "</div></section>")
+
+
 def main() -> int:
     if not BASE.exists():
         print(f"missing dating layer: {BASE} — run tools/timeline-extract.py", file=sys.stderr)
@@ -93,6 +146,7 @@ def main() -> int:
 
     html = (TEMPLATE.read_text()
             .replace("__DATA__", json.dumps(data, ensure_ascii=False))
+            .replace("__PRERENDER__", prerender(data))
             .replace("__SPAN_START__", str(start))
             .replace("__CENTURIES_CAP__", centuries))
     OUT.parent.mkdir(exist_ok=True)
