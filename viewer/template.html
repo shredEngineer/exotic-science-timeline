@@ -1507,7 +1507,15 @@ function expand(tr){
   row.className="detail";
   const rows=[];
   const add=(k,v)=>{ if(v!==undefined&&v!==null&&v!=="") rows.push("<dt>"+k+"</dt><dd>"+v+"</dd>"); };
+  // The full-text substance reads FIRST — the note, the doctrine/narrative
+  // bodies and the added context are what a reader opens the row for; the
+  // structured metadata follows below.
   add("What is recorded", esc(d.note||""));
+  add("Summary", esc(d.summary||""));
+  add("Documented kernel", esc(d.factual_kernel||""));
+  add("Added by the narrative", esc(d.lore_layer||""));
+  add("Narrative provenance", esc(d.narrative_provenance||""));
+  if(d.enrichment) add("Added context", enrichmentHtml(d.enrichment));
   add("Dated as", esc(d.years_raw||d.t_start||""));
   add("Phenomena", (d.effect_types||[]).length
         ? '<span class="enumrow">'+d.effect_types.map(t=>pill(t,REG.P,"enum",
@@ -1547,20 +1555,16 @@ function expand(tr){
             return pill(sg,REG.S,"enum",
               sv ? sg+" — "+sv.label+": "+sv.definition : "Signature pattern — defined in Registry S");
           }).join("")+"</span>" : "");
-  add("Documented kernel", esc(d.factual_kernel||""));
-  add("Added by the narrative", esc(d.lore_layer||""));
-  add("Narrative provenance", esc(d.narrative_provenance||""));
-  add("Summary", esc(d.summary||""));
   add("Linked records", relHtml);
   add("Identifier", "<code>"+esc(d.id)+"</code>");
-  if(d.enrichment) add("Added context", enrichmentHtml(d.enrichment));
-  // anything the corpus grows later still shows up, rather than being dropped
+  // anything the corpus grows later still shows up, rather than being dropped;
+  // keys starting with "_" are viewer-internal derived fields, never record data
   const SHOWN=new Set(["note","years_raw","years","effect_types","mechanisms","context","record_kind",
     "patent_flag","confidence","compilation_confidence","refs","signatures","factual_kernel","lore_layer",
     "narrative_provenance","summary","id","label","principals","enrichment","lane","lanes","t_start",
     "t_end","t_precision","ongoing","epistemotype","e_signature","relations","linked_instances","emergence",
     "retractions"]);
-  Object.keys(d).filter(k=>!SHOWN.has(k)).forEach(k=>add(esc(k), esc(String(d[k]))));
+  Object.keys(d).filter(k=>!SHOWN.has(k)&&!k.startsWith("_")).forEach(k=>add(esc(k), esc(String(d[k]))));
   row.id="d-"+tr.id.slice(2);
   row.innerHTML='<td colspan="7"><dl>'+rows.join("")+"</dl></td>";
   tr.after(row);
