@@ -112,6 +112,18 @@ def main() -> int:
     if cname.exists():
         (OUT.parent / "CNAME").write_text(cname.read_text())
 
+    # Crawler plumbing. A single-page site still benefits from explicit robots
+    # and a sitemap; the domain comes from CNAME so it is never stated twice.
+    if cname.exists():
+        domain = cname.read_text().strip()
+        (OUT.parent / "robots.txt").write_text(
+            f"User-agent: *\nAllow: /\nSitemap: https://{domain}/sitemap.xml\n")
+        (OUT.parent / "sitemap.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f'  <url><loc>https://{domain}/</loc></url>\n'
+            '</urlset>\n')
+
     print(f"built {OUT.relative_to(ROOT)}  "
           f"events={len(events)}  enrichment_attached={attached}")
     return 0
