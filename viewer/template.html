@@ -388,9 +388,10 @@ footer.site .inner{max-width:72rem;margin:0 auto}
 
 /* ---------- filter chip bars + active-filter strip ---------- */
 .filterwrap{display:flex;flex-direction:column;gap:.5rem;margin-bottom:.7rem}
-.filterbar{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center}
+.filterbar{display:flex;gap:.3rem;align-items:flex-start}
 .filterbar .fl{color:var(--muted-foreground);font-size:.72rem;text-transform:uppercase;
-  letter-spacing:.06em;min-width:6.8rem}
+  letter-spacing:.06em;flex:0 0 6.8rem;padding-top:.22rem}
+.filterbar .chips{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;flex:1;min-width:0}
 .filterbar a.chip{cursor:pointer;text-decoration:none}
 .filterbar .chip[aria-pressed="true"]{background:hsl(189 100% 50% / .18);
   border-color:var(--secondary);color:var(--secondary)}
@@ -415,7 +416,8 @@ button.tri{background:none;border:0;color:inherit;font:inherit;cursor:pointer;pa
   #fToggle{display:inline-flex}
   .filterwrap{display:none}
   .filterwrap.open{display:flex}
-  .filterbar .fl{min-width:100%}
+  .filterbar{flex-direction:column;gap:.25rem}
+  .filterbar .fl{flex:0 0 auto;padding-top:0}
 }
 /* leads: the candidates tier — names the compilation knows, below the record floor */
 #leads{margin-top:1.4rem;border:1px solid var(--border);border-radius:var(--radius);
@@ -1127,7 +1129,9 @@ function buildBars(){
   const phVals=[...new Set(ev.flatMap(e=>e.lanes||[e.lane]))].sort((a,b)=>(LANE[a]||a).localeCompare(LANE[b]||b));
   const epVals=[...new Set(ev.map(e=>e.epistemotype).filter(Boolean))].sort();
   const kindVals=[...new Set(ev.map(e=>e.record_kind).filter(Boolean))].sort();
-  const bar=(id,label)=>{const el=document.getElementById(id);el.innerHTML='<span class="fl">'+label+'</span>';return el;};
+  const bar=(id,label)=>{const el=document.getElementById(id);
+    el.innerHTML='<span class="fl">'+label+'</span><span class="chips"></span>';
+    return el.querySelector(".chips");};
   const phEl=bar("fPh","Phenomenon"); CHIPS.ph={};
   phVals.forEach(k=>{
     const c=mkChip(esc(LANE[k]||k)+'<span class="n"></span>',REG.P,"lane");
