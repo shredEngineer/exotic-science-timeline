@@ -40,7 +40,7 @@ python3 tools/timeline-extract.py    # corpus -> derived/timeline.json
 python3 tools/build.py               # -> dist/index.html
 ```
 
-The output is a single self-contained file: all data inlined, no runtime fetches, no external dependencies. It works offline and can be archived by saving one file.
+The output is a single self-contained file: all data inlined, no external dependencies for rendering. The only network request is a cookieless, self-hosted analytics beacon — without it the page works unchanged, offline included, and can be archived by saving one file.
 
 ## License
 
